@@ -1,0 +1,11 @@
+res://Scenes/NewMainScene.tscn
+res://Scenes/Player/2D/StandardPlayer.gd
+res://Scenes/UI/Skip Button.gd
+res://Scenes/UI/Upgrade Buttons.gd
+res://Scenes/SurviveTheRainManager.gd
+res://Assets/CelShader.tres
+res://Assets/Particle FX/3DSmokeClouds.tres
+res://Assets/Materials/Grass.tres
+res://Scenes/MicroGames/Spam Space Bar Game/SpamSpaceBarGame.tscn
+res://Scenes/MicroGames/Collapsing Bridge/CollapsingBridge.tscn
+res://Scenes/MicroGames/Collapsing Bridge/Phycis Planks.tscn

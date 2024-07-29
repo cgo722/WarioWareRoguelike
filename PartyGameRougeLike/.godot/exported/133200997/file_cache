@@ -1,0 +1,61 @@
+res://Assets/AI/Tag_AI.tscn::aa98c81ffbac8e98188411c96a8d157c::1717781163::res://.godot/exported/133200997/export-6a3833e94be0335321a1802cc1464452-Tag_AI.scn
+res://Assets/FishingAssets/Bubble anion 1/BubbleAnim.tres::b5ea3f25111cf853bc4ec729bdee96d2::1709604735::res://.godot/exported/133200997/export-7f5de9e6acb9195c26685ffcba87fb14-BubbleAnim.res
+res://Assets/FishingAssets/Fish.tscn::634d909709cb81f55a2c0d28bc15be1e::1716248232::res://.godot/exported/133200997/export-d76f56b7c0ec20bfcf3ee4d5e40bddeb-Fish.scn
+res://Assets/FishingAssets/FishingPlayer.tscn::c04261c5fd3b699c4f67fa0c76caa32a::1716248232::res://.godot/exported/133200997/export-05a9855f6f9951c9a7c60b07d615ef85-FishingPlayer.scn
+res://Assets/Grab The Item/vector_tree.tscn::ea37f7e0cf7c063b733759f46b50149d::1716248232::res://.godot/exported/133200997/export-f176305d8c305a8e6cc353cb28ccd293-vector_tree.scn
+res://Assets/Materials/Bowl.tres::01edc39d16c85d0eb017aaaf7cc13ea0::1709604735::res://.godot/exported/133200997/export-e69efb6b8d2ce74c594b78fb0a131ae1-Bowl.res
+res://Assets/Materials/Grass.tres::a9b588b15e90ecc646fcf08d72af2c81::1718156190::res://.godot/exported/133200997/export-795085f3458e8e44936f6398afd9b243-Grass.res
+res://Assets/Materials/OrangeWhiteBox.tres::c85a614fc02d68886466f7dbce1d460b::1717781163::res://.godot/exported/133200997/export-cbeec39bda76795e1321d95d83b20494-OrangeWhiteBox.res
+res://Assets/Materials/Outline.tres::38af08789c39d2ff95ae9a3a551b4053::1709604735::res://.godot/exported/133200997/export-692a234cea424bf42459a986f7f08ad9-Outline.res
+res://Assets/Materials/SlotCarMat.tres::3d4e7c7912505bb4cf6ffc892e58211a::1701392236::res://.godot/exported/133200997/export-81c60eb783640397fd9c7beff35c73a9-SlotCarMat.res
+res://Assets/Materials/Soup.tres::bc44c1e29fde03281cfe95c9f34215dc::1709604735::res://.godot/exported/133200997/export-5cd2a1a207c32579ac6514d4463c3a12-Soup.res
+res://Assets/Particle FX/3DSmokeClouds.tres::2f67a051f988894db8c5cfcceb2d1826::1718156190::res://.godot/exported/133200997/export-3714b114593374a56365e87007940d42-3DSmokeClouds.res
+res://Assets/Particle FX/3DSmokeClouds.tscn::7dc234e0adaaca6da2f3917cd77ead98::1716248233::res://.godot/exported/133200997/export-a3eb966b0b8038918407a8f19527cf95-3DSmokeClouds.scn
+res://Assets/Soup/BowlPlayer.tscn::e30ce6a0788a51e9b1a0da372a5eb123::1716826454::res://.godot/exported/133200997/export-0a72cf43328ce2f7c86cccd4fe4f0870-BowlPlayer.scn
+res://Assets/Soup/Broth.tscn::a24e38d7650a8f009bc369544c59175f::1716248233::res://.godot/exported/133200997/export-30a6468d8319341d22e9aee9ee428642-Broth.scn
+res://Assets/Soup/ChefSleeve.tres::8f379e716410f38f7b134e4cd6c557e1::1709604735::res://.godot/exported/133200997/export-aa4350ba674bf920d5de83a635b48e7b-ChefSleeve.res
+res://Assets/Soup/Kitchen.tscn::2c4f87962966600706f74660c9f390c8::1716826454::res://.godot/exported/133200997/export-a093565e52962d6320d7b4fd20bb46e8-Kitchen.scn
+res://Assets/Survive the Rain/Cat animations Reverie/CatRun.tres::d98d6c5a33227b32746de8b75410f78d::1712797151::res://.godot/exported/133200997/export-92fa2db80453d9f1990440599fd8c407-CatRun.res
+res://Assets/Tag/GrashGPU.tres::5b9844d0ce9320d128dad344fa6896c8::1710972652::res://.godot/exported/133200997/export-e7b80383968d58b3e9af61e8399f0914-GrashGPU.res
+res://Assets/Tag/GrassClump.tscn::e14dbe48c95c91360e85a50d3146675c::1716248233::res://.godot/exported/133200997/export-10c074cd0c9873568894a84960ad9b7b-GrassClump.scn
+res://Assets/UIpack/UIPackTheme.tres::3f660226fc5bec2635ae0504b55c7dd3::1712004758::res://.godot/exported/133200997/export-46aea28303ead8abc008acef70421987-UIPackTheme.res
+res://Assets/2D projectile.tscn::9af58021a0f4265d4c7ca335675d5f84::1716248233::res://.godot/exported/133200997/export-1015ddc81de09b928497bef3844a739a-2D projectile.scn
+res://Assets/2D Spawner.tscn::6c2d507925f43706977ce7d228f7878e::1716248233::res://.godot/exported/133200997/export-a7e9c6b2e41d9325947f17245c4b4df6-2D Spawner.scn
+res://Assets/2DPlatforms.tscn::83289aa1467b87d0a7fd9c234a4a2209::1716248233::res://.godot/exported/133200997/export-21f8c6d8d4ae984f0ed92e5c4a5a6815-2DPlatforms.scn
+res://Assets/3DInteractable.tscn::140321c893c7d82f652ffe9d2a15cb3c::1717781164::res://.godot/exported/133200997/export-a352368535bd30b4ac356847474a6af6-3DInteractable.scn
+res://Assets/CelShader.tres::2d6b12afc57c2dba86372357a0ab66cf::1718156190::res://.godot/exported/133200997/export-98169f0ab7fbf9cae3356d3a7f56ca3c-CelShader.res
+res://Assets/platforms.tscn::6b891527012f5a262058de75ee7b2d24::1716248234::res://.godot/exported/133200997/export-a64d99e0853d61d39543548064740e10-platforms.scn
+res://Assets/platformsRound.tscn::cc62354f8561d7bd1573e3e79d1731ba::1716248234::res://.godot/exported/133200997/export-6810bfef2de280db023d7d3aff2b0417-platformsRound.scn
+res://Scenes/Menus/LostScreen.tscn::c0f33b83e107fe11577cd6461e03b948::1716420963::res://.godot/exported/133200997/export-26b49a8b5c964121d63d90ec009fbbad-LostScreen.scn
+res://Scenes/Menus/MainMenu.tscn::16688b39453001219a5f96b702232fc3::1716445105::res://.godot/exported/133200997/export-8a2cd17ba7100c069efc16d196e2654d-MainMenu.scn
+res://Scenes/Menus/Settings.tscn::c24315acb0a653bb6e171091c356caf1::1716357502::res://.godot/exported/133200997/export-35cac81169e2bd0e642576957dab3644-Settings.scn
+res://Scenes/MicroGames/Dont Drop The Soup/Dont Drop the Soup.tscn::03f85a84463b652e3473af8f8c2cb875::1716826454::res://.godot/exported/133200997/export-f9974f47cb6419687965273b77ebb473-Dont Drop the Soup.scn
+res://Scenes/MicroGames/Fishing/Fish.tscn::47e5742484531f1f678af05f4ef753c6::1716248235::res://.godot/exported/133200997/export-260f70de6c958f42e4a860b20f5399cc-Fish.scn
+res://Scenes/MicroGames/Fishing/Fishing.tscn::1ff63d23848476ae8595acd9a5996f40::1716406621::res://.godot/exported/133200997/export-4fc6e9fec7080c08d8b62a0470c8cfcc-Fishing.scn
+res://Scenes/MicroGames/Fishing/SpawnerFishing.tscn::2f1120858fa8145a5310b8f2fbe6f2d0::1716248235::res://.godot/exported/133200997/export-f284e7c049eef658c1ccf299052b59d1-SpawnerFishing.scn
+res://Scenes/MicroGames/Tag/AI Spawner.tscn::3f0e9a51101e9bc038b9a6d47ba93f02::1716357502::res://.godot/exported/133200997/export-dce854a625fca57b58b17a3e0989d469-AI Spawner.scn
+res://Scenes/MicroGames/Tag3D.tscn::620651ead9c079606bbb3ae2198a22a8::1717781164::res://.godot/exported/133200997/export-0d9afa55dd367e329c4ddb3a1705d788-Tag3D.scn
+res://Scenes/Player/2D/SurviveTheRainPlayer.tscn::aab3f1821e780826647e998ef0564d29::1716445105::res://.godot/exported/133200997/export-77ed7c29235214efa791b1dae12da845-SurviveTheRainPlayer.scn
+res://Scenes/Player/3D/StandardCharacter3D.tscn::770d79811856dffc89a908824c1c5314::1718156190::res://.godot/exported/133200997/export-a0c113ecb1a064c4fccdede80cdbb67f-StandardCharacter3D.scn
+res://Scenes/UI/HUD.tscn::81e69427e0bad3565116588e8517a10a::1716248238::res://.godot/exported/133200997/export-ec117413731bb4f9ca63cac906dfc2c9-HUD.scn
+res://Scenes/UI/Upgrade Button Default.tscn::17bd3539949a3aa3c364f19bece22235::1716248238::res://.godot/exported/133200997/export-af776f60ce9fc78f80155de9a1e599e3-Upgrade Button Default.scn
+res://Scenes/UI/Upgrade Trey.tscn::705b202cb8fd166ba2f00f554ca7bc68::1716248238::res://.godot/exported/133200997/export-997d290d24f6206eb7c71f024cf70a64-Upgrade Trey.scn
+res://Scenes/NewMainScene.tscn::613a5765ce7e13b0ed29603c2579a8f6::1718156190::res://.godot/exported/133200997/export-a1cd93cb10aa4fd83c98cc9251de2272-NewMainScene.scn
+res://Assets/FishingAssets/FishDeath.tscn::f098c243729e2fd40daea688409d0ebd::1716248232::res://.godot/exported/133200997/export-26b549cf2a852df8ccce27548abc7960-FishDeath.scn
+res://Assets/Soup/BayLeaf.tscn::37365fa11eec195bc9bb3cb81c6dae64::1716248233::res://.godot/exported/133200997/export-ee8931602d2ad32478aac6ff03f5944d-BayLeaf.scn
+res://Scenes/MicroGames/CollectItem3D.tscn::06a1a4d787b79514b5791aac8b2164fe::1717781164::res://.godot/exported/133200997/export-0edd12f9cd772320dadb25a9d181ae10-CollectItem3D.scn
+res://Scenes/MicroGames/SurviveTheRain.tscn::354d4315ee640d4dcaeabe20dc0f5702::1716445105::res://.godot/exported/133200997/export-30f4b97aa998082ae853e7dfde1ac943-SurviveTheRain.scn
+res://Assets/FishingAssets/Splash.tscn::31b45bf4ba1901eeea5b8cbae5219a29::1716248232::res://.godot/exported/133200997/export-42f5c314a568cc98ef2234abe8d3673a-Splash.scn
+res://Assets/Soup/Physics Mushroom.tscn::a75aa6b302e24579c160be62e7d96627::1716248233::res://.godot/exported/133200997/export-d5417a26a7f00fff0406ea90a5fa9efe-Physics Mushroom.scn
+res://Scenes/UI/Skip Button.tscn::5b6746ef8df37a0ac82db6b02a8f4118::1716248238::res://.godot/exported/133200997/export-415f57cdd9b07ee7b9bb52d97b7e6f33-Skip Button.scn
+res://Scenes/Menus/PauseMenu.tscn::efe357779fb32b14a4f8dfc5956a14bd::1716248235::res://.godot/exported/133200997/export-ef2249417db3638d9e31f05dde7e215a-PauseMenu.scn
+res://Assets/Grab The Item/reverie_alien_ground.tscn::76f09daaa164b0d235b96e51f5fae792::1716248232::res://.godot/exported/133200997/export-722cc35f324b39524d10a77c0e9b25e9-reverie_alien_ground.scn
+res://Assets/UIpack/DefaultFont.tres::2ecf630fef3002bd19e4cafcb085c83a::1715753901::res://.godot/exported/133200997/export-4aaad21b54e75cec884432794cb154cf-DefaultFont.res
+res://Assets/UIpack/DefaultTheme.tres::0216ccde6a96e3adbe69207204b99b4a::1716442606::res://.godot/exported/133200997/export-0e7cb8f512ed5d0f46a6109b199a9e57-DefaultTheme.res
+res://Scenes/MicroGames/Spam Space Bar Game/SpamSpaceBarGame.tscn::057d788bb3ac3423efb4831afb8572fc::1716248235::res://.godot/exported/133200997/export-168e04083122632c513f3acccdcd8906-SpamSpaceBarGame.scn
+res://addons/ridiculous_coding/blip.tscn::acd8055df0617af5de5a42622a0f39ce::1716248232::res://.godot/exported/133200997/export-b1ad8d14270ed9cc1579a4d6c9cefed0-blip.scn
+res://addons/ridiculous_coding/boom.tscn::cf95d577e5d57a10e9f57f271ba61709::1716248232::res://.godot/exported/133200997/export-11f90c4756095d97250dcbf86355b502-boom.scn
+res://addons/ridiculous_coding/dock.tscn::7594563ea74438bb5810999a1a4e3bc3::1716248232::res://.godot/exported/133200997/export-dedb02818fc44fca15e7272c63823ea6-dock.scn
+res://addons/ridiculous_coding/font.tres::3608900bd127d18d72f736906c44a2d0::1716243279::res://.godot/exported/133200997/export-a54c4bd19718d4a0ce53162c96591a54-font.res
+res://addons/ridiculous_coding/newline.tscn::01484ccb611af7a93a365952e3a61947::1716248232::res://.godot/exported/133200997/export-72fbb1bf8ab7e45286a88e04c2484d2b-newline.scn
+res://default_env.tres::a52129f071fffbd20a6013a6c0edec1e::1716243280::res://.godot/exported/133200997/export-7cf3fd67ad9f55210191d77b582b8209-default_env.res
