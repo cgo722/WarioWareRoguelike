@@ -1,0 +1,21 @@
+[gd_scene load_steps=3 format=3 uid="uid://tfj23bsr3l88"]
+
+[ext_resource type="Texture2D" uid="uid://17xn3ggabe8d" path="res://Assets/Rain_drop.png" id="1_s1ebi"]
+[ext_resource type="Script" path="res://Assets/FishingAssets/FishDeath.gd" id="2_kh5cd"]
+
+[node name="Splash" type="CPUParticles2D"]
+emitting = false
+amount = 20
+lifetime = 1.4
+one_shot = true
+explosiveness = 1.0
+randomness = 1.0
+lifetime_randomness = 1.0
+texture = ExtResource("1_s1ebi")
+direction = Vector2(2.08165e-12, -1)
+spread = 90.0
+initial_velocity_min = 68.3
+initial_velocity_max = 428.26
+scale_amount_min = 0.01
+scale_amount_max = 0.03
+script = ExtResource("2_kh5cd")

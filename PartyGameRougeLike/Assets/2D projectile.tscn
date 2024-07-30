@@ -1,0 +1,46 @@
+[gd_scene load_steps=7 format=3 uid="uid://u4s0st58tb1v"]
+
+[ext_resource type="Script" path="res://Assets/2D projectile.gd" id="1_d8esj"]
+[ext_resource type="Texture2D" uid="uid://17xn3ggabe8d" path="res://Assets/Rain_drop.png" id="2_03b51"]
+[ext_resource type="Script" path="res://Scripts/RainTrail.gd" id="3_xcpuo"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_4hvqt"]
+
+[sub_resource type="Curve" id="Curve_0rdod"]
+max_value = 2.0
+_data = [Vector2(0, 2), 0.0, -0.746652, 0, 0, Vector2(0.490798, 0.956977), -4.45101, -4.45101, 0, 0, Vector2(1, 0.0455097), 0.0641493, 0.0, 0, 0]
+point_count = 3
+
+[sub_resource type="Gradient" id="Gradient_iy4wu"]
+colors = PackedColorArray(0.669976, 0.833724, 0.990461, 1, 1.56425e-06, 0.386151, 0.403838, 1)
+
+[node name="2dProjectile" type="Node2D"]
+script = ExtResource("1_d8esj")
+endPosY = 1000.0
+
+[node name="RigidBody2D" type="RigidBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="RigidBody2D"]
+shape = SubResource("CircleShape2D_4hvqt")
+disabled = true
+
+[node name="Sprite2D" type="Sprite2D" parent="RigidBody2D/CollisionShape2D"]
+scale = Vector2(0.05, 0.05)
+texture = ExtResource("2_03b51")
+
+[node name="Area2D" type="Area2D" parent="RigidBody2D"]
+collision_layer = 2
+collision_mask = 2
+
+[node name="TriggerCollision" type="CollisionShape2D" parent="RigidBody2D/Area2D"]
+shape = SubResource("CircleShape2D_4hvqt")
+
+[node name="Line2D" type="Line2D" parent="RigidBody2D"]
+top_level = true
+width_curve = SubResource("Curve_0rdod")
+gradient = SubResource("Gradient_iy4wu")
+script = ExtResource("3_xcpuo")
+maxLength = 15
+length = true
+
+[connection signal="body_entered" from="RigidBody2D/Area2D" to="." method="_on_area_2d_body_entered"]

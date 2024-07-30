@@ -1,0 +1,40 @@
+[gd_scene load_steps=6 format=3 uid="uid://dld6lrctm00ed"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_o25a4"]
+size = Vector2(64, 64)
+
+[sub_resource type="Gradient" id="Gradient_gdhy5"]
+colors = PackedColorArray(0.0966127, 0.127092, 0.178083, 1, 0.440447, 0.646517, 0.656629, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_l1jf7"]
+gradient = SubResource("Gradient_gdhy5")
+fill_from = Vector2(1, 1)
+
+[sub_resource type="Gradient" id="Gradient_6t6u5"]
+interpolation_mode = 2
+offsets = PackedFloat32Array(0, 0.126984)
+colors = PackedColorArray(0.0561908, 0.0888235, 0.0813913, 1, 0.423529, 0.545098, 0.517647, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_eudcs"]
+gradient = SubResource("Gradient_6t6u5")
+fill_from = Vector2(0.5, 0)
+fill_to = Vector2(0.5, 1)
+
+[node name="2DPlatforms" type="Node2D"]
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+collision_layer = 17
+collision_mask = 17
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+shape = SubResource("RectangleShape2D_o25a4")
+
+[node name="Sprite2D" type="Sprite2D" parent="StaticBody2D/CollisionShape2D"]
+texture = SubResource("GradientTexture2D_l1jf7")
+
+[node name="NinePatchRect" type="NinePatchRect" parent="StaticBody2D/CollisionShape2D"]
+offset_left = -32.0
+offset_top = -32.0
+offset_right = 32.0
+offset_bottom = 31.0
+texture = SubResource("GradientTexture2D_eudcs")

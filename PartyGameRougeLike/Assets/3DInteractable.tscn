@@ -1,0 +1,249 @@
+[gd_scene load_steps=18 format=3 uid="uid://ciluld6if5rp"]
+
+[ext_resource type="Script" path="res://Scripts/3DInteractable.gd" id="1_7ui2d"]
+[ext_resource type="PackedScene" uid="uid://c27jgogu4lns" path="res://Assets/Grab The Item/UraniumTube.glb" id="2_0yfbn"]
+[ext_resource type="Shader" uid="uid://7gcbwkd3kxd3" path="res://Assets/CelShader.tres" id="3_i7yow"]
+
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_jrnhd"]
+height = 5.0
+
+[sub_resource type="Gradient" id="Gradient_epc1r"]
+offsets = PackedFloat32Array(0, 0.0307692)
+colors = PackedColorArray(0.0148132, 0.752384, 3.85046e-07, 1, 0.0259889, 0.760003, 0.0106274, 1)
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_gwgwm"]
+gradient = SubResource("Gradient_epc1r")
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_6stqa"]
+render_priority = 0
+shader = ExtResource("3_i7yow")
+shader_parameter/scaling = null
+shader_parameter/Roughness_Strength = 1.0
+shader_parameter/Light_Intesity = Vector3(0.5, 0, 0)
+shader_parameter/Specular_Min = 10.0
+shader_parameter/Specular_Max = 25.0
+shader_parameter/Color_Map = SubResource("GradientTexture1D_gwgwm")
+
+[sub_resource type="Curve" id="Curve_wc2di"]
+min_value = -1.0
+_data = [Vector2(0, 1), 0.0, 0.0, 0, 0, Vector2(1, 1), 0.0, 0.0, 0, 0]
+point_count = 2
+
+[sub_resource type="CurveTexture" id="CurveTexture_itosm"]
+curve = SubResource("Curve_wc2di")
+
+[sub_resource type="Curve" id="Curve_ijpei"]
+_data = [Vector2(0, 0), 0.0, 0.0, 0, 0, Vector2(1, 1), 0.0, 0.0, 0, 0]
+point_count = 2
+
+[sub_resource type="CurveTexture" id="CurveTexture_fymuq"]
+curve = SubResource("Curve_ijpei")
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_bmifu"]
+emission_shape_offset = Vector3(2.08165e-12, -2.4, 2.08165e-12)
+emission_shape = 3
+emission_box_extents = Vector3(1, 1, 1)
+velocity_pivot = Vector3(2.08165e-12, 2.08165e-12, 2.08165e-12)
+gravity = Vector3(2.08165e-12, 0.67, 2.08165e-12)
+radial_accel_max = 2.08167e-15
+scale_min = 0.0
+scale_curve = SubResource("CurveTexture_fymuq")
+hue_variation_min = -1.0
+hue_variation_max = 1.0
+hue_variation_curve = SubResource("CurveTexture_itosm")
+turbulence_enabled = true
+turbulence_noise_strength = 7.77
+turbulence_noise_scale = 0.138
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_tfm0k"]
+diffuse_mode = 3
+specular_mode = 1
+albedo_color = Color(0.223529, 0.784314, 0, 1)
+emission_enabled = true
+emission = Color(0.639216, 1, 0.658824, 1)
+emission_energy_multiplier = 1.1
+
+[sub_resource type="SphereMesh" id="SphereMesh_32fso"]
+material = SubResource("StandardMaterial3D_tfm0k")
+radius = 0.151
+height = 0.193
+
+[sub_resource type="Animation" id="Animation_ign12"]
+length = 3.0
+loop_mode = 1
+tracks/0/type = "bezier"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Area3D:rotation:x")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"handle_modes": PackedInt32Array(0, 0),
+"points": PackedFloat32Array(0.810609, -0.25, 0, 0.25, 0, 0.809833, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0, 3)
+}
+tracks/1/type = "bezier"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Area3D:rotation:y")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"handle_modes": PackedInt32Array(0, 0),
+"points": PackedFloat32Array(0.459321, -0.25, 0, 0.25, 0, 6.74221, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0, 3)
+}
+tracks/2/type = "bezier"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Area3D:rotation:z")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"handle_modes": PackedInt32Array(0, 0),
+"points": PackedFloat32Array(-0.46762, -0.25, 0, 0.25, 0, -0.467748, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0, 3)
+}
+tracks/3/type = "bezier"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Area3D:position:x")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"handle_modes": PackedInt32Array(0, 0, 0, 0),
+"points": PackedFloat32Array(2.08165e-12, -0.25, 0, 0.25, 0, 2.08165e-12, -0.25, 0, 0.25, 0, 2.08165e-12, -0.25, 0, 0.25, 0, 2.08165e-12, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0, 1, 2, 3)
+}
+tracks/4/type = "bezier"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("Area3D:position:y")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"handle_modes": PackedInt32Array(0, 0, 0, 0),
+"points": PackedFloat32Array(2.08165e-12, -0.25, 0, 0.25, 0, 0.338017, -0.25, 0, 0.25, 0, -0.278864, -0.25, 0, 0.25, 0, 2.08165e-12, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0, 1, 2, 3)
+}
+tracks/5/type = "bezier"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("Area3D:position:z")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"handle_modes": PackedInt32Array(0, 0, 0, 0),
+"points": PackedFloat32Array(2.08165e-12, -0.25, 0, 0.25, 0, 2.08165e-12, -0.25, 0, 0.25, 0, 2.08165e-12, -0.25, 0, 0.25, 0, 2.08165e-12, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0, 1, 2, 3)
+}
+
+[sub_resource type="Animation" id="Animation_rm3f0"]
+resource_name = "Spin"
+length = 8.0
+tracks/0/type = "bezier"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Area3D:rotation:x")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"handle_modes": PackedInt32Array(0, 0, 0, 0, 0),
+"points": PackedFloat32Array(-0.265046, -0.25, 0, 0.25, 0, -0.757114, -0.25, 0, 0.25, 0, 0.810609, -0.25, 0, 0.25, 0, 0.787077, -0.25, 0, 0.25, 0, -0.265046, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0, 2, 4, 6, 8)
+}
+tracks/1/type = "bezier"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Area3D:rotation:y")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"handle_modes": PackedInt32Array(0, 0, 0, 0, 0),
+"points": PackedFloat32Array(-0.332935, -0.25, 0, 0.25, 0, -3.00381, -0.25, 0, 0.25, 0, 0.459321, -0.25, 0, 0.25, 0, -0.0837905, -0.25, 0, 0.25, 0, -0.332935, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0, 2, 4, 6, 8)
+}
+tracks/2/type = "bezier"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Area3D:rotation:z")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"handle_modes": PackedInt32Array(0, 0, 0, 0, 0),
+"points": PackedFloat32Array(0.334794, -0.25, 0, 0.25, 0, 1.80468, -0.25, 0, 0.25, 0, -0.46762, -0.25, 0, 0.25, 0, 2.45676, -0.25, 0, 0.25, 0, 0.334794, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0, 2, 4, 6, 8)
+}
+tracks/3/type = "bezier"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Area3D:position:x")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"handle_modes": PackedInt32Array(0, 0, 0, 0, 0),
+"points": PackedFloat32Array(0, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0, 2, 4, 6, 8)
+}
+tracks/4/type = "bezier"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("Area3D:position:y")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"handle_modes": PackedInt32Array(0, 0, 0, 0, 0),
+"points": PackedFloat32Array(0, -0.25, 0, 0.25, 0, 0.444913, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0, -0.460393, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0, 2, 4, 6, 8)
+}
+tracks/5/type = "bezier"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("Area3D:position:z")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"handle_modes": PackedInt32Array(0, 0, 0, 0, 0),
+"points": PackedFloat32Array(0, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0, 2, 4, 6, 8)
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_v4t26"]
+_data = {
+"RESET": SubResource("Animation_ign12"),
+"Spin": SubResource("Animation_rm3f0")
+}
+
+[node name="3dInteractable" type="Node3D"]
+script = ExtResource("1_7ui2d")
+
+[node name="Area3D" type="Area3D" parent="."]
+transform = Transform3D(0.655299, 0.690842, 0.305486, -0.310602, 0.615083, -0.724706, -0.688558, 0.380015, 0.617638, 2.08165e-12, 2.08165e-12, 2.08165e-12)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D"]
+transform = Transform3D(0.5, -1.74393e-16, 1.74393e-16, 1.74393e-16, 0.5, -1.74393e-16, -1.74393e-16, 1.74393e-16, 0.5, 0, 0, -0.0481014)
+shape = SubResource("CylinderShape3D_jrnhd")
+
+[node name="UraniumTube" parent="Area3D/CollisionShape3D" instance=ExtResource("2_0yfbn")]
+transform = Transform3D(1, -3.48787e-16, 3.48787e-16, 3.48787e-16, 1, -3.48787e-16, -3.48787e-16, 3.48787e-16, 1, 2.08165e-12, 2.08165e-12, 2.08165e-12)
+
+[node name="Cylinder" parent="Area3D/CollisionShape3D/UraniumTube" index="0"]
+transform = Transform3D(1, -2.18669e-08, 2.72942e-08, -5.23824e-08, 1, -3.94796e-09, 1.59018e-08, 1.58121e-08, 1, 0, 0, 0)
+surface_material_override/0 = SubResource("ShaderMaterial_6stqa")
+
+[node name="GPUParticles3D" type="GPUParticles3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.61355, 0)
+amount = 16
+randomness = 1.0
+fixed_fps = 15
+process_material = SubResource("ParticleProcessMaterial_bmifu")
+draw_pass_1 = SubResource("SphereMesh_32fso")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_v4t26")
+}
+
+[connection signal="body_entered" from="Area3D" to="." method="_on_area_3d_body_entered"]
+
+[editable path="Area3D/CollisionShape3D/UraniumTube"]

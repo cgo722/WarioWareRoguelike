@@ -1,0 +1,52 @@
+[gd_scene load_steps=8 format=3 uid="uid://bsduxf5a3ga11"]
+
+[ext_resource type="Script" path="res://Assets/FishingAssets/FishingPlayer.gd" id="1_1f2sf"]
+[ext_resource type="Texture2D" uid="uid://du3parb2arx0r" path="res://Assets/FishingAssets/Hook_Low_Res.png" id="2_or5yg"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_1wgbe"]
+
+[sub_resource type="Gradient" id="Gradient_2rs7v"]
+colors = PackedColorArray(0.411765, 0.411765, 0.411765, 0.666667, 0.454524, 0.454524, 0.454524, 0.0431373)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_57i2l"]
+gradient = SubResource("Gradient_2rs7v")
+fill_from = Vector2(0.521368, 0)
+fill_to = Vector2(0.532051, 1)
+
+[sub_resource type="Gradient" id="Gradient_xc3rh"]
+colors = PackedColorArray(1, 0, 0, 1, 1, 0.722417, 0.668104, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_nckua"]
+gradient = SubResource("Gradient_xc3rh")
+fill_from = Vector2(0.482906, 0)
+fill_to = Vector2(0.514957, 1)
+
+[node name="FishingPlayer" type="CharacterBody2D"]
+collision_layer = 3
+script = ExtResource("1_1f2sf")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+scale = Vector2(1.8722, 1.8722)
+shape = SubResource("RectangleShape2D_1wgbe")
+
+[node name="Sprite2D" type="Sprite2D" parent="CollisionShape2D"]
+position = Vector2(4, -3)
+scale = Vector2(0.0599301, 0.061389)
+texture = ExtResource("2_or5yg")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+zoom = Vector2(1.5, 1.5)
+position_smoothing_enabled = true
+
+[node name="TextureProgressBar" type="TextureProgressBar" parent="."]
+offset_left = 28.0
+offset_top = -20.0
+offset_right = 68.0
+offset_bottom = 380.0
+scale = Vector2(0.152195, 0.126548)
+max_value = 5000.0
+allow_greater = true
+fill_mode = 3
+nine_patch_stretch = true
+texture_under = SubResource("GradientTexture2D_57i2l")
+texture_progress = SubResource("GradientTexture2D_nckua")
