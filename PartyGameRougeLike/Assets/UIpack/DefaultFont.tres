@@ -1,0 +1,6 @@
+[gd_resource type="Theme" load_steps=2 format=3 uid="uid://dyos8gp3athjs"]
+
+[ext_resource type="FontFile" uid="uid://ficav35kblue" path="res://Assets/UIpack/Font/kenvector_future.ttf" id="1_dkx18"]
+
+[resource]
+default_font = ExtResource("1_dkx18")
