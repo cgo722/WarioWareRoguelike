@@ -1,7 +1,6 @@
-[gd_scene load_steps=5 format=3 uid="uid://ba7wlrqkaitun"]
+[gd_scene load_steps=4 format=3 uid="uid://ba7wlrqkaitun"]
 
 [ext_resource type="Script" path="res://Scenes/MicroGames/Spam Space Bar Game/MashCharacter.gd" id="1_7dk12"]
-[ext_resource type="PackedScene" uid="uid://cw3gxghv0vc00" path="res://Scenes/MicroGames/Spam Space Bar Game/Confetti.tscn" id="2_xb1cr"]
 
 [sub_resource type="Gradient" id="Gradient_u6k72"]
 
@@ -15,9 +14,3 @@ script = ExtResource("1_7dk12")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 texture = SubResource("GradientTexture2D_pg3p6")
-
-[node name="Confetti" parent="." instance=ExtResource("2_xb1cr")]
-position = Vector2(121, 0)
-
-[node name="Confetti2" parent="." instance=ExtResource("2_xb1cr")]
-position = Vector2(-121, 0)
