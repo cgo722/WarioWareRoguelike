@@ -1,0 +1,36 @@
+[gd_scene load_steps=7 format=3 uid="uid://cjqpwl3iol37y"]
+
+[ext_resource type="Shader" uid="uid://7gcbwkd3kxd3" path="res://Assets/CelShader.tres" id="2_fci46"]
+[ext_resource type="Texture2D" uid="uid://cm37ngn8kflm5" path="res://Assets/Materials/wood_floor_diff_1k.png" id="3_3ulti"]
+[ext_resource type="Script" path="res://Scenes/MicroGames/Dont Drop The Soup/DDS_Floor.gd" id="4_74fy0"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_wxmru"]
+render_priority = 0
+shader = ExtResource("2_fci46")
+shader_parameter/scaling = Vector2(200, 200)
+shader_parameter/Roughness_Strength = 1.0
+shader_parameter/Light_Intesity = Vector3(0.5, 0, 0)
+shader_parameter/Specular_Min = 100.0
+shader_parameter/Specular_Max = 100.0
+shader_parameter/Color_Map = ExtResource("3_3ulti")
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_ll5ts"]
+material = SubResource("ShaderMaterial_wxmru")
+size = Vector2(500, 500)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_qtsjo"]
+size = Vector3(500, 1, 500)
+
+[node name="Node3D" type="Node3D"]
+transform = Transform3D(13.0303, 0, 0, 0, 1, 0, 0, 0, 10.3227, 0, 0, 0)
+script = ExtResource("4_74fy0")
+
+[node name="Floor" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -15.6234, -213.759)
+cast_shadow = 0
+mesh = SubResource("PlaneMesh_ll5ts")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Floor"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Floor/StaticBody3D"]
+shape = SubResource("BoxShape3D_qtsjo")

@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://clr70ysmrwdwk"]
+
+[ext_resource type="MultiMesh" uid="uid://o7tdnwifi0bo" path="res://Assets/Tag/GrashGPU.tres" id="1_48dif"]
+
+[node name="GrassClump" type="Node3D"]
+
+[node name="MultiMeshInstance3D" type="MultiMeshInstance3D" parent="."]
+multimesh = ExtResource("1_48dif")

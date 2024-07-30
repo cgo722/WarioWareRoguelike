@@ -1,0 +1,28 @@
+[gd_scene load_steps=5 format=3 uid="uid://dl0h7dn0iran5"]
+
+[ext_resource type="Material" uid="uid://c1dv7aa7utx3t" path="res://Assets/Materials/Soup.tres" id="1_mt5jq"]
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_qhavf"]
+friction = 0.0
+rough = true
+absorbent = true
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_flgfa"]
+radius = 0.347744
+
+[sub_resource type="SphereMesh" id="SphereMesh_uvnws"]
+
+[node name="Broth" type="Node3D"]
+
+[node name="RigidBody3D" type="RigidBody3D" parent="."]
+physics_material_override = SubResource("PhysicsMaterial_qhavf")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="RigidBody3D"]
+transform = Transform3D(0.7, 0, 0, 0, 0.7, 0, 0, 0, 0.7, 0, 0, 0)
+shape = SubResource("SphereShape3D_flgfa")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="RigidBody3D"]
+transform = Transform3D(0.7, 0, 0, 0, 0.7, 0, 0, 0, 0.7, 0, 0, 0)
+material_override = ExtResource("1_mt5jq")
+mesh = SubResource("SphereMesh_uvnws")
+skeleton = NodePath("../CollisionShape3D")
