@@ -1,0 +1,158 @@
+[gd_resource type="SpriteFrames" load_steps=33 format=3 uid="uid://dvn0hvrj8dkxw"]
+
+[ext_resource type="Texture2D" uid="uid://dbghufvg1grn8" path="res://Assets/Survive the Rain/Cat animations Reverie/Cat animation Run/CatRun/frame_01.png" id="1_6qghl"]
+[ext_resource type="Texture2D" uid="uid://clk3qm4h6yxvw" path="res://Assets/Survive the Rain/Cat animations Reverie/Cat animations Reverie Fallibng/frame_01.png" id="1_ipnsp"]
+[ext_resource type="Texture2D" uid="uid://d2p1k0pqh16la" path="res://Assets/Survive the Rain/Cat animations Reverie/Cat animation Run/CatRun/frame_02.png" id="2_a68lk"]
+[ext_resource type="Texture2D" uid="uid://bslcc4v2opk70" path="res://Assets/Survive the Rain/Cat animations Reverie/Cat animations Reverie Fallibng/frame_02.png" id="2_v610y"]
+[ext_resource type="Texture2D" uid="uid://grqquiqao0h4" path="res://Assets/Survive the Rain/Cat animations Reverie/Cat animations Reverie Fallibng/frame_03.png" id="3_i5r05"]
+[ext_resource type="Texture2D" uid="uid://ca4is8gxp57ut" path="res://Assets/Survive the Rain/Cat animations Reverie/Cat animation Run/CatRun/frame_03.png" id="3_qk8r3"]
+[ext_resource type="Texture2D" uid="uid://da6a6bseu2aha" path="res://Assets/Survive the Rain/Cat animations Reverie/Cat animations Reverie Fallibng/frame_04.png" id="4_0om6q"]
+[ext_resource type="Texture2D" uid="uid://drwvsjhjdx6bn" path="res://Assets/Survive the Rain/Cat animations Reverie/Cat animation Run/CatRun/frame_04.png" id="4_nlard"]
+[ext_resource type="Texture2D" uid="uid://csyk2sefde4x" path="res://Assets/Survive the Rain/Cat animations Reverie/Cat animation Run/CatRun/frame_05.png" id="5_1q6wc"]
+[ext_resource type="Texture2D" uid="uid://cvvl0yr8en16p" path="res://Assets/Survive the Rain/Cat animations Reverie/Cat animations Reverie Idle/frame_01.png" id="5_wdydk"]
+[ext_resource type="Texture2D" uid="uid://d0xap3tei0vrt" path="res://Assets/Survive the Rain/Cat animations Reverie/Cat animation Run/CatRun/frame_06.png" id="6_22des"]
+[ext_resource type="Texture2D" uid="uid://b10kmvwyon8f6" path="res://Assets/Survive the Rain/Cat animations Reverie/Cat animations Reverie Idle/frame_02.png" id="6_f1l60"]
+[ext_resource type="Texture2D" uid="uid://crlajfe4n8mg3" path="res://Assets/Survive the Rain/Cat animations Reverie/Cat animation Run/CatRun/frame_07.png" id="7_sl2n0"]
+[ext_resource type="Texture2D" uid="uid://cvf5ji7cxljbe" path="res://Assets/Survive the Rain/Cat animations Reverie/Cat animations Reverie Idle/frame_03.png" id="7_w53fe"]
+[ext_resource type="Texture2D" uid="uid://0qyt7puc3fna" path="res://Assets/Survive the Rain/Cat animations Reverie/Cat animation Run/CatRun/frame_08.png" id="8_luary"]
+[ext_resource type="Texture2D" uid="uid://cmq6ncatjeum1" path="res://Assets/Survive the Rain/Cat animations Reverie/Cat animations Reverie Idle/frame_04.png" id="8_vxg0v"]
+[ext_resource type="Texture2D" uid="uid://dedwddjmimj0g" path="res://Assets/Survive the Rain/Cat animations Reverie/Cat animations Reverie Idle/frame_05.png" id="9_apvjd"]
+[ext_resource type="Texture2D" uid="uid://docg0cjdu1tt2" path="res://Assets/Survive the Rain/Cat animations Reverie/Cat animation Run/CatRun/frame_09.png" id="9_lxk8n"]
+[ext_resource type="Texture2D" uid="uid://c8111ihpqlope" path="res://Assets/Survive the Rain/Cat animations Reverie/Cat animations Reverie Idle/frame_06.png" id="10_hkxc4"]
+[ext_resource type="Texture2D" uid="uid://dn0bfdm1al1il" path="res://Assets/Survive the Rain/Cat animations Reverie/Cat animation Run/CatRun/frame_10.png" id="10_jqxac"]
+[ext_resource type="Texture2D" uid="uid://dyavvop88bpyg" path="res://Assets/Survive the Rain/Cat animations Reverie/Cat animation Run/CatRun/frame_11.png" id="11_l0r20"]
+[ext_resource type="Texture2D" uid="uid://ij5if5wj8vu6" path="res://Assets/Survive the Rain/Cat animations Reverie/Cat animations Reverie Idle/frame_07.png" id="11_ykb34"]
+[ext_resource type="Texture2D" uid="uid://un5ahoh7mov5" path="res://Assets/Survive the Rain/Cat animations Reverie/Cat animation Run/CatRun/frame_12.png" id="12_5a8da"]
+[ext_resource type="Texture2D" uid="uid://cltgv5g0aalqt" path="res://Assets/Survive the Rain/Cat animations Reverie/Cat animations Reverie Idle/frame_08.png" id="12_wkcdp"]
+[ext_resource type="Texture2D" uid="uid://dhxw4jpofn4l5" path="res://Assets/Survive the Rain/Cat animations Reverie/Cat animation Run/CatRun/frame_13.png" id="13_gc6kb"]
+[ext_resource type="Texture2D" uid="uid://5garhjjeihg8" path="res://Assets/Survive the Rain/Cat animations Reverie/Cat animations Reverie Jump/frame_05.png" id="17_1hgal"]
+[ext_resource type="Texture2D" uid="uid://b2m1su4r1x75" path="res://Assets/Survive the Rain/Cat animations Reverie/Cat animations Reverie Jump/frame_06.png" id="18_dfcwr"]
+[ext_resource type="Texture2D" uid="uid://di3qivyby468p" path="res://Assets/Survive the Rain/Cat animations Reverie/Cat animations Reverie Sit/frame_01.png" id="32_64a60"]
+[ext_resource type="Texture2D" uid="uid://cpske380rt7r4" path="res://Assets/Survive the Rain/Cat animations Reverie/Cat animations Reverie Sit/frame_02.png" id="33_u8lf7"]
+[ext_resource type="Texture2D" uid="uid://d2ggxjoprp0dv" path="res://Assets/Survive the Rain/Cat animations Reverie/Cat animations Reverie Sit/frame_03.png" id="34_rnnst"]
+[ext_resource type="Texture2D" uid="uid://b1c776csvpdrg" path="res://Assets/Survive the Rain/Cat animations Reverie/Cat animations Reverie Sit/frame_04.png" id="35_i7pjr"]
+[ext_resource type="Texture2D" uid="uid://neg4frim85by" path="res://Assets/Survive the Rain/Cat animations Reverie/Cat animations Reverie Sit/frame_05.png" id="36_a6qm5"]
+
+[resource]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_ipnsp")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_v610y")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_i5r05")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_0om6q")
+}],
+"loop": true,
+"name": &"Falling",
+"speed": 15.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("5_wdydk")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_f1l60")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_w53fe")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_vxg0v")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_apvjd")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_hkxc4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_ykb34")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_wkcdp")
+}],
+"loop": true,
+"name": &"Idle",
+"speed": 15.0
+}, {
+"frames": [{
+"duration": 2.0,
+"texture": ExtResource("17_1hgal")
+}, {
+"duration": 4.0,
+"texture": ExtResource("18_dfcwr")
+}],
+"loop": false,
+"name": &"Jump",
+"speed": 15.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_6qghl")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_a68lk")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_qk8r3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_nlard")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_1q6wc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_22des")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_sl2n0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_luary")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_lxk8n")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_jqxac")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_l0r20")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_5a8da")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_gc6kb")
+}],
+"loop": true,
+"name": &"Run",
+"speed": 15.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("32_64a60")
+}, {
+"duration": 1.0,
+"texture": ExtResource("33_u8lf7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("34_rnnst")
+}, {
+"duration": 1.0,
+"texture": ExtResource("35_i7pjr")
+}, {
+"duration": 1.0,
+"texture": ExtResource("36_a6qm5")
+}],
+"loop": false,
+"name": &"Sit",
+"speed": 15.0
+}]
