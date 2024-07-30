@@ -1,9 +1,0 @@
-res://Scenes/Player/2D/StandardPlayer.gd
-res://Scenes/UI/Skip Button.gd
-res://Scenes/UI/Upgrade Buttons.gd
-res://Scenes/SurviveTheRainManager.gd
-res://Assets/CelShader.tres
-res://Assets/Particle FX/3DSmokeClouds.tres
-res://Assets/Materials/Grass.tres
-res://Scenes/MicroGames/Spam Space Bar Game/MashCharacter.tscn
-res://Scenes/MicroGames/Spam Space Bar Game/MashCharacter.gd
