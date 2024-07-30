@@ -1,0 +1,15 @@
+[gd_scene load_steps=3 format=3 uid="uid://dmurk6pxdacmu"]
+
+[ext_resource type="PackedScene" uid="uid://ba7wlrqkaitun" path="res://Scenes/MicroGames/Spam Space Bar Game/MashCharacter.tscn" id="1_sjkx6"]
+[ext_resource type="Texture2D" uid="uid://dmhfg6f3gjk12" path="res://Assets/SpamSpaceBarGame/IMG_0395.png" id="2_6w5jg"]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="MashCharacter" parent="." instance=ExtResource("1_sjkx6")]
+
+[node name="Camera2D" type="Camera2D" parent="."]
+
+[node name="World Tree" type="Sprite2D" parent="."]
+position = Vector2(548, -39)
+scale = Vector2(17.8333, 17.8333)
+texture = ExtResource("2_6w5jg")

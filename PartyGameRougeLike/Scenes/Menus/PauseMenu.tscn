@@ -1,0 +1,52 @@
+[gd_scene load_steps=4 format=3 uid="uid://hd6uldxh1brl"]
+
+[ext_resource type="Script" path="res://Scenes/Menus/LostScreen.gd" id="1_yo6br"]
+[ext_resource type="Theme" uid="uid://vtocky5omcns" path="res://Assets/UIpack/DefaultTheme.tres" id="2_jjlk6"]
+[ext_resource type="Script" path="res://Scenes/Menus/GrabFocus.gd" id="2_n83gw"]
+
+[node name="Pause" type="Control"]
+process_mode = 3
+z_index = 4096
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_yo6br")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -96.87
+offset_top = -50.5
+offset_right = 116.435
+offset_bottom = 236.295
+grow_horizontal = 2
+grow_vertical = 2
+alignment = 1
+
+[node name="Label" type="Label" parent="VBoxContainer"]
+layout_mode = 2
+text = "PAUSE"
+horizontal_alignment = 1
+
+[node name="Resume" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+theme = ExtResource("2_jjlk6")
+theme_type_variation = &"FlatButton"
+text = "Resume"
+script = ExtResource("2_n83gw")
+
+[node name="Main Menu" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+theme = ExtResource("2_jjlk6")
+theme_type_variation = &"FlatButton"
+text = "Give Up"
+
+[connection signal="button_up" from="VBoxContainer/Resume" to="." method="_on_resume_button_up"]
+[connection signal="button_up" from="VBoxContainer/Main Menu" to="." method="_on_main_menu_button_up"]

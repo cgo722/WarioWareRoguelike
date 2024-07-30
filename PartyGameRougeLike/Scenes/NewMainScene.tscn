@@ -1,0 +1,24 @@
+[gd_scene load_steps=4 format=3 uid="uid://bx604idfeqyfq"]
+
+[ext_resource type="Script" path="res://Scripts/SceneChanger.gd" id="1_xybyd"]
+[ext_resource type="AudioStream" uid="uid://0nw3n5uv8hjr" path="res://Assets/UIpack/Bonus/click1.ogg" id="2_kq1hh"]
+[ext_resource type="Script" path="res://Scenes/Music Player.gd" id="3_iwpvh"]
+
+[node name="Node" type="Node"]
+script = ExtResource("1_xybyd")
+
+[node name="GameTimer" type="Timer" parent="."]
+wait_time = 15.0
+
+[node name="HUDCanvas" type="CanvasLayer" parent="."]
+
+[node name="UISFX" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("2_kq1hh")
+
+[node name="Background Music" type="AudioStreamPlayer" parent="."]
+process_mode = 3
+volume_db = -9.0
+script = ExtResource("3_iwpvh")
+
+[connection signal="timeout" from="GameTimer" to="." method="_on_timer_timeout"]
+[connection signal="finished" from="Background Music" to="Background Music" method="_on_finished"]

@@ -1,0 +1,26 @@
+[gd_scene load_steps=4 format=3 uid="uid://df3t252u805na"]
+
+[ext_resource type="Script" path="res://Scenes/MicroGames/Collapsing Bridge/Phycis Planks.gd" id="1_0o672"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_br2h7"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_dm7cx"]
+
+[node name="PhycisPlanks" type="Node3D"]
+script = ExtResource("1_0o672")
+randChance = 21
+
+[node name="RigidBody3D" type="RigidBody3D" parent="."]
+freeze = true
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="RigidBody3D"]
+transform = Transform3D(0.755, 0, 0, 0, 0.305, 0, 0, 0, 2.995, 0, 0, 0)
+shape = SubResource("BoxShape3D_br2h7")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="RigidBody3D/CollisionShape3D"]
+mesh = SubResource("BoxMesh_dm7cx")
+
+[node name="Timer" type="Timer" parent="."]
+autostart = true
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

@@ -1,0 +1,109 @@
+[gd_scene load_steps=10 format=3 uid="uid://occn8l637atj"]
+
+[ext_resource type="PackedScene" uid="uid://bsduxf5a3ga11" path="res://Assets/FishingAssets/FishingPlayer.tscn" id="1_bkbfo"]
+[ext_resource type="Script" path="res://Scenes/MicroGames/Fishing/FishingManager.gd" id="1_nx27p"]
+[ext_resource type="PackedScene" uid="uid://co4g08277ryvx" path="res://Scenes/MicroGames/Fishing/SpawnerFishing.tscn" id="3_8mh63"]
+[ext_resource type="Texture2D" uid="uid://bk30gxb8q4v0j" path="res://Assets/FishingAssets/Boat 2.png" id="4_eg3lq"]
+[ext_resource type="Texture2D" uid="uid://ciwaapf2otsen" path="res://Assets/FishingAssets/Background_(fishing)_Low_Red.png" id="4_nxi4o"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_emb46"]
+
+[sub_resource type="Gradient" id="Gradient_u8a2o"]
+colors = PackedColorArray(0.0705882, 0.145098, 0.384314, 0.85098, 0.164706, 0.658824, 0.870588, 0.462745)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_nep7v"]
+gradient = SubResource("Gradient_u8a2o")
+fill_from = Vector2(1, 1)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_j5lvi"]
+size = Vector2(34.9026, 49.7549)
+
+[node name="Fishing" type="Node2D"]
+position = Vector2(963, 549)
+script = ExtResource("1_nx27p")
+
+[node name="FishingPlayer" parent="." instance=ExtResource("1_bkbfo")]
+position = Vector2(0, -3)
+collision_layer = 32771
+motion_mode = 1
+
+[node name="SpawnerFishing" parent="." instance=ExtResource("3_8mh63")]
+position = Vector2(0, 338)
+
+[node name="NinePatchRect" type="NinePatchRect" parent="."]
+z_index = -2860
+offset_left = -2374.0
+offset_top = 2848.0
+offset_right = 2449.0
+offset_bottom = 6321.0
+texture = ExtResource("4_nxi4o")
+
+[node name="Floor" type="StaticBody2D" parent="."]
+position = Vector2(0, 5944)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Floor"]
+scale = Vector2(152.566, -4.09694)
+shape = SubResource("RectangleShape2D_emb46")
+
+[node name="Ceiling" type="StaticBody2D" parent="."]
+position = Vector2(0, -510)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Ceiling"]
+scale = Vector2(152.566, -4.09694)
+shape = SubResource("RectangleShape2D_emb46")
+
+[node name="Wall1" type="StaticBody2D" parent="."]
+position = Vector2(-1525, 2862)
+scale = Vector2(0.0234249, 86.2482)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Wall1"]
+scale = Vector2(152.566, -4.09694)
+shape = SubResource("RectangleShape2D_emb46")
+
+[node name="Wall2" type="StaticBody2D" parent="."]
+position = Vector2(1521, 2862)
+scale = Vector2(0.0234249, 86.2482)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Wall2"]
+scale = Vector2(152.566, -4.09694)
+shape = SubResource("RectangleShape2D_emb46")
+
+[node name="Water" type="Sprite2D" parent="."]
+z_index = 4096
+z_as_relative = false
+position = Vector2(2.08165e-12, 4264.14)
+scale = Vector2(138.58, 130.479)
+texture = SubResource("GradientTexture2D_nep7v")
+
+[node name="Area2D" type="Area2D" parent="Water"]
+collision_layer = 32768
+collision_mask = 32768
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Water/Area2D"]
+position = Vector2(-0.00721645, -7.12086)
+shape = SubResource("RectangleShape2D_j5lvi")
+
+[node name="Boat" type="Sprite2D" parent="."]
+z_index = -1320
+position = Vector2(-434, -73)
+rotation = 0.102892
+scale = Vector2(0.507741, 0.507741)
+texture = ExtResource("4_eg3lq")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="TextEdit" type="TextEdit" parent="CanvasLayer"]
+offset_left = 398.0
+offset_top = 661.0
+offset_right = 1558.0
+offset_bottom = 818.0
+theme_override_font_sizes/font_size = 91
+text = "Catch all the Fish!"
+
+[node name="Instruction Timer" type="Timer" parent="CanvasLayer"]
+wait_time = 3.0
+autostart = true
+
+[connection signal="body_entered" from="Water/Area2D" to="FishingPlayer" method="_on_area_2d_body_entered"]
+[connection signal="body_exited" from="Water/Area2D" to="FishingPlayer" method="_on_area_2d_body_exited"]
+[connection signal="timeout" from="CanvasLayer/Instruction Timer" to="." method="_on_instruction_timer_timeout"]

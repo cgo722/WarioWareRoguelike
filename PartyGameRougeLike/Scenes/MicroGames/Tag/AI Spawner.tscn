@@ -1,0 +1,11 @@
+[gd_scene load_steps=2 format=3 uid="uid://bsjtdxj4oon3t"]
+
+[ext_resource type="Script" path="res://Scenes/MicroGames/Tag/AI Spawner.gd" id="1_xgep8"]
+
+[node name="AiSpawner" type="Node3D"]
+script = ExtResource("1_xgep8")
+
+[node name="AI Spawner Timer" type="Timer" parent="."]
+autostart = true
+
+[connection signal="timeout" from="AI Spawner Timer" to="." method="_on_ai_spawner_timer_timeout"]

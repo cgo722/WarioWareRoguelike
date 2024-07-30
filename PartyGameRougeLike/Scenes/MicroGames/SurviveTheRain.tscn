@@ -1,0 +1,60 @@
+[gd_scene load_steps=8 format=3 uid="uid://mlfj7mlo1x23"]
+
+[ext_resource type="Script" path="res://Scenes/SurviveTheRainManager.gd" id="1_4w7kf"]
+[ext_resource type="PackedScene" uid="uid://dqnv87pgnk5c5" path="res://Assets/2D Spawner.tscn" id="2_p6udn"]
+[ext_resource type="PackedScene" uid="uid://dld6lrctm00ed" path="res://Assets/2DPlatforms.tscn" id="3_5vm1n"]
+[ext_resource type="PackedScene" uid="uid://nw1oknr3ftnp" path="res://Scenes/Player/2D/SurviveTheRainPlayer.tscn" id="4_ejuh7"]
+[ext_resource type="AudioStream" uid="uid://bx0e3p5qwabqt" path="res://Assets/Sounds/Rain.wav" id="5_1nof8"]
+
+[sub_resource type="Gradient" id="Gradient_vaxgj"]
+offsets = PackedFloat32Array(0)
+colors = PackedColorArray(0.422963, 0.543205, 0.516613, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_67px3"]
+gradient = SubResource("Gradient_vaxgj")
+fill_from = Vector2(0.50641, 0.615385)
+fill_to = Vector2(0.502137, 0.0149573)
+
+[node name="Node2D" type="Node2D"]
+script = ExtResource("1_4w7kf")
+
+[node name="2dSpawner" parent="." instance=ExtResource("2_p6udn")]
+position = Vector2(951, -200)
+
+[node name="2DPlatforms" parent="." instance=ExtResource("3_5vm1n")]
+position = Vector2(961, 960)
+scale = Vector2(30.4007, 4.55376)
+
+[node name="StandardPlayer" parent="." instance=ExtResource("4_ejuh7")]
+position = Vector2(963, 600)
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="TextEdit" type="TextEdit" parent="CanvasLayer"]
+offset_left = 688.0
+offset_top = 850.0
+offset_right = 2676.0
+offset_bottom = 1160.0
+scale = Vector2(0.6, 0.6)
+theme_override_font_sizes/font_size = 181
+text = "Don't touch the Rain"
+
+[node name="Instruction Timer" type="Timer" parent="CanvasLayer"]
+wait_time = 3.0
+autostart = true
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+z_index = -4096
+position = Vector2(988, 898)
+scale = Vector2(43.67, 43.67)
+texture = SubResource("GradientTexture2D_67px3")
+
+[node name="Node2D" type="Node2D" parent="."]
+position = Vector2(977, 813)
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("5_1nof8")
+volume_db = -25.0
+autoplay = true
+
+[connection signal="timeout" from="CanvasLayer/Instruction Timer" to="." method="_on_instruction_timer_timeout"]

@@ -1,0 +1,57 @@
+[gd_scene load_steps=5 format=3 uid="uid://c3i4ryuvfjlts"]
+
+[ext_resource type="PackedScene" uid="uid://dyqtxqq3ao0w4" path="res://Scenes/UI/Upgrade Button Default.tscn" id="1_bvuip"]
+[ext_resource type="Script" path="res://Scenes/UI/Upgrade Trey.gd" id="1_jnhas"]
+
+[sub_resource type="Gradient" id="Gradient_cn8rk"]
+offsets = PackedFloat32Array(0.0238095, 1)
+colors = PackedColorArray(0.678431, 0.415686, 0.298039, 0.482353, 0.627451, 0.713726, 0.992157, 0.482353)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_at7of"]
+gradient = SubResource("Gradient_cn8rk")
+fill_from = Vector2(0.5, 1)
+fill_to = Vector2(0.5, 0)
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_jnhas")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(950, 538)
+scale = Vector2(30.4655, 19.0309)
+texture = SubResource("GradientTexture2D_at7of")
+
+[node name="UpgradeButtonDefault" parent="." instance=ExtResource("1_bvuip")]
+layout_mode = 2
+anchors_preset = 0
+anchor_right = 0.0
+anchor_bottom = 0.0
+offset_left = 276.0
+offset_top = 518.0
+offset_right = 276.0
+offset_bottom = 558.0
+
+[node name="UpgradeButtonDefault2" parent="." instance=ExtResource("1_bvuip")]
+layout_mode = 2
+anchors_preset = 0
+anchor_right = 0.0
+anchor_bottom = 0.0
+offset_left = 885.0
+offset_top = 518.0
+offset_right = 885.0
+offset_bottom = 558.0
+
+[node name="UpgradeButtonDefault3" parent="." instance=ExtResource("1_bvuip")]
+layout_mode = 2
+anchors_preset = 0
+anchor_right = 0.0
+anchor_bottom = 0.0
+offset_left = 1483.0
+offset_top = 518.0
+offset_right = 1483.0
+offset_bottom = 558.0

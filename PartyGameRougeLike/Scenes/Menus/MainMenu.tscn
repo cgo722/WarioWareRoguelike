@@ -1,0 +1,173 @@
+[gd_scene load_steps=27 format=3 uid="uid://d0f7gdq8ltms"]
+
+[ext_resource type="Script" path="res://Scripts/UI/MainMenu.gd" id="1_6kmor"]
+[ext_resource type="Texture2D" uid="uid://bgi6l3ol7eghu" path="res://Assets/UIpack/PNG/green_button00.png" id="2_dm4qn"]
+[ext_resource type="FontFile" uid="uid://cf0og4aanegjb" path="res://Assets/UIpack/Font/kenvector_future_thin.ttf" id="2_mhsfl"]
+[ext_resource type="Texture2D" uid="uid://bha3wy7b8ibp5" path="res://Assets/UIpack/PNG/green_button02.png" id="3_gg6xw"]
+[ext_resource type="Theme" uid="uid://vtocky5omcns" path="res://Assets/UIpack/DefaultTheme.tres" id="3_rdccb"]
+[ext_resource type="Texture2D" uid="uid://c00npbnkahdok" path="res://Assets/UIpack/PNG/green_button03.png" id="4_52fp1"]
+[ext_resource type="Texture2D" uid="uid://b5i12bkbitgtt" path="res://Assets/UIpack/PNG/yellow_button00.png" id="5_mbllw"]
+[ext_resource type="Texture2D" uid="uid://shyowqibt7yx" path="res://Assets/UIpack/PNG/yellow_button02.png" id="6_eu8ts"]
+[ext_resource type="Texture2D" uid="uid://gn24wtarq6q8" path="res://Assets/UIpack/PNG/red_button00.png" id="7_nvkdw"]
+[ext_resource type="Script" path="res://Scenes/Menus/GrabFocus.gd" id="7_xgq6n"]
+[ext_resource type="Texture2D" uid="uid://cg2urapk7oumb" path="res://Assets/UIpack/PNG/yellow_button05.png" id="8_rid5t"]
+[ext_resource type="Texture2D" uid="uid://bxa5wl56j7upv" path="res://Assets/UIpack/PNG/red_button02.png" id="8_vwq27"]
+[ext_resource type="Texture2D" uid="uid://dhb3nh7sqhhfr" path="res://Assets/UIpack/PNG/yellow_button03.png" id="9_c7gnp"]
+[ext_resource type="Texture2D" uid="uid://bidigtprhl4ap" path="res://Assets/UIpack/PNG/red_button01.png" id="12_8bqvl"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_71c0i"]
+texture = ExtResource("2_dm4qn")
+texture_margin_left = 25.0
+texture_margin_top = 25.0
+texture_margin_right = 25.0
+texture_margin_bottom = 25.0
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_w3ptl"]
+texture = ExtResource("3_gg6xw")
+texture_margin_left = 25.0
+texture_margin_top = 25.0
+texture_margin_right = 25.0
+texture_margin_bottom = 25.0
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_w6d5f"]
+texture = ExtResource("4_52fp1")
+texture_margin_left = 25.0
+texture_margin_top = 25.0
+texture_margin_right = 25.0
+texture_margin_bottom = 25.0
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_wluh6"]
+texture = ExtResource("3_gg6xw")
+texture_margin_left = 25.0
+texture_margin_top = 25.0
+texture_margin_right = 25.0
+texture_margin_bottom = 25.0
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_a5hac"]
+texture = ExtResource("5_mbllw")
+texture_margin_left = 25.0
+texture_margin_top = 25.0
+texture_margin_right = 25.0
+texture_margin_bottom = 25.0
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_4m4n4"]
+texture = ExtResource("6_eu8ts")
+texture_margin_left = 25.0
+texture_margin_top = 25.0
+texture_margin_right = 25.0
+texture_margin_bottom = 25.0
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_3gqoy"]
+texture = ExtResource("9_c7gnp")
+texture_margin_left = 25.0
+texture_margin_top = 25.0
+texture_margin_right = 25.0
+texture_margin_bottom = 25.0
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_vq8tw"]
+texture = ExtResource("8_rid5t")
+texture_margin_left = 25.0
+texture_margin_top = 25.0
+texture_margin_right = 25.0
+texture_margin_bottom = 25.0
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_0olwe"]
+texture = ExtResource("12_8bqvl")
+texture_margin_left = 25.0
+texture_margin_top = 25.0
+texture_margin_right = 25.0
+texture_margin_bottom = 25.0
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_3noyn"]
+texture = ExtResource("8_vwq27")
+texture_margin_left = 25.0
+texture_margin_top = 25.0
+texture_margin_right = 25.0
+texture_margin_bottom = 25.0
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_s6i3l"]
+texture = ExtResource("7_nvkdw")
+texture_margin_left = 25.0
+texture_margin_top = 25.0
+texture_margin_right = 25.0
+texture_margin_bottom = 25.0
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_q1qig"]
+texture = ExtResource("8_vwq27")
+texture_margin_left = 25.0
+texture_margin_top = 25.0
+texture_margin_right = 25.0
+texture_margin_bottom = 25.0
+
+[node name="Control" type="Control"]
+process_mode = 3
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_6kmor")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 0
+offset_left = 584.0
+offset_top = 394.0
+offset_right = 1372.0
+offset_bottom = 837.0
+alignment = 1
+
+[node name="HSplitContainer" type="HSplitContainer" parent="VBoxContainer"]
+layout_mode = 2
+
+[node name="High Score Text" type="Label" parent="VBoxContainer/HSplitContainer"]
+layout_mode = 2
+text = "High Score"
+
+[node name="High Score Amount" type="Label" parent="VBoxContainer/HSplitContainer"]
+layout_mode = 2
+text = "??????"
+
+[node name="Title" type="Label" parent="VBoxContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_mhsfl")
+theme_override_font_sizes/font_size = 151
+text = "Reverie
+"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Play" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+theme = ExtResource("3_rdccb")
+theme_type_variation = &"FlatButton"
+theme_override_styles/normal = SubResource("StyleBoxTexture_71c0i")
+theme_override_styles/hover = SubResource("StyleBoxTexture_w3ptl")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_w6d5f")
+theme_override_styles/focus = SubResource("StyleBoxTexture_wluh6")
+text = "Play"
+script = ExtResource("7_xgq6n")
+
+[node name="Option" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+theme = ExtResource("3_rdccb")
+theme_type_variation = &"FlatButton"
+theme_override_styles/normal = SubResource("StyleBoxTexture_a5hac")
+theme_override_styles/hover = SubResource("StyleBoxTexture_4m4n4")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_3gqoy")
+theme_override_styles/focus = SubResource("StyleBoxTexture_vq8tw")
+text = "Options"
+
+[node name="Quit" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+theme = ExtResource("3_rdccb")
+theme_type_variation = &"FlatButton"
+theme_override_styles/normal = SubResource("StyleBoxTexture_0olwe")
+theme_override_styles/hover = SubResource("StyleBoxTexture_3noyn")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_s6i3l")
+theme_override_styles/focus = SubResource("StyleBoxTexture_q1qig")
+text = "Quit"
+
+[connection signal="button_up" from="VBoxContainer/Play" to="." method="_on_play_button_up"]
+[connection signal="button_up" from="VBoxContainer/Option" to="." method="_on_options_button_up"]
+[connection signal="button_up" from="VBoxContainer/Quit" to="." method="_on_quit_button_up"]

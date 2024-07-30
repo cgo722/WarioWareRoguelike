@@ -1,0 +1,226 @@
+[gd_scene load_steps=35 format=3 uid="uid://cudm8b42ylckp"]
+
+[ext_resource type="PackedScene" uid="uid://b1xcvdj4jtjgr" path="res://Scenes/Player/3D/StandardCharacter3D.tscn" id="1_ayve0"]
+[ext_resource type="Script" path="res://Scripts/QuickCollectManager.gd" id="1_bup1j"]
+[ext_resource type="Script" path="res://Scripts/Spawner.gd" id="3_04wo3"]
+[ext_resource type="Material" uid="uid://b80obov3pts5h" path="res://Assets/Materials/OrangeWhiteBox.tres" id="4_lg5nr"]
+[ext_resource type="Texture2D" uid="uid://bv7yf7wq765k0" path="res://Assets/Materials/fantasy_sky_background_0.jpg" id="6_26fn5"]
+[ext_resource type="PackedScene" uid="uid://c7ic4h1k7n0n2" path="res://Assets/Grab The Item/vector_tree.tscn" id="8_7ycbi"]
+[ext_resource type="PackedScene" uid="uid://dcded03yrfcwi" path="res://Assets/Grab The Item/Ship.gltf" id="9_4k2hv"]
+[ext_resource type="Shader" uid="uid://7gcbwkd3kxd3" path="res://Assets/CelShader.tres" id="10_cftgd"]
+[ext_resource type="Texture2D" uid="uid://lfex1275ddjf" path="res://Assets/Grab The Item/Ship_Mixed_AO.png" id="11_iho3o"]
+[ext_resource type="Texture2D" uid="uid://dm537og4ppvro" path="res://Assets/Grab The Item/Ship_Base_color.png" id="12_34gnh"]
+[ext_resource type="PackedScene" uid="uid://b5htcnoahg57c" path="res://Assets/Grab The Item/reverie_alien_ground.tscn" id="12_aepmq"]
+[ext_resource type="Shader" uid="uid://rua5o635tv8" path="res://Assets/Particle FX/3DSmokeClouds.tres" id="13_p3ttr"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_vjijr"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_i1kgg"]
+
+[sub_resource type="PanoramaSkyMaterial" id="PanoramaSkyMaterial_hkn1y"]
+panorama = ExtResource("6_26fn5")
+
+[sub_resource type="Sky" id="Sky_npwxp"]
+sky_material = SubResource("PanoramaSkyMaterial_hkn1y")
+
+[sub_resource type="Environment" id="Environment_l11xs"]
+background_mode = 2
+background_color = Color(0.862745, 0.552941, 0.364706, 1)
+sky = SubResource("Sky_npwxp")
+sdfgi_use_occlusion = true
+adjustment_enabled = true
+adjustment_contrast = 1.2
+
+[sub_resource type="Gradient" id="Gradient_qcrtq"]
+colors = PackedColorArray(0, 0, 0.290196, 1, 0.639216, 0.392157, 0.913725, 1)
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_yc4xe"]
+gradient = SubResource("Gradient_qcrtq")
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_v0v42"]
+render_priority = 0
+shader = ExtResource("10_cftgd")
+shader_parameter/scaling = Vector2(1, 1)
+shader_parameter/Roughness_Strength = 1.0
+shader_parameter/Light_Intesity = Vector3(0.5, 0, 0)
+shader_parameter/Specular_Min = 10.0
+shader_parameter/Specular_Max = 25.0
+shader_parameter/Color_Map = ExtResource("12_34gnh")
+shader_parameter/hue = SubResource("GradientTexture1D_yc4xe")
+shader_parameter/AO_Map = ExtResource("11_iho3o")
+
+[sub_resource type="Gradient" id="Gradient_m8d8a"]
+colors = PackedColorArray(0.931897, 0.931897, 0.931897, 1, 1, 1, 1, 1)
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_06k7m"]
+gradient = SubResource("Gradient_m8d8a")
+
+[sub_resource type="FastNoiseLite" id="FastNoiseLite_6keii"]
+noise_type = 0
+frequency = 1.0
+
+[sub_resource type="NoiseTexture2D" id="NoiseTexture2D_asy1e"]
+seamless = true
+noise = SubResource("FastNoiseLite_6keii")
+
+[sub_resource type="Gradient" id="Gradient_idwvj"]
+offsets = PackedFloat32Array(0.223275, 0.991881)
+colors = PackedColorArray(0.133196, 0.133196, 0.133196, 1, 0.306923, 0.306923, 0.306923, 1)
+
+[sub_resource type="FastNoiseLite" id="FastNoiseLite_p54rf"]
+
+[sub_resource type="NoiseTexture2D" id="NoiseTexture2D_03els"]
+seamless = true
+color_ramp = SubResource("Gradient_idwvj")
+noise = SubResource("FastNoiseLite_p54rf")
+
+[sub_resource type="Gradient" id="Gradient_ldux6"]
+offsets = PackedFloat32Array(0.0703654, 0.994587)
+colors = PackedColorArray(0.41598, 0.415981, 0.41598, 1, 0.847474, 0.847474, 0.847474, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_18e64"]
+gradient = SubResource("Gradient_ldux6")
+
+[sub_resource type="FastNoiseLite" id="FastNoiseLite_gikgc"]
+noise_type = 3
+
+[sub_resource type="NoiseTexture2D" id="NoiseTexture2D_v13r3"]
+noise = SubResource("FastNoiseLite_gikgc")
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_4ny00"]
+render_priority = 0
+shader = ExtResource("13_p3ttr")
+shader_parameter/Specular_Min = null
+shader_parameter/Specular_Max = null
+shader_parameter/Noise_2 = SubResource("NoiseTexture2D_asy1e")
+shader_parameter/Intesity_2 = SubResource("GradientTexture1D_06k7m")
+shader_parameter/noise = SubResource("NoiseTexture2D_v13r3")
+shader_parameter/intensity = SubResource("GradientTexture2D_18e64")
+shader_parameter/color = SubResource("NoiseTexture2D_03els")
+
+[sub_resource type="SphereMesh" id="SphereMesh_edbb7"]
+material = SubResource("ShaderMaterial_4ny00")
+
+[sub_resource type="Curve" id="Curve_47g8o"]
+max_value = 10.0
+_data = [Vector2(0, 0), 0.0, 0.0, 0, 0, Vector2(0.995397, 10), 34.5081, 0.0, 0, 0]
+point_count = 2
+
+[node name="Playground3D" type="Node3D"]
+script = ExtResource("1_bup1j")
+
+[node name="StandardCharacter3D" parent="." instance=ExtResource("1_ayve0")]
+transform = Transform3D(0.999991, -0.00358343, 0.0022564, 0.00358075, 0.999993, 0.00119232, -0.00226065, -0.00118424, 0.999997, 0, 1.99292, 0)
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(0.975783, -0.0854567, -0.201359, 0.197939, 0.736767, 0.646525, 0.093105, -0.670725, 0.735839, 0, 0, 0)
+shadow_enabled = true
+
+[node name="Camera3D" type="Camera3D" parent="."]
+transform = Transform3D(0.927836, 0.198602, -0.315717, -3.53277e-10, 0.846453, 0.532463, 0.372988, -0.494038, 0.78537, -3.328, 21.857, 17.222)
+doppler_tracking = 2
+current = true
+fov = 49.2
+size = 23.077
+
+[node name="PlatForms" type="Node" parent="."]
+
+[node name="Platforms" type="Node3D" parent="PlatForms"]
+transform = Transform3D(88.7036, 0, 0, 0, 0.245862, 0, 0, 0, 88.7036, 0, -0.143837, 0)
+
+[node name="StaticBody3D" type="StaticBody3D" parent="PlatForms/Platforms"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="PlatForms/Platforms/StaticBody3D"]
+shape = SubResource("BoxShape3D_vjijr")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="PlatForms/Platforms/StaticBody3D/CollisionShape3D"]
+transform = Transform3D(11.9273, 0, 0, 0, 1, 0, 0, 0, 3.75798, 0, 0, -0.49189)
+cast_shadow = 0
+mesh = SubResource("BoxMesh_i1kgg")
+surface_material_override/0 = ExtResource("4_lg5nr")
+
+[node name="Spawner" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.08165e-12, 2.08165e-12, 2.08165e-12)
+script = ExtResource("3_04wo3")
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_l11xs")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="TextEdit" type="TextEdit" parent="CanvasLayer"]
+offset_left = 1141.0
+offset_top = 895.0
+offset_right = 1905.0
+offset_bottom = 1035.0
+theme_override_font_sizes/font_size = 91
+text = "Grab the Rods!"
+
+[node name="Instruction Timer" type="Timer" parent="CanvasLayer"]
+wait_time = 3.0
+autostart = true
+
+[node name="VectorTree" parent="." instance=ExtResource("8_7ycbi")]
+transform = Transform3D(0.153227, 0, -0.988191, 0, 1.42092, 0, 0.988191, 0, 0.153227, 24.5183, -0.0209084, -25.0584)
+
+[node name="VectorTree4" parent="." instance=ExtResource("8_7ycbi")]
+transform = Transform3D(0.153227, 0, -0.988191, 0, 0.526003, 0, 0.988191, 0, 0.153227, 9.95474, -0.0209084, -31.4602)
+
+[node name="VectorTree5" parent="." instance=ExtResource("8_7ycbi")]
+transform = Transform3D(0.915403, 0, -0.402539, 0, 0.958166, 0, 0.402539, 0, 0.915403, 16.3382, -0.0209084, -41.308)
+
+[node name="VectorTree6" parent="." instance=ExtResource("8_7ycbi")]
+transform = Transform3D(0.0422938, 0, -0.999105, 0, 0.958166, 0, 0.999105, 0, 0.0422938, 21.1875, -0.0209084, -35.3173)
+
+[node name="VectorTree7" parent="." instance=ExtResource("8_7ycbi")]
+transform = Transform3D(0.0422938, 0, -0.999105, 0, 1.38775, 0, 0.999105, 0, 0.0422938, 4.88962, -0.0209084, -38.0198)
+
+[node name="VectorTree3" parent="." instance=ExtResource("8_7ycbi")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.90622, -0.0209084, -33.7653)
+
+[node name="VectorTree2" parent="." instance=ExtResource("8_7ycbi")]
+transform = Transform3D(1, 0, 0, 0, 0.571764, 0, 0, 0, 1, 24.5191, -0.0209045, -12.4871)
+
+[node name="Ship2" parent="." instance=ExtResource("9_4k2hv")]
+transform = Transform3D(-139.984, 212.327, 240.462, 320.787, 92.5498, 105.024, 0.127645, 262.396, -231.621, -6.76473, 8.3648, -17.9703)
+
+[node name="Ship" parent="Ship2/SpaceShipNoUV_obj" index="0"]
+transform = Transform3D(0.040934, 1.34751e-08, 0.999162, 0, 1, -3.72529e-09, -0.999162, 0, 0.040934, 0, 0, 0)
+surface_material_override/0 = SubResource("ShaderMaterial_v0v42")
+
+[node name="Smoke" type="CPUParticles3D" parent="Ship2"]
+transform = Transform3D(1, -5.52243e-09, -1.61666e-08, 9.76001e-09, 1, -5.69798e-08, 1.92068e-08, -3.13185e-08, 1, -0.00107608, 0.00624242, -0.00221419)
+amount = 35
+lifetime = 5.0
+preprocess = 3.0
+randomness = 1.0
+lifetime_randomness = 0.3
+mesh = SubResource("SphereMesh_edbb7")
+emission_shape = 1
+emission_sphere_radius = 0.01
+gravity = Vector3(2.08165e-12, 2, 2.08165e-12)
+scale_amount_curve = SubResource("Curve_47g8o")
+hue_variation_min = -1.0
+hue_variation_max = 1.0
+
+[node name="Reverie Alien Ground" parent="." instance=ExtResource("12_aepmq")]
+transform = Transform3D(19.9716, 0, 3.56611, 0, 15.29, 0, -3.36182, 0, 21.1853, -0.68584, -2.18861, -14.0893)
+
+[node name="Reverie Alien Ground6" parent="." instance=ExtResource("12_aepmq")]
+transform = Transform3D(-2.80867, 0, 26.1724, 0, 16.0449, 0, -18.4625, 0, -3.98157, 11.2977, -2.86149, -18.4625)
+
+[node name="Reverie Alien Ground5" parent="." instance=ExtResource("12_aepmq")]
+transform = Transform3D(1.50949, 15.1026, -2.94581, -2.4791, -1.94797, -21.1453, -20.0435, 1.37832, 2.39352, 14.0966, -7.07301, -10.2923)
+
+[node name="Reverie Alien Ground2" parent="." instance=ExtResource("12_aepmq")]
+transform = Transform3D(11.1216, 0, 0, 0, 5.35056, 0, 0, 0, 11.7577, 7.16529, -1.32447, -2.02729)
+
+[node name="Reverie Alien Ground4" parent="." instance=ExtResource("12_aepmq")]
+transform = Transform3D(-9.08094, 0, 6.78807, 0, 5.35056, 0, -6.42087, 0, -9.60027, 17.112, 0.585165, -2.91392)
+
+[node name="Reverie Alien Ground3" parent="." instance=ExtResource("12_aepmq")]
+transform = Transform3D(1.53162, 0.899473, -11.4767, 0.621462, -5.27158, -1.90237, -10.9981, -0.172614, -1.70576, 7.87607, -0.158376, -4.34577)
+
+[connection signal="timeout" from="CanvasLayer/Instruction Timer" to="." method="_on_instruction_timer_timeout"]
+
+[editable path="Ship2"]

@@ -1,0 +1,396 @@
+[gd_scene load_steps=17 format=3 uid="uid://cigdqqcwl3t6e"]
+
+[ext_resource type="PackedScene" uid="uid://bqxk3bqyb5tpd" path="res://Assets/Soup/BowlPlayer.tscn" id="1_7djil"]
+[ext_resource type="Script" path="res://Scenes/MicroGames/Dont Drop The Soup/Dont Drop the Soup Manger.gd" id="1_mns8a"]
+[ext_resource type="PackedScene" uid="uid://dl0h7dn0iran5" path="res://Assets/Soup/Broth.tscn" id="2_rdhsj"]
+[ext_resource type="Material" uid="uid://c1dv7aa7utx3t" path="res://Assets/Materials/Soup.tres" id="3_ytn8n"]
+[ext_resource type="PackedScene" uid="uid://cc21o6hirk3mm" path="res://Assets/Soup/ChiefArm.glb" id="4_rh62m"]
+[ext_resource type="Script" path="res://Scenes/MicroGames/Dont Drop The Soup/SkeletonIK3D.gd" id="6_82sld"]
+[ext_resource type="PackedScene" uid="uid://cjqpwl3iol37y" path="res://Assets/Soup/Kitchen.tscn" id="7_idxwn"]
+[ext_resource type="PackedScene" uid="uid://dkinuc5f40coo" path="res://Assets/Soup/BayLeaf.tscn" id="9_g55h6"]
+
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_a7lyf"]
+
+[sub_resource type="Sky" id="Sky_vp0vx"]
+sky_material = SubResource("ProceduralSkyMaterial_a7lyf")
+
+[sub_resource type="Environment" id="Environment_vrcq8"]
+background_mode = 2
+background_color = Color(0.913725, 0.913725, 0.913725, 1)
+sky = SubResource("Sky_vp0vx")
+ambient_light_source = 3
+sdfgi_use_occlusion = true
+adjustment_enabled = true
+adjustment_brightness = 1.7
+adjustment_contrast = 1.1
+adjustment_saturation = 1.52
+
+[sub_resource type="SphereMesh" id="SphereMesh_3nk41"]
+material = ExtResource("3_ytn8n")
+radius = 0.137
+height = 0.356
+
+[sub_resource type="Curve" id="Curve_6ve6n"]
+_data = [Vector2(0, 1), 0.0, -2.83589, 0, 0, Vector2(1, 0), 0.0, 0.0, 0, 0]
+point_count = 2
+
+[sub_resource type="Curve" id="Curve_u0vh4"]
+_data = [Vector2(0.00805524, 1), 0.0, 0.0, 0, 0, Vector2(0.988493, 0), 0.0, 0.0, 0, 0]
+point_count = 2
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_6t406"]
+size = Vector3(191.871, 1, 153.507)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_bou5v"]
+size = Vector3(2.04, 0.35, 1.82)
+
+[node name="DontDropTheSoup" type="Node3D"]
+script = ExtResource("1_mns8a")
+
+[node name="Camera3D" type="Camera3D" parent="."]
+transform = Transform3D(1, -5.95416e-16, 2.46629e-16, 2.4663e-16, 0.707107, 0.707107, -5.95416e-16, -0.707107, 0.707107, 0, 6.16, 6.133)
+fov = 79.7
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_vrcq8")
+
+[node name="BowlPlayer2" parent="." instance=ExtResource("1_7djil")]
+transform = Transform3D(1.99934, 0, 0, 0, 1.99934, 0, 0, 0, 1.99934, 2.08165e-12, 2.08165e-12, 2.08165e-12)
+
+[node name="IKArmMarker" type="Marker3D" parent="BowlPlayer2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1.69352, -1.16052)
+
+[node name="IKThumbMarker" type="Marker3D" parent="BowlPlayer2"]
+transform = Transform3D(0.00161514, 0.00483366, -0.999987, 0.948451, -0.316924, 1.50792e-09, -0.31692, -0.948439, -0.00509639, -1.41831, -0.56815, 0.182428)
+
+[node name="IKPointerMarker" type="Marker3D" parent="BowlPlayer2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.518454, -0.860318, -0.854047)
+
+[node name="IKMiddleMarker" type="Marker3D" parent="BowlPlayer2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.124451, -0.860318, -0.927494)
+
+[node name="IKRingMarker" type="Marker3D" parent="BowlPlayer2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.270067, -0.924268, -0.824047)
+
+[node name="IKPinkieMarker" type="Marker3D" parent="BowlPlayer2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.4394, -0.933183, -0.551408)
+
+[node name="Splash_part" type="CPUParticles3D" parent="BowlPlayer2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.177984, 0.489263, 0.22012)
+emitting = false
+amount = 120
+lifetime = 0.5
+one_shot = true
+explosiveness = 1.0
+randomness = 1.0
+lifetime_randomness = 0.2
+fract_delta = false
+mesh = SubResource("SphereMesh_3nk41")
+direction = Vector3(2.08165e-12, 2.08165e-12, 2.08165e-12)
+initial_velocity_max = 2.5
+split_scale = true
+scale_curve_x = SubResource("Curve_6ve6n")
+scale_curve_y = null
+scale_curve_z = SubResource("Curve_u0vh4")
+
+[node name="Broth" parent="." instance=ExtResource("2_rdhsj")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.103823, -0.150008, -0.454039)
+
+[node name="Broth2" parent="." instance=ExtResource("2_rdhsj")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.103823, -0.150008, 0.324741)
+
+[node name="Broth3" parent="." instance=ExtResource("2_rdhsj")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.103823, -0.150008, 1.01422)
+
+[node name="Broth4" parent="." instance=ExtResource("2_rdhsj")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.636174, -0.150008, 1.1477)
+
+[node name="Broth5" parent="." instance=ExtResource("2_rdhsj")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.636174, -0.150008, 0.365001)
+
+[node name="Broth6" parent="." instance=ExtResource("2_rdhsj")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.636174, -0.150008, -0.414172)
+
+[node name="Broth7" parent="." instance=ExtResource("2_rdhsj")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.32216, -0.150008, 0.132358)
+
+[node name="Broth8" parent="." instance=ExtResource("2_rdhsj")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.916738, -0.150008, 0.173659)
+
+[node name="Broth9" parent="." instance=ExtResource("2_rdhsj")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.916738, -0.150008, -0.646056)
+
+[node name="Broth10" parent="." instance=ExtResource("2_rdhsj")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.916738, -0.150008, 0.913926)
+
+[node name="Broth11" parent="." instance=ExtResource("2_rdhsj")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.103823, 0.740421, -0.454039)
+
+[node name="Broth12" parent="." instance=ExtResource("2_rdhsj")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.103823, 0.740421, 0.324741)
+
+[node name="Broth13" parent="." instance=ExtResource("2_rdhsj")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.103823, 0.740421, 1.01422)
+
+[node name="Broth14" parent="." instance=ExtResource("2_rdhsj")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.636174, 0.740421, 1.1477)
+
+[node name="Broth15" parent="." instance=ExtResource("2_rdhsj")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.636174, 0.740421, 0.365001)
+
+[node name="Broth16" parent="." instance=ExtResource("2_rdhsj")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.636174, 0.740421, -0.414172)
+
+[node name="Broth17" parent="." instance=ExtResource("2_rdhsj")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.32216, 0.740421, 0.132358)
+
+[node name="Broth18" parent="." instance=ExtResource("2_rdhsj")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.916738, 0.740421, 0.173659)
+
+[node name="Broth19" parent="." instance=ExtResource("2_rdhsj")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.916738, 0.740421, -0.646056)
+
+[node name="Broth20" parent="." instance=ExtResource("2_rdhsj")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.916738, 0.740421, 0.913926)
+
+[node name="Broth21" parent="." instance=ExtResource("2_rdhsj")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.103823, 1.70955, -0.454039)
+
+[node name="Broth22" parent="." instance=ExtResource("2_rdhsj")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.103823, 1.70955, 0.324741)
+
+[node name="Broth23" parent="." instance=ExtResource("2_rdhsj")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.103823, 1.70955, 1.01422)
+
+[node name="Broth24" parent="." instance=ExtResource("2_rdhsj")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.636174, 1.70955, 1.1477)
+
+[node name="Broth25" parent="." instance=ExtResource("2_rdhsj")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.636174, 1.70955, 0.365001)
+
+[node name="Broth26" parent="." instance=ExtResource("2_rdhsj")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.636174, 1.70955, -0.414172)
+
+[node name="Broth27" parent="." instance=ExtResource("2_rdhsj")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.32216, 1.70955, 0.132358)
+
+[node name="Broth28" parent="." instance=ExtResource("2_rdhsj")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.916738, 1.70955, 0.173659)
+
+[node name="Broth29" parent="." instance=ExtResource("2_rdhsj")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.916738, 1.70955, -0.646056)
+
+[node name="Broth30" parent="." instance=ExtResource("2_rdhsj")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.916738, 1.70955, 0.913926)
+
+[node name="Broth31" parent="." instance=ExtResource("2_rdhsj")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.103823, 2.88853, -0.454039)
+
+[node name="Broth32" parent="." instance=ExtResource("2_rdhsj")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.103823, 2.88853, 0.324741)
+
+[node name="Broth33" parent="." instance=ExtResource("2_rdhsj")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.103823, 2.88853, 1.01422)
+
+[node name="Broth34" parent="." instance=ExtResource("2_rdhsj")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.636174, 2.88853, 1.1477)
+
+[node name="Broth35" parent="." instance=ExtResource("2_rdhsj")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.636174, 2.88853, 0.365001)
+
+[node name="Broth36" parent="." instance=ExtResource("2_rdhsj")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.636174, 2.88853, -0.414172)
+
+[node name="Broth37" parent="." instance=ExtResource("2_rdhsj")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.32216, 2.88853, 0.132358)
+
+[node name="Broth38" parent="." instance=ExtResource("2_rdhsj")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.916738, 2.88853, 0.173659)
+
+[node name="Broth39" parent="." instance=ExtResource("2_rdhsj")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.916738, 2.88853, -0.646056)
+
+[node name="Broth40" parent="." instance=ExtResource("2_rdhsj")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.916738, 2.88853, 0.913926)
+
+[node name="Broth41" parent="." instance=ExtResource("2_rdhsj")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.103823, 3.77895, -0.454039)
+
+[node name="Broth42" parent="." instance=ExtResource("2_rdhsj")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.103823, 3.77895, 0.324741)
+
+[node name="Broth43" parent="." instance=ExtResource("2_rdhsj")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.103823, 3.77895, 1.01422)
+
+[node name="Broth44" parent="." instance=ExtResource("2_rdhsj")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.636174, 3.77895, 1.1477)
+
+[node name="Broth45" parent="." instance=ExtResource("2_rdhsj")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.636174, 3.77895, 0.365001)
+
+[node name="Broth46" parent="." instance=ExtResource("2_rdhsj")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.636174, 3.77895, -0.414172)
+
+[node name="Broth47" parent="." instance=ExtResource("2_rdhsj")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.32216, 3.77895, 0.132358)
+
+[node name="Broth48" parent="." instance=ExtResource("2_rdhsj")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.916738, 3.77895, 0.173659)
+
+[node name="Broth49" parent="." instance=ExtResource("2_rdhsj")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.916738, 3.77895, -0.646056)
+
+[node name="Broth50" parent="." instance=ExtResource("2_rdhsj")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.916738, 3.77895, 0.913926)
+
+[node name="Broth51" parent="." instance=ExtResource("2_rdhsj")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.103823, 4.74809, -0.454039)
+
+[node name="Broth52" parent="." instance=ExtResource("2_rdhsj")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.103823, 4.74809, 0.324741)
+
+[node name="Broth53" parent="." instance=ExtResource("2_rdhsj")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.103823, 4.74809, 1.01422)
+
+[node name="Broth54" parent="." instance=ExtResource("2_rdhsj")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.636174, 4.74809, 1.1477)
+
+[node name="Broth55" parent="." instance=ExtResource("2_rdhsj")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.636174, 4.74809, 0.365001)
+
+[node name="Broth56" parent="." instance=ExtResource("2_rdhsj")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.636174, 4.74809, -0.414172)
+
+[node name="Broth57" parent="." instance=ExtResource("2_rdhsj")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.32216, 4.74809, 0.132358)
+
+[node name="Broth58" parent="." instance=ExtResource("2_rdhsj")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.916738, 4.74809, 0.173659)
+
+[node name="Broth59" parent="." instance=ExtResource("2_rdhsj")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.916738, 4.74809, -0.646056)
+
+[node name="Broth60" parent="." instance=ExtResource("2_rdhsj")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.916738, 4.74809, 0.913926)
+
+[node name="Area3D" type="Area3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -13.2314, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.72876, 0, -0.671967)
+shape = SubResource("BoxShape3D_6t406")
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 9.5
+autostart = true
+
+[node name="ChiefArm" parent="." instance=ExtResource("4_rh62m")]
+transform = Transform3D(0.886215, 6.93693, -17.7669, -7.25407, -16.3269, -6.73652, -17.6398, 7.06265, 1.87767, 0.0576768, 0.134728, 6.18304)
+
+[node name="Skeleton3D" parent="ChiefArm/metarig" index="0"]
+bones/1/rotation = Quaternion(0.524998, 0.59101, 0.458461, -0.406077)
+bones/1/scale = Vector3(1, 1, 1)
+bones/2/rotation = Quaternion(-0.0738686, 0.740942, 0.0376345, 0.666432)
+bones/2/scale = Vector3(1, 1, 1)
+bones/3/rotation = Quaternion(0.0380705, -0.094498, -0.0187878, 0.994619)
+bones/4/scale = Vector3(1, 1, 1)
+bones/5/rotation = Quaternion(-0.413167, -0.148063, -0.237737, 0.866517)
+bones/6/rotation = Quaternion(-0.129742, -0.0504602, 0.153908, 0.97823)
+bones/7/rotation = Quaternion(0.212991, 0.0203938, 0.0862055, 0.97303)
+bones/8/rotation = Quaternion(-0.154702, 0.00268485, -0.0953732, 0.983343)
+bones/8/scale = Vector3(1, 1, 1)
+bones/9/rotation = Quaternion(-0.00721824, -0.000666661, -0.107082, 0.994224)
+bones/9/scale = Vector3(1, 1, 1)
+bones/10/rotation = Quaternion(0.0777885, 0.0230959, 0.119653, 0.989494)
+bones/11/rotation = Quaternion(-0.0450943, 0.00197227, -0.117152, 0.992088)
+bones/12/rotation = Quaternion(-0.00906574, -0.000998851, -0.122817, 0.992387)
+bones/12/scale = Vector3(1, 1, 1)
+bones/13/rotation = Quaternion(-0.0591591, 0.0286193, 0.10253, 0.992557)
+bones/13/scale = Vector3(1, 1, 1)
+bones/14/rotation = Quaternion(0.0355315, -0.00340079, -0.0400821, 0.998559)
+bones/15/scale = Vector3(1, 1, 1)
+bones/16/rotation = Quaternion(-0.191412, 0.03072, 0.103006, 0.975606)
+bones/16/scale = Vector3(1, 1, 1)
+bones/17/rotation = Quaternion(0.177607, -0.00428904, -0.0851328, 0.980403)
+bones/18/rotation = Quaternion(-0.0125973, -0.00163372, -0.109009, 0.99396)
+
+[node name="ArmIK" type="SkeletonIK3D" parent="ChiefArm/metarig/Skeleton3D" index="1"]
+process_priority = 1
+root_bone = &"shoulder.L"
+tip_bone = &"IK_Bone"
+target_node = NodePath("../../../../BowlPlayer2/IKArmMarker")
+script = ExtResource("6_82sld")
+
+[node name="ThumbIK" type="SkeletonIK3D" parent="ChiefArm/metarig/Skeleton3D" index="2"]
+process_priority = 1
+root_bone = &"hand.L.001"
+tip_bone = &"hand.L.003"
+target_node = NodePath("../../../../BowlPlayer2/IKThumbMarker")
+script = ExtResource("6_82sld")
+
+[node name="PointerIK" type="SkeletonIK3D" parent="ChiefArm/metarig/Skeleton3D" index="3"]
+process_priority = 1
+root_bone = &"hand.L.004"
+tip_bone = &"hand.L.006"
+target_node = NodePath("../../../../BowlPlayer2/IKPointerMarker")
+script = ExtResource("6_82sld")
+
+[node name="MiddleIK" type="SkeletonIK3D" parent="ChiefArm/metarig/Skeleton3D" index="4"]
+process_priority = 1
+root_bone = &"hand.L.007"
+tip_bone = &"hand.L.009"
+target_node = NodePath("../../../../BowlPlayer2/IKMiddleMarker")
+script = ExtResource("6_82sld")
+
+[node name="RingIK" type="SkeletonIK3D" parent="ChiefArm/metarig/Skeleton3D" index="5"]
+process_priority = 1
+root_bone = &"hand.L.010"
+tip_bone = &"hand.L.012"
+target_node = NodePath("../../../../BowlPlayer2/IKRingMarker")
+script = ExtResource("6_82sld")
+
+[node name="PinkieIK" type="SkeletonIK3D" parent="ChiefArm/metarig/Skeleton3D" index="6"]
+process_priority = 1
+root_bone = &"hand.L.013"
+tip_bone = &"hand.L.015"
+target_node = NodePath("../../../../BowlPlayer2/IKPinkieMarker")
+script = ExtResource("6_82sld")
+
+[node name="Area3D2" type="Area3D" parent="."]
+transform = Transform3D(1.99934, 0, 0, 0, 1.99934, 0, 0, 0, 1.99934, 2.08165e-12, 2.08165e-12, 2.08165e-12)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.420205, 0)
+shape = SubResource("BoxShape3D_bou5v")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="TextEdit" type="TextEdit" parent="CanvasLayer"]
+offset_left = 659.0
+offset_top = 177.0
+offset_right = 1315.0
+offset_bottom = 323.0
+theme_override_font_sizes/font_size = 51
+text = "DON'T DROP THE SOUP!!!"
+
+[node name="Instruction TImer" type="Timer" parent="CanvasLayer"]
+wait_time = 3.0
+autostart = true
+
+[node name="Kitchen" parent="." instance=ExtResource("7_idxwn")]
+
+[node name="BayLeaf" parent="." instance=ExtResource("9_g55h6")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.289693, 8.31257, 0.187665)
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(1, -4.66935e-16, 3.28166e-16, -5.69953e-16, -0.846862, 0.531812, 2.95898e-17, -0.531812, -0.846862, 0, 0, 0)
+shadow_enabled = true
+shadow_bias = 7.27
+
+[connection signal="body_entered" from="Area3D" to="." method="_on_area_3d_body_entered"]
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
+[connection signal="body_entered" from="Area3D2" to="BowlPlayer2" method="_on_area_3d_body_entered"]
+[connection signal="timeout" from="CanvasLayer/Instruction TImer" to="." method="_on_instruction_t_imer_timeout"]
+
+[editable path="ChiefArm"]
+[editable path="Kitchen"]

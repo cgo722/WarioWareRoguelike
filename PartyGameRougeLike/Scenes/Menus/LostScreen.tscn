@@ -1,0 +1,45 @@
+[gd_scene load_steps=4 format=3 uid="uid://duq2725666n8r"]
+
+[ext_resource type="Script" path="res://Scenes/Menus/LostScreen.gd" id="1_aketj"]
+[ext_resource type="Theme" uid="uid://vtocky5omcns" path="res://Assets/UIpack/DefaultTheme.tres" id="2_jg41o"]
+[ext_resource type="Script" path="res://Scenes/Menus/GrabFocus.gd" id="2_oovxf"]
+
+[node name="GameOver" type="Control"]
+process_mode = 3
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_aketj")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -96.87
+offset_top = -50.5
+offset_right = 116.435
+offset_bottom = 236.295
+grow_horizontal = 2
+grow_vertical = 2
+alignment = 1
+
+[node name="Label" type="Label" parent="VBoxContainer"]
+layout_mode = 2
+text = "GAME OVER"
+horizontal_alignment = 1
+
+[node name="Main Menu" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+theme = ExtResource("2_jg41o")
+theme_type_variation = &"FlatButton"
+text = "Main Menu"
+script = ExtResource("2_oovxf")
+
+[connection signal="button_up" from="VBoxContainer/Main Menu" to="." method="_on_quit_button_up"]
+[connection signal="button_up" from="VBoxContainer/Main Menu" to="." method="_on_main_menu_button_up"]
