@@ -1,0 +1,197 @@
+{
+    "asset": {
+        "version": "2.0",
+        "generator": "Open Asset Import Library (assimp v3.1.95221606)"
+    },
+    "accessors": [
+        {
+            "bufferView": 0,
+            "byteOffset": 0,
+            "componentType": 5126,
+            "count": 4704,
+            "type": "VEC3",
+            "max": [
+                1.7104649543762208,
+                0.6336659789085388,
+                1.6447679996490479
+            ],
+            "min": [
+                -1.7104649543762208,
+                -0.6336560249328613,
+                -1.0817660093307496
+            ]
+        },
+        {
+            "bufferView": 1,
+            "byteOffset": 0,
+            "componentType": 5126,
+            "count": 4704,
+            "type": "VEC3",
+            "max": [
+                1.0,
+                1.0,
+                1.0
+            ],
+            "min": [
+                -1.0,
+                -1.0,
+                -1.0
+            ]
+        },
+        {
+            "bufferView": 2,
+            "byteOffset": 0,
+            "componentType": 5126,
+            "count": 4704,
+            "type": "VEC4",
+            "max": [
+                1.0,
+                1.0,
+                1.0,
+                1.0
+            ],
+            "min": [
+                -0.999933123588562,
+                -0.9999743700027466,
+                -1.0,
+                -0.999933123588562
+            ]
+        },
+        {
+            "bufferView": 3,
+            "byteOffset": 0,
+            "componentType": 5126,
+            "count": 4704,
+            "type": "VEC2",
+            "max": [
+                0.9999990463256836,
+                0.9999990463256836
+            ],
+            "min": [
+                9.993091225624085e-7,
+                0.01293402910232544
+            ]
+        },
+        {
+            "bufferView": 4,
+            "byteOffset": 0,
+            "componentType": 5123,
+            "count": 19224,
+            "type": "SCALAR",
+            "max": [
+                4703.0
+            ],
+            "min": [
+                0.0
+            ]
+        }
+    ],
+    "buffers": [
+        {
+            "byteLength": 264240,
+            "uri": "Ship.bin"
+        }
+    ],
+    "bufferViews": [
+        {
+            "buffer": 0,
+            "byteOffset": 0,
+            "byteLength": 56448,
+            "target": 34962
+        },
+        {
+            "buffer": 0,
+            "byteOffset": 56448,
+            "byteLength": 56448,
+            "target": 34962
+        },
+        {
+            "buffer": 0,
+            "byteOffset": 112896,
+            "byteLength": 75264,
+            "target": 34962
+        },
+        {
+            "buffer": 0,
+            "byteOffset": 188160,
+            "byteLength": 37632,
+            "target": 34962
+        },
+        {
+            "buffer": 0,
+            "byteOffset": 225792,
+            "byteLength": 38448,
+            "target": 34963
+        }
+    ],
+    "materials": [
+        {
+            "name": "Ship",
+            "pbrMetallicRoughness": {
+                "baseColorFactor": [
+                    0.800000011920929,
+                    0.800000011920929,
+                    0.800000011920929,
+                    1.0
+                ],
+                "metallicFactor": 0.0
+            }
+        }
+    ],
+    "meshes": [
+        {
+            "name": "Ship",
+            "primitives": [
+                {
+                    "mode": 4,
+                    "material": 0,
+                    "indices": 4,
+                    "attributes": {
+                        "POSITION": 0,
+                        "NORMAL": 1,
+                        "TANGENT": 2,
+                        "TEXCOORD_0": 3
+                    }
+                }
+            ]
+        }
+    ],
+    "nodes": [
+        {
+            "name": "SpaceShipNoUV.obj",
+            "matrix": [
+                0.009999999776482582,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.009999999776482582,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.009999999776482582,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                1.0
+            ],
+            "children": [
+                1
+            ]
+        },
+        {
+            "name": "Ship",
+            "mesh": 0
+        }
+    ],
+    "scenes": [
+        {
+            "nodes": [
+                0
+            ]
+        }
+    ],
+    "scene": 0
+}

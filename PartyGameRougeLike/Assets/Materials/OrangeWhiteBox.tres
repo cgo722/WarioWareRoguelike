@@ -1,0 +1,17 @@
+[gd_resource type="StandardMaterial3D" load_steps=2 format=3 uid="uid://b80obov3pts5h"]
+
+[sub_resource type="NoiseTexture2D" id="NoiseTexture2D_ghes4"]
+in_3d_space = true
+seamless = true
+
+[resource]
+diffuse_mode = 3
+specular_mode = 1
+albedo_color = Color(0.501961, 0.239216, 0.952941, 1)
+albedo_texture = SubResource("NoiseTexture2D_ghes4")
+metallic_specular = 1.0
+roughness = 0.06
+heightmap_scale = -16.0
+backlight_enabled = true
+backlight = Color(0.509804, 0.901961, 1, 1)
+grow = true

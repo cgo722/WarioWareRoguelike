@@ -1,0 +1,15 @@
+[gd_scene load_steps=4 format=3 uid="uid://c7ic4h1k7n0n2"]
+
+[ext_resource type="PackedScene" uid="uid://xd6pbijuvljj" path="res://Assets/Grab The Item/VectorTree.glb" id="1_ovqvw"]
+[ext_resource type="Texture2D" uid="uid://c8mjxwfqxjmbo" path="res://Assets/Grab The Item/VectorTree_-color.png" id="2_whwt7"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_h3uqm"]
+diffuse_mode = 3
+specular_mode = 1
+albedo_texture = ExtResource("2_whwt7")
+roughness = 0.0
+
+[node name="VectorTree" instance=ExtResource("1_ovqvw")]
+
+[node name="SimpleVectorAlienTree1" parent="." index="0"]
+material_override = SubResource("StandardMaterial3D_h3uqm")
