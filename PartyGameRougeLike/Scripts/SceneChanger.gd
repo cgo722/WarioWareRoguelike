@@ -14,7 +14,6 @@ var scene_instance
 @onready var upgrades = load("res://Scenes/UI/Upgrade Trey.tscn")
 @onready var skipButton = load("res://Scenes/UI/Skip Button.tscn")
 @onready var pauseMenu = load("res://Scenes/Menus/PauseMenu.tscn")
-var curUpgrade
 
 @onready var UIPlayer = $UISFX
 # Called when the node enters the scene tree for the first time.
@@ -40,10 +39,8 @@ func _process(_delta):
 		gamemanager.score -= gamemanager.skipCost
 		gamemanager.skipCost += 100
 		SceneManager(false)
-		SceneManager(true)
 	if gamemanager.death == true: 
 		SceneManager(false)
-		SceneManager(true)
 	if gamemanager.playerHealth > 0:
 		if gamemanager.start == true:
 			var hud_instance = hud.instantiate()
@@ -60,7 +57,6 @@ func _process(_delta):
 func _on_timer_timeout():
 	if gamemanager.playerHealth > 0:
 		SceneManager(false)
-		SceneManager(true)
 
 	if(gameTimer.wait_time > 3):
 		gameTimer.wait_time *= gamemanager.roundLength
@@ -93,13 +89,13 @@ func SceneManager(loaded):
 		if gamemanager.playerHealth > 0:
 			UpgradeButtons()
 		scene_instance.queue_free()
+		SceneManager(true)
 
 func UpgradeButtons(): 
 	if gamemanager.playerHealth > 0:
 		gamemanager.upgrades = false 
 		var upgrade_instance = upgrades.instantiate()
 		$HUDCanvas.add_child(upgrade_instance)
-		curUpgrade = upgrade_instance
 		get_tree().paused = true
 	pass
 	
