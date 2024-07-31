@@ -19,6 +19,7 @@ config/icon="res://icon.svg"
 [autoload]
 
 GameManager="*res://Scripts/GameManager.gd"
+Shaker="*res://addons/shaker/src/Shaker.gd"
 
 [display]
 
@@ -37,7 +38,7 @@ version_control/autoload_on_startup=true
 
 [editor_plugins]
 
-enabled=PackedStringArray("res://addons/ridiculous_coding/plugin.cfg")
+enabled=PackedStringArray("res://addons/ridiculous_coding/plugin.cfg", "res://addons/shaker/plugin.cfg")
 
 [input]
 

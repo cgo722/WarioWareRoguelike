@@ -1,0 +1,23 @@
+[gd_scene load_steps=6 format=3 uid="uid://cpgwwvy0lobdx"]
+
+[ext_resource type="PackedScene" uid="uid://bsksfvybc36sl" path="res://Assets/Collapsing Bridge/Rope.glb" id="1_0bi3x"]
+[ext_resource type="Shader" uid="uid://7gcbwkd3kxd3" path="res://Assets/CelShader.tres" id="2_i3u4q"]
+
+[sub_resource type="Gradient" id="Gradient_e1sj2"]
+colors = PackedColorArray(0.529794, 0.298748, 0.0675887, 1, 0.917922, 0.670466, 0.134667, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_4eina"]
+gradient = SubResource("Gradient_e1sj2")
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_tcld3"]
+render_priority = 0
+shader = ExtResource("2_i3u4q")
+shader_parameter/scaling = null
+shader_parameter/Roughness_Strength = 1.0
+shader_parameter/Light_Intesity = Vector3(0.5, 0, 0)
+shader_parameter/Color_Map = SubResource("GradientTexture2D_4eina")
+
+[node name="Rope" instance=ExtResource("1_0bi3x")]
+
+[node name="Tube 2" parent="." index="0"]
+surface_material_override/0 = SubResource("ShaderMaterial_tcld3")

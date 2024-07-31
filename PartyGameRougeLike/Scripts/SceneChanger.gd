@@ -1,21 +1,21 @@
 extends Node
 
-@onready var Levels = ["res://Scenes/MicroGames/SurviveTheRain.tscn", "res://Scenes/MicroGames/CollectItem3D.tscn", 
+@onready var Levels := ["res://Scenes/MicroGames/SurviveTheRain.tscn", "res://Scenes/MicroGames/CollectItem3D.tscn", 
 "res://Scenes/MicroGames/Tag3D.tscn", "res://Scenes/MicroGames/Fishing/Fishing.tscn",
 "res://Scenes/MicroGames/Dont Drop The Soup/Dont Drop the Soup.tscn"]
 
-var Bag = []
+var Bag := []
 var loadedLevel
 var previousLevel
 var scene_instance
-@onready var gameTimer = $GameTimer
-@onready var gamemanager = get_node("/root/GameManager")
-@onready var hud = load("res://Scenes/UI/HUD.tscn")
-@onready var upgrades = load("res://Scenes/UI/Upgrade Trey.tscn")
-@onready var skipButton = load("res://Scenes/UI/Skip Button.tscn")
-@onready var pauseMenu = load("res://Scenes/Menus/PauseMenu.tscn")
+@onready var gameTimer := $GameTimer
+@onready var gamemanager := get_node("/root/GameManager")
+@onready var hud := load("res://Scenes/UI/HUD.tscn")
+@onready var upgrades := load("res://Scenes/UI/Upgrade Trey.tscn")
+@onready var skipButton := load("res://Scenes/UI/Skip Button.tscn")
+@onready var pauseMenu := load("res://Scenes/Menus/PauseMenu.tscn")
 
-@onready var UIPlayer = $UISFX
+@onready var UIPlayer := $UISFX
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	Input.set_mouse_mode(Input.MOUSE_MODE_HIDDEN)

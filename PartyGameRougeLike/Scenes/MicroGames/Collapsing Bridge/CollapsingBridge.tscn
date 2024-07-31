@@ -1,7 +1,9 @@
-[gd_scene load_steps=7 format=3 uid="uid://dq2rrssue01df"]
+[gd_scene load_steps=8 format=3 uid="uid://dq2rrssue01df"]
 
 [ext_resource type="PackedScene" uid="uid://b1xcvdj4jtjgr" path="res://Scenes/Player/3D/StandardCharacter3D.tscn" id="1_w7o34"]
 [ext_resource type="PackedScene" uid="uid://df3t252u805na" path="res://Scenes/MicroGames/Collapsing Bridge/Phycis Planks.tscn" id="2_vwlct"]
+[ext_resource type="PackedScene" uid="uid://budtvc4niw8o5" path="res://Assets/Collapsing Bridge/Boulders.glb" id="3_ldxjq"]
+[ext_resource type="PackedScene" uid="uid://cpgwwvy0lobdx" path="res://Assets/Collapsing Bridge/rope_Scene.tscn" id="4_sfp5p"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_rejck"]
 
@@ -11,22 +13,13 @@ sky_material = SubResource("ProceduralSkyMaterial_rejck")
 [sub_resource type="Environment" id="Environment_idhij"]
 background_mode = 2
 sky = SubResource("Sky_dvofe")
-
-[sub_resource type="BoxMesh" id="BoxMesh_vwaan"]
-size = Vector3(17.71, 23, 15)
+fog_enabled = true
+fog_density = 0.0103
 
 [node name="CollapsingBridge" type="Node3D"]
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
 environment = SubResource("Environment_idhij")
-
-[node name="CSGMesh3D" type="CSGMesh3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 19.5585, -11.6217, 0)
-mesh = SubResource("BoxMesh_vwaan")
-
-[node name="CSGMesh3D2" type="CSGMesh3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -21.842, -11.6217, 0)
-mesh = SubResource("BoxMesh_vwaan")
 
 [node name="StandardCharacter3D" parent="." instance=ExtResource("1_w7o34")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.09709, 1.15698, 0)
@@ -36,46 +29,83 @@ transform = Transform3D(1, 0, 0, 0, 0.909961, 0.414693, 0, -0.414693, 0.909961, 
 fov = 26.6
 
 [node name="PhycisPlanks" parent="." instance=ExtResource("2_vwlct")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.42681, 0, 0.534597)
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -2.42681, 0, 0.534597)
 
 [node name="PhycisPlanks2" parent="." instance=ExtResource("2_vwlct")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -11.3193, 0, 0.534597)
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -11.3193, 0, 0.534597)
 
 [node name="PhycisPlanks3" parent="." instance=ExtResource("2_vwlct")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9.90474, 0, 0.534597)
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -9.90474, 0, 0.534597)
 
 [node name="PhycisPlanks4" parent="." instance=ExtResource("2_vwlct")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.46633, 0, 0.534597)
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -8.46633, 0, 0.534597)
 
 [node name="PhycisPlanks5" parent="." instance=ExtResource("2_vwlct")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.89736, 0, 0.534597)
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -6.89736, 0, 0.534597)
 
 [node name="PhycisPlanks6" parent="." instance=ExtResource("2_vwlct")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.30828, 0, 0.534597)
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -5.30828, 0, 0.534597)
 
 [node name="PhycisPlanks7" parent="." instance=ExtResource("2_vwlct")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.96655, 0, 0.534597)
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -3.96655, 0, 0.534597)
 
 [node name="PhycisPlanks8" parent="." instance=ExtResource("2_vwlct")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.612226, 0, 0.534597)
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -0.612226, 0, 0.534597)
 
 [node name="PhycisPlanks9" parent="." instance=ExtResource("2_vwlct")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.15371, 0, 0.534597)
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 1.15371, 0, 0.534597)
 
 [node name="PhycisPlanks10" parent="." instance=ExtResource("2_vwlct")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.88905, 0, 0.534597)
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 2.88905, 0, 0.534597)
 
 [node name="PhycisPlanks11" parent="." instance=ExtResource("2_vwlct")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.48793, 0, 0.534597)
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 4.48793, 0, 0.534597)
 
 [node name="PhycisPlanks12" parent="." instance=ExtResource("2_vwlct")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.05397, 0, 0.534597)
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 6.05397, 0, 0.534597)
 
 [node name="PhycisPlanks13" parent="." instance=ExtResource("2_vwlct")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.57364, 0, 0.534597)
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 7.57364, 0, 0.534597)
 
 [node name="PhycisPlanks14" parent="." instance=ExtResource("2_vwlct")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.6517, 0, 0.534597)
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 8.6517, 0, 0.534597)
 
 [node name="PhycisPlanks15" parent="." instance=ExtResource("2_vwlct")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9.87832, 0, 0.534597)
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 9.87832, 0, 0.534597)
+
+[node name="Cliff +" type="Node3D" parent="."]
+transform = Transform3D(0.710971, 0, 0.703221, 0, 1, 0, -0.703221, 0, 0.710971, 25.1482, -4.20959, -3.31658)
+
+[node name="Boulders" parent="Cliff +" instance=ExtResource("3_ldxjq")]
+
+[node name="Boulders3" parent="Cliff +" instance=ExtResource("3_ldxjq")]
+transform = Transform3D(-0.258071, 0.468755, 1.22285, 0.699306, 1.10313, -0.27528, -1.10728, 0.587432, -0.458861, 5.90215, -4.89211, 3.22534)
+
+[node name="Boulders4" parent="Cliff +" instance=ExtResource("3_ldxjq")]
+transform = Transform3D(-3.16609, 0.390279, 0.745511, 0.0475907, 2.98076, -1.35833, -0.840142, -1.30192, -2.88641, 10.5069, -26.0225, 0.441174)
+
+[node name="Boulders2" parent="Cliff +" instance=ExtResource("3_ldxjq")]
+transform = Transform3D(0.794873, 0.920565, 0.505194, -0.147253, 0.725068, -1.08953, -1.0397, 0.6011, 0.540542, -10.6052, 0.830187, 1.52412)
+
+[node name="Boulders5" parent="Cliff +" instance=ExtResource("3_ldxjq")]
+transform = Transform3D(1.03357, -0.608151, -0.544406, -0.147253, 0.725068, -1.08953, 0.802834, 0.915922, 0.501028, -1.67807, 0.774386, -10.2952)
+
+[node name="Cliff -" type="Node3D" parent="."]
+transform = Transform3D(0.710971, 0, 0.703221, 0, 1, 0, -0.703221, 0, 0.710971, -33.1492, -4.20959, -3.31658)
+
+[node name="Boulders" parent="Cliff -" instance=ExtResource("3_ldxjq")]
+
+[node name="Boulders3" parent="Cliff -" instance=ExtResource("3_ldxjq")]
+transform = Transform3D(-0.67706, 0.846131, 0.779328, 1.05234, 0.820823, 0.0230602, -0.464622, 0.626107, -1.08343, 10.5125, -1.52025, 7.78549)
+
+[node name="Boulders4" parent="Cliff -" instance=ExtResource("3_ldxjq")]
+transform = Transform3D(1.46923, -2.68524, 1.16751, 1.49292, -0.436719, -2.88317, 2.51889, 1.8251, 1.02784, 4.39014, -26.0225, -5.60888)
+
+[node name="Boulders2" parent="Cliff -" instance=ExtResource("3_ldxjq")]
+transform = Transform3D(0.794873, 0.920565, 0.505194, -0.147253, 0.725068, -1.08953, -1.0397, 0.6011, 0.540542, -10.2766, 0, 1.77781)
+
+[node name="Rope" parent="." instance=ExtResource("4_sfp5p")]
+transform = Transform3D(1.85167, 0, 0, 0, 1.85111, -0.0300208, 0, 0.0386135, 1.43918, -1.24165, 0, 2.0949)
+
+[node name="Rope2" parent="." instance=ExtResource("4_sfp5p")]
+transform = Transform3D(-1.852, 0, 0, 0, 1.78255, -0.390361, 0, -0.502397, -1.38504, -1.24165, 0, -1.03216)
