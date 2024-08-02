@@ -36,7 +36,6 @@ func _ready():
 	playerHealth = 3
 	score = 0
 	savingResource = SavingResource.loadData()
-	print(savingResource.HiScore)
 
 func _reset():
 	playerSpeed3D = 1.0
