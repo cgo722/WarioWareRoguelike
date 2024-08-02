@@ -1,14 +1,17 @@
 extends CharacterBody2D
 
-@onready var gamemanager = get_node("/root/GameManager")
+@onready var gamemanager := get_node("/root/GameManager")
 @onready var SPEED : float = 300.0 * gamemanager.playerSpeed2D
 @onready var pwrBar : TextureProgressBar = $TextureProgressBar
 var depth : float
 @export var pwrStr : float = 10
 var fishing : bool
+var animationPlayed : bool = false
 
-@onready var fishDeathPS = load("res://Assets/FishingAssets/FishDeath.tscn")
-@onready var splashPS = load("res://Assets/FishingAssets/Splash.tscn")
+@onready var fishDeathPS := load("res://Assets/FishingAssets/FishDeath.tscn")
+@onready var splashPS := load("res://Assets/FishingAssets/Splash.tscn")
+@onready var fisherman := $"../FishermanSprite"
+
 # Get the gravity from the project settings to be synced with RigidBody nodes.
 
 var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
@@ -22,13 +25,18 @@ func _physics_process(delta):
 	pwrBar.value = depth
 	if Input.is_action_pressed("jump") && fishing == false:
 		depth += (pwrStr * gamemanager.jumpStrength)
+		if animationPlayed == false:
+			fisherman.play("Reel")
+			animationPlayed = true
 		pass
 		
 	if Input.is_action_just_released("jump") && fishing == false:
 		velocity.y = depth
 		depth = 0
 		fishing = true
-		
+		fisherman.play("Cast")
+		animationPlayed = false
+
 	if fishing == true:
 		velocity.y += (-gravity * delta) * .5
 		

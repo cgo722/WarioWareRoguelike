@@ -1,10 +1,14 @@
-[gd_scene load_steps=10 format=3 uid="uid://occn8l637atj"]
+[gd_scene load_steps=15 format=3 uid="uid://occn8l637atj"]
 
 [ext_resource type="PackedScene" uid="uid://bsduxf5a3ga11" path="res://Assets/FishingAssets/FishingPlayer.tscn" id="1_bkbfo"]
 [ext_resource type="Script" path="res://Scenes/MicroGames/Fishing/FishingManager.gd" id="1_nx27p"]
 [ext_resource type="PackedScene" uid="uid://co4g08277ryvx" path="res://Scenes/MicroGames/Fishing/SpawnerFishing.tscn" id="3_8mh63"]
 [ext_resource type="Texture2D" uid="uid://bk30gxb8q4v0j" path="res://Assets/FishingAssets/Boat 2.png" id="4_eg3lq"]
 [ext_resource type="Texture2D" uid="uid://ciwaapf2otsen" path="res://Assets/FishingAssets/Background_(fishing)_Low_Red.png" id="4_nxi4o"]
+[ext_resource type="Texture2D" uid="uid://cl43rq73dewxj" path="res://Assets/FishingAssets/IMG_0431.png" id="6_6egx7"]
+[ext_resource type="Texture2D" uid="uid://klhim3uch7fv" path="res://Assets/FishingAssets/IMG_0432.png" id="7_rme3c"]
+[ext_resource type="Texture2D" uid="uid://dqjuq0vukxegh" path="res://Assets/FishingAssets/IMG_0433.png" id="8_dv4im"]
+[ext_resource type="Texture2D" uid="uid://dkarbwoq5kxhh" path="res://Assets/FishingAssets/IMG_0434.png" id="9_bvsbo"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_emb46"]
 
@@ -17,6 +21,37 @@ fill_from = Vector2(1, 1)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_j5lvi"]
 size = Vector2(34.9026, 49.7549)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_uwe1i"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("8_dv4im")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_bvsbo")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_6egx7")
+}],
+"loop": false,
+"name": &"Cast",
+"speed": 7.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("6_6egx7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_rme3c")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_dv4im")
+}],
+"loop": false,
+"name": &"Reel",
+"speed": 7.0
+}]
 
 [node name="Fishing" type="Node2D"]
 position = Vector2(963, 549)
@@ -103,6 +138,12 @@ text = "Catch all the Fish!"
 [node name="Instruction Timer" type="Timer" parent="CanvasLayer"]
 wait_time = 3.0
 autostart = true
+
+[node name="FishermanSprite" type="AnimatedSprite2D" parent="."]
+z_index = -2000
+position = Vector2(-462, -161)
+sprite_frames = SubResource("SpriteFrames_uwe1i")
+animation = &"Cast"
 
 [connection signal="body_entered" from="Water/Area2D" to="FishingPlayer" method="_on_area_2d_body_entered"]
 [connection signal="body_exited" from="Water/Area2D" to="FishingPlayer" method="_on_area_2d_body_exited"]
