@@ -1,16 +1,10 @@
-[gd_scene load_steps=4 format=3 uid="uid://ba7wlrqkaitun"]
+[gd_scene load_steps=3 format=3 uid="uid://ba7wlrqkaitun"]
 
 [ext_resource type="Script" path="res://Scenes/MicroGames/Spam Space Bar Game/MashCharacter.gd" id="1_7dk12"]
-
-[sub_resource type="Gradient" id="Gradient_u6k72"]
-
-[sub_resource type="GradientTexture2D" id="GradientTexture2D_pg3p6"]
-gradient = SubResource("Gradient_u6k72")
-width = 15
-height = 25
+[ext_resource type="Texture2D" uid="uid://cedyy6ffeyjyq" path="res://Assets/SpamSpaceBarGame/IMG_0404.png" id="2_1i2pb"]
 
 [node name="MashCharacter" type="Node2D"]
 script = ExtResource("1_7dk12")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-texture = SubResource("GradientTexture2D_pg3p6")
+texture = ExtResource("2_1i2pb")
