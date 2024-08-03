@@ -6,9 +6,7 @@
 [ext_resource type="Script" path="res://addons/shaker/data/Vector3/ShakerTypeRandom3D.gd" id="4_n1sx2"]
 [ext_resource type="Script" path="res://addons/shaker/data/Vector3/ShakerPreset3D.gd" id="5_o80lf"]
 
-[sub_resource type="BoxShape3D" id="BoxShape3D_br2h7"]
-
-[sub_resource type="Resource" id="Resource_cikk5"]
+[sub_resource type="Resource" id="Resource_8py6t"]
 script = ExtResource("4_n1sx2")
 seed = 0
 amplitude = Vector3(1, 1, 1)
@@ -21,7 +19,7 @@ end_percent = 1.0
 _temp_graph = false
 bake_internal = 64
 
-[sub_resource type="Resource" id="Resource_u33tn"]
+[sub_resource type="Resource" id="Resource_s147v"]
 script = ExtResource("4_n1sx2")
 seed = 0
 amplitude = Vector3(1, 1, 1)
@@ -34,16 +32,18 @@ end_percent = 1.0
 _temp_graph = false
 bake_internal = 64
 
-[sub_resource type="Resource" id="Resource_0tn50"]
+[sub_resource type="Resource" id="Resource_n3257"]
 script = ExtResource("5_o80lf")
-PositionShake = Array[Resource("res://addons/shaker/data/Vector3/BaseShakerType3D.gd")]([SubResource("Resource_cikk5")])
-RotationShake = Array[Resource("res://addons/shaker/data/Vector3/BaseShakerType3D.gd")]([SubResource("Resource_u33tn")])
+PositionShake = Array[Resource("res://addons/shaker/data/Vector3/BaseShakerType3D.gd")]([SubResource("Resource_8py6t")])
+RotationShake = Array[Resource("res://addons/shaker/data/Vector3/BaseShakerType3D.gd")]([SubResource("Resource_s147v")])
 ScaleShake = Array[Resource("res://addons/shaker/data/Vector3/BaseShakerType3D.gd")]([])
 bake_internal = 64
 __follow_timeline = false
 
+[sub_resource type="BoxShape3D" id="BoxShape3D_br2h7"]
+
 [node name="PhycisPlanks" type="Node3D"]
-transform = Transform3D(1, -3.32948e-08, -1.26893e-08, 3.32948e-08, 1, -7.21775e-09, 1.26893e-08, 7.21775e-09, 1, -1.51515e-07, -2.03378e-07, 6.14673e-08)
+transform = Transform3D(2.6, -4.13915e-08, -1.21072e-08, 4.13915e-08, 2.6, 7.71834e-09, 1.21072e-08, -7.71834e-09, 2.6, -1.3558e-07, -2.08597e-07, 9.39835e-08)
 script = ExtResource("1_0o672")
 randChance = 21
 
@@ -52,6 +52,13 @@ freeze = true
 
 [node name="Plank" parent="RigidBody3D" instance=ExtResource("2_mcdwo")]
 
+[node name="ShakerComponent3D" type="Node3D" parent="RigidBody3D/Plank"]
+transform = Transform3D(2.6, -3.59413e-17, 0, -3.59413e-17, 2.6, 0, 0, 0, 2.6, 0, 0, 0)
+script = ExtResource("3_mgtf8")
+intensity = 0.05
+duration = 1.0
+shakerPreset = SubResource("Resource_n3257")
+
 [node name="CollisionShape3D" type="CollisionShape3D" parent="RigidBody3D"]
 transform = Transform3D(1.05587, 0, 0, 0, 0.0908096, 0, 0, 0, 0.304391, 0, 0, 0)
 shape = SubResource("BoxShape3D_br2h7")
@@ -59,10 +66,5 @@ shape = SubResource("BoxShape3D_br2h7")
 [node name="Timer" type="Timer" parent="."]
 autostart = true
 
-[node name="ShakerComponent3D" type="Node3D" parent="."]
-script = ExtResource("3_mgtf8")
-intensity = 0.05
-duration = 1.0
-shakerPreset = SubResource("Resource_0tn50")
-
+[connection signal="shake_finished" from="RigidBody3D/Plank/ShakerComponent3D" to="." method="_on_shaker_component_3d_shake_finished"]
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

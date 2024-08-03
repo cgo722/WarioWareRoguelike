@@ -6,9 +6,11 @@ var count : int
 @onready var sprite := $Sprite2D
 @onready var spriteAnim := ["res://Assets/SpamSpaceBarGame/IMG_0404.png",\
  "res://Assets/SpamSpaceBarGame/IMG_0405.png"]
-@onready var worldTree := $"../World Tree"
+@onready var worldTree := $"../../ParallaxMidGround/World Tree"
 @onready var worldTreeAnim := ["res://Assets/SpamSpaceBarGame/IMG_0395.png", "res://Assets/SpamSpaceBarGame/IMG_0407.png",
 "res://Assets/SpamSpaceBarGame/IMG_0408.png", "res://Assets/SpamSpaceBarGame/IMG_0409.png","res://Assets/SpamSpaceBarGame/IMG_0410.png" ]
+@onready var camShake := $"../../../Camera2D/ShakerComponent2D"
+@onready var woodChipParticles := load("res://Assets/Particle FX/WoodChips.tscn")
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	gamemanager.completed = false
@@ -20,6 +22,9 @@ func _process(delta):
 	if Input.is_action_just_pressed("jump"):
 		count += roundi(1 * gamemanager.jumpStrength)
 		sprite.texture = load(spriteAnim[1])
+		camShake.play_shake()
+		var woodChipInstance = woodChipParticles.instantiate()
+		self.add_child(woodChipInstance)
 	else:
 		sprite.texture = load(spriteAnim[0])
 	if count < maxCount * 0.25:

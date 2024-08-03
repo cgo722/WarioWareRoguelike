@@ -1,0 +1,16 @@
+[gd_resource type="TileSet" load_steps=3 format=3 uid="uid://dej71b6bknwed"]
+
+[ext_resource type="Texture2D" uid="uid://b7bwmxtmgy6p2" path="res://Assets/SpamSpaceBarGame/TileMap.PNG" id="1_k2jhi"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_2aq1i"]
+texture = ExtResource("1_k2jhi")
+0:0/0 = 0
+1:0/0 = 0
+2:0/0 = 0
+1:2/0 = 0
+2:2/0 = 0
+3:2/0 = 0
+3:3/0 = 0
+
+[resource]
+sources/0 = SubResource("TileSetAtlasSource_2aq1i")
