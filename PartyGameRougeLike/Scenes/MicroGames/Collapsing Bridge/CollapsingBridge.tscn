@@ -29,49 +29,58 @@ transform = Transform3D(1, 0, 0, 0, 0.909961, 0.414693, 0, -0.414693, 0.909961, 
 fov = 26.6
 
 [node name="PhycisPlanks" parent="." instance=ExtResource("2_vwlct")]
-transform = Transform3D(-9.49491e-08, 0, 2.17218, 0, 2.17218, 0, -2.17218, 0, -9.49491e-08, -2.42681, -0.614577, 0.534597)
-
-[node name="PhycisPlanks2" parent="." instance=ExtResource("2_vwlct")]
-transform = Transform3D(-1.06724e-07, 0.953296, 2.44155, 4.16699e-08, 2.44155, -0.953296, -2.62106, 0, -1.1457e-07, -8.27702, 0.495189, 0.534597)
-
-[node name="PhycisPlanks3" parent="." instance=ExtResource("2_vwlct")]
-transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -9.90474, 0, 0.534597)
-
-[node name="PhycisPlanks4" parent="." instance=ExtResource("2_vwlct")]
-transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -8.46633, 0, 0.534597)
-
-[node name="PhycisPlanks5" parent="." instance=ExtResource("2_vwlct")]
-transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -6.89736, 0, 0.534597)
-
-[node name="PhycisPlanks6" parent="." instance=ExtResource("2_vwlct")]
-transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -5.30828, 0, 0.534597)
-
-[node name="PhycisPlanks7" parent="." instance=ExtResource("2_vwlct")]
-transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -3.96655, 0, 0.534597)
-
-[node name="PhycisPlanks8" parent="." instance=ExtResource("2_vwlct")]
-transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -0.612226, 0, 0.534597)
-
-[node name="PhycisPlanks9" parent="." instance=ExtResource("2_vwlct")]
-transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 1.15371, 0, 0.534597)
+transform = Transform3D(-9.49491e-08, 0, 2.17218, 0, 2.17218, 0, -2.17218, 0, -9.49491e-08, -2.42681, -0.0350526, 0.534597)
 
 [node name="PhycisPlanks10" parent="." instance=ExtResource("2_vwlct")]
-transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 2.88905, 0, 0.534597)
+transform = Transform3D(-9.49491e-08, 0, 2.17218, 0, 2.17218, 0, -2.17218, 0, -9.49491e-08, -1.2988, -0.193982, 0.534597)
 
 [node name="PhycisPlanks11" parent="." instance=ExtResource("2_vwlct")]
-transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 4.48793, 0, 0.534597)
+transform = Transform3D(-9.49491e-08, 0, 2.17218, 0, 2.17218, 0, -2.17218, 0, -9.49491e-08, -0.399348, -0.193982, 0.534597)
 
 [node name="PhycisPlanks12" parent="." instance=ExtResource("2_vwlct")]
-transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 6.05397, 0, 0.534597)
+transform = Transform3D(-9.49491e-08, 0, 2.17218, 0, 2.17218, 0, -2.17218, 0, -9.49491e-08, 0.457241, -0.193982, 0.534597)
 
 [node name="PhycisPlanks13" parent="." instance=ExtResource("2_vwlct")]
-transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 7.57364, 0, 0.534597)
+transform = Transform3D(-9.49491e-08, 0, 2.17218, 0, 2.17218, 0, -2.17218, 0, -9.49491e-08, 1.37368, -0.193982, 0.534597)
 
 [node name="PhycisPlanks14" parent="." instance=ExtResource("2_vwlct")]
-transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 8.6517, 0, 0.534597)
+transform = Transform3D(-9.49491e-08, 0, 2.17218, 0, 2.17218, 0, -2.17218, 0, -9.49491e-08, 2.17566, -0.193982, 0.534597)
 
 [node name="PhycisPlanks15" parent="." instance=ExtResource("2_vwlct")]
-transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 9.87832, 0, 0.534597)
+transform = Transform3D(-9.49491e-08, 0, 2.17218, 0, 2.17218, 0, -2.17218, 0, -9.49491e-08, 3.06162, -0.193982, 0.534597)
+
+[node name="PhycisPlanks16" parent="." instance=ExtResource("2_vwlct")]
+transform = Transform3D(-9.49491e-08, 0, 2.17218, 0, 2.17218, 0, -2.17218, 0, -9.49491e-08, 3.97975, -0.193982, 0.534597)
+
+[node name="PhycisPlanks17" parent="." instance=ExtResource("2_vwlct")]
+transform = Transform3D(-9.49491e-08, 0, 2.17218, 0, 2.17218, 0, -2.17218, 0, -9.49491e-08, 4.9107, -0.193982, 0.534597)
+
+[node name="PhycisPlanks18" parent="." instance=ExtResource("2_vwlct")]
+transform = Transform3D(-9.49491e-08, 0, 2.17218, 0, 2.17218, 0, -2.17218, 0, -9.49491e-08, 5.83603, -0.193982, 0.534597)
+
+[node name="PhycisPlanks19" parent="." instance=ExtResource("2_vwlct")]
+transform = Transform3D(-9.49491e-08, 0, 2.17218, 0, 2.17218, 0, -2.17218, 0, -9.49491e-08, 6.86905, -0.193982, 0.534597)
+
+[node name="PhycisPlanks2" parent="." instance=ExtResource("2_vwlct")]
+transform = Transform3D(-9.41491e-08, 0.281384, 2.15388, 1.22997e-08, 2.15388, -0.281384, -2.17218, -7.48044e-25, -9.49491e-08, -3.2054, 0.026215, 0.534597)
+
+[node name="PhycisPlanks3" parent="." instance=ExtResource("2_vwlct")]
+transform = Transform3D(-9.33712e-08, 0.394357, 2.13608, 1.72379e-08, 2.13608, -0.394357, -2.17218, -2.49117e-24, -9.49491e-08, -3.98221, 0.17097, 0.534597)
+
+[node name="PhycisPlanks4" parent="." instance=ExtResource("2_vwlct")]
+transform = Transform3D(-9.39086e-08, 0.320694, 2.14838, 1.4018e-08, 2.14838, -0.320694, -2.17218, -1.35458e-24, -9.49491e-08, -4.84267, 0.34715, 0.534597)
+
+[node name="PhycisPlanks5" parent="." instance=ExtResource("2_vwlct")]
+transform = Transform3D(-9.2434e-08, 0.496647, 2.11464, 2.17091e-08, 2.11464, -0.496647, -2.17218, 2.80614e-16, -9.49491e-08, -5.72704, 0.518421, 0.534597)
+
+[node name="PhycisPlanks6" parent="." instance=ExtResource("2_vwlct")]
+transform = Transform3D(-9.23811e-08, 0.501775, 2.11343, 2.19333e-08, 2.11343, -0.501775, -2.17218, -5.55007e-25, -9.49491e-08, -6.5636, 0.70699, 0.534597)
+
+[node name="PhycisPlanks7" parent="." instance=ExtResource("2_vwlct")]
+transform = Transform3D(-9.30105e-08, 0.436703, 2.12783, 1.90889e-08, 2.12783, -0.436703, -2.17218, -3.14455e-24, -9.49491e-08, -7.43602, 0.945654, 0.534597)
+
+[node name="PhycisPlanks8" parent="." instance=ExtResource("2_vwlct")]
+transform = Transform3D(-9.0478e-08, 0.658717, 2.06989, 2.87935e-08, 2.06989, -0.658717, -2.17218, -2.97654e-24, -9.49491e-08, -8.358, 1.19937, 0.534597)
 
 [node name="Cliff +" type="Node3D" parent="."]
 transform = Transform3D(0.710971, 0, 0.703221, 0, 1, 0, -0.703221, 0, 0.710971, 25.1482, -4.20959, -3.31658)
@@ -105,7 +114,7 @@ transform = Transform3D(1.46923, -2.68524, 1.16751, 1.49292, -0.436719, -2.88317
 transform = Transform3D(0.794873, 0.920565, 0.505194, -0.147253, 0.725068, -1.08953, -1.0397, 0.6011, 0.540542, -10.2766, 0, 1.77781)
 
 [node name="Rope" parent="." instance=ExtResource("4_sfp5p")]
-transform = Transform3D(1.85212, -4.71176e-16, 4.83225e-16, 6.21894e-16, 1.78297, -0.389431, -4.71188e-16, 0.501171, 1.38544, -1.24165, 0, 2.0949)
+transform = Transform3D(1.8515, 0.0463608, -0.0101258, -0.0481588, 1.78237, -0.3893, -2.88632e-07, 0.501172, 1.38544, -0.656056, 0.346576, 2.0949)
 
 [node name="Rope2" parent="." instance=ExtResource("4_sfp5p")]
-transform = Transform3D(-1.85212, 3.41282e-05, -1.63914e-05, 3.85721e-05, 1.78261, -0.390425, 1.10451e-05, -0.502451, -1.38517, -1.24165, 0.299934, -1.03216)
+transform = Transform3D(-1.85212, 3.50391e-05, -1.67217e-05, 3.95643e-05, 1.78261, -0.390429, 1.1207e-05, -0.502452, -1.38517, -1.24165, 0.299934, -1.03216)
