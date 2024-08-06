@@ -1,5 +1,6 @@
-[gd_scene load_steps=8 format=3 uid="uid://dq2rrssue01df"]
+[gd_scene load_steps=9 format=3 uid="uid://dq2rrssue01df"]
 
+[ext_resource type="Script" path="res://Scenes/MicroGames/Collapsing Bridge/CollapsingBridgeManager.gd" id="1_e0ft4"]
 [ext_resource type="PackedScene" uid="uid://b1xcvdj4jtjgr" path="res://Scenes/Player/3D/StandardCharacter3D.tscn" id="1_w7o34"]
 [ext_resource type="PackedScene" uid="uid://df3t252u805na" path="res://Scenes/MicroGames/Collapsing Bridge/Phycis Planks.tscn" id="2_vwlct"]
 [ext_resource type="PackedScene" uid="uid://budtvc4niw8o5" path="res://Assets/Collapsing Bridge/Boulders.glb" id="3_ldxjq"]
@@ -17,6 +18,7 @@ fog_enabled = true
 fog_density = 0.0103
 
 [node name="CollapsingBridge" type="Node3D"]
+script = ExtResource("1_e0ft4")
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
 environment = SubResource("Environment_idhij")
@@ -99,9 +101,9 @@ transform = Transform3D(1.46923, -2.68524, 1.16751, 1.49292, -0.436719, -2.88317
 transform = Transform3D(0.794873, 0.920565, 0.505194, -0.147253, 0.725068, -1.08953, -1.0397, 0.6011, 0.540542, -10.2766, 0, 1.77781)
 
 [node name="Rope" parent="." instance=ExtResource("4_sfp5p")]
-transform = Transform3D(1.85242, 0.0461108, -0.0100048, -0.0478831, 1.78287, -0.389786, -9.44381e-05, 0.501583, 1.38641, -0.656056, 0.346576, 2.0949)
+transform = Transform3D(1.85242, 0.0461109, -0.0100049, -0.0478831, 1.78287, -0.389786, -9.4435e-05, 0.501583, 1.38641, -0.656056, 0.346576, 2.0949)
 
 [node name="Rope2" parent="." instance=ExtResource("4_sfp5p")]
-transform = Transform3D(-1.85303, 0.000297703, -0.00014496, 0.000337211, 1.7831, -0.390916, 9.86877e-05, -0.502868, -1.38614, -1.24165, 0.299934, -1.03216)
+transform = Transform3D(-1.85303, 0.000297704, -0.00014496, 0.000337211, 1.7831, -0.390918, 9.86869e-05, -0.502868, -1.38614, -1.24165, 0.299934, -1.03216)
 
 [editable path="PhycisPlanks"]
