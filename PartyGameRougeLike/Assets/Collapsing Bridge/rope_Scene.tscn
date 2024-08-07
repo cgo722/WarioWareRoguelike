@@ -1,24 +1,14 @@
-[gd_scene load_steps=12 format=3 uid="uid://cpgwwvy0lobdx"]
+[gd_scene load_steps=9 format=3 uid="uid://cpgwwvy0lobdx"]
 
 [ext_resource type="PackedScene" uid="uid://bsksfvybc36sl" path="res://Assets/Collapsing Bridge/Rope.glb" id="1_0bi3x"]
-[ext_resource type="Shader" uid="uid://7gcbwkd3kxd3" path="res://Assets/CelShader.tres" id="2_i3u4q"]
 [ext_resource type="Script" path="res://addons/shaker/src/Vector3/shaker_component3D.gd" id="3_seold"]
 [ext_resource type="Script" path="res://addons/shaker/data/Vector3/ShakerTypeSineWave3D.gd" id="4_4jc8s"]
 [ext_resource type="Script" path="res://addons/shaker/data/Vector3/ShakerPreset3D.gd" id="5_l1wjk"]
 
-[sub_resource type="Gradient" id="Gradient_e1sj2"]
-colors = PackedColorArray(0.529794, 0.298748, 0.0675887, 1, 0.917922, 0.670466, 0.134667, 1)
-
-[sub_resource type="GradientTexture2D" id="GradientTexture2D_4eina"]
-gradient = SubResource("Gradient_e1sj2")
-
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_tcld3"]
-render_priority = 0
-shader = ExtResource("2_i3u4q")
-shader_parameter/scaling = null
-shader_parameter/Roughness_Strength = 1.0
-shader_parameter/Light_Intesity = Vector3(0.5, 0, 0)
-shader_parameter/Color_Map = SubResource("GradientTexture2D_4eina")
+[sub_resource type="ORMMaterial3D" id="ORMMaterial3D_2j43m"]
+diffuse_mode = 3
+specular_mode = 1
+albedo_color = Color(0.776533, 0.607713, 0.314476, 1)
 
 [sub_resource type="Resource" id="Resource_5o82q"]
 script = ExtResource("4_4jc8s")
@@ -60,10 +50,9 @@ __follow_timeline = false
 transform = Transform3D(1.00915, -0.00146961, 0.000640481, 0.00147802, 1.00403, -0.00145196, -0.000638253, 0.0014453, 1.00931, 0, 0, 0)
 
 [node name="Tube 2" parent="." index="0"]
-surface_material_override/0 = SubResource("ShaderMaterial_tcld3")
+surface_material_override/0 = SubResource("ORMMaterial3D_2j43m")
 
 [node name="ShakerComponent3D" type="Node3D" parent="." index="1"]
 script = ExtResource("3_seold")
-is_playing = true
 AutoPlay = true
 shakerPreset = SubResource("Resource_uj8sg")

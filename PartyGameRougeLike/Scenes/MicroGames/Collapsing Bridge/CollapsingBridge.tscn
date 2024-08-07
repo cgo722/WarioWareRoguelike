@@ -25,10 +25,11 @@ environment = SubResource("Environment_idhij")
 
 [node name="StandardCharacter3D" parent="." instance=ExtResource("1_w7o34")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.09709, 1.15698, 0)
+twoD = true
 
 [node name="Camera3D" type="Camera3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 0.767915, 0.640552, 0, -0.640552, 0.767915, -1.111, 23.5364, 24.448)
-fov = 26.6
+fov = 51.0
 
 [node name="PhycisPlanks" parent="." instance=ExtResource("2_vwlct")]
 transform = Transform3D(-9.48331e-08, 0.10736, 2.16953, 4.69286e-09, 2.16953, -0.10736, -2.17218, 0, -9.49491e-08, -2.23056, -0.0350526, 0.534597)
@@ -94,6 +95,15 @@ transform = Transform3D(0.710971, 0, 0.703221, 0, 1, 0, -0.703221, 0, 0.710971, 
 [node name="Boulders3" parent="Cliff -" instance=ExtResource("3_ldxjq")]
 transform = Transform3D(-0.67706, 0.846131, 0.779328, 1.05234, 0.820823, 0.0230602, -0.464622, 0.626107, -1.08343, 10.5125, -1.52025, 7.78549)
 
+[node name="Boulders5" parent="Cliff -" instance=ExtResource("3_ldxjq")]
+transform = Transform3D(-2.96373, -1.83364, 3.29619, -3.06778, 3.61073, -0.749747, -2.1945, -2.57122, -3.4035, 22.0024, -41.6111, -23.8976)
+
+[node name="Boulders6" parent="Cliff -" instance=ExtResource("3_ldxjq")]
+transform = Transform3D(-7.51843, 4.84994, 6.48493, 5.71323, 9.44808, -0.442297, -5.73893, 3.05198, -8.93608, 17.4668, -86.9486, -99.3563)
+
+[node name="Boulders7" parent="Cliff -" instance=ExtResource("3_ldxjq")]
+transform = Transform3D(-9.44791, -1.93849, -5.39283, -4.29998, -4.47586, 9.14222, -3.78819, 9.91523, 3.07258, 136.377, -57.2021, 18.25)
+
 [node name="Boulders4" parent="Cliff -" instance=ExtResource("3_ldxjq")]
 transform = Transform3D(1.46923, -2.68524, 1.16751, 1.49292, -0.436719, -2.88317, 2.51889, 1.8251, 1.02784, 4.39014, -26.0225, -5.60888)
 
@@ -101,9 +111,14 @@ transform = Transform3D(1.46923, -2.68524, 1.16751, 1.49292, -0.436719, -2.88317
 transform = Transform3D(0.794873, 0.920565, 0.505194, -0.147253, 0.725068, -1.08953, -1.0397, 0.6011, 0.540542, -10.2766, 0, 1.77781)
 
 [node name="Rope" parent="." instance=ExtResource("4_sfp5p")]
-transform = Transform3D(1.85242, 0.0461109, -0.0100049, -0.0478831, 1.78287, -0.389786, -9.4435e-05, 0.501583, 1.38641, -0.656056, 0.346576, 2.0949)
+transform = Transform3D(1.85242, 0.0461102, -0.0100046, -0.0478824, 1.78287, -0.389787, -9.46689e-05, 0.501584, 1.38641, -0.656056, 0.346576, 2.0949)
 
 [node name="Rope2" parent="." instance=ExtResource("4_sfp5p")]
-transform = Transform3D(-1.85303, 0.000297704, -0.00014496, 0.000337211, 1.7831, -0.390918, 9.86869e-05, -0.502868, -1.38614, -1.24165, 0.299934, -1.03216)
+transform = Transform3D(-1.85303, 0.00029838, -0.000145291, 0.000337978, 1.7831, -0.390919, 9.89126e-05, -0.502869, -1.38614, -1.24165, 0.299934, -1.03216)
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(0.76491, -0.108165, 0.63499, -0.451714, -0.792847, 0.409081, 0.459202, -0.599745, -0.655316, 0, 8.62624, 7.11617)
+light_color = Color(0.933013, 0.755983, 0.744268, 1)
+shadow_enabled = true
 
 [editable path="PhycisPlanks"]
