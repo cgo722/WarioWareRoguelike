@@ -1,3 +1,9 @@
-[gd_scene format=3 uid="uid://cocvuou0yhodj"]
+[gd_scene load_steps=2 format=3 uid="uid://cocvuou0yhodj"]
+
+[ext_resource type="PackedScene" uid="uid://dg8nga1havwdm" path="res://Scenes/MicroGames/Pull the sword out of the stone/Sword out of the Stone Player.tscn" id="1_1udmm"]
 
 [node name="PullTheSwordOutOfTheStone" type="Node2D"]
+
+[node name="SwordOutoftheStonePlayer" parent="." instance=ExtResource("1_1udmm")]
+position = Vector2(957, 765)
+pullOutSpeed = 10.0

@@ -1,0 +1,8 @@
+[gd_scene load_steps=3 format=3 uid="uid://dg8nga1havwdm"]
+
+[ext_resource type="Texture2D" uid="uid://c2arq65kq33eg" path="res://Assets/Sword and the Stone/IMG_0413.png" id="1_tcwyr"]
+[ext_resource type="Script" path="res://Scenes/MicroGames/Pull the sword out of the stone/Sword out of the Stone Player.gd" id="2_avffc"]
+
+[node name="SwordOutOfTheStonePlayer" type="Sprite2D"]
+texture = ExtResource("1_tcwyr")
+script = ExtResource("2_avffc")
