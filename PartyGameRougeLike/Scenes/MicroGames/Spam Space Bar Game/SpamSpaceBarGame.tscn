@@ -78,6 +78,7 @@ motion_scale = Vector2(1.1, 1.1)
 [node name="MashCharacter" parent="Parallax/ParallaxForground" instance=ExtResource("1_sjkx6")]
 position = Vector2(487, 104)
 scale = Vector2(6.38529, 6.38529)
+scoreIncrease = [5, 250]
 
 [node name="Foreground" type="TileMap" parent="Parallax/ParallaxForground"]
 scale = Vector2(6.5, 6.5)

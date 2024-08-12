@@ -1,6 +1,7 @@
 extends Node2D
 
 @onready var gamemanager = get_node("/root/GameManager")
+@export var scoreIncrease := [5, ]
 @onready var maxCount : int = randi_range(1, 100)
 var count : int
 @onready var sprite := $Sprite2D
@@ -11,6 +12,7 @@ var count : int
 "res://Assets/SpamSpaceBarGame/IMG_0408.png", "res://Assets/SpamSpaceBarGame/IMG_0409.png","res://Assets/SpamSpaceBarGame/IMG_0410.png" ]
 @onready var camShake := $"../../../Camera2D/ShakerComponent2D"
 @onready var woodChipParticles := load("res://Assets/Particle FX/WoodChips.tscn")
+var scored : bool
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	gamemanager.completed = false
@@ -25,6 +27,7 @@ func _process(delta):
 		camShake.play_shake()
 		var woodChipInstance = woodChipParticles.instantiate()
 		self.add_child(woodChipInstance)
+		scoreChange(scoreIncrease[0])
 	else:
 		sprite.texture = load(spriteAnim[0])
 	if count < maxCount * 0.25:
@@ -38,4 +41,10 @@ func _process(delta):
 	if count > maxCount:
 		gamemanager.completed = true
 		worldTree.texture = load(worldTreeAnim[4])
+	if gamemanager.completed == true:
+		scoreChange(scoreIncrease[1])
 	pass
+
+
+func scoreChange(change : int):
+	gamemanager.score += change

@@ -2,7 +2,8 @@ extends Node
 
 @onready var Levels := ["res://Scenes/MicroGames/SurviveTheRain.tscn", "res://Scenes/MicroGames/CollectItem3D.tscn", 
 "res://Scenes/MicroGames/Tag3D.tscn", "res://Scenes/MicroGames/Fishing/Fishing.tscn",
-"res://Scenes/MicroGames/Dont Drop The Soup/Dont Drop the Soup.tscn", "res://Scenes/MicroGames/Collapsing Bridge/CollapsingBridge.tscn"]
+"res://Scenes/MicroGames/Dont Drop The Soup/Dont Drop the Soup.tscn", "res://Scenes/MicroGames/Collapsing Bridge/CollapsingBridge.tscn",
+"res://Scenes/MicroGames/Spam Space Bar Game/SpamSpaceBarGame.tscn", "res://Scenes/MicroGames/Pull the sword out of the stone/Pull the sword out of the Stone.tscn"]
 
 var Bag := []
 var loadedLevel

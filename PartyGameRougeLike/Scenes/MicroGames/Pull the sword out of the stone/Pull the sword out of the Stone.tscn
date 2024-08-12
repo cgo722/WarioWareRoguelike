@@ -1,9 +1,17 @@
-[gd_scene load_steps=2 format=3 uid="uid://cocvuou0yhodj"]
+[gd_scene load_steps=3 format=3 uid="uid://cocvuou0yhodj"]
 
 [ext_resource type="PackedScene" uid="uid://dg8nga1havwdm" path="res://Scenes/MicroGames/Pull the sword out of the stone/Sword out of the Stone Player.tscn" id="1_1udmm"]
+[ext_resource type="Texture2D" uid="uid://dkncenisvubl3" path="res://Assets/Sword and the Stone/Boulder.png" id="2_iwww8"]
 
 [node name="PullTheSwordOutOfTheStone" type="Node2D"]
 
 [node name="SwordOutoftheStonePlayer" parent="." instance=ExtResource("1_1udmm")]
-position = Vector2(957, 765)
+position = Vector2(957, 761)
+scale = Vector2(0.161896, 0.161896)
+competedHeight = 241.0
 pullOutSpeed = 10.0
+fallSpeed = 8.0
+
+[node name="Boulder" type="Sprite2D" parent="."]
+position = Vector2(1009, 1081)
+texture = ExtResource("2_iwww8")
