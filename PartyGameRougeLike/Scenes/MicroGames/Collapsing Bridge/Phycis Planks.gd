@@ -21,7 +21,7 @@ func _process(delta):
 		scored == true
 
 func _on_timer_timeout():
-	outCome = randi() % randChance
+	outCome = randi() % int(randChance * gamemanager.otherSpeed3D)
 	if outCome < randChance * 0.1:
 		shaker.play_shake()
 	pass # Replace with function body.

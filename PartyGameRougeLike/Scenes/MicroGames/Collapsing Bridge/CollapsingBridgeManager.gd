@@ -13,3 +13,8 @@ func _process(delta):
 		gamemanager.completed = false
 		gamemanager.death = true
 	pass
+
+
+func _on_instruction_timer_timeout():
+	$CanvasLayer.queue_free()
+	pass # Replace with function body.

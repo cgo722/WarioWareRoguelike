@@ -93,7 +93,7 @@ transform = Transform3D(0.710971, 0, 0.703221, 0, 1, 0, -0.703221, 0, 0.710971, 
 [node name="Boulders" parent="Cliff -" instance=ExtResource("3_ldxjq")]
 
 [node name="Boulders3" parent="Cliff -" instance=ExtResource("3_ldxjq")]
-transform = Transform3D(-0.67706, 0.846131, 0.779328, 1.05234, 0.820823, 0.0230602, -0.464622, 0.626107, -1.08343, 10.5125, -1.52025, 7.78549)
+transform = Transform3D(-0.67706, 0.846131, 0.779328, 1.05234, 0.820823, 0.0230602, -0.464622, 0.626107, -1.08343, 11.5183, -1.52025, 8.78031)
 
 [node name="Boulders5" parent="Cliff -" instance=ExtResource("3_ldxjq")]
 transform = Transform3D(-2.96373, -1.83364, 3.29619, -3.06778, 3.61073, -0.749747, -2.1945, -2.57122, -3.4035, 22.0024, -41.6111, -23.8976)
@@ -103,6 +103,15 @@ transform = Transform3D(-7.51843, 4.84994, 6.48493, 5.71323, 9.44808, -0.442297,
 
 [node name="Boulders7" parent="Cliff -" instance=ExtResource("3_ldxjq")]
 transform = Transform3D(-9.44791, -1.93849, -5.39283, -4.29998, -4.47586, 9.14222, -3.78819, 9.91523, 3.07258, 136.377, -57.2021, 18.25)
+
+[node name="Boulders8" parent="Cliff -" instance=ExtResource("3_ldxjq")]
+transform = Transform3D(-77.6544, -15.9329, -44.3249, -35.3424, -36.788, 75.1418, -31.1359, 81.4955, 25.2542, 1180.23, -1466.63, -1173.99)
+
+[node name="Boulders9" parent="Cliff -" instance=ExtResource("3_ldxjq")]
+transform = Transform3D(-77.6544, -15.9329, -44.3249, -35.3424, -36.788, 75.1418, -31.1359, 81.4955, 25.2542, 1740.79, -906.133, -1740.72)
+
+[node name="Boulders10" parent="Cliff -" instance=ExtResource("3_ldxjq")]
+transform = Transform3D(-77.6544, -15.9329, -44.3249, -35.3424, -36.788, 75.1418, -31.1359, 81.4956, 25.2542, 2133.45, -906.133, -1352.35)
 
 [node name="Boulders4" parent="Cliff -" instance=ExtResource("3_ldxjq")]
 transform = Transform3D(1.46923, -2.68524, 1.16751, 1.49292, -0.436719, -2.88317, 2.51889, 1.8251, 1.02784, 4.39014, -26.0225, -5.60888)
@@ -120,5 +129,25 @@ transform = Transform3D(-1.85303, 0.00029838, -0.000145291, 0.000337978, 1.7831,
 transform = Transform3D(0.76491, -0.108165, 0.63499, -0.451714, -0.792847, 0.409081, 0.459202, -0.599745, -0.655316, 0, 8.62624, 7.11617)
 light_color = Color(0.933013, 0.755983, 0.744268, 1)
 shadow_enabled = true
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="TextEdit" type="TextEdit" parent="CanvasLayer"]
+anchors_preset = -1
+anchor_right = 0.130208
+offset_left = 441.0
+offset_top = 850.0
+offset_right = 2429.0
+offset_bottom = 1160.0
+scale = Vector2(0.6, 0.6)
+theme_override_font_sizes/font_size = 181
+text = "Don't Fall Off The Bridge"
+metadata/_edit_use_anchors_ = true
+
+[node name="Instruction Timer" type="Timer" parent="CanvasLayer"]
+wait_time = 3.0
+autostart = true
+
+[connection signal="timeout" from="CanvasLayer/Instruction Timer" to="." method="_on_instruction_timer_timeout"]
 
 [editable path="PhycisPlanks"]

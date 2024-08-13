@@ -1,7 +1,17 @@
-[gd_scene load_steps=3 format=3 uid="uid://cocvuou0yhodj"]
+[gd_scene load_steps=6 format=3 uid="uid://cocvuou0yhodj"]
 
 [ext_resource type="PackedScene" uid="uid://dg8nga1havwdm" path="res://Scenes/MicroGames/Pull the sword out of the stone/Sword out of the Stone Player.tscn" id="1_1udmm"]
 [ext_resource type="Texture2D" uid="uid://dkncenisvubl3" path="res://Assets/Sword and the Stone/Boulder.png" id="2_iwww8"]
+[ext_resource type="PackedScene" uid="uid://dqwaw0acw6fep" path="res://Assets/Particle FX/2D Wind.tscn" id="3_wvmu4"]
+
+[sub_resource type="Gradient" id="Gradient_iooef"]
+interpolation_mode = 2
+offsets = PackedFloat32Array(0, 0.998523)
+colors = PackedColorArray(0.199963, 0.341907, 0.55677, 1, 0.520063, 0.767025, 0.947649, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_hyomm"]
+gradient = SubResource("Gradient_iooef")
+fill_to = Vector2(0, 1)
 
 [node name="PullTheSwordOutOfTheStone" type="Node2D"]
 
@@ -15,3 +25,34 @@ fallSpeed = 8.0
 [node name="Boulder" type="Sprite2D" parent="."]
 position = Vector2(1009, 1081)
 texture = ExtResource("2_iwww8")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+z_index = -4096
+position = Vector2(991, 609)
+scale = Vector2(31.8438, 31.8438)
+texture = SubResource("GradientTexture2D_hyomm")
+
+[node name="2dWind" parent="." instance=ExtResource("3_wvmu4")]
+position = Vector2(933, 661)
+amount = 25
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="TextEdit" type="TextEdit" parent="CanvasLayer"]
+anchors_preset = -1
+anchor_bottom = 0.225
+offset_left = -2.0
+offset_top = -6.0
+offset_right = 1986.0
+offset_bottom = 304.0
+scale = Vector2(0.6, 0.6)
+theme_override_font_sizes/font_size = 181
+text = "Shake and Pull the 
+Sword Out"
+metadata/_edit_use_anchors_ = true
+
+[node name="Instruction Timer" type="Timer" parent="CanvasLayer"]
+wait_time = 3.0
+autostart = true
+
+[connection signal="timeout" from="CanvasLayer/Instruction Timer" to="SwordOutoftheStonePlayer" method="_on_instruction_timer_timeout"]

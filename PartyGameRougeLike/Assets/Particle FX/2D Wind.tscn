@@ -1,0 +1,24 @@
+[gd_scene load_steps=4 format=3 uid="uid://dqwaw0acw6fep"]
+
+[sub_resource type="Curve" id="Curve_wgoxf"]
+_data = [Vector2(0.00596125, 0.0061512), 0.0, 6.22797, 0, 0, Vector2(0.497765, 1), 0.0, 0.0, 0, 0, Vector2(0.994039, 0), -6.12959, 0.0, 0, 0]
+point_count = 3
+
+[sub_resource type="CurveTexture" id="CurveTexture_50egs"]
+curve = SubResource("Curve_wgoxf")
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_bhdud"]
+particle_flag_disable_z = true
+emission_shape = 3
+emission_box_extents = Vector3(1280, 720, 1)
+initial_velocity_min = 150.0
+initial_velocity_max = 500.0
+gravity = Vector3(2.08165e-12, 25, 2.08165e-12)
+scale_curve = SubResource("CurveTexture_50egs")
+
+[node name="2dWind" type="GPUParticles2D"]
+amount = 50
+process_material = SubResource("ParticleProcessMaterial_bhdud")
+lifetime = 2.5
+randomness = 1.0
+trail_enabled = true

@@ -1,10 +1,11 @@
-[gd_scene load_steps=8 format=3 uid="uid://mlfj7mlo1x23"]
+[gd_scene load_steps=9 format=3 uid="uid://mlfj7mlo1x23"]
 
 [ext_resource type="Script" path="res://Scenes/SurviveTheRainManager.gd" id="1_4w7kf"]
 [ext_resource type="PackedScene" uid="uid://dqnv87pgnk5c5" path="res://Assets/2D Spawner.tscn" id="2_p6udn"]
 [ext_resource type="PackedScene" uid="uid://dld6lrctm00ed" path="res://Assets/2DPlatforms.tscn" id="3_5vm1n"]
 [ext_resource type="PackedScene" uid="uid://nw1oknr3ftnp" path="res://Scenes/Player/2D/SurviveTheRainPlayer.tscn" id="4_ejuh7"]
 [ext_resource type="AudioStream" uid="uid://bx0e3p5qwabqt" path="res://Assets/Sounds/Rain.wav" id="5_1nof8"]
+[ext_resource type="PackedScene" uid="uid://dqwaw0acw6fep" path="res://Assets/Particle FX/2D Wind.tscn" id="6_v4x7b"]
 
 [sub_resource type="Gradient" id="Gradient_vaxgj"]
 offsets = PackedFloat32Array(0)
@@ -38,6 +39,7 @@ offset_bottom = 1160.0
 scale = Vector2(0.6, 0.6)
 theme_override_font_sizes/font_size = 181
 text = "Don't touch the Rain"
+metadata/_edit_use_anchors_ = true
 
 [node name="Instruction Timer" type="Timer" parent="CanvasLayer"]
 wait_time = 3.0
@@ -56,5 +58,9 @@ position = Vector2(977, 813)
 stream = ExtResource("5_1nof8")
 volume_db = -25.0
 autoplay = true
+
+[node name="2dWind" parent="." instance=ExtResource("6_v4x7b")]
+position = Vector2(961, 637)
+amount = 15
 
 [connection signal="timeout" from="CanvasLayer/Instruction Timer" to="." method="_on_instruction_timer_timeout"]

@@ -2,7 +2,7 @@ extends Node2D
 
 @onready var gamemanager = get_node("/root/GameManager")
 @export var scoreIncrease := [5, ]
-@onready var maxCount : int = randi_range(1, 100)
+@onready var maxCount : int = randi_range(1, 100) * gamemanager.otherSpeed2D
 var count : int
 @onready var sprite := $Sprite2D
 @onready var spriteAnim := ["res://Assets/SpamSpaceBarGame/IMG_0404.png",\
@@ -41,10 +41,16 @@ func _process(delta):
 	if count > maxCount:
 		gamemanager.completed = true
 		worldTree.texture = load(worldTreeAnim[4])
-	if gamemanager.completed == true:
+	if gamemanager.completed == true && scored == false:
 		scoreChange(scoreIncrease[1])
+		scored = true
 	pass
 
 
 func scoreChange(change : int):
 	gamemanager.score += change
+
+
+func _on_instruction_timer_timeout():
+	$"../../../CanvasLayer".queue_free()
+	pass # Replace with function body.

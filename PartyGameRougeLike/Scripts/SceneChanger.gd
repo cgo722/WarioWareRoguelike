@@ -73,16 +73,14 @@ func NewScene():
 		Bag += Levels
 	Bag.remove_at(levelSel)
 	print(Levels)
+
 func SceneManager(loaded):
 	if loaded == true:
 		gamemanager.completed = false
 		gamemanager.death = false
 		NewScene()
-		if gamemanager.playerHealth <= -1:
-			DeathScreen()
-		else:
-			scene_instance = loadedLevel.instantiate()
-			self.add_child(scene_instance)
+		scene_instance = loadedLevel.instantiate()
+		self.add_child(scene_instance)
 		
 	if loaded == false:
 		if gamemanager.completed == false:
