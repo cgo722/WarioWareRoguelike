@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=3 uid="uid://dmurk6pxdacmu"]
+[gd_scene load_steps=12 format=3 uid="uid://dmurk6pxdacmu"]
 
 [ext_resource type="PackedScene" uid="uid://ba7wlrqkaitun" path="res://Scenes/MicroGames/Spam Space Bar Game/MashCharacter.tscn" id="1_sjkx6"]
 [ext_resource type="Texture2D" uid="uid://dmhfg6f3gjk12" path="res://Assets/SpamSpaceBarGame/IMG_0395.png" id="2_6w5jg"]
@@ -28,6 +28,62 @@ RotationShake = Array[Resource("res://addons/shaker/data/Single/BaseShakerType1D
 ScaleShake = Array[Resource("res://addons/shaker/data/Vector2/BaseShakerType2D.gd")]([])
 bake_internal = 64
 __follow_timeline = false
+
+[sub_resource type="Animation" id="Animation_jn8s3"]
+resource_name = "Falling Animation"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.9, 1),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(687, -189), Vector2(687, -189), Vector2(-304, 187)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.2, 0.4, 0.6, 0.7, 0.8, 1),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [3.48787e-16, -0.0454872, 0.187167, -0.093157, -0.00393578, 3.48787e-16, -1.57691]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath(".:skew")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.9, 1),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [0.0, 0.0, 0.0]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath(".:scale")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 0.9, 1),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(17.727, 17.727), Vector2(17.727, 17.727), Vector2(17.727, 37.2454)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_ucpu5"]
+_data = {
+"Falling Animation": SubResource("Animation_jn8s3")
+}
 
 [node name="Node2D" type="Node2D"]
 
@@ -68,11 +124,24 @@ format = 2
 layer_0/tile_data = PackedInt32Array(-262160, 131072, 2, -262159, 131072, 2, -262158, 131072, 2, -262157, 131072, 2, -262156, 131072, 2, -262155, 131072, 2, -262154, 131072, 2, -262153, 131072, 2, -262152, 131072, 2, -262151, 131072, 2, -262150, 131072, 2, -262149, 131072, 2, -262148, 131072, 2, -262147, 131072, 2, -262146, 131072, 2, -262145, 131072, 2, -327680, 131072, 2, -327679, 131072, 2, -327678, 131072, 2, -327677, 131072, 2, -327676, 131072, 2, -327675, 131072, 2, -327674, 131072, 2, -327673, 131072, 2, -327672, 131072, 2, -327671, 131072, 2, -327670, 131072, 2, -327669, 131072, 2, -327668, 131072, 2, -327667, 131072, 2, -327666, 131072, 2, -327665, 131072, 2, -327664, 131072, 2, -327663, 131072, 2, -327662, 131072, 2, -196618, 65536, 2, -196617, 196608, 2, -196616, 65536, 2, -196614, 65536, 2, -196612, 65536, 2, -196610, 65536, 2, -262144, 65536, 2, -262142, 65536, 2, -262140, 65536, 2, -196615, 196608, 2, -196613, 196608, 2, -196611, 196608, 2, -196609, 196608, 2, -262143, 196608, 2, -262141, 196608, 2, -393226, 131072, 2, -327690, 131072, 2, -393225, 131072, 2, -327689, 131072, 2, -393224, 131072, 2, -327688, 131072, 2, -393223, 131072, 2, -327687, 131072, 2, -393222, 131072, 2, -327686, 131072, 2, -393221, 131072, 2, -327685, 131072, 2, -393220, 131072, 2, -327684, 131072, 2, -393219, 131072, 2, -327683, 131072, 2, -393218, 131072, 2, -327682, 131072, 2, -393217, 131072, 2, -327681, 131072, 2, -458752, 131072, 2, -393216, 131072, 2, -458751, 131072, 2, -393215, 131072, 2, -458750, 131072, 2, -393214, 131072, 2, -458749, 131072, 2, -393213, 131072, 2, -458748, 131072, 2, -393212, 131072, 2, -458747, 131072, 2, -393211, 131072, 2, -262139, 196608, 2, -262137, 196608, 2, -262135, 196608, 2, -262133, 196608, 2, -262138, 65536, 2, -262136, 65536, 2, -262134, 65536, 2, -458746, 131072, 2, -393210, 131072, 2, -458745, 131072, 2, -393209, 131072, 2, -458744, 131072, 2, -393208, 131072, 2, -458743, 131072, 2, -393207, 131072, 2, -458742, 131072, 2, -393206, 131072, 2, -458741, 131072, 2, -393205, 131072, 2, -458740, 131072, 2, -393204, 131072, 2, -458739, 131072, 2, -393203, 131072, 2, -458738, 131072, 2, -393202, 131072, 2, -458737, 131072, 2, -393201, 131072, 2, -458736, 131072, 2, -393200, 131072, 2)
 
 [node name="World Tree" type="Sprite2D" parent="Parallax/ParallaxMidGround"]
-visible = false
 z_index = 1505
 position = Vector2(548, -39)
 scale = Vector2(17.8333, 17.8333)
 texture = ExtResource("2_6w5jg")
+
+[node name="World Tree2" type="Sprite2D" parent="Parallax/ParallaxMidGround"]
+z_index = 1505
+position = Vector2(-304, 187)
+rotation = -1.57691
+scale = Vector2(17.727, 37.2454)
+texture = ExtResource("2_6w5jg")
+region_enabled = true
+region_rect = Rect2(16, 0, 32, 40)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Parallax/ParallaxMidGround/World Tree2"]
+libraries = {
+"": SubResource("AnimationLibrary_ucpu5")
+}
 
 [node name="ParallaxForground" type="ParallaxLayer" parent="Parallax"]
 motion_scale = Vector2(1.1, 1.1)
