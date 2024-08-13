@@ -11,8 +11,8 @@ initial_velocity_max = 500.0
 gravity = Vector3(2.08165e-12, 9800, 2.08165e-12)
 linear_accel_max = 100.0
 damping_max = 31.356
-scale_min = 3.0
-scale_max = 7.5
+scale_min = 5.0
+scale_max = 15.0
 color = Color(0.851712, 0.713073, 0.726011, 1)
 
 [node name="WoodChips" type="GPUParticles2D"]

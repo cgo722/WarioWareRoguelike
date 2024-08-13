@@ -1,6 +1,7 @@
-[gd_scene load_steps=6 format=3 uid="uid://cocvuou0yhodj"]
+[gd_scene load_steps=7 format=3 uid="uid://cocvuou0yhodj"]
 
 [ext_resource type="PackedScene" uid="uid://dg8nga1havwdm" path="res://Scenes/MicroGames/Pull the sword out of the stone/Sword out of the Stone Player.tscn" id="1_1udmm"]
+[ext_resource type="Texture2D" uid="uid://b0b1tefme8l5f" path="res://Assets/Sword and the Stone/Bush.png" id="2_7fmej"]
 [ext_resource type="Texture2D" uid="uid://dkncenisvubl3" path="res://Assets/Sword and the Stone/Boulder.png" id="2_iwww8"]
 [ext_resource type="PackedScene" uid="uid://dqwaw0acw6fep" path="res://Assets/Particle FX/2D Wind.tscn" id="3_wvmu4"]
 
@@ -21,6 +22,19 @@ scale = Vector2(0.161896, 0.161896)
 competedHeight = 241.0
 pullOutSpeed = 10.0
 fallSpeed = 8.0
+
+[node name="Bush6" type="Sprite2D" parent="."]
+modulate = Color(0.482353, 1, 1, 1)
+position = Vector2(364, 893)
+scale = Vector2(0.385667, 0.419677)
+texture = ExtResource("2_7fmej")
+flip_h = true
+
+[node name="Bush3" type="Sprite2D" parent="."]
+modulate = Color(0.541176, 1, 1, 1)
+position = Vector2(1573, 925)
+scale = Vector2(0.359, 0.510931)
+texture = ExtResource("2_7fmej")
 
 [node name="Boulder" type="Sprite2D" parent="."]
 position = Vector2(1009, 1081)
@@ -54,5 +68,37 @@ metadata/_edit_use_anchors_ = true
 [node name="Instruction Timer" type="Timer" parent="CanvasLayer"]
 wait_time = 3.0
 autostart = true
+
+[node name="Bush5" type="Sprite2D" parent="."]
+modulate = Color(0.807843, 1, 1, 1)
+position = Vector2(36, 927)
+scale = Vector2(0.385667, 0.419677)
+texture = ExtResource("2_7fmej")
+flip_h = true
+
+[node name="Bush4" type="Sprite2D" parent="."]
+modulate = Color(0.695583, 0.911895, 0.882279, 1)
+position = Vector2(2036.88, 772)
+scale = Vector2(0.630833, 0.510931)
+texture = ExtResource("2_7fmej")
+
+[node name="Bush" type="Sprite2D" parent="."]
+modulate = Color(0.88493, 0.870439, 0, 1)
+position = Vector2(249, 1136)
+scale = Vector2(0.532667, 0.548479)
+texture = ExtResource("2_7fmej")
+
+[node name="Bush2" type="Sprite2D" parent="."]
+modulate = Color(0.890102, 0.863297, 0.747582, 1)
+position = Vector2(1917.75, 1130.75)
+scale = Vector2(0.713667, 0.774239)
+texture = ExtResource("2_7fmej")
+flip_h = true
+
+[node name="Bush7" type="Sprite2D" parent="."]
+modulate = Color(0.974983, 0.833272, 0.326309, 1)
+position = Vector2(977, 1322)
+scale = Vector2(1.26783, 0.72077)
+texture = ExtResource("2_7fmej")
 
 [connection signal="timeout" from="CanvasLayer/Instruction Timer" to="SwordOutoftheStonePlayer" method="_on_instruction_timer_timeout"]
