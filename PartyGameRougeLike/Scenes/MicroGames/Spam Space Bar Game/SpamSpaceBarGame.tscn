@@ -93,10 +93,10 @@ position = Vector2(-1, 20)
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
 [node name="TextEdit" type="TextEdit" parent="CanvasLayer"]
-offset_left = -915.0
-offset_top = 505.0
-offset_right = 1073.0
-offset_bottom = 815.0
+offset_left = 133.0
+offset_top = 513.0
+offset_right = 2121.0
+offset_bottom = 823.0
 scale = Vector2(0.6, 0.6)
 theme_override_font_sizes/font_size = 181
 text = "Cut Down The Tree"
