@@ -43,8 +43,6 @@ shader = ExtResource("10_cftgd")
 shader_parameter/scaling = Vector2(1, 1)
 shader_parameter/Roughness_Strength = 1.0
 shader_parameter/Light_Intesity = Vector3(0.5, 0, 0)
-shader_parameter/Specular_Min = 10.0
-shader_parameter/Specular_Max = 25.0
 shader_parameter/Color_Map = ExtResource("12_34gnh")
 shader_parameter/hue = SubResource("GradientTexture1D_yc4xe")
 shader_parameter/AO_Map = ExtResource("11_iho3o")
@@ -172,6 +170,69 @@ transform = Transform3D(0.915403, 0, -0.402539, 0, 0.958166, 0, 0.402539, 0, 0.9
 [node name="VectorTree6" parent="." instance=ExtResource("8_7ycbi")]
 transform = Transform3D(0.0422938, 0, -0.999105, 0, 0.958166, 0, 0.999105, 0, 0.0422938, 21.1875, -0.0209084, -35.3173)
 
+[node name="VectorTree8" parent="." instance=ExtResource("8_7ycbi")]
+transform = Transform3D(0.0422938, 0, -0.999105, 0, 0.958166, 0, 0.999105, 0, 0.0422938, 30.5052, -0.0209084, -32.5834)
+
+[node name="VectorTree9" parent="." instance=ExtResource("8_7ycbi")]
+transform = Transform3D(0.0422938, 0, -0.999105, 0, 0.958166, 0, 0.999105, 0, 0.0422938, 3.87459, -0.0209084, -46.0272)
+
+[node name="VectorTree10" parent="." instance=ExtResource("8_7ycbi")]
+transform = Transform3D(0.0422938, 0, -0.999105, 0, 0.958166, 0, 0.999105, 0, 0.0422938, -7.25164, -0.0209084, -39.9419)
+
+[node name="VectorTree11" parent="." instance=ExtResource("8_7ycbi")]
+transform = Transform3D(0.0422938, 0, -0.999105, 0, 0.590966, 0, 0.999105, 0, 0.0422938, -11.2516, 0.199468, -32.9419)
+
+[node name="VectorTree12" parent="." instance=ExtResource("8_7ycbi")]
+transform = Transform3D(0.0422938, 0, -0.999105, 0, 0.590966, 0, 0.999105, 0, 0.0422938, 5.74836, 0.199468, -31.9419)
+
+[node name="VectorTree13" parent="." instance=ExtResource("8_7ycbi")]
+transform = Transform3D(0.0422938, 0, -0.999105, 0, 0.958166, 0, 0.999105, 0, 0.0422938, 14.8766, -0.0209084, -34.5289)
+
+[node name="VectorTree14" parent="." instance=ExtResource("8_7ycbi")]
+transform = Transform3D(0.0422938, 0, -0.999105, 0, 0.883817, 0, 0.999105, 0, 0.0422938, 32.9103, -0.0525476, -21.1248)
+
+[node name="VectorTree15" parent="." instance=ExtResource("8_7ycbi")]
+transform = Transform3D(0.0422938, 0, -0.999105, 0, 0.590966, 0, 0.999105, 0, 0.0422938, 32.9103, 0.780682, -5.91075)
+
+[node name="VectorTree16" parent="." instance=ExtResource("8_7ycbi")]
+transform = Transform3D(0.0422938, 0, -0.999105, 0, 1.43298, 0, 0.999105, 0, 0.0422938, 31.6225, 0.979816, 6.15054)
+
+[node name="VectorTree17" parent="." instance=ExtResource("8_7ycbi")]
+transform = Transform3D(0.0422938, 0, -0.999105, 0, 0.590966, 0, 0.999105, 0, 0.0422938, 43.6225, 0.780681, -0.849463)
+
+[node name="VectorTree18" parent="." instance=ExtResource("8_7ycbi")]
+transform = Transform3D(0.0422938, 0, -0.999105, 0, 1.43298, 0, 0.999105, 0, 0.0422938, 39.1504, 0.979816, -9.09023)
+
+[node name="VectorTree19" parent="." instance=ExtResource("8_7ycbi")]
+transform = Transform3D(0.0422938, 0, -0.999105, 0, 1.43298, 0, 0.999105, 0, 0.0422938, 39.3988, 0.979816, 5.45424)
+
+[node name="VectorTree20" parent="." instance=ExtResource("8_7ycbi")]
+transform = Transform3D(0.0422938, 0, -0.999105, 0, 0.590966, 0, 0.999105, 0, 0.0422938, -30.3244, 0.780681, -19.132)
+
+[node name="VectorTree21" parent="." instance=ExtResource("8_7ycbi")]
+transform = Transform3D(0.0422938, 0, -0.999105, 0, 0.958166, 0, 0.999105, 0, 0.0422938, -31.3244, 0.921444, -27.132)
+
+[node name="VectorTree22" parent="." instance=ExtResource("8_7ycbi")]
+transform = Transform3D(0.0422938, 0, -0.999105, 0, 0.590966, 0, 0.999105, 0, 0.0422938, -31.3244, 0.780681, -27.132)
+
+[node name="VectorTree23" parent="." instance=ExtResource("8_7ycbi")]
+transform = Transform3D(0.0422938, 0, -0.999105, 0, 1.43298, 0, 0.999105, 0, 0.0422938, -20.3084, 0.979816, -29.2046)
+
+[node name="VectorTree24" parent="." instance=ExtResource("8_7ycbi")]
+transform = Transform3D(0.0422938, 0, -0.999105, 0, 0.883817, 0, 0.999105, 0, 0.0422938, -18.8013, 0.816681, -20.804)
+
+[node name="VectorTree25" parent="." instance=ExtResource("8_7ycbi")]
+transform = Transform3D(0.0422938, 0, -0.999105, 0, 0.958166, 0, 0.999105, 0, 0.0422938, -25.4922, 0.921444, -30.5576)
+
+[node name="VectorTree26" parent="." instance=ExtResource("8_7ycbi")]
+transform = Transform3D(0.0422938, 0, -0.999105, 0, 1.43298, 0, 0.999105, 0, 0.0422938, -23.4922, 0.979816, -17.5576)
+
+[node name="VectorTree27" parent="." instance=ExtResource("8_7ycbi")]
+transform = Transform3D(0.0422938, 0, -0.999105, 0, 0.590966, 0, 0.999105, 0, 0.0422938, -15.4922, 0.780681, -13.5576)
+
+[node name="VectorTree29" parent="." instance=ExtResource("8_7ycbi")]
+transform = Transform3D(0.0422938, 0, -0.999105, 0, 0.883817, 0, 0.999105, 0, 0.0422938, -16.5534, 0.816685, -36.0118)
+
 [node name="VectorTree7" parent="." instance=ExtResource("8_7ycbi")]
 transform = Transform3D(0.0422938, 0, -0.999105, 0, 1.38775, 0, 0.999105, 0, 0.0422938, 4.88962, -0.0209084, -38.0198)
 
@@ -205,6 +266,27 @@ hue_variation_max = 1.0
 
 [node name="Reverie Alien Ground" parent="." instance=ExtResource("12_aepmq")]
 transform = Transform3D(19.9716, 0, 3.56611, 0, 15.29, 0, -3.36182, 0, 21.1853, -0.68584, -2.18861, -14.0893)
+
+[node name="Reverie Alien Ground7" parent="." instance=ExtResource("12_aepmq")]
+transform = Transform3D(41.3948, 25.6383, -9.14912, -34.9367, 29.4384, -15.0067, -2.6573, 12.347, 54.7777, -20.1121, -1.16681, -74.9869)
+
+[node name="Reverie Alien Ground10" parent="." instance=ExtResource("12_aepmq")]
+transform = Transform3D(-5.60674, 30.9746, 37.1489, -53.7964, -5.16165, -0.639628, 3.95876, -26.2738, 43.921, -72.3759, -1.16681, -34.6201)
+
+[node name="Reverie Alien Ground11" parent="." instance=ExtResource("12_aepmq")]
+transform = Transform3D(0.0792751, -4.0643, 57.2441, -53.7964, -5.16165, -0.639628, 6.86302, -40.4132, -5.67527, -61.4779, -8.12605, -52.4129)
+
+[node name="Reverie Alien Ground8" parent="." instance=ExtResource("12_aepmq")]
+transform = Transform3D(-41.5144, 16.4087, 28.96, -6.74648, -35.2021, 28.4938, 34.2375, 12.9597, 40.7299, 58.0077, -1.16681, -46.9624)
+
+[node name="Reverie Alien Ground12" parent="." instance=ExtResource("12_aepmq")]
+transform = Transform3D(-41.5144, 16.4087, 28.96, -34.7199, -22.6354, -30.685, 3.50021, -29.9129, 39.1057, 89.4382, -1.16681, -20.8996)
+
+[node name="Reverie Alien Ground13" parent="." instance=ExtResource("12_aepmq")]
+transform = Transform3D(-41.5144, 16.4087, 28.96, -34.7199, -22.6354, -30.685, 3.50021, -29.9129, 39.1057, 89.4382, -1.16681, 18.9836)
+
+[node name="Reverie Alien Ground9" parent="." instance=ExtResource("12_aepmq")]
+transform = Transform3D(1.5209, -25.8569, 58.644, 35.1872, -34.7831, -31.3037, 54.692, 23.0975, 18.509, 19.3948, -1.16681, -85.6367)
 
 [node name="Reverie Alien Ground6" parent="." instance=ExtResource("12_aepmq")]
 transform = Transform3D(-2.80867, 0, 26.1724, 0, 16.0449, 0, -18.4625, 0, -3.98157, 11.2977, -2.86149, -18.4625)

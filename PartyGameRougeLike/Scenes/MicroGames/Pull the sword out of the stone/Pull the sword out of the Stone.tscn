@@ -101,4 +101,7 @@ position = Vector2(977, 1322)
 scale = Vector2(1.26783, 0.72077)
 texture = ExtResource("2_7fmej")
 
+[node name="DirectionalLight2D" type="DirectionalLight2D" parent="."]
+color = Color(0.887934, 0.557453, 7.70092e-07, 1)
+
 [connection signal="timeout" from="CanvasLayer/Instruction Timer" to="SwordOutoftheStonePlayer" method="_on_instruction_timer_timeout"]

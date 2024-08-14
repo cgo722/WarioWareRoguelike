@@ -1,4 +1,4 @@
-[gd_scene load_steps=18 format=3 uid="uid://ciluld6if5rp"]
+[gd_scene load_steps=24 format=3 uid="uid://ciluld6if5rp"]
 
 [ext_resource type="Script" path="res://Scripts/3DInteractable.gd" id="1_7ui2d"]
 [ext_resource type="PackedScene" uid="uid://c27jgogu4lns" path="res://Assets/Grab The Item/UraniumTube.glb" id="2_0yfbn"]
@@ -20,8 +20,6 @@ shader = ExtResource("3_i7yow")
 shader_parameter/scaling = null
 shader_parameter/Roughness_Strength = 1.0
 shader_parameter/Light_Intesity = Vector3(0.5, 0, 0)
-shader_parameter/Specular_Min = 10.0
-shader_parameter/Specular_Max = 25.0
 shader_parameter/Color_Map = SubResource("GradientTexture1D_gwgwm")
 
 [sub_resource type="Curve" id="Curve_wc2di"]
@@ -214,6 +212,38 @@ _data = {
 "Spin": SubResource("Animation_rm3f0")
 }
 
+[sub_resource type="Curve" id="Curve_ek8qg"]
+max_value = 3.0
+_data = [Vector2(0, 0), 0.0, 0.0, 0, 0, Vector2(1, 1.00755), 0.0, 0.0, 0, 0]
+point_count = 2
+
+[sub_resource type="CurveTexture" id="CurveTexture_u8r2f"]
+curve = SubResource("Curve_ek8qg")
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_ekayh"]
+emission_shape_offset = Vector3(0, -1, 0)
+direction = Vector3(0, 1, 0)
+initial_velocity_min = 5.0
+initial_velocity_max = 7.5
+gravity = Vector3(0, 0, 0)
+damping_min = 5.0
+damping_max = 10.0
+scale_over_velocity_curve = SubResource("CurveTexture_u8r2f")
+
+[sub_resource type="Curve" id="Curve_phjek"]
+_data = [Vector2(0.00218341, 0.954717), 0.0, -0.0724438, 0, 0, Vector2(0.255459, 0), 0.0, 0.0, 0, 0, Vector2(0.504367, 0.30566), 0.0, 0.0, 0, 0, Vector2(0.757642, 0.0188679), 0.0, 0.0, 0, 0, Vector2(1, 0.30566), 0.0, 0.0, 0, 0]
+point_count = 5
+
+[sub_resource type="ORMMaterial3D" id="ORMMaterial3D_ooq8n"]
+transparency = 1
+cull_mode = 2
+shading_mode = 0
+albedo_color = Color(0.837844, 0.994753, 0.804087, 1)
+
+[sub_resource type="RibbonTrailMesh" id="RibbonTrailMesh_g330h"]
+material = SubResource("ORMMaterial3D_ooq8n")
+curve = SubResource("Curve_phjek")
+
 [node name="3dInteractable" type="Node3D"]
 script = ExtResource("1_7ui2d")
 
@@ -243,6 +273,18 @@ draw_pass_1 = SubResource("SphereMesh_32fso")
 libraries = {
 "": SubResource("AnimationLibrary_v4t26")
 }
+
+[node name="SpawnParticles" type="GPUParticles3D" parent="."]
+emitting = false
+amount = 14
+lifetime = 2.0
+one_shot = true
+explosiveness = 1.0
+randomness = 1.0
+trail_enabled = true
+trail_lifetime = 0.5
+process_material = SubResource("ParticleProcessMaterial_ekayh")
+draw_pass_1 = SubResource("RibbonTrailMesh_g330h")
 
 [connection signal="body_entered" from="Area3D" to="." method="_on_area_3d_body_entered"]
 
