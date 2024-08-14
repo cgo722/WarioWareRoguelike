@@ -13,9 +13,12 @@ var count : int
 @onready var camShake := $"../../../Camera2D/ShakerComponent2D"
 @onready var woodChipParticles := load("res://Assets/Particle FX/WoodChips.tscn")
 var scored : bool
+@onready var worldTree2 := $"../../ParallaxMidGround/World Tree2"
+@onready var worldTree2Anim := $"../../ParallaxMidGround/World Tree2/AnimationPlayer"
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	gamemanager.completed = false
+	worldTree2.visible = false
 	pass # Replace with function body.
 
 
@@ -44,6 +47,8 @@ func _process(delta):
 	if gamemanager.completed == true && scored == false:
 		scoreChange(scoreIncrease[1])
 		scored = true
+		worldTree2.visible = true
+		worldTree2Anim.play("Falling Animation")
 	pass
 
 
