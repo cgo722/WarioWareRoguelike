@@ -1,8 +1,15 @@
-[gd_scene load_steps=4 format=3 uid="uid://bx604idfeqyfq"]
+[gd_scene load_steps=6 format=3 uid="uid://bx604idfeqyfq"]
 
 [ext_resource type="Script" path="res://Scripts/SceneChanger.gd" id="1_xybyd"]
 [ext_resource type="AudioStream" uid="uid://0nw3n5uv8hjr" path="res://Assets/UIpack/Bonus/click1.ogg" id="2_kq1hh"]
-[ext_resource type="Script" path="res://Scenes/Music Player.gd" id="3_iwpvh"]
+[ext_resource type="AudioStream" uid="uid://b85dgtpt5lpxi" path="res://Assets/Sounds/Alien Ballad.wav" id="4_rb0bu"]
+[ext_resource type="AudioStream" uid="uid://ci5s06sa1i03k" path="res://Assets/Sounds/Synth ballad 05.wav" id="5_f6did"]
+
+[sub_resource type="AudioStreamPlaylist" id="AudioStreamPlaylist_kxkap"]
+shuffle = true
+stream_count = 2
+stream_0 = ExtResource("4_rb0bu")
+stream_1 = ExtResource("5_f6did")
 
 [node name="Node" type="Node"]
 script = ExtResource("1_xybyd")
@@ -15,10 +22,8 @@ wait_time = 15.0
 [node name="UISFX" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("2_kq1hh")
 
-[node name="Background Music" type="AudioStreamPlayer" parent="."]
-process_mode = 3
-volume_db = -9.0
-script = ExtResource("3_iwpvh")
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = SubResource("AudioStreamPlaylist_kxkap")
+autoplay = true
 
 [connection signal="timeout" from="GameTimer" to="." method="_on_timer_timeout"]
-[connection signal="finished" from="Background Music" to="Background Music" method="_on_finished"]

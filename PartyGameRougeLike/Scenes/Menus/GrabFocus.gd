@@ -4,4 +4,3 @@ extends Control
 func _ready():
 	grab_focus()
 	pass # Replace with function body.
-

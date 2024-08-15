@@ -19,5 +19,3 @@ func _on_ai_spawner_timer_timeout():
 	var spawn_instance = AI.instantiate()
 	self.add_child(spawn_instance)
 	$"AI Spawner Timer".wait_time += .2
-
-

@@ -83,4 +83,3 @@ func AnimTreeState(): #got to get landing to work
 						animT["parameters/conditions/landed"] = true
 						animT["parameters/conditions/isFalling"] = false
 	pass
-
