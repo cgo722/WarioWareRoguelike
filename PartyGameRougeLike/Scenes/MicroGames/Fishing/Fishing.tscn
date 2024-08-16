@@ -1,4 +1,4 @@
-[gd_scene load_steps=17 format=3 uid="uid://occn8l637atj"]
+[gd_scene load_steps=22 format=3 uid="uid://occn8l637atj"]
 
 [ext_resource type="PackedScene" uid="uid://bsduxf5a3ga11" path="res://Assets/FishingAssets/FishingPlayer.tscn" id="1_bkbfo"]
 [ext_resource type="Script" path="res://Scenes/MicroGames/Fishing/FishingManager.gd" id="1_nx27p"]
@@ -10,7 +10,9 @@
 [ext_resource type="Texture2D" uid="uid://dqjuq0vukxegh" path="res://Assets/FishingAssets/IMG_0433.png" id="8_dv4im"]
 [ext_resource type="Texture2D" uid="uid://dkarbwoq5kxhh" path="res://Assets/FishingAssets/IMG_0434.png" id="9_bvsbo"]
 [ext_resource type="Texture2D" uid="uid://3sgcexaj8q7o" path="res://Assets/FishingAssets/CliffSide.png" id="9_gt2of"]
+[ext_resource type="Shader" path="res://Assets/Materials/2DColorChangerf.gdshader" id="10_2rri3"]
 [ext_resource type="Texture2D" uid="uid://c5mq1j2pkvsb5" path="res://Assets/FishingAssets/Rock Formation Low Res.png" id="10_apdmc"]
+[ext_resource type="Texture2D" uid="uid://dj64ab4ehsaxp" path="res://Assets/FishingAssets/Waves.png" id="11_2pfx6"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_emb46"]
 
@@ -46,7 +48,8 @@ animations = [{
 }]
 
 [sub_resource type="Gradient" id="Gradient_u8a2o"]
-colors = PackedColorArray(0.0705882, 0.145098, 0.384314, 0.85098, 0.164706, 0.658824, 0.870588, 0.462745)
+offsets = PackedFloat32Array(0.214612, 0.748858, 1)
+colors = PackedColorArray(0.25216, 0.000182704, 0.790291, 0.164706, 0.2937, 0.452713, 0.89, 0.164706, 0.279981, 0.768262, 0.999998, 0.121569)
 
 [sub_resource type="GradientTexture2D" id="GradientTexture2D_nep7v"]
 gradient = SubResource("Gradient_u8a2o")
@@ -54,6 +57,18 @@ fill_from = Vector2(1, 1)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_j5lvi"]
 size = Vector2(34.9026, 49.7549)
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_lb4he"]
+shader = ExtResource("10_2rri3")
+shader_parameter/col = Vector4(0, 0.65, 1, 0.88)
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_sy4xd"]
+shader = ExtResource("10_2rri3")
+shader_parameter/col = Vector4(0.365, 1, 1, 0.895)
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_by1xe"]
+shader = ExtResource("10_2rri3")
+shader_parameter/col = Vector4(1, 1, 1, 1)
 
 [node name="Fishing" type="Node2D"]
 position = Vector2(963, 549)
@@ -159,12 +174,138 @@ scale = Vector2(4.82666, 7.72014)
 texture = ExtResource("9_gt2of")
 flip_h = true
 
+[node name="Waves19" type="Sprite2D" parent="Background"]
+z_index = 4096
+material = SubResource("ShaderMaterial_lb4he")
+position = Vector2(-797, 88)
+texture = ExtResource("11_2pfx6")
+
+[node name="Waves20" type="Sprite2D" parent="Background"]
+z_index = 4096
+material = SubResource("ShaderMaterial_lb4he")
+position = Vector2(-1222, 88)
+texture = ExtResource("11_2pfx6")
+
+[node name="Waves21" type="Sprite2D" parent="Background"]
+z_index = 4096
+material = SubResource("ShaderMaterial_lb4he")
+position = Vector2(-1713, 88)
+texture = ExtResource("11_2pfx6")
+
+[node name="Waves22" type="Sprite2D" parent="Background"]
+z_index = 4096
+material = SubResource("ShaderMaterial_lb4he")
+position = Vector2(653, 88)
+texture = ExtResource("11_2pfx6")
+
+[node name="Waves23" type="Sprite2D" parent="Background"]
+z_index = 4096
+material = SubResource("ShaderMaterial_lb4he")
+position = Vector2(228, 88)
+texture = ExtResource("11_2pfx6")
+
+[node name="Waves24" type="Sprite2D" parent="Background"]
+z_index = 4096
+material = SubResource("ShaderMaterial_lb4he")
+position = Vector2(-263, 88)
+texture = ExtResource("11_2pfx6")
+
+[node name="Waves25" type="Sprite2D" parent="Background"]
+z_index = 4096
+material = SubResource("ShaderMaterial_lb4he")
+position = Vector2(2025, 88)
+texture = ExtResource("11_2pfx6")
+
+[node name="Waves26" type="Sprite2D" parent="Background"]
+z_index = 4096
+material = SubResource("ShaderMaterial_lb4he")
+position = Vector2(1600, 88)
+texture = ExtResource("11_2pfx6")
+
+[node name="Waves27" type="Sprite2D" parent="Background"]
+z_index = 4096
+material = SubResource("ShaderMaterial_lb4he")
+position = Vector2(1109, 88)
+texture = ExtResource("11_2pfx6")
+
+[node name="WayBackGround" type="Parallax2D" parent="."]
+scroll_scale = Vector2(0.25, 0.25)
+scroll_offset = Vector2(0, -100)
+repeat_size = Vector2(350, 0)
+repeat_times = 25
+
+[node name="Background(fishing)LowRed" type="Sprite2D" parent="WayBackGround"]
+z_index = -4096
+position = Vector2(-1011, -334)
+texture = ExtResource("4_nxi4o")
+
 [node name="MiddleGround" type="Parallax2D" parent="."]
 
 [node name="FishingPlayer" parent="MiddleGround" instance=ExtResource("1_bkbfo")]
 position = Vector2(0, -3)
 collision_layer = 32771
 motion_mode = 1
+
+[node name="Waves10" type="Sprite2D" parent="MiddleGround"]
+z_index = 4096
+material = SubResource("ShaderMaterial_sy4xd")
+position = Vector2(-797, 88)
+texture = ExtResource("11_2pfx6")
+
+[node name="Waves11" type="Sprite2D" parent="MiddleGround"]
+z_index = 4096
+material = SubResource("ShaderMaterial_sy4xd")
+position = Vector2(-1222, 88)
+texture = ExtResource("11_2pfx6")
+
+[node name="Waves12" type="Sprite2D" parent="MiddleGround"]
+z_index = 4096
+material = SubResource("ShaderMaterial_sy4xd")
+position = Vector2(-1713, 88)
+texture = ExtResource("11_2pfx6")
+
+[node name="Waves13" type="Sprite2D" parent="MiddleGround"]
+z_index = 4096
+material = SubResource("ShaderMaterial_sy4xd")
+position = Vector2(653, 88)
+texture = ExtResource("11_2pfx6")
+
+[node name="Waves14" type="Sprite2D" parent="MiddleGround"]
+z_index = 4096
+material = SubResource("ShaderMaterial_sy4xd")
+position = Vector2(228, 88)
+texture = ExtResource("11_2pfx6")
+
+[node name="Waves15" type="Sprite2D" parent="MiddleGround"]
+z_index = 4096
+material = SubResource("ShaderMaterial_sy4xd")
+position = Vector2(-263, 88)
+texture = ExtResource("11_2pfx6")
+
+[node name="Waves16" type="Sprite2D" parent="MiddleGround"]
+z_index = 4096
+material = SubResource("ShaderMaterial_sy4xd")
+position = Vector2(2025, 88)
+texture = ExtResource("11_2pfx6")
+
+[node name="Waves17" type="Sprite2D" parent="MiddleGround"]
+z_index = 4096
+material = SubResource("ShaderMaterial_sy4xd")
+position = Vector2(1600, 88)
+texture = ExtResource("11_2pfx6")
+
+[node name="Waves18" type="Sprite2D" parent="MiddleGround"]
+z_index = 4096
+material = SubResource("ShaderMaterial_sy4xd")
+position = Vector2(1109, 88)
+texture = ExtResource("11_2pfx6")
+
+[node name="Water2" type="Sprite2D" parent="MiddleGround"]
+z_index = 4096
+z_as_relative = false
+position = Vector2(0, 4264.14)
+scale = Vector2(138.58, 130.479)
+texture = SubResource("GradientTexture2D_nep7v")
 
 [node name="Foreground" type="Parallax2D" parent="."]
 scroll_scale = Vector2(1.5, 1.5)
@@ -221,6 +362,195 @@ position = Vector2(2383.28, 9534.08)
 rotation = -1.66883
 scale = Vector2(4.16612, 6.50701)
 texture = ExtResource("10_apdmc")
+
+[node name="Waves" type="Sprite2D" parent="Foreground"]
+z_index = 4096
+material = SubResource("ShaderMaterial_by1xe")
+position = Vector2(-797, 88)
+texture = ExtResource("11_2pfx6")
+
+[node name="Waves2" type="Sprite2D" parent="Foreground"]
+z_index = 4096
+material = SubResource("ShaderMaterial_by1xe")
+position = Vector2(-1222, 88)
+texture = ExtResource("11_2pfx6")
+
+[node name="Waves3" type="Sprite2D" parent="Foreground"]
+z_index = 4096
+material = SubResource("ShaderMaterial_by1xe")
+position = Vector2(-1713, 88)
+texture = ExtResource("11_2pfx6")
+
+[node name="Waves4" type="Sprite2D" parent="Foreground"]
+z_index = 4096
+material = SubResource("ShaderMaterial_by1xe")
+position = Vector2(653, 88)
+texture = ExtResource("11_2pfx6")
+
+[node name="Waves5" type="Sprite2D" parent="Foreground"]
+z_index = 4096
+material = SubResource("ShaderMaterial_by1xe")
+position = Vector2(228, 88)
+texture = ExtResource("11_2pfx6")
+
+[node name="Waves6" type="Sprite2D" parent="Foreground"]
+z_index = 4096
+material = SubResource("ShaderMaterial_by1xe")
+position = Vector2(-263, 88)
+texture = ExtResource("11_2pfx6")
+
+[node name="Waves7" type="Sprite2D" parent="Foreground"]
+z_index = 4096
+material = SubResource("ShaderMaterial_by1xe")
+position = Vector2(2025, 88)
+texture = ExtResource("11_2pfx6")
+
+[node name="Waves8" type="Sprite2D" parent="Foreground"]
+z_index = 4096
+material = SubResource("ShaderMaterial_by1xe")
+position = Vector2(1600, 88)
+texture = ExtResource("11_2pfx6")
+
+[node name="Waves9" type="Sprite2D" parent="Foreground"]
+z_index = 4096
+material = SubResource("ShaderMaterial_by1xe")
+position = Vector2(1109, 88)
+texture = ExtResource("11_2pfx6")
+
+[node name="Water3" type="Sprite2D" parent="Foreground"]
+z_index = 4096
+z_as_relative = false
+position = Vector2(0, 4264.14)
+scale = Vector2(138.58, 130.479)
+texture = SubResource("GradientTexture2D_nep7v")
+
+[node name="WavesBackground" type="Parallax2D" parent="."]
+scroll_scale = Vector2(0.75, 0.75)
+
+[node name="Waves19" type="Sprite2D" parent="WavesBackground"]
+z_index = 4096
+material = SubResource("ShaderMaterial_lb4he")
+position = Vector2(-797, 88)
+texture = ExtResource("11_2pfx6")
+
+[node name="Waves20" type="Sprite2D" parent="WavesBackground"]
+z_index = 4096
+material = SubResource("ShaderMaterial_lb4he")
+position = Vector2(-1222, 88)
+texture = ExtResource("11_2pfx6")
+
+[node name="Waves21" type="Sprite2D" parent="WavesBackground"]
+z_index = 4096
+material = SubResource("ShaderMaterial_lb4he")
+position = Vector2(-1713, 88)
+texture = ExtResource("11_2pfx6")
+
+[node name="Waves22" type="Sprite2D" parent="WavesBackground"]
+z_index = 4096
+material = SubResource("ShaderMaterial_lb4he")
+position = Vector2(653, 88)
+texture = ExtResource("11_2pfx6")
+
+[node name="Waves23" type="Sprite2D" parent="WavesBackground"]
+z_index = 4096
+material = SubResource("ShaderMaterial_lb4he")
+position = Vector2(228, 88)
+texture = ExtResource("11_2pfx6")
+
+[node name="Waves24" type="Sprite2D" parent="WavesBackground"]
+z_index = 4096
+material = SubResource("ShaderMaterial_lb4he")
+position = Vector2(-263, 88)
+texture = ExtResource("11_2pfx6")
+
+[node name="Waves25" type="Sprite2D" parent="WavesBackground"]
+z_index = 4096
+material = SubResource("ShaderMaterial_lb4he")
+position = Vector2(2025, 88)
+texture = ExtResource("11_2pfx6")
+
+[node name="Waves26" type="Sprite2D" parent="WavesBackground"]
+z_index = 4096
+material = SubResource("ShaderMaterial_lb4he")
+position = Vector2(1600, 88)
+texture = ExtResource("11_2pfx6")
+
+[node name="Waves27" type="Sprite2D" parent="WavesBackground"]
+z_index = 4096
+material = SubResource("ShaderMaterial_lb4he")
+position = Vector2(1109, 88)
+texture = ExtResource("11_2pfx6")
+
+[node name="Water4" type="Sprite2D" parent="WavesBackground"]
+z_index = 4096
+z_as_relative = false
+position = Vector2(0, 4264.14)
+scale = Vector2(138.58, 130.479)
+texture = SubResource("GradientTexture2D_nep7v")
+
+[node name="Waves Foreground" type="Parallax2D" parent="."]
+scroll_scale = Vector2(1.25, 1.25)
+
+[node name="Waves" type="Sprite2D" parent="Waves Foreground"]
+z_index = 4096
+material = SubResource("ShaderMaterial_by1xe")
+position = Vector2(-797, 88)
+texture = ExtResource("11_2pfx6")
+
+[node name="Waves2" type="Sprite2D" parent="Waves Foreground"]
+z_index = 4096
+material = SubResource("ShaderMaterial_by1xe")
+position = Vector2(-1222, 88)
+texture = ExtResource("11_2pfx6")
+
+[node name="Waves3" type="Sprite2D" parent="Waves Foreground"]
+z_index = 4096
+material = SubResource("ShaderMaterial_by1xe")
+position = Vector2(-1713, 88)
+texture = ExtResource("11_2pfx6")
+
+[node name="Waves4" type="Sprite2D" parent="Waves Foreground"]
+z_index = 4096
+material = SubResource("ShaderMaterial_by1xe")
+position = Vector2(653, 88)
+texture = ExtResource("11_2pfx6")
+
+[node name="Waves5" type="Sprite2D" parent="Waves Foreground"]
+z_index = 4096
+material = SubResource("ShaderMaterial_by1xe")
+position = Vector2(228, 88)
+texture = ExtResource("11_2pfx6")
+
+[node name="Waves6" type="Sprite2D" parent="Waves Foreground"]
+z_index = 4096
+material = SubResource("ShaderMaterial_by1xe")
+position = Vector2(-263, 88)
+texture = ExtResource("11_2pfx6")
+
+[node name="Waves7" type="Sprite2D" parent="Waves Foreground"]
+z_index = 4096
+material = SubResource("ShaderMaterial_by1xe")
+position = Vector2(2025, 88)
+texture = ExtResource("11_2pfx6")
+
+[node name="Waves8" type="Sprite2D" parent="Waves Foreground"]
+z_index = 4096
+material = SubResource("ShaderMaterial_by1xe")
+position = Vector2(1600, 88)
+texture = ExtResource("11_2pfx6")
+
+[node name="Waves9" type="Sprite2D" parent="Waves Foreground"]
+z_index = 4096
+material = SubResource("ShaderMaterial_by1xe")
+position = Vector2(1109, 88)
+texture = ExtResource("11_2pfx6")
+
+[node name="Water5" type="Sprite2D" parent="Waves Foreground"]
+z_index = 4096
+z_as_relative = false
+position = Vector2(0, 4264.14)
+scale = Vector2(138.58, 130.479)
+texture = SubResource("GradientTexture2D_nep7v")
 
 [connection signal="timeout" from="CanvasLayer/Instruction Timer" to="." method="_on_instruction_timer_timeout"]
 [connection signal="body_entered" from="Background/Water/Area2D" to="MiddleGround/FishingPlayer" method="_on_area_2d_body_entered"]
