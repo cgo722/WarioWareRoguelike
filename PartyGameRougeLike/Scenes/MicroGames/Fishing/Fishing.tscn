@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=3 uid="uid://occn8l637atj"]
+[gd_scene load_steps=17 format=3 uid="uid://occn8l637atj"]
 
 [ext_resource type="PackedScene" uid="uid://bsduxf5a3ga11" path="res://Assets/FishingAssets/FishingPlayer.tscn" id="1_bkbfo"]
 [ext_resource type="Script" path="res://Scenes/MicroGames/Fishing/FishingManager.gd" id="1_nx27p"]
@@ -9,18 +9,10 @@
 [ext_resource type="Texture2D" uid="uid://klhim3uch7fv" path="res://Assets/FishingAssets/IMG_0432.png" id="7_rme3c"]
 [ext_resource type="Texture2D" uid="uid://dqjuq0vukxegh" path="res://Assets/FishingAssets/IMG_0433.png" id="8_dv4im"]
 [ext_resource type="Texture2D" uid="uid://dkarbwoq5kxhh" path="res://Assets/FishingAssets/IMG_0434.png" id="9_bvsbo"]
+[ext_resource type="Texture2D" uid="uid://3sgcexaj8q7o" path="res://Assets/FishingAssets/CliffSide.png" id="9_gt2of"]
+[ext_resource type="Texture2D" uid="uid://c5mq1j2pkvsb5" path="res://Assets/FishingAssets/Rock Formation Low Res.png" id="10_apdmc"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_emb46"]
-
-[sub_resource type="Gradient" id="Gradient_u8a2o"]
-colors = PackedColorArray(0.0705882, 0.145098, 0.384314, 0.85098, 0.164706, 0.658824, 0.870588, 0.462745)
-
-[sub_resource type="GradientTexture2D" id="GradientTexture2D_nep7v"]
-gradient = SubResource("Gradient_u8a2o")
-fill_from = Vector2(1, 1)
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_j5lvi"]
-size = Vector2(34.9026, 49.7549)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_uwe1i"]
 animations = [{
@@ -53,77 +45,23 @@ animations = [{
 "speed": 7.0
 }]
 
+[sub_resource type="Gradient" id="Gradient_u8a2o"]
+colors = PackedColorArray(0.0705882, 0.145098, 0.384314, 0.85098, 0.164706, 0.658824, 0.870588, 0.462745)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_nep7v"]
+gradient = SubResource("Gradient_u8a2o")
+fill_from = Vector2(1, 1)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_j5lvi"]
+size = Vector2(34.9026, 49.7549)
+
 [node name="Fishing" type="Node2D"]
 position = Vector2(963, 549)
 script = ExtResource("1_nx27p")
 
-[node name="FishingPlayer" parent="." instance=ExtResource("1_bkbfo")]
-position = Vector2(0, -3)
-collision_layer = 32771
-motion_mode = 1
-
 [node name="SpawnerFishing" parent="." instance=ExtResource("3_8mh63")]
 position = Vector2(0, 338)
-
-[node name="NinePatchRect" type="NinePatchRect" parent="."]
-z_index = -2860
-offset_left = -2374.0
-offset_top = 2848.0
-offset_right = 2449.0
-offset_bottom = 6321.0
-texture = ExtResource("4_nxi4o")
-
-[node name="Floor" type="StaticBody2D" parent="."]
-position = Vector2(0, 5944)
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Floor"]
-scale = Vector2(152.566, -4.09694)
-shape = SubResource("RectangleShape2D_emb46")
-
-[node name="Ceiling" type="StaticBody2D" parent="."]
-position = Vector2(0, -510)
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Ceiling"]
-scale = Vector2(152.566, -4.09694)
-shape = SubResource("RectangleShape2D_emb46")
-
-[node name="Wall1" type="StaticBody2D" parent="."]
-position = Vector2(-1525, 2862)
-scale = Vector2(0.0234249, 86.2482)
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Wall1"]
-scale = Vector2(152.566, -4.09694)
-shape = SubResource("RectangleShape2D_emb46")
-
-[node name="Wall2" type="StaticBody2D" parent="."]
-position = Vector2(1521, 2862)
-scale = Vector2(0.0234249, 86.2482)
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Wall2"]
-scale = Vector2(152.566, -4.09694)
-shape = SubResource("RectangleShape2D_emb46")
-
-[node name="Water" type="Sprite2D" parent="."]
-z_index = 4096
-z_as_relative = false
-position = Vector2(2.08165e-12, 4264.14)
-scale = Vector2(138.58, 130.479)
-texture = SubResource("GradientTexture2D_nep7v")
-
-[node name="Area2D" type="Area2D" parent="Water"]
-collision_layer = 32768
-collision_mask = 32768
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Water/Area2D"]
-position = Vector2(-0.00721645, -7.12086)
-shape = SubResource("RectangleShape2D_j5lvi")
-
-[node name="Boat" type="Sprite2D" parent="."]
-z_index = -1320
-position = Vector2(-434, -73)
-rotation = 0.102892
-scale = Vector2(0.507741, 0.507741)
-texture = ExtResource("4_eg3lq")
+maxCount = 150
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
@@ -139,12 +77,151 @@ text = "Catch all the Fish!"
 wait_time = 3.0
 autostart = true
 
-[node name="FishermanSprite" type="AnimatedSprite2D" parent="."]
+[node name="Background" type="Parallax2D" parent="."]
+scroll_scale = Vector2(0.5, 0.5)
+
+[node name="Floor" type="StaticBody2D" parent="Background"]
+position = Vector2(0, 5944)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Background/Floor"]
+scale = Vector2(152.566, -4.09694)
+shape = SubResource("RectangleShape2D_emb46")
+
+[node name="Ceiling" type="StaticBody2D" parent="Background"]
+position = Vector2(0, -510)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Background/Ceiling"]
+scale = Vector2(152.566, -4.09694)
+shape = SubResource("RectangleShape2D_emb46")
+
+[node name="Wall1" type="StaticBody2D" parent="Background"]
+position = Vector2(-1525, 2862)
+scale = Vector2(0.0234249, 86.2482)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Background/Wall1"]
+scale = Vector2(152.566, -4.09694)
+shape = SubResource("RectangleShape2D_emb46")
+
+[node name="Wall2" type="StaticBody2D" parent="Background"]
+position = Vector2(1521, 2862)
+scale = Vector2(0.0234249, 86.2482)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Background/Wall2"]
+scale = Vector2(152.566, -4.09694)
+shape = SubResource("RectangleShape2D_emb46")
+
+[node name="Boat" type="Sprite2D" parent="Background"]
+z_index = -1320
+position = Vector2(-434, -73)
+rotation = 0.102892
+scale = Vector2(0.507741, 0.507741)
+texture = ExtResource("4_eg3lq")
+
+[node name="FishermanSprite" type="AnimatedSprite2D" parent="Background/Boat"]
 z_index = -2000
-position = Vector2(-462, -161)
+position = Vector2(-72.656, -166.736)
+rotation = -0.102892
+scale = Vector2(1.96951, 1.96951)
 sprite_frames = SubResource("SpriteFrames_uwe1i")
 animation = &"Cast"
 
-[connection signal="body_entered" from="Water/Area2D" to="FishingPlayer" method="_on_area_2d_body_entered"]
-[connection signal="body_exited" from="Water/Area2D" to="FishingPlayer" method="_on_area_2d_body_exited"]
+[node name="NinePatchRect" type="NinePatchRect" parent="Background"]
+z_index = -2860
+offset_left = -2374.0
+offset_top = 2848.0
+offset_right = 2449.0
+offset_bottom = 6321.0
+texture = ExtResource("4_nxi4o")
+
+[node name="Water" type="Sprite2D" parent="Background"]
+z_index = 4096
+z_as_relative = false
+position = Vector2(0, 4264.14)
+scale = Vector2(138.58, 130.479)
+texture = SubResource("GradientTexture2D_nep7v")
+
+[node name="Area2D" type="Area2D" parent="Background/Water"]
+collision_layer = 32768
+collision_mask = 32768
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Background/Water/Area2D"]
+position = Vector2(-0.00721645, -7.12086)
+shape = SubResource("RectangleShape2D_j5lvi")
+
+[node name="CliffSide" type="Sprite2D" parent="Background"]
+position = Vector2(2200, 4733)
+scale = Vector2(5.41538, 7.23837)
+texture = ExtResource("9_gt2of")
+
+[node name="CliffSide2" type="Sprite2D" parent="Background"]
+position = Vector2(-1487, 4037)
+scale = Vector2(4.82666, 7.72014)
+texture = ExtResource("9_gt2of")
+flip_h = true
+
+[node name="MiddleGround" type="Parallax2D" parent="."]
+
+[node name="FishingPlayer" parent="MiddleGround" instance=ExtResource("1_bkbfo")]
+position = Vector2(0, -3)
+collision_layer = 32771
+motion_mode = 1
+
+[node name="Foreground" type="Parallax2D" parent="."]
+scroll_scale = Vector2(1.5, 1.5)
+
+[node name="RockFormationLowRes" type="Sprite2D" parent="Foreground"]
+position = Vector2(881, 14948.7)
+scale = Vector2(5.22725, 3.91963)
+texture = ExtResource("10_apdmc")
+
+[node name="RockFormationLowRes2" type="Sprite2D" parent="Foreground"]
+position = Vector2(-827, 14337.7)
+rotation = 0.744926
+scale = Vector2(5.07269, 2.23768)
+texture = ExtResource("10_apdmc")
+
+[node name="RockFormationLowRes3" type="Sprite2D" parent="Foreground"]
+position = Vector2(-137, 15129.7)
+rotation = -2.78485
+scale = Vector2(4.16612, 6.50701)
+texture = ExtResource("10_apdmc")
+
+[node name="RockFormationLowRes4" type="Sprite2D" parent="Foreground"]
+position = Vector2(-912.722, 10784.1)
+rotation = 1.11602
+scale = Vector2(5.22725, 3.91963)
+texture = ExtResource("10_apdmc")
+
+[node name="RockFormationLowRes5" type="Sprite2D" parent="Foreground"]
+position = Vector2(-2620.72, 10173.1)
+rotation = 1.86094
+scale = Vector2(5.07269, 2.23768)
+texture = ExtResource("10_apdmc")
+
+[node name="RockFormationLowRes6" type="Sprite2D" parent="Foreground"]
+position = Vector2(-1930.72, 10965.1)
+rotation = -1.66883
+scale = Vector2(4.16612, 6.50701)
+texture = ExtResource("10_apdmc")
+
+[node name="RockFormationLowRes7" type="Sprite2D" parent="Foreground"]
+position = Vector2(3401.28, 9353.08)
+rotation = 1.11602
+scale = Vector2(5.22725, 3.91963)
+texture = ExtResource("10_apdmc")
+
+[node name="RockFormationLowRes8" type="Sprite2D" parent="Foreground"]
+position = Vector2(1693.28, 8742.08)
+rotation = 1.86094
+scale = Vector2(5.07269, 2.23768)
+texture = ExtResource("10_apdmc")
+
+[node name="RockFormationLowRes9" type="Sprite2D" parent="Foreground"]
+position = Vector2(2383.28, 9534.08)
+rotation = -1.66883
+scale = Vector2(4.16612, 6.50701)
+texture = ExtResource("10_apdmc")
+
 [connection signal="timeout" from="CanvasLayer/Instruction Timer" to="." method="_on_instruction_timer_timeout"]
+[connection signal="body_entered" from="Background/Water/Area2D" to="MiddleGround/FishingPlayer" method="_on_area_2d_body_entered"]
+[connection signal="body_exited" from="Background/Water/Area2D" to="MiddleGround/FishingPlayer" method="_on_area_2d_body_exited"]

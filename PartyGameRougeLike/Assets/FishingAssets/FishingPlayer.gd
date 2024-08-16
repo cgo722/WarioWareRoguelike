@@ -10,7 +10,7 @@ var animationPlayed : bool = false
 
 @onready var fishDeathPS := load("res://Assets/FishingAssets/FishDeath.tscn")
 @onready var splashPS := load("res://Assets/FishingAssets/Splash.tscn")
-@onready var fisherman := $"../FishermanSprite"
+@onready var fisherman := $"../../Background/Boat/FishermanSprite"
 
 # Get the gravity from the project settings to be synced with RigidBody nodes.
 

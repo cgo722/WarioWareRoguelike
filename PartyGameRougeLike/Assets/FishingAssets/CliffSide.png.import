@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b2kd6f37463qe"
-path="res://.godot/imported/Rock_formation_1_Low_Res.png-13ab97393e91db6e776f3e09b3ce45e1.ctex"
+uid="uid://3sgcexaj8q7o"
+path="res://.godot/imported/CliffSide.png-db6127cf0235c822326274cdadffec60.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/FishingAssets/Rock_formation_1_Low_Res.png"
-dest_files=["res://.godot/imported/Rock_formation_1_Low_Res.png-13ab97393e91db6e776f3e09b3ce45e1.ctex"]
+source_file="res://Assets/FishingAssets/CliffSide.png"
+dest_files=["res://.godot/imported/CliffSide.png-db6127cf0235c822326274cdadffec60.ctex"]
 
 [params]
 
