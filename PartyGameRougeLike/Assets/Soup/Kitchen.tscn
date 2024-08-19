@@ -10,8 +10,6 @@ shader = ExtResource("2_fci46")
 shader_parameter/scaling = Vector2(200, 200)
 shader_parameter/Roughness_Strength = 1.0
 shader_parameter/Light_Intesity = Vector3(0.5, 0, 0)
-shader_parameter/Specular_Min = 100.0
-shader_parameter/Specular_Max = 100.0
 shader_parameter/Color_Map = ExtResource("3_3ulti")
 
 [sub_resource type="PlaneMesh" id="PlaneMesh_ll5ts"]

@@ -14,6 +14,8 @@ sky_material = SubResource("ProceduralSkyMaterial_rejck")
 [sub_resource type="Environment" id="Environment_idhij"]
 background_mode = 2
 sky = SubResource("Sky_dvofe")
+ssao_enabled = true
+sdfgi_enabled = true
 fog_enabled = true
 fog_density = 0.0103
 

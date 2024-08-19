@@ -19,9 +19,11 @@ background_mode = 2
 sky = SubResource("Sky_d55y7")
 ambient_light_source = 3
 reflected_light_source = 2
+ssao_enabled = true
+sdfgi_enabled = true
 sdfgi_use_occlusion = true
-fog_light_color = Color(0.631373, 0.717647, 0.0705882, 1)
-fog_density = 0.0038
+fog_mode = 1
+fog_density = 1.0
 volumetric_fog_density = 0.025
 
 [sub_resource type="CameraAttributesPractical" id="CameraAttributesPractical_723hc"]
