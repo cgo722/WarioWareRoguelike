@@ -1,0 +1,19 @@
+[gd_scene load_steps=2 format=3 uid="uid://jrbf0i46arbv"]
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_g75nq"]
+lifetime_randomness = 1.0
+particle_flag_disable_z = true
+emission_shape = 3
+emission_box_extents = Vector3(250, 1000, 1)
+spread = 180.0
+initial_velocity_min = 50.0
+initial_velocity_max = 125.0
+gravity = Vector3(0, 0, 0)
+scale_max = 2.0
+turbulence_enabled = true
+turbulence_noise_speed = Vector3(1, 0, 0)
+
+[node name="2D Floating Particles" type="GPUParticles2D"]
+amount = 300
+process_material = SubResource("ParticleProcessMaterial_g75nq")
+lifetime = 10.0

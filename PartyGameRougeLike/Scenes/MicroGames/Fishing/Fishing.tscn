@@ -1,4 +1,4 @@
-[gd_scene load_steps=22 format=3 uid="uid://occn8l637atj"]
+[gd_scene load_steps=23 format=3 uid="uid://occn8l637atj"]
 
 [ext_resource type="PackedScene" uid="uid://bsduxf5a3ga11" path="res://Assets/FishingAssets/FishingPlayer.tscn" id="1_bkbfo"]
 [ext_resource type="Script" path="res://Scenes/MicroGames/Fishing/FishingManager.gd" id="1_nx27p"]
@@ -13,6 +13,7 @@
 [ext_resource type="Shader" path="res://Assets/Materials/2DColorChangerf.gdshader" id="10_2rri3"]
 [ext_resource type="Texture2D" uid="uid://c5mq1j2pkvsb5" path="res://Assets/FishingAssets/Rock Formation Low Res.png" id="10_apdmc"]
 [ext_resource type="Texture2D" uid="uid://dj64ab4ehsaxp" path="res://Assets/FishingAssets/Waves.png" id="11_2pfx6"]
+[ext_resource type="PackedScene" uid="uid://jrbf0i46arbv" path="res://Assets/Particle FX/2D Floating Particles.tscn" id="13_sa1ss"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_emb46"]
 
@@ -307,6 +308,9 @@ position = Vector2(0, 4264.14)
 scale = Vector2(138.58, 130.479)
 texture = SubResource("GradientTexture2D_nep7v")
 
+[node name="2D Floating Particles4" parent="MiddleGround" instance=ExtResource("13_sa1ss")]
+position = Vector2(157, 1524)
+
 [node name="Foreground" type="Parallax2D" parent="."]
 scroll_scale = Vector2(1.5, 1.5)
 
@@ -424,6 +428,9 @@ position = Vector2(0, 4264.14)
 scale = Vector2(138.58, 130.479)
 texture = SubResource("GradientTexture2D_nep7v")
 
+[node name="2D Floating Particles3" parent="Foreground" instance=ExtResource("13_sa1ss")]
+position = Vector2(157, 1524)
+
 [node name="WavesBackground" type="Parallax2D" parent="."]
 scroll_scale = Vector2(0.75, 0.75)
 
@@ -488,6 +495,9 @@ position = Vector2(0, 4264.14)
 scale = Vector2(138.58, 130.479)
 texture = SubResource("GradientTexture2D_nep7v")
 
+[node name="2D Floating Particles2" parent="WavesBackground" instance=ExtResource("13_sa1ss")]
+position = Vector2(157, 1524)
+
 [node name="Waves Foreground" type="Parallax2D" parent="."]
 scroll_scale = Vector2(1.25, 1.25)
 
@@ -551,6 +561,9 @@ z_as_relative = false
 position = Vector2(0, 4264.14)
 scale = Vector2(138.58, 130.479)
 texture = SubResource("GradientTexture2D_nep7v")
+
+[node name="2D Floating Particles" parent="Waves Foreground" instance=ExtResource("13_sa1ss")]
+position = Vector2(157, 1524)
 
 [connection signal="timeout" from="CanvasLayer/Instruction Timer" to="." method="_on_instruction_timer_timeout"]
 [connection signal="body_entered" from="Background/Water/Area2D" to="MiddleGround/FishingPlayer" method="_on_area_2d_body_entered"]
