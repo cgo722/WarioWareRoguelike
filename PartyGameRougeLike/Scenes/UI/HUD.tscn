@@ -9,62 +9,53 @@ layout_mode = 3
 anchors_preset = 0
 script = ExtResource("1_7woku")
 
-[node name="Health Text" type="Label" parent="."]
+[node name="HBoxContainer" type="HBoxContainer" parent="."]
 layout_mode = 0
-offset_left = 44.0
-offset_top = 52.0
-offset_right = 96.0
-offset_bottom = 75.0
+offset_right = 40.0
+offset_bottom = 40.0
+theme_override_constants/separation = 380
+
+[node name="HSplitContainer" type="HSplitContainer" parent="HBoxContainer"]
+layout_mode = 2
+
+[node name="Health Text" type="Label" parent="HBoxContainer/HSplitContainer"]
+layout_mode = 2
 theme = ExtResource("2_a748c")
 theme_override_font_sizes/font_size = 45
-text = "Health:"
+text = "KEY_HEALTH"
 
-[node name="Health Amount Text" type="Label" parent="."]
-layout_mode = 0
-offset_left = 255.0
-offset_top = 52.0
-offset_right = 307.0
-offset_bottom = 115.0
-theme = ExtResource("2_a748c")
-theme_override_font_sizes/font_size = 45
-text = "0"
-
-[node name="Timer Text" type="Label" parent="."]
-layout_mode = 0
-offset_left = 1592.0
-offset_top = 52.0
-offset_right = 1730.0
-offset_bottom = 115.0
-theme = ExtResource("2_a748c")
-theme_override_font_sizes/font_size = 45
-text = "Timer:"
-
-[node name="Timer Amount Text" type="Label" parent="."]
-layout_mode = 0
-offset_left = 1759.0
-offset_top = 52.0
-offset_right = 1811.0
-offset_bottom = 104.0
+[node name="Health Amount Text" type="Label" parent="HBoxContainer/HSplitContainer"]
+layout_mode = 2
 theme = ExtResource("2_a748c")
 theme_override_font_sizes/font_size = 45
 text = "0"
 
-[node name="Score Text" type="Label" parent="."]
-layout_mode = 0
-offset_left = 855.0
-offset_top = 52.0
-offset_right = 1017.0
-offset_bottom = 128.0
+[node name="HSplitContainer2" type="HSplitContainer" parent="HBoxContainer"]
+layout_mode = 2
+
+[node name="Timer Text" type="Label" parent="HBoxContainer/HSplitContainer2"]
+layout_mode = 2
+theme = ExtResource("2_a748c")
+theme_override_font_sizes/font_size = 45
+text = "KEY_TIMER"
+
+[node name="Timer Amount Text" type="Label" parent="HBoxContainer/HSplitContainer2"]
+layout_mode = 2
+theme = ExtResource("2_a748c")
+theme_override_font_sizes/font_size = 45
+text = "0"
+
+[node name="HSplitContainer3" type="HSplitContainer" parent="HBoxContainer"]
+layout_mode = 2
+
+[node name="Score Text" type="Label" parent="HBoxContainer/HSplitContainer3"]
+layout_mode = 2
 theme = ExtResource("2_a748c")
 theme_override_font_sizes/font_size = 55
-text = "Score:"
+text = "KEY_SCORE"
 
-[node name="Score Amount Text" type="Label" parent="."]
-layout_mode = 0
-offset_left = 1092.0
-offset_top = 52.0
-offset_right = 1144.0
-offset_bottom = 128.0
+[node name="Score Amount Text" type="Label" parent="HBoxContainer/HSplitContainer3"]
+layout_mode = 2
 theme = ExtResource("2_a748c")
 theme_override_font_sizes/font_size = 55
 text = "0"

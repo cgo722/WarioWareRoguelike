@@ -10,7 +10,7 @@ func _ready():
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(_delta):
-	$"Health Amount Text".text = str(gamemanager.playerHealth)
-	$"Timer Amount Text".text = str(snapped(timer.time_left, 0.01))
-	$"Score Amount Text".text = str(gamemanager.score)
+	$"HBoxContainer/HSplitContainer/Health Amount Text".text = str(gamemanager.playerHealth)
+	$"HBoxContainer/HSplitContainer2/Timer Amount Text".text = str(snapped(timer.time_left, 0.01))
+	$"HBoxContainer/HSplitContainer3/Score Amount Text".text = str(gamemanager.score)
 	pass

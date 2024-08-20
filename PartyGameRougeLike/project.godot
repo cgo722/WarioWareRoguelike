@@ -107,6 +107,10 @@ jump={
 
 pen_tablet/driver.windows="wintab"
 
+[internationalization]
+
+locale/translations=PackedStringArray("res://localization/localizations.en.translation", "res://localization/localizations.de.translation", "res://localization/localizations.ru.translation", "res://localization/localizations.ja.translation", "res://localization/localizations.es.translation", "res://localization/localizations.zh.translation")
+
 [physics]
 
 2d/run_on_separate_thread=true

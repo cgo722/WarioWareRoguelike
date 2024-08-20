@@ -36,7 +36,7 @@ layout_mode = 2
 
 [node name="ResolutionUIText" type="Label" parent="VBoxContainer/Resolution Split"]
 layout_mode = 2
-text = "Resolution:"
+text = "KEY_RESOLUTION"
 
 [node name="ResOptionButton" type="OptionButton" parent="VBoxContainer/Resolution Split"]
 layout_mode = 2
@@ -47,7 +47,7 @@ layout_mode = 2
 
 [node name="FullScreen" type="Label" parent="VBoxContainer/FullScreen Split"]
 layout_mode = 2
-text = "Fullscreen:"
+text = "KEY_FULLSCREEN"
 
 [node name="FScrCheckBox" type="CheckBox" parent="VBoxContainer/FullScreen Split"]
 layout_mode = 2
@@ -57,7 +57,7 @@ layout_mode = 2
 
 [node name="Vsync" type="Label" parent="VBoxContainer/VSyncSplit"]
 layout_mode = 2
-text = "Vsync"
+text = "KEY_VSYNC"
 
 [node name="VsCheckBox" type="CheckBox" parent="VBoxContainer/VSyncSplit"]
 layout_mode = 2

@@ -1,4 +1,4 @@
-[gd_resource type="Resource" load_steps=2 format=3 uid="uid://dmqjq3hnd4dff"]
+[gd_resource type="Resource" script_class="LocalizationPlaceholdersData" load_steps=2 format=3 uid="uid://dmqjq3hnd4dff"]
 
 [ext_resource type="Script" path="res://addons/localization_editor/model/LocalizationPlaceholdersData.gd" id="1"]
 
@@ -10,9 +10,25 @@ placeholders = {
 "en": "John",
 "ru": "Ваня"
 },
+"NOMBRE": {
+"de": "",
+"en": "",
+"es": "",
+"ja": "",
+"ru": "",
+"zh": ""
+},
 "OLD": {
 "de": "16",
 "en": "17",
 "ru": "18"
+},
+"名前": {
+"de": "",
+"en": "",
+"es": "",
+"ja": "",
+"ru": "",
+"zh": ""
 }
 }
