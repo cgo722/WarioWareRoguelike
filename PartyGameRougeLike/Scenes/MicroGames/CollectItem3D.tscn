@@ -1,8 +1,9 @@
-[gd_scene load_steps=35 format=3 uid="uid://cudm8b42ylckp"]
+[gd_scene load_steps=37 format=3 uid="uid://cudm8b42ylckp"]
 
 [ext_resource type="PackedScene" uid="uid://b1xcvdj4jtjgr" path="res://Scenes/Player/3D/StandardCharacter3D.tscn" id="1_ayve0"]
 [ext_resource type="Script" path="res://Scripts/QuickCollectManager.gd" id="1_bup1j"]
 [ext_resource type="Script" path="res://Scripts/Spawner.gd" id="3_04wo3"]
+[ext_resource type="Material" uid="uid://cai3cerjbd5al" path="res://Assets/Materials/Outline.tres" id="3_a1trw"]
 [ext_resource type="Material" uid="uid://b80obov3pts5h" path="res://Assets/Materials/OrangeWhiteBox.tres" id="4_lg5nr"]
 [ext_resource type="Texture2D" uid="uid://bv7yf7wq765k0" path="res://Assets/Materials/fantasy_sky_background_0.jpg" id="6_26fn5"]
 [ext_resource type="PackedScene" uid="uid://c7ic4h1k7n0n2" path="res://Assets/Grab The Item/vector_tree.tscn" id="8_7ycbi"]
@@ -12,6 +13,9 @@
 [ext_resource type="Texture2D" uid="uid://dm537og4ppvro" path="res://Assets/Grab The Item/Ship_Base_color.png" id="12_34gnh"]
 [ext_resource type="PackedScene" uid="uid://b5htcnoahg57c" path="res://Assets/Grab The Item/reverie_alien_ground.tscn" id="12_aepmq"]
 [ext_resource type="Shader" uid="uid://rua5o635tv8" path="res://Assets/Particle FX/3DSmokeClouds.tres" id="13_p3ttr"]
+
+[sub_resource type="QuadMesh" id="QuadMesh_mht4o"]
+size = Vector2(2, 2)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_vjijr"]
 
@@ -122,6 +126,12 @@ doppler_tracking = 2
 current = true
 fov = 49.2
 size = 23.077
+
+[node name="CSGMesh3D" type="CSGMesh3D" parent="Camera3D"]
+transform = Transform3D(52.879, -1.37616e-06, 2.75232e-06, 1.37616e-06, 52.879, 0, -2.75232e-06, 7.16281e-14, 52.879, -0.144268, 0.0407867, -0.398315)
+flip_faces = true
+mesh = SubResource("QuadMesh_mht4o")
+material = ExtResource("3_a1trw")
 
 [node name="PlatForms" type="Node" parent="."]
 

@@ -1,8 +1,9 @@
-[gd_scene load_steps=9 format=3 uid="uid://dq2rrssue01df"]
+[gd_scene load_steps=11 format=3 uid="uid://dq2rrssue01df"]
 
 [ext_resource type="Script" path="res://Scenes/MicroGames/Collapsing Bridge/CollapsingBridgeManager.gd" id="1_e0ft4"]
 [ext_resource type="PackedScene" uid="uid://b1xcvdj4jtjgr" path="res://Scenes/Player/3D/StandardCharacter3D.tscn" id="1_w7o34"]
 [ext_resource type="PackedScene" uid="uid://df3t252u805na" path="res://Scenes/MicroGames/Collapsing Bridge/Phycis Planks.tscn" id="2_vwlct"]
+[ext_resource type="Material" uid="uid://cai3cerjbd5al" path="res://Assets/Materials/Outline.tres" id="3_grmnl"]
 [ext_resource type="PackedScene" uid="uid://budtvc4niw8o5" path="res://Assets/Collapsing Bridge/Boulders.glb" id="3_ldxjq"]
 [ext_resource type="PackedScene" uid="uid://cpgwwvy0lobdx" path="res://Assets/Collapsing Bridge/rope_Scene.tscn" id="4_sfp5p"]
 
@@ -19,6 +20,9 @@ sdfgi_enabled = true
 fog_enabled = true
 fog_density = 0.0103
 
+[sub_resource type="QuadMesh" id="QuadMesh_2bbxl"]
+size = Vector2(2, 2)
+
 [node name="CollapsingBridge" type="Node3D"]
 script = ExtResource("1_e0ft4")
 
@@ -32,6 +36,12 @@ twoD = true
 [node name="Camera3D" type="Camera3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 0.767915, 0.640552, 0, -0.640552, 0.767915, -1.111, 23.5364, 24.448)
 fov = 51.0
+
+[node name="CSGMesh3D" type="CSGMesh3D" parent="Camera3D"]
+transform = Transform3D(123.193, 0, 0, 0, 123.192, 1.14441e-05, 0, -1.14441e-05, 123.192, 0, 0.221806, -1.42965)
+flip_faces = true
+mesh = SubResource("QuadMesh_2bbxl")
+material = ExtResource("3_grmnl")
 
 [node name="PhycisPlanks" parent="." instance=ExtResource("2_vwlct")]
 transform = Transform3D(-9.48331e-08, 0.10736, 2.16953, 4.69286e-09, 2.16953, -0.10736, -2.17218, 0, -9.49491e-08, -2.23056, -0.0350526, 0.534597)

@@ -1,12 +1,16 @@
-[gd_scene load_steps=17 format=3 uid="uid://b0hxpu0qbet3a"]
+[gd_scene load_steps=19 format=3 uid="uid://b0hxpu0qbet3a"]
 
 [ext_resource type="Script" path="res://Scripts/Tag/Tag3DManager.gd" id="1_quder"]
 [ext_resource type="PackedScene" uid="uid://d2t83bvb81i57" path="res://Assets/platformsRound.tscn" id="1_y21i5"]
 [ext_resource type="PackedScene" uid="uid://b1xcvdj4jtjgr" path="res://Scenes/Player/3D/StandardCharacter3D.tscn" id="2_0b8co"]
 [ext_resource type="Texture2D" uid="uid://bv7yf7wq765k0" path="res://Assets/Materials/fantasy_sky_background_0.jpg" id="3_b802e"]
+[ext_resource type="Material" uid="uid://cai3cerjbd5al" path="res://Assets/Materials/Outline.tres" id="4_dwla7"]
 [ext_resource type="PackedScene" uid="uid://bsjtdxj4oon3t" path="res://Scenes/MicroGames/Tag/AI Spawner.tscn" id="5_bxlyk"]
 [ext_resource type="ArrayMesh" uid="uid://4njta17iupbu" path="res://Assets/Tag/Grass_Plane_002.res" id="6_jl6i7"]
 [ext_resource type="Shader" uid="uid://najcvkwte0j8" path="res://Assets/Materials/Grass.tres" id="7_yxmpd"]
+
+[sub_resource type="QuadMesh" id="QuadMesh_3tqv5"]
+size = Vector2(2, 2)
 
 [sub_resource type="PanoramaSkyMaterial" id="PanoramaSkyMaterial_iqj3u"]
 panorama = ExtResource("3_b802e")
@@ -68,6 +72,12 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.175531, 2.90789, -0.078704
 transform = Transform3D(1, 0, 0, 0, 0.912834, 0.40833, 0, -0.40833, 0.912834, 0, 18.1883, 40.483)
 fov = 30.0
 size = 36.135
+
+[node name="CSGMesh3D" type="CSGMesh3D" parent="Camera3D"]
+transform = Transform3D(33.6228, 0, 0, 0, 33.6228, 9.53674e-07, 0, 0, 33.6228, 0, -0.0401335, -1.57561)
+flip_faces = true
+mesh = SubResource("QuadMesh_3tqv5")
+material = ExtResource("4_dwla7")
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 0.634852, 0.772634, 0, -0.772634, 0.634852, 0, 5.28047, 0)
