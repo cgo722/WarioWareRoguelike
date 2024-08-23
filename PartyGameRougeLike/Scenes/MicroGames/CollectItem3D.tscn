@@ -1,4 +1,4 @@
-[gd_scene load_steps=37 format=3 uid="uid://cudm8b42ylckp"]
+[gd_scene load_steps=38 format=3 uid="uid://cudm8b42ylckp"]
 
 [ext_resource type="PackedScene" uid="uid://b1xcvdj4jtjgr" path="res://Scenes/Player/3D/StandardCharacter3D.tscn" id="1_ayve0"]
 [ext_resource type="Script" path="res://Scripts/QuickCollectManager.gd" id="1_bup1j"]
@@ -13,6 +13,7 @@
 [ext_resource type="Texture2D" uid="uid://dm537og4ppvro" path="res://Assets/Grab The Item/Ship_Base_color.png" id="12_34gnh"]
 [ext_resource type="PackedScene" uid="uid://b5htcnoahg57c" path="res://Assets/Grab The Item/reverie_alien_ground.tscn" id="12_aepmq"]
 [ext_resource type="Shader" uid="uid://rua5o635tv8" path="res://Assets/Particle FX/3DSmokeClouds.tres" id="13_p3ttr"]
+[ext_resource type="PackedScene" uid="uid://btdh6d75c3jp0" path="res://Scenes/upgrade_timer.tscn" id="14_pxyqq"]
 
 [sub_resource type="QuadMesh" id="QuadMesh_mht4o"]
 size = Vector2(2, 2)
@@ -338,6 +339,9 @@ transform = Transform3D(-9.08094, 0, 6.78807, 0, 5.35056, 0, -6.42087, 0, -9.600
 [node name="Reverie Alien Ground3" parent="." instance=ExtResource("12_aepmq")]
 transform = Transform3D(1.53162, 0.899473, -11.4767, 0.621462, -5.27158, -1.90237, -10.9981, -0.172614, -1.70576, 7.87607, -0.158376, -4.34577)
 
+[node name="Upgrade_Timer" parent="." instance=ExtResource("14_pxyqq")]
+
 [connection signal="timeout" from="CanvasLayer/Instruction Timer" to="." method="_on_instruction_timer_timeout"]
+[connection signal="timeout" from="Upgrade_Timer" to="StandardCharacter3D" method="_on_upgrade_timer_timeout"]
 
 [editable path="Ship2"]

@@ -1,9 +1,9 @@
 extends CharacterBody3D
 
 @onready var gamemanager = get_node("/root/GameManager")
-@onready var SPEED : float = 4.0 * gamemanager.playerSpeed3D
+@onready var SPEED : float = 4.0
 @onready var animT : AnimationTree = $Alien/AnimationTree
-@onready var JUMP_VELOCITY : float = 6 * gamemanager.jumpStrength
+@onready var JUMP_VELOCITY : float = 6 
 @onready var mesh = $Alien
 @onready var runningParticles = $"3dSmokeClouds"
 @export var twoD : bool = false
@@ -83,3 +83,9 @@ func AnimTreeState(): #got to get landing to work
 						animT["parameters/conditions/landed"] = true
 						animT["parameters/conditions/isFalling"] = false
 	pass
+
+
+func _on_upgrade_timer_timeout() -> void:
+	SPEED *= gamemanager.playerSpeed3D
+	JUMP_VELOCITY *= gamemanager.jumpStrength
+	pass # Replace with function body.
