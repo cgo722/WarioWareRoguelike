@@ -7,12 +7,15 @@ extends Control
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	get_tree().paused = false
+	if ResourceLoader.exists("user://SaveData.res"):
+		hsAmount.text = str(gamemanager.savingResource.HiScore)
+	else:
+		hsAmount.text = "0"
 	pass # Replace with function body.
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(_delta):
-	hsAmount.text = str(gamemanager.savingResource.HiScore)
 	pass
 
 func _on_options_button_up():
