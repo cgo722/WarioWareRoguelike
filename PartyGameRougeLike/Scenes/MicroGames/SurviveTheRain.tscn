@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://mlfj7mlo1x23"]
+[gd_scene load_steps=10 format=3 uid="uid://mlfj7mlo1x23"]
 
 [ext_resource type="Script" path="res://Scenes/SurviveTheRainManager.gd" id="1_4w7kf"]
 [ext_resource type="PackedScene" uid="uid://dqnv87pgnk5c5" path="res://Assets/2D Spawner.tscn" id="2_p6udn"]
@@ -6,6 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://nw1oknr3ftnp" path="res://Scenes/Player/2D/SurviveTheRainPlayer.tscn" id="4_ejuh7"]
 [ext_resource type="AudioStream" uid="uid://bx0e3p5qwabqt" path="res://Assets/Sounds/Rain.wav" id="5_1nof8"]
 [ext_resource type="PackedScene" uid="uid://dqwaw0acw6fep" path="res://Assets/Particle FX/2D Wind.tscn" id="6_v4x7b"]
+[ext_resource type="PackedScene" uid="uid://btdh6d75c3jp0" path="res://Scenes/upgrade_timer.tscn" id="7_ius4y"]
 
 [sub_resource type="Gradient" id="Gradient_vaxgj"]
 offsets = PackedFloat32Array(0)
@@ -63,4 +64,7 @@ autoplay = true
 position = Vector2(961, 637)
 amount = 15
 
+[node name="Upgrade_Timer" parent="." instance=ExtResource("7_ius4y")]
+
 [connection signal="timeout" from="CanvasLayer/Instruction Timer" to="." method="_on_instruction_timer_timeout"]
+[connection signal="timeout" from="Upgrade_Timer" to="StandardPlayer" method="_on_upgrade_timer_timeout"]

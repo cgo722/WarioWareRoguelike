@@ -16,6 +16,7 @@ const KEY_RESOLUTION = "KEY_RESOLUTION"
 const KEY_HEALTH = "KEY_HEALTH"
 const KEY_TIMER = "KEY_TIMER"
 const KEY_SCORE = "KEY_SCORE"
+const KEY_HOWTO = "KEY_HOWTO"
 
 const KEYS = [
  "KEY_NAME",
@@ -30,5 +31,6 @@ const KEYS = [
  "KEY_RESOLUTION",
  "KEY_HEALTH",
  "KEY_TIMER",
- "KEY_SCORE"
+ "KEY_SCORE",
+ "KEY_HOWTO"
 ]

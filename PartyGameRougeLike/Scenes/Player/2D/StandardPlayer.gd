@@ -1,8 +1,8 @@
 extends CharacterBody2D
 
 @onready var gamemanager = get_node("/root/GameManager")
-@onready var SPEED : float = 300.0 * gamemanager.playerSpeed2D
-@onready var JUMP_VELOCITY : float = -500.0 * gamemanager.jumpStrength
+@onready var SPEED : float = 300.0
+@onready var JUMP_VELOCITY : float = -500.0
 
 # Get the gravity from the project settings to be synced with RigidBody nodes.
 var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
@@ -63,3 +63,9 @@ func _physics_process(delta):
 
 	move_and_slide()
 #jump animations is still not playing and idle isn't playing
+
+
+func _on_upgrade_timer_timeout() -> void:
+	SPEED *= gamemanager.playerSpeed2D
+	JUMP_VELOCITY *= gamemanager.jumpStrength
+	pass # Replace with function body.

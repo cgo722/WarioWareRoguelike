@@ -2,7 +2,7 @@ extends Control
 
 @onready var gamemanager = get_node("/root/GameManager")
 @onready var settingsMenu = load("res://Scenes/Menus/Settings.tscn")
-@onready var hsAmount : Label = $"VBoxContainer/HSplitContainer/High Score Amount"
+@onready var hsAmount : Label = $"BoxContainer/VBoxContainer/HSplitContainer/High Score Amount"
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -35,3 +35,8 @@ func _on_play_button_up():
 func _exit_tree():
 	var UiPlayuer = get_parent().get_node("UISFX")
 	UiPlayuer.play()
+
+
+func _on_how_to_button_up() -> void:
+	
+	pass # Replace with function body.

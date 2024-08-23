@@ -1,8 +1,9 @@
-[gd_scene load_steps=19 format=3 uid="uid://b0hxpu0qbet3a"]
+[gd_scene load_steps=20 format=3 uid="uid://b0hxpu0qbet3a"]
 
 [ext_resource type="Script" path="res://Scripts/Tag/Tag3DManager.gd" id="1_quder"]
 [ext_resource type="PackedScene" uid="uid://d2t83bvb81i57" path="res://Assets/platformsRound.tscn" id="1_y21i5"]
 [ext_resource type="PackedScene" uid="uid://b1xcvdj4jtjgr" path="res://Scenes/Player/3D/StandardCharacter3D.tscn" id="2_0b8co"]
+[ext_resource type="PackedScene" uid="uid://btdh6d75c3jp0" path="res://Scenes/upgrade_timer.tscn" id="2_s7waf"]
 [ext_resource type="Texture2D" uid="uid://bv7yf7wq765k0" path="res://Assets/Materials/fantasy_sky_background_0.jpg" id="3_b802e"]
 [ext_resource type="Material" uid="uid://cai3cerjbd5al" path="res://Assets/Materials/Outline.tres" id="4_dwla7"]
 [ext_resource type="PackedScene" uid="uid://bsjtdxj4oon3t" path="res://Scenes/MicroGames/Tag/AI Spawner.tscn" id="5_bxlyk"]
@@ -59,6 +60,8 @@ buffer = PackedFloat32Array(0.35725, -0.0678125, 0.278531, 12.4755, -0.0426253, 
 [node name="Tag3d" type="Node3D"]
 script = ExtResource("1_quder")
 
+[node name="Upgrade_Timer" parent="." instance=ExtResource("2_s7waf")]
+
 [node name="Platforms2" parent="." instance=ExtResource("1_y21i5")]
 transform = Transform3D(34.6653, 0, 0, 0, 0.482119, 0, 0, 0, 35.2451, -0.210391, -0.65306, -0.278799)
 
@@ -114,6 +117,7 @@ autostart = true
 material_override = SubResource("ShaderMaterial_0yiu1")
 multimesh = SubResource("MultiMesh_3yfhw")
 
+[connection signal="timeout" from="Upgrade_Timer" to="StandardCharacter3D" method="_on_upgrade_timer_timeout"]
 [connection signal="timeout" from="CanvasLayer/Instruction Timer" to="." method="_on_instruction_timer_timeout"]
 
 [editable path="Platforms2"]

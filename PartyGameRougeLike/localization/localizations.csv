@@ -4,11 +4,12 @@ KEY_PLAY,Play,Spielen,Играть,遊ぶ,Jugar,玩
 KEY_SETTINGS,Settings,Einstellungen,Настройки,設定,Ajustes,设置
 KEY_LANGUAGE,Language,Sprache,Язык,言語,Idioma,语言
 KEY_QUIT,Quit,Beenden,Закрыть,やめる,Abandonar,辞职
-KEY_TITLE,Reverie,,Мечтательность,夢想,Ensueño,遐想
-KEY_HIGHSCORE,High Score,,Высокий балл,ハイスコ​​ア,Puntuación alta,高分
-KEY_VSYNC,Vsync,,вертикальная синхронизация,垂直同期,sincronización vertical,垂直同步
-KEY_FULLSCREEN,Fullscreen,,Полноэкранный,全画面表示,Pantalla completa,全屏
-KEY_RESOLUTION,Resolution,,Разрешение,解決,Resolución,解决
-KEY_HEALTH,Health,,Здоровье,健康,Salud,健康
-KEY_TIMER,Time,,Время,時間,Tiempo,时间
-KEY_SCORE,Score,,Счет,スコア,Puntaje,分数
+KEY_TITLE,It's A Game Changer,Es ist ein Game Changer,Это меняет правила игры,ゲームチェンジャーです,Es un cambio de juego,这是一个改变游戏规则的东西
+KEY_HIGHSCORE,High Score,Highscore,Высокий балл,ハイスコ​​ア,Puntuación alta,高分
+KEY_VSYNC,Vsync,Vsync,вертикальная синхронизация,垂直同期,sincronización vertical,垂直同步
+KEY_FULLSCREEN,Fullscreen,Vollbild,Полноэкранный,全画面表示,Pantalla completa,全屏
+KEY_RESOLUTION,Resolution,Auflösung,Разрешение,解決,Resolución,解决
+KEY_HEALTH,Health,Gesundheit,Здоровье,健康,Salud,健康
+KEY_TIMER,Time,Zeit,Время,時間,Tiempo,时间
+KEY_SCORE,Score,Punktzahl,Счет,スコア,Puntaje,分数
+KEY_HOWTO,How To Play,Wie man spielt,Как играть,遊び方,Cómo jugar,如何玩

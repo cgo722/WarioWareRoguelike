@@ -1,10 +1,13 @@
 extends Node
 
-@onready var Levels := ["res://Scenes/MicroGames/SurviveTheRain.tscn", "res://Scenes/MicroGames/CollectItem3D.tscn", 
+@onready var DemoLevels := ["res://Scenes/MicroGames/SurviveTheRain.tscn", "res://Scenes/MicroGames/CollectItem3D.tscn", 
+"res://Scenes/MicroGames/Tag3D.tscn", "res://Scenes/MicroGames/Fishing/Fishing.tscn",
+"res://Scenes/MicroGames/Dont Drop The Soup/Dont Drop the Soup.tscn"]
+@onready var FullGameLevels := ["res://Scenes/MicroGames/SurviveTheRain.tscn", "res://Scenes/MicroGames/CollectItem3D.tscn", 
 "res://Scenes/MicroGames/Tag3D.tscn", "res://Scenes/MicroGames/Fishing/Fishing.tscn",
 "res://Scenes/MicroGames/Dont Drop The Soup/Dont Drop the Soup.tscn", "res://Scenes/MicroGames/Collapsing Bridge/CollapsingBridge.tscn",
 "res://Scenes/MicroGames/Spam Space Bar Game/SpamSpaceBarGame.tscn", "res://Scenes/MicroGames/Pull the sword out of the stone/Pull the sword out of the Stone.tscn"]
-
+@export var demo : bool
 var Bag := []
 var loadedLevel
 var previousLevel
@@ -20,7 +23,10 @@ var scene_instance
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	Input.set_mouse_mode(Input.MOUSE_MODE_HIDDEN)
-	Bag += Levels
+	if demo == true:
+		Bag += DemoLevels
+	else:
+		Bag += FullGameLevels
 	gamemanager.start = false
 	if(gamemanager.restart != true):
 		loadedLevel = load("res://Scenes/Menus/MainMenu.tscn")
@@ -70,9 +76,11 @@ func NewScene():
 	var levelSel = randi_range(0, Bag.size()- 1)
 	loadedLevel = load(Bag[levelSel])
 	if Bag.size() <= 1:
-		Bag += Levels
+		if demo == true:
+			Bag += DemoLevels
+		else:
+			Bag += FullGameLevels
 	Bag.remove_at(levelSel)
-	print(Levels)
 
 func SceneManager(loaded):
 	if loaded == true:

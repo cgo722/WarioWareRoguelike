@@ -1,7 +1,8 @@
-[gd_scene load_steps=11 format=3 uid="uid://dq2rrssue01df"]
+[gd_scene load_steps=12 format=3 uid="uid://dq2rrssue01df"]
 
 [ext_resource type="Script" path="res://Scenes/MicroGames/Collapsing Bridge/CollapsingBridgeManager.gd" id="1_e0ft4"]
 [ext_resource type="PackedScene" uid="uid://b1xcvdj4jtjgr" path="res://Scenes/Player/3D/StandardCharacter3D.tscn" id="1_w7o34"]
+[ext_resource type="PackedScene" uid="uid://btdh6d75c3jp0" path="res://Scenes/upgrade_timer.tscn" id="2_bh65r"]
 [ext_resource type="PackedScene" uid="uid://df3t252u805na" path="res://Scenes/MicroGames/Collapsing Bridge/Phycis Planks.tscn" id="2_vwlct"]
 [ext_resource type="Material" uid="uid://cai3cerjbd5al" path="res://Assets/Materials/Outline.tres" id="3_grmnl"]
 [ext_resource type="PackedScene" uid="uid://budtvc4niw8o5" path="res://Assets/Collapsing Bridge/Boulders.glb" id="3_ldxjq"]
@@ -25,6 +26,8 @@ size = Vector2(2, 2)
 
 [node name="CollapsingBridge" type="Node3D"]
 script = ExtResource("1_e0ft4")
+
+[node name="Upgrade_Timer" parent="." instance=ExtResource("2_bh65r")]
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
 environment = SubResource("Environment_idhij")
@@ -160,6 +163,5 @@ metadata/_edit_use_anchors_ = true
 wait_time = 3.0
 autostart = true
 
+[connection signal="timeout" from="Upgrade_Timer" to="StandardCharacter3D" method="_on_upgrade_timer_timeout"]
 [connection signal="timeout" from="CanvasLayer/Instruction Timer" to="." method="_on_instruction_timer_timeout"]
-
-[editable path="PhycisPlanks"]

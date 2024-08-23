@@ -1,6 +1,6 @@
 extends Node3D
 @onready var gamemanager = get_node("/root/GameManager")
-@onready var SPEED : float = 0.01 * gamemanager.playerSpeed3D
+@onready var SPEED : float = 0.01 
 var minT : float 
 var maxT : float
 var rotationDir : Vector3
@@ -37,4 +37,9 @@ func _on_round_timer_timeout():
 
 func _on_area_3d_body_entered(_body):
 	splashParticles.emitting = true
+	pass # Replace with function body.
+
+
+func _on_upgrade_timer_timeout() -> void:
+	SPEED *= gamemanager.playerSpeed3D
 	pass # Replace with function body.

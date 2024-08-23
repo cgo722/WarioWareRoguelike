@@ -1,4 +1,4 @@
-[gd_scene load_steps=19 format=3 uid="uid://cigdqqcwl3t6e"]
+[gd_scene load_steps=20 format=3 uid="uid://cigdqqcwl3t6e"]
 
 [ext_resource type="PackedScene" uid="uid://bqxk3bqyb5tpd" path="res://Assets/Soup/BowlPlayer.tscn" id="1_7djil"]
 [ext_resource type="Script" path="res://Scenes/MicroGames/Dont Drop The Soup/Dont Drop the Soup Manger.gd" id="1_mns8a"]
@@ -9,6 +9,7 @@
 [ext_resource type="Script" path="res://Scenes/MicroGames/Dont Drop The Soup/SkeletonIK3D.gd" id="6_82sld"]
 [ext_resource type="PackedScene" uid="uid://cjqpwl3iol37y" path="res://Assets/Soup/Kitchen.tscn" id="7_idxwn"]
 [ext_resource type="PackedScene" uid="uid://dkinuc5f40coo" path="res://Assets/Soup/BayLeaf.tscn" id="9_g55h6"]
+[ext_resource type="PackedScene" uid="uid://btdh6d75c3jp0" path="res://Scenes/upgrade_timer.tscn" id="10_7t2an"]
 
 [sub_resource type="QuadMesh" id="QuadMesh_qu6dn"]
 
@@ -398,10 +399,13 @@ transform = Transform3D(1, -4.66935e-16, 3.28166e-16, -5.69953e-16, -0.846862, 0
 shadow_enabled = true
 shadow_bias = 7.27
 
+[node name="Upgrade_Timer" parent="." instance=ExtResource("10_7t2an")]
+
 [connection signal="body_entered" from="Area3D" to="." method="_on_area_3d_body_entered"]
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
 [connection signal="body_entered" from="Area3D2" to="BowlPlayer2" method="_on_area_3d_body_entered"]
 [connection signal="timeout" from="CanvasLayer/Instruction TImer" to="." method="_on_instruction_t_imer_timeout"]
+[connection signal="timeout" from="Upgrade_Timer" to="BowlPlayer2" method="_on_upgrade_timer_timeout"]
 
 [editable path="ChiefArm"]
 [editable path="Kitchen"]
