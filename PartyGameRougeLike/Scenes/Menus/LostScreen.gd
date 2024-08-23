@@ -22,3 +22,9 @@ func _on_main_menu_button_up():
 	get_parent().add_child(scene_instance)
 	queue_free()
 	pass # Replace with function body.
+
+
+func _on_resume_button_up() -> void:
+	get_tree().paused = false
+	self.queue_free()
+	pass # Replace with function body.
