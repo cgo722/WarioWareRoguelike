@@ -1,7 +1,8 @@
-[gd_scene load_steps=23 format=3 uid="uid://occn8l637atj"]
+[gd_scene load_steps=24 format=3 uid="uid://occn8l637atj"]
 
 [ext_resource type="PackedScene" uid="uid://bsduxf5a3ga11" path="res://Assets/FishingAssets/FishingPlayer.tscn" id="1_bkbfo"]
 [ext_resource type="Script" path="res://Scenes/MicroGames/Fishing/FishingManager.gd" id="1_nx27p"]
+[ext_resource type="PackedScene" uid="uid://btdh6d75c3jp0" path="res://Scenes/upgrade_timer.tscn" id="2_1rw80"]
 [ext_resource type="PackedScene" uid="uid://co4g08277ryvx" path="res://Scenes/MicroGames/Fishing/SpawnerFishing.tscn" id="3_8mh63"]
 [ext_resource type="Texture2D" uid="uid://bk30gxb8q4v0j" path="res://Assets/FishingAssets/Boat 2.png" id="4_eg3lq"]
 [ext_resource type="Texture2D" uid="uid://ciwaapf2otsen" path="res://Assets/FishingAssets/Background_(fishing)_Low_Red.png" id="4_nxi4o"]
@@ -74,6 +75,8 @@ shader_parameter/col = Vector4(1, 1, 1, 1)
 [node name="Fishing" type="Node2D"]
 position = Vector2(963, 549)
 script = ExtResource("1_nx27p")
+
+[node name="Upgrade_Timer" parent="." instance=ExtResource("2_1rw80")]
 
 [node name="SpawnerFishing" parent="." instance=ExtResource("3_8mh63")]
 position = Vector2(0, 338)
@@ -565,6 +568,7 @@ texture = SubResource("GradientTexture2D_nep7v")
 [node name="2D Floating Particles" parent="Waves Foreground" instance=ExtResource("13_sa1ss")]
 position = Vector2(157, 1524)
 
+[connection signal="timeout" from="Upgrade_Timer" to="MiddleGround/FishingPlayer" method="_on_upgrade_timer_timeout"]
 [connection signal="timeout" from="CanvasLayer/Instruction Timer" to="." method="_on_instruction_timer_timeout"]
 [connection signal="body_entered" from="Background/Water/Area2D" to="MiddleGround/FishingPlayer" method="_on_area_2d_body_entered"]
 [connection signal="body_exited" from="Background/Water/Area2D" to="MiddleGround/FishingPlayer" method="_on_area_2d_body_exited"]

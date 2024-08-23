@@ -1,7 +1,7 @@
 extends CharacterBody2D
 
 @onready var gamemanager := get_node("/root/GameManager")
-@onready var SPEED : float = 300.0 * gamemanager.playerSpeed2D
+@onready var SPEED : float = 300.0 
 @onready var pwrBar : TextureProgressBar = $TextureProgressBar
 var depth : float
 @export var pwrStr : float = 10
@@ -64,4 +64,10 @@ func _on_area_2d_body_exited(body):
 	var PSInstance = splashPS.instantiate()
 	get_parent().add_child(PSInstance)
 	PSInstance.position = position
+	pass # Replace with function body.
+
+
+func _on_upgrade_timer_timeout() -> void:
+	SPEED *= gamemanager.playerSpeed2D
+	
 	pass # Replace with function body.

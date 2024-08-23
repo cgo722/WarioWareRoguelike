@@ -3,7 +3,8 @@ extends Node2D
 @export var maxCount : int
 var count : int
 @onready var fish = load("res://Assets/FishingAssets/Fish.tscn")
-@onready var paralaxLayers = [$"../Background",$"../MiddleGround", $"../Foreground"]
+@onready var paralaxLayers = [$"../Background",$"../MiddleGround",
+ $"../Foreground", $"../WavesBackground", $"../Waves Foreground"]
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	while count < maxCount:
