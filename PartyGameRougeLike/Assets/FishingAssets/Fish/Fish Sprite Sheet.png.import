@@ -2,12 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bmtx240iohc25"
-valid=false
+uid="uid://cpf17jnt04wsw"
+path="res://.godot/imported/Fish Sprite Sheet.png-5550f1c5519bd3497f4b74bff9b7cdd7.ctex"
+metadata={
+"vram_texture": false
+}
 
 [deps]
 
-source_file="res://Assets/FishingAssets/Fish sprite 1/._frame_15.png"
+source_file="res://Assets/FishingAssets/Fish/Fish Sprite Sheet.png"
+dest_files=["res://.godot/imported/Fish Sprite Sheet.png-5550f1c5519bd3497f4b74bff9b7cdd7.ctex"]
 
 [params]
 

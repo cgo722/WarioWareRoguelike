@@ -1,84 +1,17 @@
-[gd_scene load_steps=20 format=3 uid="uid://vguf8m0iqebi"]
+[gd_scene load_steps=6 format=3 uid="uid://vguf8m0iqebi"]
 
 [ext_resource type="Script" path="res://Assets/FishingAssets/Fish.gd" id="1_dgr3k"]
-[ext_resource type="Texture2D" uid="uid://lefahjvsrmvg" path="res://Assets/FishingAssets/Fish sprite 1/frame_01.png" id="2_kxqr5"]
-[ext_resource type="Texture2D" uid="uid://dp0rmg02xp0bt" path="res://Assets/FishingAssets/Fish sprite 1/frame_02.png" id="3_4ti7s"]
-[ext_resource type="Texture2D" uid="uid://oy650j1ky7j3" path="res://Assets/FishingAssets/Fish sprite 1/frame_03.png" id="4_tl8t1"]
-[ext_resource type="Texture2D" uid="uid://bicddw7xwbh4v" path="res://Assets/FishingAssets/Fish sprite 1/frame_04.png" id="5_b4mvy"]
-[ext_resource type="Texture2D" uid="uid://hd7xnpnyp62f" path="res://Assets/FishingAssets/Fish sprite 1/frame_05.png" id="6_14e1w"]
-[ext_resource type="Texture2D" uid="uid://xpiqw5tdcmd7" path="res://Assets/FishingAssets/Fish sprite 1/frame_06.png" id="7_gl4ij"]
-[ext_resource type="Texture2D" uid="uid://ckyyrh7oguquc" path="res://Assets/FishingAssets/Fish sprite 1/frame_07.png" id="8_3dn3a"]
-[ext_resource type="Texture2D" uid="uid://c3vpl2licxw16" path="res://Assets/FishingAssets/Fish sprite 1/frame_08.png" id="9_xhn4m"]
-[ext_resource type="Texture2D" uid="uid://bt4hgns68bdeh" path="res://Assets/FishingAssets/Fish sprite 1/frame_09.png" id="10_f8lyl"]
-[ext_resource type="Texture2D" uid="uid://bgscsjsbhnef6" path="res://Assets/FishingAssets/Fish sprite 1/frame_10.png" id="11_s1f2x"]
-[ext_resource type="Texture2D" uid="uid://xjmaa45nsb3i" path="res://Assets/FishingAssets/Fish sprite 1/frame_11.png" id="12_tbn42"]
-[ext_resource type="Texture2D" uid="uid://dl77uicol51ro" path="res://Assets/FishingAssets/Fish sprite 1/frame_12.png" id="13_e5qpu"]
-[ext_resource type="Texture2D" uid="uid://b3yla0x4mna6s" path="res://Assets/FishingAssets/Fish sprite 1/frame_13.png" id="14_jnwut"]
-[ext_resource type="Texture2D" uid="uid://dn3bviqwq1340" path="res://Assets/FishingAssets/Fish sprite 1/frame_14.png" id="15_msogd"]
-[ext_resource type="Texture2D" uid="uid://kku2ongpbybk" path="res://Assets/FishingAssets/Fish sprite 1/frame_15.png" id="16_yhdfc"]
-[ext_resource type="Texture2D" uid="uid://drllrdfrji2pn" path="res://Assets/FishingAssets/Fish sprite 1/frame_16.png" id="17_4wbt2"]
+[ext_resource type="SpriteFrames" uid="uid://bhx7liwu2l8r0" path="res://Assets/FishingAssets/Fish/Blue Fish.tres" id="2_18yd8"]
+[ext_resource type="SpriteFrames" uid="uid://cjxpup2gc2rgn" path="res://Assets/FishingAssets/Fish/Green Fish.tres" id="3_wdij8"]
+[ext_resource type="SpriteFrames" uid="uid://b7s7kkscordct" path="res://Assets/FishingAssets/Fish/Red Fish.tres" id="4_whfqb"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_m5xu2"]
 radius = 12.0
 
-[sub_resource type="SpriteFrames" id="SpriteFrames_s0jw0"]
-animations = [{
-"frames": [{
-"duration": 2.0,
-"texture": ExtResource("2_kxqr5")
-}, {
-"duration": 1.0,
-"texture": ExtResource("3_4ti7s")
-}, {
-"duration": 1.0,
-"texture": ExtResource("4_tl8t1")
-}, {
-"duration": 1.0,
-"texture": ExtResource("5_b4mvy")
-}, {
-"duration": 1.0,
-"texture": ExtResource("6_14e1w")
-}, {
-"duration": 1.0,
-"texture": ExtResource("7_gl4ij")
-}, {
-"duration": 1.0,
-"texture": ExtResource("8_3dn3a")
-}, {
-"duration": 1.0,
-"texture": ExtResource("9_xhn4m")
-}, {
-"duration": 1.0,
-"texture": ExtResource("10_f8lyl")
-}, {
-"duration": 1.0,
-"texture": ExtResource("11_s1f2x")
-}, {
-"duration": 1.0,
-"texture": ExtResource("12_tbn42")
-}, {
-"duration": 1.0,
-"texture": ExtResource("13_e5qpu")
-}, {
-"duration": 1.0,
-"texture": ExtResource("14_jnwut")
-}, {
-"duration": 1.0,
-"texture": ExtResource("15_msogd")
-}, {
-"duration": 1.0,
-"texture": ExtResource("16_yhdfc")
-}, {
-"duration": 1.0,
-"texture": ExtResource("17_4wbt2")
-}],
-"loop": true,
-"name": &"default",
-"speed": 15.0
-}]
-
 [node name="Fish" type="Node2D"]
 script = ExtResource("1_dgr3k")
+spriteFrames = [ExtResource("2_18yd8"), ExtResource("3_wdij8"), ExtResource("4_whfqb")]
+scores = [350.0, 100.0, 500.0]
 
 [node name="Area2D" type="Area2D" parent="."]
 collision_mask = 2
@@ -88,10 +21,9 @@ scale = Vector2(2.91495, 2.91495)
 shape = SubResource("CircleShape2D_m5xu2")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Area2D/CollisionShape2D"]
-position = Vector2(2.98023e-08, -2.98023e-08)
-scale = Vector2(0.0264665, 0.0264665)
-sprite_frames = SubResource("SpriteFrames_s0jw0")
-frame_progress = 0.0346875
+position = Vector2(-2.105, 0)
+scale = Vector2(0.086, 0.086)
+sprite_frames = ExtResource("3_wdij8")
 
 [node name="Timer" type="Timer" parent="."]
 wait_time = 3.0

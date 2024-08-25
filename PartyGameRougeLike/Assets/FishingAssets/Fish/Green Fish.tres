@@ -1,0 +1,67 @@
+[gd_resource type="SpriteFrames" load_steps=10 format=3 uid="uid://cjxpup2gc2rgn"]
+
+[ext_resource type="Texture2D" uid="uid://cpf17jnt04wsw" path="res://Assets/FishingAssets/Fish/Fish Sprite Sheet.png" id="1_cibjc"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_e3n1c"]
+atlas = ExtResource("1_cibjc")
+region = Rect2(0, 512, 512, 512)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2kcv6"]
+atlas = ExtResource("1_cibjc")
+region = Rect2(512, 512, 512, 512)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_opesn"]
+atlas = ExtResource("1_cibjc")
+region = Rect2(1024, 512, 512, 512)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_c18m0"]
+atlas = ExtResource("1_cibjc")
+region = Rect2(1536, 512, 512, 512)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qdcol"]
+atlas = ExtResource("1_cibjc")
+region = Rect2(2048, 512, 512, 512)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7x2wo"]
+atlas = ExtResource("1_cibjc")
+region = Rect2(2560, 512, 512, 512)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_fjmk3"]
+atlas = ExtResource("1_cibjc")
+region = Rect2(3072, 512, 512, 512)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5cc1r"]
+atlas = ExtResource("1_cibjc")
+region = Rect2(3584, 512, 512, 512)
+
+[resource]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_e3n1c")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2kcv6")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_opesn")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_c18m0")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qdcol")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7x2wo")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_fjmk3")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5cc1r")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
