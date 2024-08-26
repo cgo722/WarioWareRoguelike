@@ -18,7 +18,7 @@ var scene_instance
 @onready var upgrades := load("res://Scenes/UI/Upgrade Trey.tscn")
 @onready var skipButton := load("res://Scenes/UI/Skip Button.tscn")
 @onready var pauseMenu := load("res://Scenes/Menus/PauseMenu.tscn")
-
+var pauseable : bool
 @onready var UIPlayer := $UISFX
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -32,6 +32,7 @@ func _ready():
 		loadedLevel = load("res://Scenes/Menus/MainMenu.tscn")
 		scene_instance = loadedLevel.instantiate()
 		self.add_child(scene_instance)
+		pauseable = false
 	else:
 		gamemanager.start = true
 	pass # Replace with function body.
@@ -39,7 +40,9 @@ func _ready():
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(_delta):
-	if Input.is_action_just_pressed("Pause"):
+	if gamemanager.start == true:
+		pauseable = true
+	if Input.is_action_just_pressed("Pause") && pauseable == true:
 		var pauseMenuInstance = pauseMenu.instantiate()
 		$HUDCanvas.add_child(pauseMenuInstance)
 	if Input.is_action_just_pressed("Skip") && gamemanager.score > gamemanager.skipCost:
