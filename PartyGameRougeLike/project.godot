@@ -114,6 +114,7 @@ locale/translations=PackedStringArray("res://localization/localizations.en.trans
 [localization_editor]
 
 translations_save_auth=false
+translations_split_offset=652
 
 [physics]
 

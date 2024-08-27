@@ -24,57 +24,57 @@ var descText : String
 func _ready():
 	effect = effectNames.pick_random()
 	if effect == "SpdU":
-		buttonText = "New Shoes"
-		descText = "Your new kicks give a 5% increase in your running speed"
+		buttonText = "KEY_SPDU"
+		descText = "DESC_SPDU"
 	if effect == "SpdURLD":
-		buttonText = "Adernaline"
-		descText = "Player Speed +15% and Round Length -25%"
+		buttonText = "KEY_SPDURLD"
+		descText = "DESC_SPDURLD"
 	if effect == "SpdUJFD":
-		buttonText = "Skipped Leg Day"
-		descText = "Do to running more instead of doing your squats your speed has increased by +15% but you Jump height is -20%"
+		buttonText = "KEY_SPDUJFD"
+		descText = "DESC_SPDUJFD"
 		
 	if effect == "RLU":
-		buttonText = "Sun Dial"
-		descText = "This rudimentary device gives a 5% increase to timer length"
+		buttonText = "KEY_RLU"
+		descText = "DESC_RLU"
 		
 	if effect == "RLD":
-		buttonText = "Broken Hour Glass"
-		descText = "This broken device gives a 5% decrease to timer length"
+		buttonText = "KEY_RLD"
+		descText = "DESC_RLD"
 	if effect == "RluSpdD":
-		buttonText = "Hour Glass"
-		descText = "Round Length +25% and Player Speed -25%"
+		buttonText = "KEY_RLUSPDD"
+		descText = "DESC_RLUSPDD"
 	if effect == "PHU":
-		buttonText = "1 Up"
-		descText = "1 Extra Life and +15% speed to everything but the player"
+		buttonText = "KEY_PHU"
+		descText = "DESC_PHU"
 	if effect == "TR":
-		buttonText = "StopWatch"
-		descText = "This resets the timer back to 15 seconds at the cost of one life"
+		buttonText = "KEY_TR"
+		descText = "DESC_TR"
 		
 	if effect == "MSpdU":
-		buttonText = "Bottled Wind"
-		descText = "At a cost of one life you can increase your speed by +50%"
+		buttonText = "KEY_MSPDU"
+		descText = "DESC_MSPDU"
 		
 	if effect == "MRLU":
-		buttonText = "Grandfather Clock"
-		descText = "At the cost of one life you can increase the time in a round by +100%"
+		buttonText = "KEY_MRLU"
+		descText = "DESC_MRLU"
 		
 	if effect == "MPHU":
-		buttonText = "Mega 1 UP"
-		descText = "At a Significant cost of 75% of the round timer you get two lives"
+		buttonText = "KEY_MPHU"
+		descText = "DESC_MPHU"
 		
 	if effect == "JFUSpdD":
-		buttonText = "Spring Boots"
-		descText = "+20% increase to your spacebar button at the cost of -25% speed"
+		buttonText = "KEY_JFUSPDD"
+		descText = "DESC_JFUSPDD"
 	if effect == "JFUOSpdU":
-		buttonText = "Leg Day"
-		descText = "Because of not skipping leg day your jump is increased by +25% but others are faster than you by -15%"
+		buttonText = "KEY_JFUOSPDU"
+		descText = "DESC_JFUOSPDU"
 	if effect == "MJFU":
-		buttonText = "Rocket Boots"
-		descText = "+50% to the power of the Spacebar button at the cost of one life"
+		buttonText = "KEY_MJFU"
+		descText = "DESC_MJFU"
 		
 	if effect == "JpU":
-		buttonText = "Squats"
-		descText = "5% increase to jump height"
+		buttonText = "KEY_JPU"
+		descText = "DESC_JPU"
 	button.text = buttonText
 	descBox.text = descText
 	pass # Replace with function body.
@@ -154,7 +154,7 @@ func _on_button_button_up():
 		gamemanager.playerHealth -= 1
 		
 	if effect == "JpU":
-		gamemanager.jumpStrength = 0.05
+		gamemanager.jumpStrength += 0.05
 	get_tree().paused = false
 	pass # Replace with function body.
 
