@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bnrd7dpngxmaw"
-path="res://.godot/imported/Don't_Touch_The_Rain.png-035ee9ac61ec4a5e3763cf8efe27cb54.ctex"
+uid="uid://cbtp0t0h8bm4i"
+path="res://.godot/imported/Street Lamp.png-866fb6bcbc273af7637f1de57312e564.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Survive the Rain/Don't_Touch_The_Rain.png"
-dest_files=["res://.godot/imported/Don't_Touch_The_Rain.png-035ee9ac61ec4a5e3763cf8efe27cb54.ctex"]
+source_file="res://Assets/Survive the Rain/Street Lamp.png"
+dest_files=["res://.godot/imported/Street Lamp.png-866fb6bcbc273af7637f1de57312e564.ctex"]
 
 [params]
 

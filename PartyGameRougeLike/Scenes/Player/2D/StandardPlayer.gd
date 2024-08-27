@@ -34,6 +34,7 @@ func _physics_process(delta):
 		RunPart.emitting = false
 		jumpPart.emitting = true
 		animations.play("Jump")
+		JumpSFX.pitch_scale = randf_range(0.8, 1.2)
 		JumpSFX.play()
 
 	# Get the input direction and handle the movement/deceleration.
@@ -43,6 +44,7 @@ func _physics_process(delta):
 		velocity.x = direction * SPEED
 		if is_on_floor() && jumping == false:
 			if not runSFX.is_playing():
+				runSFX.pitch_scale = randf_range(2, 3)
 				runSFX.play()
 			animations.play("Run")
 			sitting = false

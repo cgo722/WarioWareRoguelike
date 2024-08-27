@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://gj6v5i0ynr2k"
-path="res://.godot/imported/Castle_Small.png-b9e17022376a3b602e50b1a8533b4f91.ctex"
+uid="uid://b6waksw0udoqw"
+path="res://.godot/imported/Car.png-527ef9e6fd3ab9effd738a31ead6081d.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Survive the Rain/Castle_Small.png"
-dest_files=["res://.godot/imported/Castle_Small.png-b9e17022376a3b602e50b1a8533b4f91.ctex"]
+source_file="res://Assets/Survive the Rain/Car.png"
+dest_files=["res://.godot/imported/Car.png-527ef9e6fd3ab9effd738a31ead6081d.ctex"]
 
 [params]
 

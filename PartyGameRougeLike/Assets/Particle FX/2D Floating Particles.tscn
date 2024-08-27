@@ -4,7 +4,7 @@
 lifetime_randomness = 1.0
 particle_flag_disable_z = true
 emission_shape = 3
-emission_box_extents = Vector3(250, 1000, 1)
+emission_box_extents = Vector3(750, 2000, 1)
 spread = 180.0
 initial_velocity_min = 50.0
 initial_velocity_max = 125.0
