@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=3 uid="uid://mlfj7mlo1x23"]
+[gd_scene load_steps=19 format=3 uid="uid://mlfj7mlo1x23"]
 
 [ext_resource type="Script" path="res://Scenes/SurviveTheRainManager.gd" id="1_4w7kf"]
 [ext_resource type="PackedScene" uid="uid://dqnv87pgnk5c5" path="res://Assets/2D Spawner.tscn" id="2_p6udn"]
@@ -11,10 +11,11 @@
 [ext_resource type="Shader" path="res://Assets/Materials/2DColorChangerf.gdshader" id="8_lmyr5"]
 [ext_resource type="Texture2D" uid="uid://c01e0t7g103sj" path="res://Assets/Survive the Rain/BrickTexture.png" id="9_6ttcl"]
 [ext_resource type="Texture2D" uid="uid://cbtp0t0h8bm4i" path="res://Assets/Survive the Rain/Street Lamp.png" id="10_3p1f7"]
+[ext_resource type="PackedScene" uid="uid://sdk8fn8sxgh4" path="res://Scenes/MicroGames/CarScene.tscn" id="12_3ek5c"]
 
 [sub_resource type="Gradient" id="Gradient_vaxgj"]
 offsets = PackedFloat32Array(0)
-colors = PackedColorArray(0.422963, 0.543205, 0.516613, 1)
+colors = PackedColorArray(0.144202, 0.203501, 0.190619, 1)
 
 [sub_resource type="GradientTexture2D" id="GradientTexture2D_67px3"]
 gradient = SubResource("Gradient_vaxgj")
@@ -25,8 +26,16 @@ fill_to = Vector2(0.502137, 0.0149573)
 shader = ExtResource("8_lmyr5")
 shader_parameter/col = Vector4(0, 0, 0, 1)
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_1u8ii"]
-size = Vector2(212, 675)
+[sub_resource type="Gradient" id="Gradient_4jn2g"]
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_ud3hs"]
+gradient = SubResource("Gradient_4jn2g")
+fill_from = Vector2(1, 0.732906)
+fill_to = Vector2(1, 0.435897)
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_q8fvy"]
+shader = ExtResource("8_lmyr5")
+shader_parameter/col = Vector4(1, 1, 1, 1)
 
 [node name="Node2D" type="Node2D"]
 script = ExtResource("1_4w7kf")
@@ -35,8 +44,8 @@ script = ExtResource("1_4w7kf")
 position = Vector2(951, -200)
 
 [node name="2DPlatforms" parent="." instance=ExtResource("3_5vm1n")]
-position = Vector2(961, 960)
-scale = Vector2(30.4007, 4.55376)
+position = Vector2(961, 1159)
+scale = Vector2(30.4007, 12.4738)
 
 [node name="StandardPlayer" parent="." instance=ExtResource("4_ejuh7")]
 position = Vector2(963, 600)
@@ -69,9 +78,6 @@ position = Vector2(988.44, 898.44)
 scale = Vector2(43.67, 43.67)
 texture = SubResource("GradientTexture2D_67px3")
 
-[node name="Node2D" type="Node2D" parent="."]
-position = Vector2(977, 813)
-
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("5_1nof8")
 volume_db = -25.0
@@ -97,10 +103,42 @@ position = Vector2(257, 777)
 scale = Vector2(2.35866, 2.35866)
 texture = ExtResource("10_3p1f7")
 
+[node name="PointLight2D3" type="PointLight2D" parent="Foreground/StreetLamp2"]
+position = Vector2(107.9, 13.3551)
+scale = Vector2(2.39145, 6.94913)
+color = Color(0.674211, 0.65697, 0.332066, 1)
+energy = 2.99
+shadow_enabled = true
+texture = SubResource("GradientTexture2D_ud3hs")
+
+[node name="PointLight2D4" type="PointLight2D" parent="Foreground/StreetLamp2"]
+position = Vector2(508.763, 15.8989)
+scale = Vector2(1.97411, 6.84313)
+color = Color(0.674211, 0.65697, 0.332066, 1)
+energy = 2.99
+shadow_enabled = true
+texture = SubResource("GradientTexture2D_ud3hs")
+
 [node name="StreetLamp3" type="Sprite2D" parent="Foreground"]
 position = Vector2(1629, 719)
 scale = Vector2(2.01556, 2.01556)
 texture = ExtResource("10_3p1f7")
+
+[node name="PointLight2D5" type="PointLight2D" parent="Foreground/StreetLamp3"]
+position = Vector2(80.4987, 44.4046)
+scale = Vector2(1.74812, 8.13205)
+color = Color(0.674211, 0.65697, 0.332066, 1)
+energy = 2.99
+shadow_enabled = true
+texture = SubResource("GradientTexture2D_ud3hs")
+
+[node name="PointLight2D6" type="PointLight2D" parent="Foreground/StreetLamp3"]
+position = Vector2(-768.025, 47.3814)
+scale = Vector2(2.31015, 8.00801)
+color = Color(0.674211, 0.65697, 0.332066, 1)
+energy = 2.99
+shadow_enabled = true
+texture = SubResource("GradientTexture2D_ud3hs")
 
 [node name="Background" type="Parallax2D" parent="."]
 scroll_scale = Vector2(0.5, 0.5)
@@ -121,55 +159,40 @@ z_index = -830
 position = Vector2(938, 533)
 texture = ExtResource("10_3p1f7")
 
-[node name="BrickTexture" type="Sprite2D" parent="."]
-position = Vector2(-108, 731)
+[node name="PointLight2D" type="PointLight2D" parent="Background/StreetLamp"]
+position = Vector2(-67, 36)
+scale = Vector2(1.71875, 7.65625)
+color = Color(0.674211, 0.65697, 0.332066, 1)
+energy = 2.99
+shadow_enabled = true
+texture = SubResource("GradientTexture2D_ud3hs")
+
+[node name="PointLight2D2" type="PointLight2D" parent="Background/StreetLamp"]
+position = Vector2(61, 36)
+scale = Vector2(1.71875, 7.65625)
+color = Color(0.674211, 0.65697, 0.332066, 1)
+energy = 2.99
+shadow_enabled = true
+texture = SubResource("GradientTexture2D_ud3hs")
+
+[node name="Far Background" type="Parallax2D" parent="."]
 scale = Vector2(0.417542, 0.417542)
+scroll_scale = Vector2(0.1, 0.1)
+repeat_size = Vector2(512.45, 400.88)
+repeat_times = 50
+
+[node name="BrickTexture" type="Sprite2D" parent="Far Background"]
+z_index = -4096
+material = SubResource("ShaderMaterial_q8fvy")
+scale = Vector2(1, 1)
 texture = ExtResource("9_6ttcl")
 
-[node name="BrickTexture2" type="Sprite2D" parent="."]
-position = Vector2(-108, 571)
-scale = Vector2(0.417542, 0.417542)
-texture = ExtResource("9_6ttcl")
-
-[node name="BrickTexture3" type="Sprite2D" parent="."]
-position = Vector2(-108, 400)
-scale = Vector2(0.417542, 0.417542)
-texture = ExtResource("9_6ttcl")
-
-[node name="BrickTexture4" type="Sprite2D" parent="."]
-position = Vector2(-108, 232)
-scale = Vector2(0.417542, 0.417542)
-texture = ExtResource("9_6ttcl")
-
-[node name="BrickTexture5" type="Sprite2D" parent="."]
-position = Vector2(2040.89, 731)
-scale = Vector2(0.417542, 0.417542)
-texture = ExtResource("9_6ttcl")
-
-[node name="BrickTexture6" type="Sprite2D" parent="."]
-position = Vector2(2040.89, 571)
-scale = Vector2(0.417542, 0.417542)
-texture = ExtResource("9_6ttcl")
-
-[node name="BrickTexture7" type="Sprite2D" parent="."]
-position = Vector2(2040.89, 400)
-scale = Vector2(0.417542, 0.417542)
-texture = ExtResource("9_6ttcl")
-
-[node name="BrickTexture8" type="Sprite2D" parent="."]
-position = Vector2(2040.89, 232)
-scale = Vector2(0.417542, 0.417542)
-texture = ExtResource("9_6ttcl")
-
-[node name="Area2D" type="Area2D" parent="."]
-position = Vector2(-109, 501.5)
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
-shape = SubResource("RectangleShape2D_1u8ii")
-
-[node name="CollisionShape2D2" type="CollisionShape2D" parent="Area2D"]
-position = Vector2(2150, 0)
-shape = SubResource("RectangleShape2D_1u8ii")
+[node name="Car Scene" parent="." instance=ExtResource("12_3ek5c")]
+position = Vector2(2189, 673)
+scale = Vector2(0.732509, 0.732509)
+speed = -10.0
+minX = -374.0
+maxX = 2380.0
 
 [connection signal="timeout" from="CanvasLayer/Instruction Timer" to="." method="_on_instruction_timer_timeout"]
 [connection signal="timeout" from="Upgrade_Timer" to="StandardPlayer" method="_on_upgrade_timer_timeout"]
