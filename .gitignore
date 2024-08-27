@@ -10,3 +10,5 @@ export_presets.cfg
 PartyGameRougeLike/Builds/
 
 PartyGameRougeLike/.godot/
+
+.DS_Store
