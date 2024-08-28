@@ -1,4 +1,4 @@
-[gd_scene load_steps=19 format=3 uid="uid://mlfj7mlo1x23"]
+[gd_scene load_steps=18 format=3 uid="uid://mlfj7mlo1x23"]
 
 [ext_resource type="Script" path="res://Scenes/SurviveTheRainManager.gd" id="1_4w7kf"]
 [ext_resource type="PackedScene" uid="uid://dqnv87pgnk5c5" path="res://Assets/2D Spawner.tscn" id="2_p6udn"]
@@ -11,7 +11,6 @@
 [ext_resource type="Shader" path="res://Assets/Materials/2DColorChangerf.gdshader" id="8_lmyr5"]
 [ext_resource type="Texture2D" uid="uid://c01e0t7g103sj" path="res://Assets/Survive the Rain/BrickTexture.png" id="9_6ttcl"]
 [ext_resource type="Texture2D" uid="uid://cbtp0t0h8bm4i" path="res://Assets/Survive the Rain/Street Lamp.png" id="10_3p1f7"]
-[ext_resource type="PackedScene" uid="uid://sdk8fn8sxgh4" path="res://Scenes/MicroGames/CarScene.tscn" id="12_3ek5c"]
 
 [sub_resource type="Gradient" id="Gradient_vaxgj"]
 offsets = PackedFloat32Array(0)
@@ -53,6 +52,7 @@ position = Vector2(963, 600)
 [node name="Camera2D" type="Camera2D" parent="StandardPlayer"]
 position = Vector2(0.256393, 0.256393)
 scale = Vector2(0.256388, 0.256388)
+offset = Vector2(0, -209.38)
 zoom = Vector2(1.5, 1.5)
 position_smoothing_enabled = true
 
@@ -184,15 +184,7 @@ repeat_times = 50
 [node name="BrickTexture" type="Sprite2D" parent="Far Background"]
 z_index = -4096
 material = SubResource("ShaderMaterial_q8fvy")
-scale = Vector2(1, 1)
 texture = ExtResource("9_6ttcl")
-
-[node name="Car Scene" parent="." instance=ExtResource("12_3ek5c")]
-position = Vector2(2189, 673)
-scale = Vector2(0.732509, 0.732509)
-speed = -10.0
-minX = -374.0
-maxX = 2380.0
 
 [connection signal="timeout" from="CanvasLayer/Instruction Timer" to="." method="_on_instruction_timer_timeout"]
 [connection signal="timeout" from="Upgrade_Timer" to="StandardPlayer" method="_on_upgrade_timer_timeout"]
