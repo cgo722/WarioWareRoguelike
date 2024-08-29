@@ -1,20 +1,38 @@
-[gd_scene load_steps=8 format=3 uid="uid://cjqpwl3iol37y"]
+[gd_scene load_steps=13 format=3 uid="uid://cjqpwl3iol37y"]
 
 [ext_resource type="Shader" uid="uid://7gcbwkd3kxd3" path="res://Assets/CelShader.tres" id="2_fci46"]
 [ext_resource type="Texture2D" uid="uid://cm37ngn8kflm5" path="res://Assets/Materials/wood_floor_diff_1k.png" id="3_3ulti"]
 [ext_resource type="Script" path="res://Scenes/MicroGames/Dont Drop The Soup/DDS_Floor.gd" id="4_74fy0"]
 [ext_resource type="PackedScene" uid="uid://dveg6h3xjtm2" path="res://TableSet.tscn" id="4_gi0vb"]
 
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_wxmru"]
+[sub_resource type="Gradient" id="Gradient_pqyhv"]
+colors = PackedColorArray(0.275091, 0.275091, 0.275091, 1, 0.603923, 0.603923, 0.603923, 1)
+
+[sub_resource type="FastNoiseLite" id="FastNoiseLite_8qou2"]
+frequency = 0.0546
+
+[sub_resource type="NoiseTexture2D" id="NoiseTexture2D_be40i"]
+color_ramp = SubResource("Gradient_pqyhv")
+noise = SubResource("FastNoiseLite_8qou2")
+
+[sub_resource type="Gradient" id="Gradient_qreh1"]
+offsets = PackedFloat32Array(0)
+colors = PackedColorArray(0, 0, 0, 1)
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_o2i8j"]
+gradient = SubResource("Gradient_qreh1")
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_a41s4"]
 render_priority = 0
 shader = ExtResource("2_fci46")
-shader_parameter/scaling = Vector2(200, 200)
+shader_parameter/scaling = Vector2(100, 100)
 shader_parameter/Roughness_Strength = 1.0
-shader_parameter/Light_Intesity = Vector3(0.5, 0, 0)
 shader_parameter/Color_Map = ExtResource("3_3ulti")
+shader_parameter/hue = SubResource("GradientTexture1D_o2i8j")
+shader_parameter/Roughness = SubResource("NoiseTexture2D_be40i")
 
 [sub_resource type="PlaneMesh" id="PlaneMesh_ll5ts"]
-material = SubResource("ShaderMaterial_wxmru")
+material = SubResource("ShaderMaterial_a41s4")
 size = Vector2(500, 500)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_qtsjo"]
@@ -56,3 +74,123 @@ transform = Transform3D(3.63047, 0, -6.66151, 0, 7.58657, 0, 6.66151, 0, 3.63047
 
 [node name="Table Set2" parent="." instance=ExtResource("4_gi0vb")]
 transform = Transform3D(4.23203, 0, 6.2965, 0, 7.58657, 0, -6.2965, 0, 4.23203, 61.1149, -15.1234, -125.642)
+
+[node name="Table Set9" parent="." instance=ExtResource("4_gi0vb")]
+transform = Transform3D(1.09464, 0, 7.50718, 0, 7.58657, 0, -7.50718, 0, 1.09464, 34.2367, -15.1234, -446.322)
+
+[node name="Table Set10" parent="." instance=ExtResource("4_gi0vb")]
+transform = Transform3D(3.63047, 0, -6.66151, 0, 7.58657, 0, 6.66151, 0, 3.63047, -81.2526, -15.1234, -579.427)
+
+[node name="Table Set11" parent="." instance=ExtResource("4_gi0vb")]
+transform = Transform3D(3.63047, 0, -6.66151, 0, 7.58657, 0, 6.66151, 0, 3.63047, -77.43, -15.1234, -670.144)
+
+[node name="Table Set12" parent="." instance=ExtResource("4_gi0vb")]
+transform = Transform3D(-3.00886, 0, -6.9644, 0, 7.58657, 0, 6.9644, 0, -3.00886, -69.3468, -15.1234, -763.522)
+
+[node name="Table Set13" parent="." instance=ExtResource("4_gi0vb")]
+transform = Transform3D(7.1225, 0, 2.61267, 0, 7.58657, 0, -2.61267, 0, 7.1225, -60.927, -15.1234, -503.669)
+
+[node name="Table Set14" parent="." instance=ExtResource("4_gi0vb")]
+transform = Transform3D(7.30571, 0, 2.04515, 0, 7.58657, 0, -2.04515, 0, 7.30571, 49.1614, -15.1234, -769.001)
+
+[node name="Table Set15" parent="." instance=ExtResource("4_gi0vb")]
+transform = Transform3D(3.63047, 0, -6.66151, 0, 7.58657, 0, 6.66151, 0, 3.63047, 37.9349, -15.1234, -670.144)
+
+[node name="Table Set16" parent="." instance=ExtResource("4_gi0vb")]
+transform = Transform3D(4.23203, 0, 6.2965, 0, 7.58657, 0, -6.2965, 0, 4.23203, 61.1149, -15.1234, -544.112)
+
+[node name="Table Set17" parent="." instance=ExtResource("4_gi0vb")]
+transform = Transform3D(7.58657, 0, 0, 0, 7.58657, 0, 0, 0, 7.58657, -261.245, -15.1234, -61.5225)
+
+[node name="Table Set18" parent="." instance=ExtResource("4_gi0vb")]
+transform = Transform3D(3.63047, 0, -6.66151, 0, 7.58657, 0, 6.66151, 0, 3.63047, -286.975, -15.1234, -160.957)
+
+[node name="Table Set19" parent="." instance=ExtResource("4_gi0vb")]
+transform = Transform3D(3.63047, 0, -6.66151, 0, 7.58657, 0, 6.66151, 0, 3.63047, -283.152, -15.1234, -251.674)
+
+[node name="Table Set20" parent="." instance=ExtResource("4_gi0vb")]
+transform = Transform3D(-3.00886, 0, -6.9644, 0, 7.58657, 0, 6.9644, 0, -3.00886, -275.069, -15.1234, -345.052)
+
+[node name="Table Set21" parent="." instance=ExtResource("4_gi0vb")]
+transform = Transform3D(7.1225, 0, 2.61267, 0, 7.58657, 0, -2.61267, 0, 7.1225, -303.665, -15.1234, -413.377)
+
+[node name="Table Set22" parent="." instance=ExtResource("4_gi0vb")]
+transform = Transform3D(7.30571, 0, 2.04515, 0, 7.58657, 0, -2.04515, 0, 7.30571, -156.561, -15.1234, -350.531)
+
+[node name="Table Set23" parent="." instance=ExtResource("4_gi0vb")]
+transform = Transform3D(3.63047, 0, -6.66151, 0, 7.58657, 0, 6.66151, 0, 3.63047, -167.787, -15.1234, -251.674)
+
+[node name="Table Set24" parent="." instance=ExtResource("4_gi0vb")]
+transform = Transform3D(4.23203, 0, 6.2965, 0, 7.58657, 0, -6.2965, 0, 4.23203, -144.607, -15.1234, -125.642)
+
+[node name="Table Set25" parent="." instance=ExtResource("4_gi0vb")]
+transform = Transform3D(1.09464, 0, 7.50718, 0, 7.58657, 0, -7.50718, 0, 1.09464, -171.486, -15.1234, -446.322)
+
+[node name="Table Set26" parent="." instance=ExtResource("4_gi0vb")]
+transform = Transform3D(3.63047, 0, -6.66151, 0, 7.58657, 0, 6.66151, 0, 3.63047, -286.975, -15.1234, -579.427)
+
+[node name="Table Set27" parent="." instance=ExtResource("4_gi0vb")]
+transform = Transform3D(3.63047, 0, -6.66151, 0, 7.58657, 0, 6.66151, 0, 3.63047, -283.152, -15.1234, -670.144)
+
+[node name="Table Set28" parent="." instance=ExtResource("4_gi0vb")]
+transform = Transform3D(-3.00886, 0, -6.9644, 0, 7.58657, 0, 6.9644, 0, -3.00886, -275.069, -15.1234, -763.522)
+
+[node name="Table Set29" parent="." instance=ExtResource("4_gi0vb")]
+transform = Transform3D(7.1225, 0, 2.61267, 0, 7.58657, 0, -2.61267, 0, 7.1225, -266.649, -15.1234, -503.669)
+
+[node name="Table Set30" parent="." instance=ExtResource("4_gi0vb")]
+transform = Transform3D(7.30571, 0, 2.04515, 0, 7.58657, 0, -2.04515, 0, 7.30571, -156.561, -15.1234, -769.001)
+
+[node name="Table Set31" parent="." instance=ExtResource("4_gi0vb")]
+transform = Transform3D(3.63047, 0, -6.66151, 0, 7.58657, 0, 6.66151, 0, 3.63047, -167.787, -15.1234, -670.144)
+
+[node name="Table Set32" parent="." instance=ExtResource("4_gi0vb")]
+transform = Transform3D(4.23203, 0, 6.2965, 0, 7.58657, 0, -6.2965, 0, 4.23203, -144.607, -15.1234, -544.112)
+
+[node name="Table Set33" parent="." instance=ExtResource("4_gi0vb")]
+transform = Transform3D(7.58657, 0, 0, 0, 7.58657, 0, 0, 0, 7.58657, 150.031, -15.1234, -61.5225)
+
+[node name="Table Set34" parent="." instance=ExtResource("4_gi0vb")]
+transform = Transform3D(3.63047, 0, -6.66151, 0, 7.58657, 0, 6.66151, 0, 3.63047, 124.301, -15.1234, -160.957)
+
+[node name="Table Set35" parent="." instance=ExtResource("4_gi0vb")]
+transform = Transform3D(3.63047, 0, -6.66151, 0, 7.58657, 0, 6.66151, 0, 3.63047, 128.123, -15.1234, -251.674)
+
+[node name="Table Set36" parent="." instance=ExtResource("4_gi0vb")]
+transform = Transform3D(-3.00886, 0, -6.9644, 0, 7.58657, 0, 6.9644, 0, -3.00886, 136.206, -15.1234, -345.052)
+
+[node name="Table Set37" parent="." instance=ExtResource("4_gi0vb")]
+transform = Transform3D(7.1225, 0, 2.61267, 0, 7.58657, 0, -2.61267, 0, 7.1225, 107.61, -15.1234, -413.377)
+
+[node name="Table Set38" parent="." instance=ExtResource("4_gi0vb")]
+transform = Transform3D(7.30571, 0, 2.04515, 0, 7.58657, 0, -2.04515, 0, 7.30571, 254.715, -15.1234, -350.531)
+
+[node name="Table Set39" parent="." instance=ExtResource("4_gi0vb")]
+transform = Transform3D(3.63047, 0, -6.66151, 0, 7.58657, 0, 6.66151, 0, 3.63047, 243.488, -15.1234, -251.674)
+
+[node name="Table Set40" parent="." instance=ExtResource("4_gi0vb")]
+transform = Transform3D(4.23203, 0, 6.2965, 0, 7.58657, 0, -6.2965, 0, 4.23203, 266.668, -15.1234, -125.642)
+
+[node name="Table Set41" parent="." instance=ExtResource("4_gi0vb")]
+transform = Transform3D(1.09464, 0, 7.50718, 0, 7.58657, 0, -7.50718, 0, 1.09464, 239.79, -15.1234, -446.322)
+
+[node name="Table Set42" parent="." instance=ExtResource("4_gi0vb")]
+transform = Transform3D(3.63047, 0, -6.66151, 0, 7.58657, 0, 6.66151, 0, 3.63047, 124.301, -15.1234, -579.427)
+
+[node name="Table Set43" parent="." instance=ExtResource("4_gi0vb")]
+transform = Transform3D(3.63047, 0, -6.66151, 0, 7.58657, 0, 6.66151, 0, 3.63047, 128.123, -15.1234, -670.144)
+
+[node name="Table Set44" parent="." instance=ExtResource("4_gi0vb")]
+transform = Transform3D(-3.00886, 0, -6.9644, 0, 7.58657, 0, 6.9644, 0, -3.00886, 136.206, -15.1234, -763.522)
+
+[node name="Table Set45" parent="." instance=ExtResource("4_gi0vb")]
+transform = Transform3D(7.1225, 0, 2.61267, 0, 7.58657, 0, -2.61267, 0, 7.1225, 144.626, -15.1234, -503.669)
+
+[node name="Table Set46" parent="." instance=ExtResource("4_gi0vb")]
+transform = Transform3D(7.30571, 0, 2.04515, 0, 7.58657, 0, -2.04515, 0, 7.30571, 254.715, -15.1234, -769.001)
+
+[node name="Table Set47" parent="." instance=ExtResource("4_gi0vb")]
+transform = Transform3D(3.63047, 0, -6.66151, 0, 7.58657, 0, 6.66151, 0, 3.63047, 243.488, -15.1234, -670.144)
+
+[node name="Table Set48" parent="." instance=ExtResource("4_gi0vb")]
+transform = Transform3D(4.23203, 0, 6.2965, 0, 7.58657, 0, -6.2965, 0, 4.23203, 266.668, -15.1234, -544.112)

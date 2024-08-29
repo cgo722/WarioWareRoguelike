@@ -395,15 +395,16 @@ wait_time = 3.0
 autostart = true
 
 [node name="Kitchen" parent="." instance=ExtResource("7_idxwn")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -9.06, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -20.2389, 0)
 
 [node name="BayLeaf" parent="." instance=ExtResource("9_g55h6")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.289693, 8.31257, 0.187665)
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
-transform = Transform3D(1, -4.66935e-16, 3.28166e-16, -5.69953e-16, -0.846862, 0.531812, 2.95898e-17, -0.531812, -0.846862, 0, 0, 0)
+transform = Transform3D(1, -4.66935e-16, 3.28167e-16, 7.56304e-17, 0.678352, 0.734737, -5.65687e-16, -0.734737, 0.678352, 0, 12.5464, 0)
 shadow_enabled = true
-shadow_bias = 7.27
+shadow_reverse_cull_face = true
+directional_shadow_max_distance = 556.4
 
 [node name="Upgrade_Timer" parent="." instance=ExtResource("10_7t2an")]
 
