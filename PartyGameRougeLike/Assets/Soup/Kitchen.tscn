@@ -34,4 +34,25 @@ mesh = SubResource("PlaneMesh_ll5ts")
 shape = SubResource("BoxShape3D_qtsjo")
 
 [node name="Table Set" parent="." instance=ExtResource("4_gi0vb")]
-transform = Transform3D(7.58657, 0, 0, 0, 7.58657, 0, 0, 0, 7.58657, -25.4609, -15.1234, -8.31086)
+transform = Transform3D(7.58657, 0, 0, 0, 7.58657, 0, 0, 0, 7.58657, -55.5224, -15.1234, -61.5225)
+
+[node name="Table Set3" parent="." instance=ExtResource("4_gi0vb")]
+transform = Transform3D(3.63047, 0, -6.66151, 0, 7.58657, 0, 6.66151, 0, 3.63047, -81.2526, -15.1234, -160.957)
+
+[node name="Table Set4" parent="." instance=ExtResource("4_gi0vb")]
+transform = Transform3D(3.63047, 0, -6.66151, 0, 7.58657, 0, 6.66151, 0, 3.63047, -77.43, -15.1234, -251.674)
+
+[node name="Table Set6" parent="." instance=ExtResource("4_gi0vb")]
+transform = Transform3D(-3.00886, 0, -6.9644, 0, 7.58657, 0, 6.9644, 0, -3.00886, -69.3468, -15.1234, -345.052)
+
+[node name="Table Set8" parent="." instance=ExtResource("4_gi0vb")]
+transform = Transform3D(7.1225, 0, 2.61267, 0, 7.58657, 0, -2.61267, 0, 7.1225, -97.9428, -15.1234, -413.377)
+
+[node name="Table Set7" parent="." instance=ExtResource("4_gi0vb")]
+transform = Transform3D(7.30571, 0, 2.04515, 0, 7.58657, 0, -2.04515, 0, 7.30571, 49.1614, -15.1234, -350.531)
+
+[node name="Table Set5" parent="." instance=ExtResource("4_gi0vb")]
+transform = Transform3D(3.63047, 0, -6.66151, 0, 7.58657, 0, 6.66151, 0, 3.63047, 37.9349, -15.1234, -251.674)
+
+[node name="Table Set2" parent="." instance=ExtResource("4_gi0vb")]
+transform = Transform3D(4.23203, 0, 6.2965, 0, 7.58657, 0, -6.2965, 0, 4.23203, 61.1149, -15.1234, -125.642)
