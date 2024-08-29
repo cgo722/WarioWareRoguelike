@@ -1,0 +1,67 @@
+[gd_scene load_steps=13 format=3 uid="uid://dveg6h3xjtm2"]
+
+[ext_resource type="ArrayMesh" uid="uid://q2wpn5uj350e" path="res://Assets/Soup/Table.obj" id="1_3como"]
+[ext_resource type="Script" path="res://Scripts/table_set.gd" id="1_ykbcc"]
+[ext_resource type="Shader" uid="uid://7gcbwkd3kxd3" path="res://Assets/CelShader.tres" id="2_jqode"]
+[ext_resource type="Texture2D" uid="uid://ddp81lkmsi73" path="res://Assets/Soup/Table AO Map.png" id="3_igguw"]
+[ext_resource type="Texture2D" uid="uid://g8j5n4qly6ir" path="res://Assets/Soup/Table-Color.png" id="4_t8jsf"]
+[ext_resource type="Texture2D" uid="uid://dfkwx6op64o0v" path="res://Assets/Soup/Table-Roughness.png" id="5_pljnd"]
+[ext_resource type="ArrayMesh" uid="uid://bbm3ukmkfx7qf" path="res://Assets/Soup/Stool.obj" id="6_n5ssf"]
+[ext_resource type="Texture2D" uid="uid://cbskvqj7dkvdl" path="res://Assets/Soup/StoolAOMap.png" id="7_24l3q"]
+
+[sub_resource type="Gradient" id="Gradient_o8tgi"]
+colors = PackedColorArray(0, 0, 0, 1, 0, 0, 0, 1)
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_cmmbg"]
+gradient = SubResource("Gradient_o8tgi")
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_jkgah"]
+render_priority = 0
+shader = ExtResource("2_jqode")
+shader_parameter/scaling = Vector2(1, 1)
+shader_parameter/Roughness_Strength = 1.0
+shader_parameter/Light_Intesity = Vector3(0.5, 0, 0)
+shader_parameter/Color_Map = ExtResource("4_t8jsf")
+shader_parameter/hue = SubResource("GradientTexture1D_cmmbg")
+shader_parameter/Roughness = ExtResource("5_pljnd")
+shader_parameter/AO_Map = ExtResource("3_igguw")
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_7uscv"]
+render_priority = 0
+shader = ExtResource("2_jqode")
+shader_parameter/scaling = Vector2(1, 1)
+shader_parameter/Roughness_Strength = 1.0
+shader_parameter/Light_Intesity = Vector3(0.5, 0, 0)
+shader_parameter/AO_Map = ExtResource("7_24l3q")
+
+[node name="Table Set" type="Node3D"]
+script = ExtResource("1_ykbcc")
+
+[node name="Table" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.083797, 0, -0.157442)
+mesh = ExtResource("1_3como")
+surface_material_override/0 = SubResource("ShaderMaterial_jkgah")
+
+[node name="Stool" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.936525, 0, -0.3506, 0, 0.546322, 0, 0.3506, 0, 0.936525, -2.00723, 0, 2.41446)
+visible = false
+mesh = ExtResource("6_n5ssf")
+surface_material_override/0 = SubResource("ShaderMaterial_7uscv")
+
+[node name="Stool2" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.936525, 0, -0.3506, 0, 0.546322, 0, 0.3506, 0, 0.936525, 1.91088, 0, -2.41597)
+visible = false
+mesh = ExtResource("6_n5ssf")
+surface_material_override/0 = SubResource("ShaderMaterial_7uscv")
+
+[node name="Stool3" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.936525, 0, -0.3506, 0, 0.546322, 0, 0.3506, 0, 0.936525, 2.2196, -4.76837e-07, 2.04943)
+visible = false
+mesh = ExtResource("6_n5ssf")
+surface_material_override/0 = SubResource("ShaderMaterial_7uscv")
+
+[node name="Stool5" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.936525, 0, -0.3506, 0, 0.546322, 0, 0.3506, 0, 0.936525, -2.29117, -1.43051e-06, -2.17146)
+visible = false
+mesh = ExtResource("6_n5ssf")
+surface_material_override/0 = SubResource("ShaderMaterial_7uscv")

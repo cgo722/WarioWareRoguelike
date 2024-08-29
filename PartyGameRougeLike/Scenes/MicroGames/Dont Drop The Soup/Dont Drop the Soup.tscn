@@ -395,6 +395,7 @@ wait_time = 3.0
 autostart = true
 
 [node name="Kitchen" parent="." instance=ExtResource("7_idxwn")]
+transform = Transform3D(13.0303, 0, 0, 0, 1, 0, 0, 0, 10.3227, 0, -9.06, 0)
 
 [node name="BayLeaf" parent="." instance=ExtResource("9_g55h6")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.289693, 8.31257, 0.187665)
