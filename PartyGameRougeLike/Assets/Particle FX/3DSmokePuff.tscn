@@ -1,6 +1,6 @@
-[gd_scene load_steps=13 format=3 uid="uid://cj28sqkx0c855"]
+[gd_scene load_steps=13 format=3 uid="uid://bqhsi03loly7m"]
 
-[ext_resource type="Shader" uid="uid://rua5o635tv8" path="res://Assets/Particle FX/3DSmokeClouds.tres" id="1_osk5d"]
+[ext_resource type="Shader" uid="uid://rua5o635tv8" path="res://Assets/Particle FX/3DSmokeClouds.tres" id="1_fbd04"]
 
 [sub_resource type="Gradient" id="Gradient_k0l80"]
 offsets = PackedFloat32Array(0.00811908, 0.99594)
@@ -15,7 +15,7 @@ noise = SubResource("FastNoiseLite_vdukp")
 
 [sub_resource type="Gradient" id="Gradient_q0iow"]
 offsets = PackedFloat32Array(0.00405954, 1)
-colors = PackedColorArray(0.501406, 0.501406, 0.501406, 1, 1, 1, 1, 1)
+colors = PackedColorArray(0.571649, 0.571649, 0.571649, 1, 1, 1, 1, 1)
 
 [sub_resource type="GradientTexture2D" id="GradientTexture2D_8fnc7"]
 gradient = SubResource("Gradient_q0iow")
@@ -29,10 +29,10 @@ noise = SubResource("FastNoiseLite_lixpv")
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_jdndk"]
 render_priority = 0
-shader = ExtResource("1_osk5d")
-shader_parameter/FloatParameter = 0.215
-shader_parameter/Specular_Min = null
-shader_parameter/Specular_Max = null
+shader = ExtResource("1_fbd04")
+shader_parameter/FloatParameter = 0.2
+shader_parameter/Specular_Min = 0.59
+shader_parameter/Specular_Max = 0.16
 shader_parameter/noise = SubResource("NoiseTexture2D_ukp37")
 shader_parameter/intensity = SubResource("GradientTexture2D_8fnc7")
 shader_parameter/color = SubResource("NoiseTexture2D_3r6ox")
@@ -47,16 +47,22 @@ point_count = 2
 
 [sub_resource type="Curve" id="Curve_movin"]
 max_value = 1.5
-_data = [Vector2(2.08165e-12, 2.08165e-12), 0.0, 3.00394, 0, 0, Vector2(1, 1.5), -0.0595829, 0.0, 0, 0]
-point_count = 2
+_data = [Vector2(2.08165e-12, 2.08165e-12), 0.0, 3.00394, 0, 0, Vector2(0.5, 3), 0.0, 0.0, 0, 0, Vector2(1, 0), -0.0595829, 0.0, 0, 0]
+point_count = 3
 
 [node name="3DSmokeClouds" type="CPUParticles3D"]
-lifetime = 0.5
+emitting = false
+amount = 40
+one_shot = true
+explosiveness = 1.0
 randomness = 1.0
 lifetime_randomness = 0.2
+fixed_fps = 30
 mesh = SubResource("SphereMesh_2fkps")
+spread = 180.0
 gravity = Vector3(2.08165e-12, 0.2, 2.08165e-12)
-initial_velocity_max = 5.0
+initial_velocity_min = 5.0
+initial_velocity_max = 10.0
 damping_max = 1.0
 damping_curve = SubResource("Curve_gnffb")
 scale_amount_curve = SubResource("Curve_movin")
