@@ -1,0 +1,61 @@
+[gd_scene load_steps=13 format=3 uid="uid://bhokju2rfk8c1"]
+
+[ext_resource type="Shader" uid="uid://rua5o635tv8" path="res://Assets/Particle FX/3DSmokeClouds.tres" id="1_japqe"]
+
+[sub_resource type="Curve" id="Curve_7wty4"]
+_data = [Vector2(0, 0), 0.0, 0.0, 0, 0, Vector2(0.5, 3), 0.0, 0.0, 0, 0, Vector2(1, 0), 0.0, 0.0, 0, 0]
+point_count = 3
+
+[sub_resource type="CurveTexture" id="CurveTexture_2wcgj"]
+curve = SubResource("Curve_7wty4")
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_4m3dd"]
+spread = 180.0
+initial_velocity_min = 7.0
+initial_velocity_max = 13.27
+gravity = Vector3(0, 0.2, 0)
+damping_min = 7.693
+damping_max = 24.786
+scale_curve = SubResource("CurveTexture_2wcgj")
+
+[sub_resource type="Gradient" id="Gradient_6cpwd"]
+colors = PackedColorArray(0.177122, 0.199062, 0.238934, 1, 0.600066, 0.64187, 0.741672, 1)
+
+[sub_resource type="FastNoiseLite" id="FastNoiseLite_togxo"]
+noise_type = 3
+frequency = 0.0082
+
+[sub_resource type="NoiseTexture2D" id="NoiseTexture2D_amohc"]
+color_ramp = SubResource("Gradient_6cpwd")
+noise = SubResource("FastNoiseLite_togxo")
+
+[sub_resource type="Gradient" id="Gradient_efgna"]
+colors = PackedColorArray(0.145266, 0.145266, 0.145266, 1, 0.848905, 0.848906, 0.848905, 1)
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_c4vv6"]
+gradient = SubResource("Gradient_efgna")
+
+[sub_resource type="NoiseTexture2D" id="NoiseTexture2D_8o50h"]
+noise = SubResource("FastNoiseLite_togxo")
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_lrnru"]
+render_priority = 0
+shader = ExtResource("1_japqe")
+shader_parameter/Ripple_Intensity = 0.555
+shader_parameter/Specular_Min = null
+shader_parameter/Specular_Max = null
+shader_parameter/noise = SubResource("NoiseTexture2D_8o50h")
+shader_parameter/intensity = SubResource("GradientTexture1D_c4vv6")
+shader_parameter/color = SubResource("NoiseTexture2D_amohc")
+
+[sub_resource type="SphereMesh" id="SphereMesh_13fkh"]
+material = SubResource("ShaderMaterial_lrnru")
+
+[node name="PuffSmoke" type="GPUParticles3D"]
+emitting = false
+amount = 40
+one_shot = true
+explosiveness = 1.0
+randomness = 1.0
+process_material = SubResource("ParticleProcessMaterial_4m3dd")
+draw_pass_1 = SubResource("SphereMesh_13fkh")

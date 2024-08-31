@@ -73,7 +73,7 @@ parameter_name = "Intesity_2"
 operator = 2
 
 [sub_resource type="VisualShaderNodeFloatParameter" id="VisualShaderNodeFloatParameter_fbdjs"]
-parameter_name = "FloatParameter"
+parameter_name = "Ripple_Intensity"
 
 [sub_resource type="VisualShaderNodeTexture" id="VisualShaderNodeTexture_cd1uo"]
 expanded_output_ports = [0]
@@ -100,7 +100,7 @@ texture = SubResource("GradientTexture2D_2hmx6")
 code = "shader_type spatial;
 render_mode blend_mix, depth_draw_opaque, cull_back, diffuse_lambert, specular_schlick_ggx;
 
-uniform float FloatParameter;
+uniform float Ripple_Intensity;
 uniform sampler2D Noise_2;
 uniform sampler2D Intesity_2;
 uniform sampler2D noise;
@@ -117,7 +117,7 @@ void vertex() {
 
 
 // FloatParameter:19
-	float n_out19p0 = FloatParameter;
+	float n_out19p0 = Ripple_Intensity;
 
 
 // FloatOp:18
@@ -221,7 +221,7 @@ void light() {
 
 }
 "
-graph_offset = Vector2(-3055.93, -395.287)
+graph_offset = Vector2(-4600, -233.333)
 nodes/vertex/0/position = Vector2(700, 40)
 nodes/vertex/4/node = SubResource("VisualShaderNodeTexture_cd1uo")
 nodes/vertex/4/position = Vector2(-1800, -200)

@@ -30,7 +30,7 @@ noise = SubResource("FastNoiseLite_lixpv")
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_jdndk"]
 render_priority = 0
 shader = ExtResource("1_fbd04")
-shader_parameter/FloatParameter = 0.2
+shader_parameter/Ripple_Intensity = null
 shader_parameter/Specular_Min = 0.59
 shader_parameter/Specular_Max = 0.16
 shader_parameter/noise = SubResource("NoiseTexture2D_ukp37")

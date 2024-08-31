@@ -94,7 +94,7 @@ noise = SubResource("FastNoiseLite_gikgc")
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_4ny00"]
 render_priority = 0
 shader = ExtResource("13_p3ttr")
-shader_parameter/FloatParameter = null
+shader_parameter/Ripple_Intensity = null
 shader_parameter/Specular_Min = null
 shader_parameter/Specular_Max = null
 shader_parameter/Noise_2 = SubResource("NoiseTexture2D_asy1e")

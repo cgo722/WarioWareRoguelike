@@ -3,7 +3,7 @@
 [ext_resource type="Script" path="res://Scripts/3DInteractable.gd" id="1_7ui2d"]
 [ext_resource type="PackedScene" uid="uid://c27jgogu4lns" path="res://Assets/Grab The Item/UraniumTube.glb" id="2_0yfbn"]
 [ext_resource type="Shader" uid="uid://7gcbwkd3kxd3" path="res://Assets/CelShader.tres" id="3_i7yow"]
-[ext_resource type="PackedScene" uid="uid://bqhsi03loly7m" path="res://Assets/Particle FX/3DSmokePuff.tscn" id="4_ls4oi"]
+[ext_resource type="PackedScene" uid="uid://bhokju2rfk8c1" path="res://Assets/Particle FX/PuffSmoke.tscn" id="5_nqxfk"]
 
 [sub_resource type="CylinderShape3D" id="CylinderShape3D_jrnhd"]
 height = 5.0
@@ -242,7 +242,7 @@ libraries = {
 "": SubResource("AnimationLibrary_v4t26")
 }
 
-[node name="3DSmokeClouds" parent="." instance=ExtResource("4_ls4oi")]
+[node name="PuffSmoke" parent="." instance=ExtResource("5_nqxfk")]
 
 [connection signal="body_entered" from="Area3D" to="." method="_on_area_3d_body_entered"]
 
