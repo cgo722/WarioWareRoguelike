@@ -1,8 +1,9 @@
-[gd_scene load_steps=19 format=3 uid="uid://ciluld6if5rp"]
+[gd_scene load_steps=24 format=3 uid="uid://ciluld6if5rp"]
 
 [ext_resource type="Script" path="res://Scripts/3DInteractable.gd" id="1_7ui2d"]
 [ext_resource type="PackedScene" uid="uid://c27jgogu4lns" path="res://Assets/Grab The Item/UraniumTube.glb" id="2_0yfbn"]
 [ext_resource type="Shader" uid="uid://7gcbwkd3kxd3" path="res://Assets/CelShader.tres" id="3_i7yow"]
+[ext_resource type="Texture2D" uid="uid://cmh2s63n5dkar" path="res://Assets/Materials/TribandColor.tres" id="4_qs4mx"]
 [ext_resource type="PackedScene" uid="uid://bhokju2rfk8c1" path="res://Assets/Particle FX/PuffSmoke.tscn" id="5_nqxfk"]
 
 [sub_resource type="CylinderShape3D" id="CylinderShape3D_jrnhd"]
@@ -15,12 +16,31 @@ colors = PackedColorArray(0.0148132, 0.752384, 3.85046e-07, 1, 0.0259889, 0.7600
 [sub_resource type="GradientTexture1D" id="GradientTexture1D_gwgwm"]
 gradient = SubResource("Gradient_epc1r")
 
+[sub_resource type="Gradient" id="Gradient_cp5en"]
+offsets = PackedFloat32Array(1)
+colors = PackedColorArray(1, 1, 1, 1)
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_wr8o7"]
+gradient = SubResource("Gradient_cp5en")
+
+[sub_resource type="Gradient" id="Gradient_pskjl"]
+offsets = PackedFloat32Array(0)
+colors = PackedColorArray(0, 0, 0, 1)
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_b2snu"]
+gradient = SubResource("Gradient_pskjl")
+
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_6stqa"]
 render_priority = 0
 shader = ExtResource("3_i7yow")
-shader_parameter/scaling = null
+shader_parameter/scaling = Vector2(1, 1)
 shader_parameter/Roughness_Strength = 1.0
+shader_parameter/Shadow_Hardness_Min = 0.5
+shader_parameter/Shadow_Hardness_Max = 1.0
 shader_parameter/Color_Map = SubResource("GradientTexture1D_gwgwm")
+shader_parameter/hue = SubResource("GradientTexture1D_b2snu")
+shader_parameter/Roughness = SubResource("GradientTexture1D_wr8o7")
+shader_parameter/Light_Map = ExtResource("4_qs4mx")
 
 [sub_resource type="Curve" id="Curve_wc2di"]
 min_value = -1.0

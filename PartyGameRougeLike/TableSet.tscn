@@ -1,4 +1,4 @@
-[gd_scene load_steps=17 format=3 uid="uid://dveg6h3xjtm2"]
+[gd_scene load_steps=18 format=3 uid="uid://dveg6h3xjtm2"]
 
 [ext_resource type="ArrayMesh" uid="uid://q2wpn5uj350e" path="res://Assets/Soup/Table.obj" id="1_3como"]
 [ext_resource type="Script" path="res://Scripts/table_set.gd" id="1_ykbcc"]
@@ -6,6 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://ddp81lkmsi73" path="res://Assets/Soup/Table AO Map.png" id="3_igguw"]
 [ext_resource type="Texture2D" uid="uid://g8j5n4qly6ir" path="res://Assets/Soup/Table-Color.png" id="4_t8jsf"]
 [ext_resource type="Texture2D" uid="uid://dfkwx6op64o0v" path="res://Assets/Soup/Table-Roughness.png" id="5_pljnd"]
+[ext_resource type="Texture2D" uid="uid://cmh2s63n5dkar" path="res://Assets/Materials/TribandColor.tres" id="6_i36xr"]
 [ext_resource type="ArrayMesh" uid="uid://bbm3ukmkfx7qf" path="res://Assets/Soup/Stool.obj" id="6_n5ssf"]
 [ext_resource type="Texture2D" uid="uid://cbskvqj7dkvdl" path="res://Assets/Soup/StoolAOMap.png" id="7_24l3q"]
 [ext_resource type="Texture2D" uid="uid://df6rs8n2ubw2c" path="res://Assets/Soup/Stool-Color.png" id="9_ulxev"]
@@ -28,6 +29,7 @@ shader_parameter/Color_Map = ExtResource("4_t8jsf")
 shader_parameter/hue = SubResource("GradientTexture1D_cmmbg")
 shader_parameter/Roughness = ExtResource("5_pljnd")
 shader_parameter/AO_Map = ExtResource("3_igguw")
+shader_parameter/Light_Map = ExtResource("6_i36xr")
 
 [sub_resource type="Gradient" id="Gradient_0vo0a"]
 offsets = PackedFloat32Array(0)
@@ -47,6 +49,7 @@ shader_parameter/Color_Map = ExtResource("9_ulxev")
 shader_parameter/hue = SubResource("GradientTexture1D_bav7o")
 shader_parameter/Roughness = ExtResource("10_m8e3o")
 shader_parameter/AO_Map = ExtResource("7_24l3q")
+shader_parameter/Light_Map = ExtResource("6_i36xr")
 
 [node name="Table Set" type="Node3D"]
 script = ExtResource("1_ykbcc")

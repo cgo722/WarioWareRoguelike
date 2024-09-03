@@ -1,4 +1,4 @@
-[gd_resource type="VisualShader" load_steps=34 format=3 uid="uid://7gcbwkd3kxd3"]
+[gd_resource type="VisualShader" load_steps=32 format=3 uid="uid://7gcbwkd3kxd3"]
 
 [sub_resource type="VisualShaderNodeTexture2DParameter" id="VisualShaderNodeTexture2DParameter_ub4qt"]
 parameter_name = "hue"
@@ -56,11 +56,9 @@ default_input_values = [0, 0.0, 1, -1.0, 2, 1.0]
 [sub_resource type="VisualShaderNodeFloatOp" id="VisualShaderNodeFloatOp_yfjqo"]
 operator = 2
 
-[sub_resource type="VisualShaderNodeVectorCompose" id="VisualShaderNodeVectorCompose_3htgu"]
-op_type = 0
-
 [sub_resource type="VisualShaderNodeTexture2DParameter" id="VisualShaderNodeTexture2DParameter_74lus"]
 parameter_name = "Light_Map"
+texture_type = 1
 
 [sub_resource type="VisualShaderNodeDotProduct" id="VisualShaderNodeDotProduct_xsbtk"]
 
@@ -77,10 +75,6 @@ texture = SubResource("GradientTexture1D_kol5m")
 default_input_values = [0, Quaternion(0, 0, 0, 0), 1, Quaternion(0, 0, 0, 0)]
 op_type = 2
 operator = 2
-
-[sub_resource type="VisualShaderNodeVectorOp" id="VisualShaderNodeVectorOp_yx0e7"]
-default_input_values = [0, Vector3(0, 0, 0), 1, Vector3(2.087, 0.051, 0.953)]
-operator = 3
 
 [sub_resource type="VisualShaderNodeFloatOp" id="VisualShaderNodeFloatOp_je4y1"]
 operator = 2
@@ -119,7 +113,7 @@ uniform sampler2D hue;
 uniform sampler2D Roughness;
 uniform float Roughness_Strength = 1;
 uniform sampler2D AO_Map;
-uniform sampler2D Light_Map;
+uniform sampler2D Light_Map : source_color;
 uniform float Shadow_Hardness_Min = 0.5;
 uniform float Shadow_Hardness_Max = 1;
 
@@ -237,18 +231,8 @@ void light() {
 	float n_out17p0 = n_out16p0 * n_out4p0;
 
 
-// VectorOp:22
-	vec3 n_in22p1 = vec3(2.08700, 0.05100, 0.95300);
-	vec3 n_out22p0 = vec3(n_out17p0) / n_in22p1;
-
-
-// VectorCompose:18
-	float n_in18p1 = 0.00000;
-	vec2 n_out18p0 = vec2(n_out22p0.x, n_in18p1);
-
-
 // VectorOp:21
-	vec4 n_out21p0 = n_out20p0 * vec4(n_out18p0, 0.0, 0.0);
+	vec4 n_out21p0 = n_out20p0 * vec4(n_out17p0);
 
 
 	vec3 n_out29p0;
@@ -287,7 +271,7 @@ void light() {
 
 }
 "
-graph_offset = Vector2(670.849, -162.464)
+graph_offset = Vector2(-873.185, 1005.19)
 nodes/fragment/2/node = SubResource("VisualShaderNodeTexture2DParameter_6ym75")
 nodes/fragment/2/position = Vector2(-1900, -220)
 nodes/fragment/3/node = SubResource("VisualShaderNodeTexture_kcsg0")
@@ -325,21 +309,17 @@ nodes/light/3/position = Vector2(-1340, 40)
 nodes/light/4/node = SubResource("VisualShaderNodeInput_g34wj")
 nodes/light/4/position = Vector2(-1340, 300)
 nodes/light/11/node = SubResource("VisualShaderNodeInput_v0co8")
-nodes/light/11/position = Vector2(-1340, 560)
+nodes/light/11/position = Vector2(-1320, 140)
 nodes/light/16/node = SubResource("VisualShaderNodeClamp_1hmwh")
 nodes/light/16/position = Vector2(-120, 40)
 nodes/light/17/node = SubResource("VisualShaderNodeFloatOp_yfjqo")
-nodes/light/17/position = Vector2(320, -20)
-nodes/light/18/node = SubResource("VisualShaderNodeVectorCompose_3htgu")
-nodes/light/18/position = Vector2(1240, -20)
+nodes/light/17/position = Vector2(380, 60)
 nodes/light/19/node = SubResource("VisualShaderNodeTexture2DParameter_74lus")
 nodes/light/19/position = Vector2(-1340, 820)
 nodes/light/20/node = SubResource("VisualShaderNodeTexture_sth3p")
 nodes/light/20/position = Vector2(-660, 1080)
 nodes/light/21/node = SubResource("VisualShaderNodeVectorOp_80d31")
 nodes/light/21/position = Vector2(1660, -160)
-nodes/light/22/node = SubResource("VisualShaderNodeVectorOp_yx0e7")
-nodes/light/22/position = Vector2(760, -80)
 nodes/light/24/node = SubResource("VisualShaderNodeFloatOp_je4y1")
 nodes/light/24/position = Vector2(2600, -120)
 nodes/light/25/node = SubResource("VisualShaderNodeInput_67knd")
@@ -351,5 +331,5 @@ nodes/light/27/position = Vector2(2360, 840)
 nodes/light/28/node = SubResource("VisualShaderNodeClamp_0pm6l")
 nodes/light/28/position = Vector2(3200, -20)
 nodes/light/29/node = SubResource("VisualShaderNodeColorFunc_qympc")
-nodes/light/29/position = Vector2(2120, -80)
-nodes/light/connections = PackedInt32Array(3, 0, 2, 0, 11, 0, 2, 1, 2, 0, 16, 0, 16, 0, 17, 0, 4, 0, 17, 1, 19, 0, 20, 2, 20, 0, 21, 0, 18, 0, 21, 1, 17, 0, 22, 0, 22, 0, 18, 0, 25, 0, 24, 1, 24, 0, 28, 0, 26, 0, 28, 1, 27, 0, 28, 2, 21, 0, 29, 0, 29, 0, 24, 0, 28, 0, 0, 0)
+nodes/light/29/position = Vector2(2080, -180)
+nodes/light/connections = PackedInt32Array(3, 0, 2, 0, 11, 0, 2, 1, 16, 0, 17, 0, 19, 0, 20, 2, 20, 0, 21, 0, 25, 0, 24, 1, 24, 0, 28, 0, 26, 0, 28, 1, 27, 0, 28, 2, 21, 0, 29, 0, 29, 0, 24, 0, 28, 0, 0, 0, 17, 0, 21, 1, 2, 0, 16, 0, 4, 0, 17, 1)

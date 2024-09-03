@@ -1,15 +1,37 @@
-[gd_scene load_steps=4 format=3 uid="uid://c7ic4h1k7n0n2"]
+[gd_scene load_steps=10 format=3 uid="uid://c7ic4h1k7n0n2"]
 
 [ext_resource type="PackedScene" uid="uid://xd6pbijuvljj" path="res://Assets/Grab The Item/VectorTree.glb" id="1_ovqvw"]
+[ext_resource type="Shader" uid="uid://7gcbwkd3kxd3" path="res://Assets/CelShader.tres" id="2_3ygcm"]
 [ext_resource type="Texture2D" uid="uid://c8mjxwfqxjmbo" path="res://Assets/Grab The Item/VectorTree_-color.png" id="2_whwt7"]
+[ext_resource type="Texture2D" uid="uid://cmh2s63n5dkar" path="res://Assets/Materials/TribandColor.tres" id="4_e7dca"]
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_h3uqm"]
-diffuse_mode = 3
-specular_mode = 1
-albedo_texture = ExtResource("2_whwt7")
-roughness = 0.0
+[sub_resource type="Gradient" id="Gradient_ir3jr"]
+offsets = PackedFloat32Array(1)
+colors = PackedColorArray(1, 1, 1, 1)
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_h2ti4"]
+gradient = SubResource("Gradient_ir3jr")
+
+[sub_resource type="Gradient" id="Gradient_cayjo"]
+offsets = PackedFloat32Array(0)
+colors = PackedColorArray(0, 0, 0, 1)
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_33i2e"]
+gradient = SubResource("Gradient_cayjo")
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_pagxw"]
+render_priority = 0
+shader = ExtResource("2_3ygcm")
+shader_parameter/scaling = Vector2(1, 1)
+shader_parameter/Roughness_Strength = 1.0
+shader_parameter/Shadow_Hardness_Min = 0.5
+shader_parameter/Shadow_Hardness_Max = 1.0
+shader_parameter/Color_Map = ExtResource("2_whwt7")
+shader_parameter/hue = SubResource("GradientTexture1D_33i2e")
+shader_parameter/Roughness = SubResource("GradientTexture1D_h2ti4")
+shader_parameter/Light_Map = ExtResource("4_e7dca")
 
 [node name="VectorTree" instance=ExtResource("1_ovqvw")]
 
 [node name="SimpleVectorAlienTree1" parent="." index="0"]
-material_override = SubResource("StandardMaterial3D_h3uqm")
+material_override = SubResource("ShaderMaterial_pagxw")

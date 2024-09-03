@@ -1,8 +1,9 @@
-[gd_scene load_steps=13 format=3 uid="uid://cjqpwl3iol37y"]
+[gd_scene load_steps=14 format=3 uid="uid://cjqpwl3iol37y"]
 
 [ext_resource type="Shader" uid="uid://7gcbwkd3kxd3" path="res://Assets/CelShader.tres" id="2_fci46"]
 [ext_resource type="Texture2D" uid="uid://cm37ngn8kflm5" path="res://Assets/Materials/wood_floor_diff_1k.png" id="3_3ulti"]
 [ext_resource type="Script" path="res://Scenes/MicroGames/Dont Drop The Soup/DDS_Floor.gd" id="4_74fy0"]
+[ext_resource type="Texture2D" uid="uid://cmh2s63n5dkar" path="res://Assets/Materials/TribandColor.tres" id="4_bnis3"]
 [ext_resource type="PackedScene" uid="uid://dveg6h3xjtm2" path="res://TableSet.tscn" id="4_gi0vb"]
 
 [sub_resource type="Gradient" id="Gradient_pqyhv"]
@@ -27,9 +28,12 @@ render_priority = 0
 shader = ExtResource("2_fci46")
 shader_parameter/scaling = Vector2(100, 100)
 shader_parameter/Roughness_Strength = 1.0
+shader_parameter/Shadow_Hardness_Min = 0.5
+shader_parameter/Shadow_Hardness_Max = 1.0
 shader_parameter/Color_Map = ExtResource("3_3ulti")
 shader_parameter/hue = SubResource("GradientTexture1D_o2i8j")
 shader_parameter/Roughness = SubResource("NoiseTexture2D_be40i")
+shader_parameter/Light_Map = ExtResource("4_bnis3")
 
 [sub_resource type="PlaneMesh" id="PlaneMesh_ll5ts"]
 material = SubResource("ShaderMaterial_a41s4")

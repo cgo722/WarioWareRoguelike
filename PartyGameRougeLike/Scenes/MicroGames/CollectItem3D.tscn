@@ -1,4 +1,4 @@
-[gd_scene load_steps=38 format=3 uid="uid://cudm8b42ylckp"]
+[gd_scene load_steps=39 format=3 uid="uid://cudm8b42ylckp"]
 
 [ext_resource type="PackedScene" uid="uid://b1xcvdj4jtjgr" path="res://Scenes/Player/3D/StandardCharacter3D.tscn" id="1_ayve0"]
 [ext_resource type="Script" path="res://Scripts/QuickCollectManager.gd" id="1_bup1j"]
@@ -10,6 +10,7 @@
 [ext_resource type="PackedScene" uid="uid://dcded03yrfcwi" path="res://Assets/Grab The Item/Ship.gltf" id="9_4k2hv"]
 [ext_resource type="Shader" uid="uid://7gcbwkd3kxd3" path="res://Assets/CelShader.tres" id="10_cftgd"]
 [ext_resource type="Texture2D" uid="uid://lfex1275ddjf" path="res://Assets/Grab The Item/Ship_Mixed_AO.png" id="11_iho3o"]
+[ext_resource type="Texture2D" uid="uid://cmh2s63n5dkar" path="res://Assets/Materials/TribandColor.tres" id="12_1u4pc"]
 [ext_resource type="Texture2D" uid="uid://dm537og4ppvro" path="res://Assets/Grab The Item/Ship_Base_color.png" id="12_34gnh"]
 [ext_resource type="PackedScene" uid="uid://b5htcnoahg57c" path="res://Assets/Grab The Item/reverie_alien_ground.tscn" id="12_aepmq"]
 [ext_resource type="Shader" uid="uid://rua5o635tv8" path="res://Assets/Particle FX/3DSmokeClouds.tres" id="13_p3ttr"]
@@ -54,6 +55,7 @@ shader_parameter/Shadow_Hardness_Max = 1.0
 shader_parameter/Color_Map = ExtResource("12_34gnh")
 shader_parameter/hue = SubResource("GradientTexture1D_yc4xe")
 shader_parameter/AO_Map = ExtResource("11_iho3o")
+shader_parameter/Light_Map = ExtResource("12_1u4pc")
 
 [sub_resource type="Gradient" id="Gradient_m8d8a"]
 colors = PackedColorArray(0.931897, 0.931897, 0.931897, 1, 1, 1, 1, 1)
