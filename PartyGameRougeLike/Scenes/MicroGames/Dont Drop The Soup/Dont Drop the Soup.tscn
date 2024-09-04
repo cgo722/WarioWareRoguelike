@@ -1,17 +1,14 @@
-[gd_scene load_steps=20 format=3 uid="uid://cigdqqcwl3t6e"]
+[gd_scene load_steps=18 format=3 uid="uid://cigdqqcwl3t6e"]
 
 [ext_resource type="PackedScene" uid="uid://bqxk3bqyb5tpd" path="res://Assets/Soup/BowlPlayer.tscn" id="1_7djil"]
 [ext_resource type="Script" path="res://Scenes/MicroGames/Dont Drop The Soup/Dont Drop the Soup Manger.gd" id="1_mns8a"]
 [ext_resource type="PackedScene" uid="uid://dl0h7dn0iran5" path="res://Assets/Soup/Broth.tscn" id="2_rdhsj"]
-[ext_resource type="Material" uid="uid://cai3cerjbd5al" path="res://Assets/Materials/Outline.tres" id="2_y6fot"]
 [ext_resource type="Material" uid="uid://c1dv7aa7utx3t" path="res://Assets/Materials/Soup.tres" id="3_ytn8n"]
 [ext_resource type="PackedScene" uid="uid://cc21o6hirk3mm" path="res://Assets/Soup/ChiefArm.glb" id="4_rh62m"]
 [ext_resource type="Script" path="res://Scenes/MicroGames/Dont Drop The Soup/SkeletonIK3D.gd" id="6_82sld"]
 [ext_resource type="PackedScene" uid="uid://cjqpwl3iol37y" path="res://Assets/Soup/Kitchen.tscn" id="7_idxwn"]
 [ext_resource type="PackedScene" uid="uid://dkinuc5f40coo" path="res://Assets/Soup/BayLeaf.tscn" id="9_g55h6"]
 [ext_resource type="PackedScene" uid="uid://btdh6d75c3jp0" path="res://Scenes/upgrade_timer.tscn" id="10_7t2an"]
-
-[sub_resource type="QuadMesh" id="QuadMesh_qu6dn"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_a7lyf"]
 
@@ -56,12 +53,6 @@ script = ExtResource("1_mns8a")
 [node name="Camera3D" type="Camera3D" parent="."]
 transform = Transform3D(1, -5.95416e-16, 2.46629e-16, 2.4663e-16, 0.707107, 0.707107, -5.95416e-16, -0.707107, 0.707107, 0, 6.16, 6.133)
 fov = 79.7
-
-[node name="CSGMesh3D" type="CSGMesh3D" parent="Camera3D"]
-transform = Transform3D(57.2718, 1.52466e-20, 0, 1.69407e-21, 57.2719, 0, -1.69407e-21, 0, 57.2719, 0.327308, 0.363671, -2.03741)
-flip_faces = true
-mesh = SubResource("QuadMesh_qu6dn")
-material = ExtResource("2_y6fot")
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
 environment = SubResource("Environment_vrcq8")

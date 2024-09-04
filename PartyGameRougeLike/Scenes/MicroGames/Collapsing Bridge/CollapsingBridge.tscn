@@ -5,8 +5,8 @@
 [ext_resource type="PackedScene" uid="uid://btdh6d75c3jp0" path="res://Scenes/upgrade_timer.tscn" id="2_bh65r"]
 [ext_resource type="PackedScene" uid="uid://df3t252u805na" path="res://Scenes/MicroGames/Collapsing Bridge/Phycis Planks.tscn" id="2_vwlct"]
 [ext_resource type="Material" uid="uid://cai3cerjbd5al" path="res://Assets/Materials/Outline.tres" id="3_grmnl"]
-[ext_resource type="PackedScene" uid="uid://budtvc4niw8o5" path="res://Assets/Collapsing Bridge/Boulders.glb" id="3_ldxjq"]
 [ext_resource type="PackedScene" uid="uid://cpgwwvy0lobdx" path="res://Assets/Collapsing Bridge/rope_Scene.tscn" id="4_sfp5p"]
+[ext_resource type="PackedScene" uid="uid://ymhydhk2nn2u" path="res://Assets/Collapsing Bridge/boulders.tscn" id="7_or7b3"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_rejck"]
 
@@ -88,51 +88,53 @@ transform = Transform3D(0.47368, 0.519994, 2.53366, 2.31077e-08, 2.5758, -0.5286
 [node name="Cliff +" type="Node3D" parent="."]
 transform = Transform3D(0.710971, 0, 0.703221, 0, 1, 0, -0.703221, 0, 0.710971, 25.1482, -4.20959, -3.31658)
 
-[node name="Boulders" parent="Cliff +" instance=ExtResource("3_ldxjq")]
+[node name="Boulders" parent="Cliff +" instance=ExtResource("7_or7b3")]
+transform = Transform3D(1.20208, 0, 1.31487, 0, 1.78154, 0, -1.31487, 0, 1.20208, -3.92478, -5.49035, 1.70212)
 
-[node name="Boulders3" parent="Cliff +" instance=ExtResource("3_ldxjq")]
-transform = Transform3D(-0.258071, 0.468755, 1.22285, 0.699306, 1.10313, -0.27528, -1.10728, 0.587432, -0.458861, 5.90215, -4.89211, 3.22534)
+[node name="Boulders8" parent="Cliff +" instance=ExtResource("7_or7b3")]
+transform = Transform3D(-1.5009, 0.935589, -0.214135, 0.880824, 1.18483, -0.997097, -0.381221, -0.945899, -1.46076, -12.6742, -5.49035, 13.6428)
 
-[node name="Boulders4" parent="Cliff +" instance=ExtResource("3_ldxjq")]
-transform = Transform3D(-3.16609, 0.390279, 0.745511, 0.0475907, 2.98076, -1.35833, -0.840142, -1.30192, -2.88641, 10.5069, -26.0225, 0.441174)
+[node name="Boulders2" parent="Cliff +" instance=ExtResource("7_or7b3")]
+transform = Transform3D(2.06686, 1.42328, 0.744813, 1.40849, -2.18928, 0.274976, 0.772421, 0.183642, -2.4944, 13.8626, -5.49035, -3.11304)
 
-[node name="Boulders2" parent="Cliff +" instance=ExtResource("3_ldxjq")]
-transform = Transform3D(0.794873, 0.920565, 0.505194, -0.147253, 0.725068, -1.08953, -1.0397, 0.6011, 0.540542, -10.6052, 0.830187, 1.52412)
+[node name="Boulders3" parent="Cliff +" instance=ExtResource("7_or7b3")]
+transform = Transform3D(1.36995, -1.21265, 1.87219, -0.407909, -2.29623, -1.18883, 2.193, 0.330425, -1.39068, 16.8292, -5.49036, -23.5493)
 
-[node name="Boulders5" parent="Cliff +" instance=ExtResource("3_ldxjq")]
-transform = Transform3D(1.03357, -0.608151, -0.544406, -0.147253, 0.725068, -1.08953, 0.802834, 0.915922, 0.501028, -1.67807, 0.774386, -10.2952)
+[node name="Boulders4" parent="Cliff +" instance=ExtResource("7_or7b3")]
+transform = Transform3D(-2.90631, -5.12972, 0.718279, -0.898511, -0.311856, -5.86276, 5.10124, -2.97747, -0.623423, 67.4101, -45.2566, -3.48921)
+
+[node name="Boulders5" parent="Cliff +" instance=ExtResource("7_or7b3")]
+transform = Transform3D(-2.77088, -3.78181, 3.64646, 0.437715, -4.27444, -4.1005, 5.23519, -1.64425, 2.27284, 99.6973, -45.2566, -74.2492)
+
+[node name="Boulders6" parent="Cliff +" instance=ExtResource("7_or7b3")]
+transform = Transform3D(-1.05442, -0.662514, 5.8074, -4.68147, -3.43766, -1.24216, 3.49981, -4.79793, 0.0880923, 95.1501, -45.2566, -18.1754)
+
+[node name="Boulders7" parent="Cliff +" instance=ExtResource("7_or7b3")]
+transform = Transform3D(-1.05442, -0.662514, 5.8074, -4.68147, -3.43766, -1.24216, 3.49981, -4.79793, 0.0880923, 7.72393, -54.1056, 2.84521)
 
 [node name="Cliff -" type="Node3D" parent="."]
 transform = Transform3D(0.710971, 0, 0.703221, 0, 1, 0, -0.703221, 0, 0.710971, -33.1492, -4.20959, -3.31658)
 
-[node name="Boulders" parent="Cliff -" instance=ExtResource("3_ldxjq")]
+[node name="Boulders" parent="Cliff -" instance=ExtResource("7_or7b3")]
+transform = Transform3D(0.202825, -1.43917, 1.25781, 1.90328, 0.268233, 6.74998e-08, -0.175531, 1.2455, 1.45339, 4.18944, -3.55988, 13.1549)
 
-[node name="Boulders3" parent="Cliff -" instance=ExtResource("3_ldxjq")]
-transform = Transform3D(-0.67706, 0.846131, 0.779328, 1.05234, 0.820823, 0.0230602, -0.464622, 0.626107, -1.08343, 11.5183, -1.52025, 8.78031)
+[node name="Boulders5" parent="Cliff -" instance=ExtResource("7_or7b3")]
+transform = Transform3D(-0.266796, 1.89308, 0.198745, 1.90328, 0.268233, 8.18766e-08, -0.0277354, 0.1968, -1.91179, 12.5174, -9.35638, -13.3131)
 
-[node name="Boulders5" parent="Cliff -" instance=ExtResource("3_ldxjq")]
-transform = Transform3D(-2.96373, -1.83364, 3.29619, -3.06778, 3.61073, -0.749747, -2.1945, -2.57122, -3.4035, 22.0024, -41.6111, -23.8976)
+[node name="Boulders6" parent="Cliff -" instance=ExtResource("7_or7b3")]
+transform = Transform3D(-1.37252, 0.827301, 1.06121, 0.918117, 1.68397, -0.125342, -0.983696, 0.417401, -1.59767, 7.21188, -8.98773, -18.5608)
 
-[node name="Boulders6" parent="Cliff -" instance=ExtResource("3_ldxjq")]
-transform = Transform3D(-7.51843, 4.84994, 6.48493, 5.71323, 9.44808, -0.442297, -5.73893, 3.05198, -8.93608, 17.4668, -86.9486, -99.3563)
+[node name="Boulders7" parent="Cliff -" instance=ExtResource("7_or7b3")]
+transform = Transform3D(-1.37252, 0.827301, 1.06121, 0.918117, 1.68397, -0.125342, -0.983696, 0.417401, -1.59767, -4.44901, -2.55213, -6.7714)
 
-[node name="Boulders7" parent="Cliff -" instance=ExtResource("3_ldxjq")]
-transform = Transform3D(-9.44791, -1.93849, -5.39283, -4.29998, -4.47586, 9.14222, -3.78819, 9.91523, 3.07258, 136.377, -57.2021, 18.25)
+[node name="Boulders2" parent="Cliff -" instance=ExtResource("7_or7b3")]
+transform = Transform3D(-1.64936, -3.26967, 3.76856, -4.56566, 2.58962, 0.248586, -2.01185, -3.19629, -3.65368, 4.18944, -39.0146, 13.1549)
 
-[node name="Boulders8" parent="Cliff -" instance=ExtResource("3_ldxjq")]
-transform = Transform3D(-77.6544, -15.9329, -44.3249, -35.3424, -36.788, 75.1418, -31.1359, 81.4955, 25.2542, 1180.23, -1466.63, -1173.99)
+[node name="Boulders3" parent="Cliff -" instance=ExtResource("7_or7b3")]
+transform = Transform3D(-0.19132, -5.06632, 1.38168, 5.00336, 0.243984, 1.58745, -1.59465, 1.37336, 4.815, -22.575, -39.0146, -13.3178)
 
-[node name="Boulders9" parent="Cliff -" instance=ExtResource("3_ldxjq")]
-transform = Transform3D(-77.6544, -15.9329, -44.3249, -35.3424, -36.788, 75.1418, -31.1359, 81.4955, 25.2542, 1740.79, -906.133, -1740.72)
-
-[node name="Boulders10" parent="Cliff -" instance=ExtResource("3_ldxjq")]
-transform = Transform3D(-77.6544, -15.9329, -44.3249, -35.3424, -36.788, 75.1418, -31.1359, 81.4956, 25.2542, 2133.45, -906.133, -1352.35)
-
-[node name="Boulders4" parent="Cliff -" instance=ExtResource("3_ldxjq")]
-transform = Transform3D(1.46923, -2.68524, 1.16751, 1.49292, -0.436719, -2.88317, 2.51889, 1.8251, 1.02784, 4.39014, -26.0225, -5.60888)
-
-[node name="Boulders2" parent="Cliff -" instance=ExtResource("3_ldxjq")]
-transform = Transform3D(0.794873, 0.920565, 0.505194, -0.147253, 0.725068, -1.08953, -1.0397, 0.6011, 0.540542, -10.2766, 0, 1.77781)
+[node name="Boulders4" parent="Cliff -" instance=ExtResource("7_or7b3")]
+transform = Transform3D(-0.333693, 5.23842, 0.246619, 5.00336, 0.243984, 1.58745, 1.57104, 0.335625, -5.00324, 26.3563, -39.0146, -57.5574)
 
 [node name="Rope" parent="." instance=ExtResource("4_sfp5p")]
 transform = Transform3D(1.85242, 0.0461102, -0.0100046, -0.0478824, 1.78287, -0.389787, -9.46689e-05, 0.501584, 1.38641, -0.656056, 0.346576, 2.0949)

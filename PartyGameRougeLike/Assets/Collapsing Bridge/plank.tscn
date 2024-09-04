@@ -1,0 +1,31 @@
+[gd_scene load_steps=9 format=3 uid="uid://d2t28yi8602lb"]
+
+[ext_resource type="PackedScene" uid="uid://wlrxqpdl4jbg" path="res://Assets/Collapsing Bridge/Plank.glb" id="1_w0kd6"]
+[ext_resource type="Shader" uid="uid://7gcbwkd3kxd3" path="res://Assets/CelShader.tres" id="2_bpufy"]
+[ext_resource type="Texture2D" uid="uid://dbvyvysbugkkk" path="res://Assets/Collapsing Bridge/Plank_Plank_base.png" id="3_7d7v7"]
+[ext_resource type="Texture2D" uid="uid://cmh2s63n5dkar" path="res://Assets/Materials/TribandColor.tres" id="4_4b8bk"]
+[ext_resource type="Texture2D" uid="uid://b26sgv621na8f" path="res://Assets/Collapsing Bridge/Plank_Plank_nor.png" id="5_8jgbc"]
+
+[sub_resource type="Gradient" id="Gradient_t5n3s"]
+offsets = PackedFloat32Array(0)
+colors = PackedColorArray(0, 0, 0, 1)
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_1qvgh"]
+gradient = SubResource("Gradient_t5n3s")
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_7yfia"]
+render_priority = 0
+shader = ExtResource("2_bpufy")
+shader_parameter/scaling = Vector2(1, 1)
+shader_parameter/Roughness_Strength = 1.0
+shader_parameter/Shadow_Hardness_Min = 0.5
+shader_parameter/Shadow_Hardness_Max = 1.0
+shader_parameter/Color_Map = ExtResource("3_7d7v7")
+shader_parameter/hue = SubResource("GradientTexture1D_1qvgh")
+shader_parameter/Normal_Map = ExtResource("5_8jgbc")
+shader_parameter/Light_Map = ExtResource("4_4b8bk")
+
+[node name="Plank" instance=ExtResource("1_w0kd6")]
+
+[node name="CBRetopo" parent="." index="0"]
+surface_material_override/0 = SubResource("ShaderMaterial_7yfia")

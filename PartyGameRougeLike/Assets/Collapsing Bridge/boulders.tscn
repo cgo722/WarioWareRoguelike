@@ -1,0 +1,31 @@
+[gd_scene load_steps=9 format=3 uid="uid://ymhydhk2nn2u"]
+
+[ext_resource type="PackedScene" uid="uid://budtvc4niw8o5" path="res://Assets/Collapsing Bridge/Boulders.glb" id="1_vvbn7"]
+[ext_resource type="Shader" uid="uid://7gcbwkd3kxd3" path="res://Assets/CelShader.tres" id="2_sbjl5"]
+[ext_resource type="Texture2D" uid="uid://c8jkklrncphyx" path="res://Assets/Collapsing Bridge/Boulders_export_base.png" id="3_8maqn"]
+[ext_resource type="Texture2D" uid="uid://cmh2s63n5dkar" path="res://Assets/Materials/TribandColor.tres" id="4_oo6q2"]
+[ext_resource type="Texture2D" uid="uid://dumcdwb7olo0a" path="res://Assets/Collapsing Bridge/Boulders_export_nor.png" id="5_0n07r"]
+
+[sub_resource type="Gradient" id="Gradient_r128v"]
+offsets = PackedFloat32Array(0)
+colors = PackedColorArray(0, 0, 0, 1)
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_ij6be"]
+gradient = SubResource("Gradient_r128v")
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_bc8ww"]
+render_priority = 0
+shader = ExtResource("2_sbjl5")
+shader_parameter/scaling = Vector2(1, 1)
+shader_parameter/Roughness_Strength = 1.0
+shader_parameter/Shadow_Hardness_Min = 0.5
+shader_parameter/Shadow_Hardness_Max = 1.0
+shader_parameter/Color_Map = ExtResource("3_8maqn")
+shader_parameter/hue = SubResource("GradientTexture1D_ij6be")
+shader_parameter/Normal_Map = ExtResource("5_0n07r")
+shader_parameter/Light_Map = ExtResource("4_oo6q2")
+
+[node name="Boulders" instance=ExtResource("1_vvbn7")]
+
+[node name="CBRetopo" parent="." index="0"]
+surface_material_override/0 = SubResource("ShaderMaterial_bc8ww")
