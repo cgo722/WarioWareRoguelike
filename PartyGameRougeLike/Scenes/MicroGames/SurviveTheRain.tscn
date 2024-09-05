@@ -1,4 +1,4 @@
-[gd_scene load_steps=18 format=3 uid="uid://mlfj7mlo1x23"]
+[gd_scene load_steps=25 format=3 uid="uid://mlfj7mlo1x23"]
 
 [ext_resource type="Script" path="res://Scenes/SurviveTheRainManager.gd" id="1_4w7kf"]
 [ext_resource type="PackedScene" uid="uid://dqnv87pgnk5c5" path="res://Assets/2D Spawner.tscn" id="2_p6udn"]
@@ -32,9 +32,40 @@ gradient = SubResource("Gradient_4jn2g")
 fill_from = Vector2(1, 0.732906)
 fill_to = Vector2(1, 0.435897)
 
+[sub_resource type="Gradient" id="Gradient_s6wvp"]
+offsets = PackedFloat32Array(0.00443131, 1)
+colors = PackedColorArray(0, 0, 0, 0, 1, 1, 1, 0.196078)
+
+[sub_resource type="FastNoiseLite" id="FastNoiseLite_174k6"]
+noise_type = 3
+seed = -360
+frequency = 0.0019
+
+[sub_resource type="NoiseTexture2D" id="NoiseTexture2D_k5pye"]
+color_ramp = SubResource("Gradient_s6wvp")
+noise = SubResource("FastNoiseLite_174k6")
+
+[sub_resource type="FastNoiseLite" id="FastNoiseLite_tis5k"]
+noise_type = 3
+seed = 640
+frequency = 0.0019
+
+[sub_resource type="NoiseTexture2D" id="NoiseTexture2D_21h21"]
+color_ramp = SubResource("Gradient_s6wvp")
+noise = SubResource("FastNoiseLite_tis5k")
+
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_q8fvy"]
 shader = ExtResource("8_lmyr5")
-shader_parameter/col = Vector4(1, 1, 1, 1)
+shader_parameter/col = Vector4(1, 1, 1, 0.087)
+
+[sub_resource type="FastNoiseLite" id="FastNoiseLite_xus0n"]
+noise_type = 3
+seed = 140
+frequency = 0.0019
+
+[sub_resource type="NoiseTexture2D" id="NoiseTexture2D_5uje4"]
+color_ramp = SubResource("Gradient_s6wvp")
+noise = SubResource("FastNoiseLite_xus0n")
 
 [node name="Node2D" type="Node2D"]
 script = ExtResource("1_4w7kf")
@@ -140,6 +171,12 @@ energy = 2.99
 shadow_enabled = true
 texture = SubResource("GradientTexture2D_ud3hs")
 
+[node name="Fog3" type="Sprite2D" parent="Foreground"]
+z_index = 3980
+position = Vector2(1073.5, 853)
+scale = Vector2(7.42989, 6.19763)
+texture = SubResource("NoiseTexture2D_k5pye")
+
 [node name="Background" type="Parallax2D" parent="."]
 scroll_scale = Vector2(0.5, 0.5)
 
@@ -175,6 +212,12 @@ energy = 2.99
 shadow_enabled = true
 texture = SubResource("GradientTexture2D_ud3hs")
 
+[node name="Fog" type="Sprite2D" parent="Background"]
+z_index = -40
+position = Vector2(1073.5, 853)
+scale = Vector2(7.44213, 6.20784)
+texture = SubResource("NoiseTexture2D_21h21")
+
 [node name="Far Background" type="Parallax2D" parent="."]
 scale = Vector2(0.417542, 0.417542)
 scroll_scale = Vector2(0.1, 0.1)
@@ -185,6 +228,11 @@ repeat_times = 50
 z_index = -4096
 material = SubResource("ShaderMaterial_q8fvy")
 texture = ExtResource("9_6ttcl")
+
+[node name="Fog2" type="Sprite2D" parent="."]
+position = Vector2(1073.5, 853)
+scale = Vector2(7.44213, 6.20784)
+texture = SubResource("NoiseTexture2D_5uje4")
 
 [connection signal="timeout" from="CanvasLayer/Instruction Timer" to="." method="_on_instruction_timer_timeout"]
 [connection signal="timeout" from="Upgrade_Timer" to="StandardPlayer" method="_on_upgrade_timer_timeout"]

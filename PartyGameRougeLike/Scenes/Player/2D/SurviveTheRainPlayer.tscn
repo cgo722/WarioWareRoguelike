@@ -112,3 +112,5 @@ pitch_scale = 2.5
 [node name="JumpSFX" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("5_uh0wa")
 volume_db = 10.0
+
+[connection signal="finished" from="RunSFX" to="." method="_on_run_sfx_finished"]

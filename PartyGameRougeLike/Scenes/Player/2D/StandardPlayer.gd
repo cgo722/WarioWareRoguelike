@@ -71,3 +71,8 @@ func _on_upgrade_timer_timeout() -> void:
 	SPEED *= gamemanager.playerSpeed2D
 	JUMP_VELOCITY *= gamemanager.jumpStrength
 	pass # Replace with function body.
+
+
+func _on_run_sfx_finished() -> void:
+	runSFX.pitch_scale += randf_range(-0.2, 0.2)
+	pass # Replace with function body.
