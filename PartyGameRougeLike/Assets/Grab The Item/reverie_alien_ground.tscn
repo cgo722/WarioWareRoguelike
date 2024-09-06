@@ -37,6 +37,7 @@ data = PackedVector3Array(-0.4014, 0.3664, -0.4341, -0.3916, 0.3704, -0.426, -0.
 [node name="Reverie Alien Ground" instance=ExtResource("1_aogu3")]
 
 [node name="Low Poly" parent="." index="0"]
+lod_bias = 0.2
 surface_material_override/0 = SubResource("ShaderMaterial_4siyq")
 
 [node name="StaticBody3D" type="StaticBody3D" parent="Low Poly" index="0"]

@@ -5,4 +5,5 @@
 [node name="GrassClump" type="Node3D"]
 
 [node name="MultiMeshInstance3D" type="MultiMeshInstance3D" parent="."]
+lod_bias = 0.01
 multimesh = ExtResource("1_48dif")

@@ -35,3 +35,4 @@ shader_parameter/Light_Map = ExtResource("4_e7dca")
 
 [node name="SimpleVectorAlienTree1" parent="." index="0"]
 material_override = SubResource("ShaderMaterial_pagxw")
+lod_bias = 0.05
