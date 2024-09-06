@@ -15,6 +15,7 @@ radius = 0.347744
 [node name="Broth" type="Node3D"]
 
 [node name="RigidBody3D" type="RigidBody3D" parent="."]
+collision_layer = 2049
 physics_material_override = SubResource("PhysicsMaterial_qhavf")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="RigidBody3D"]

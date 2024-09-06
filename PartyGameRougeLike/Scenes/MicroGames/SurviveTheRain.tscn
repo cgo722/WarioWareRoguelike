@@ -33,7 +33,7 @@ fill_from = Vector2(1, 0.732906)
 fill_to = Vector2(1, 0.435897)
 
 [sub_resource type="Gradient" id="Gradient_s6wvp"]
-offsets = PackedFloat32Array(0.00443131, 1)
+offsets = PackedFloat32Array(0.429838, 1)
 colors = PackedColorArray(0, 0, 0, 0, 1, 1, 1, 0.196078)
 
 [sub_resource type="FastNoiseLite" id="FastNoiseLite_174k6"]
@@ -106,7 +106,7 @@ autostart = true
 [node name="Sprite2D" type="Sprite2D" parent="."]
 z_index = -4096
 position = Vector2(988.44, 898.44)
-scale = Vector2(43.67, 43.67)
+scale = Vector2(84.3435, 66.5569)
 texture = SubResource("GradientTexture2D_67px3")
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
