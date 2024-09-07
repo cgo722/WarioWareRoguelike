@@ -8,7 +8,7 @@ var gravity = ProjectSettings.get_setting("physics/3d/default_gravity")
 @onready var radius : float = 3.0
 @onready var animT : AnimationTree = $CollisionShape3D/RoseBud/AnimationTree
 var newDir : Vector3
-
+@export var puffFX : PackedScene
 var states : Array = ["Idle", "Running"]
 var curState : String
 var prevState : String
@@ -32,6 +32,9 @@ func _process(delta):
 func _on_area_3d_body_entered(body):
 	gamemanager.completed = true
 	gamemanager.score += 150
+	var puffFXInstance = puffFX.instantiate()
+	self.add_sibling(puffFXInstance)
+	puffFXInstance.position = position
 	self.queue_free()
 	pass # Replace with function body.
 

@@ -27,6 +27,7 @@ reflected_light_source = 2
 ssao_enabled = true
 sdfgi_enabled = true
 sdfgi_use_occlusion = true
+glow_intensity = 1.97
 fog_mode = 1
 fog_density = 1.0
 volumetric_fog_density = 0.025
