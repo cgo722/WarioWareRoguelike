@@ -12,13 +12,14 @@ extends Node
 
 @onready var effect
 
-@onready var button = $Button 
-@onready var descBox = $Button/Label
+@onready var button =  $VBoxContainer/Button
+@onready var descBox = $VBoxContainer/Button/Label
 var buttonText : String
 var descText : String
 
 @onready var GameTimer : Timer = get_parent().get_parent().get_parent().get_node("GameTimer")
-
+@onready var Sprites := ["res://Assets/UIpack/789_Lorc_RPG_icons/Icon.5_56.png","res://Assets/UIpack/789_Lorc_RPG_icons/Icon.1_72.png", 
+"res://Assets/UIpack/789_Lorc_RPG_icons/Icon.5_63.png", ]
 
 # Called when the node enters the scene tree for the first time.
 func _ready():

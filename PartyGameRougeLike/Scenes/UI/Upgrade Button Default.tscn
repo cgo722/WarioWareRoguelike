@@ -1,7 +1,8 @@
-[gd_scene load_steps=4 format=3 uid="uid://dyqtxqq3ao0w4"]
+[gd_scene load_steps=5 format=3 uid="uid://dyqtxqq3ao0w4"]
 
 [ext_resource type="Script" path="res://Scenes/UI/Upgrade Buttons.gd" id="1_ovnvo"]
 [ext_resource type="Theme" uid="uid://vtocky5omcns" path="res://Assets/UIpack/DefaultTheme.tres" id="2_506bn"]
+[ext_resource type="Texture2D" uid="uid://dx38kvxxyu4yl" path="res://Assets/UIpack/789_Lorc_RPG_icons/Icon.1_01.png" id="2_hynvp"]
 [ext_resource type="Script" path="res://Scenes/Menus/GrabFocus.gd" id="2_s0rnu"]
 
 [node name="UpgradeButtonDefault" type="Control"]
@@ -13,26 +14,31 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_ovnvo")
 
-[node name="Button" type="Button" parent="."]
-process_mode = 3
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
 layout_mode = 0
-offset_right = 8.0
-offset_bottom = 8.0
-scale = Vector2(1.2097, 1.36224)
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Sprite2D" type="Sprite2D" parent="VBoxContainer"]
+scale = Vector2(0.826651, 0.734085)
+texture = ExtResource("2_hynvp")
+
+[node name="Button" type="Button" parent="VBoxContainer"]
+process_mode = 3
+layout_mode = 2
 theme = ExtResource("2_506bn")
 theme_type_variation = &"FlatButton"
 script = ExtResource("2_s0rnu")
 
-[node name="Label" type="Label" parent="Button"]
-layout_mode = 0
-offset_left = -181.0
-offset_top = 15.0
-offset_right = 292.0
-offset_bottom = 220.0
+[node name="Label" type="Label" parent="VBoxContainer/Button"]
+layout_mode = 2
+offset_top = 54.0
+offset_right = 50.0
+offset_bottom = 55.0
 theme = ExtResource("2_506bn")
 horizontal_alignment = 1
 vertical_alignment = 1
 autowrap_mode = 3
 clip_text = true
 
-[connection signal="button_up" from="Button" to="." method="_on_button_button_up"]
+[connection signal="button_up" from="VBoxContainer/Button" to="." method="_on_button_button_up"]

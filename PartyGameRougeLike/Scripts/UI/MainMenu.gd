@@ -3,6 +3,7 @@ extends Control
 @onready var gamemanager = get_node("/root/GameManager")
 @onready var settingsMenu = load("res://Scenes/Menus/Settings.tscn")
 @onready var hsAmount : Label = $"BoxContainer/VBoxContainer/HSplitContainer/High Score Amount"
+@onready var howToMenu = load("res://Scenes/Menus/How To Screen.tscn")
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	get_tree().paused = false
@@ -40,5 +41,7 @@ func _exit_tree():
 
 
 func _on_how_to_button_up() -> void:
-	
+	var sceneInstance = howToMenu.instantiate()
+	get_parent().add_child(sceneInstance)
+	self.queue_free()
 	pass # Replace with function body.

@@ -205,7 +205,6 @@ theme_override_styles/normal = SubResource("StyleBoxTexture_a5hac")
 text = "KEY_SETTINGS"
 
 [node name="How To" type="Button" parent="BoxContainer/VBoxContainer"]
-visible = false
 layout_mode = 2
 theme = ExtResource("3_rdccb")
 theme_type_variation = &"FlatButton"
@@ -227,4 +226,5 @@ text = "KEY_QUIT"
 
 [connection signal="button_up" from="BoxContainer/VBoxContainer/Play" to="." method="_on_play_button_up"]
 [connection signal="button_up" from="BoxContainer/VBoxContainer/Option" to="." method="_on_options_button_up"]
+[connection signal="button_up" from="BoxContainer/VBoxContainer/How To" to="." method="_on_how_to_button_up"]
 [connection signal="button_up" from="BoxContainer/VBoxContainer/Quit" to="." method="_on_quit_button_up"]

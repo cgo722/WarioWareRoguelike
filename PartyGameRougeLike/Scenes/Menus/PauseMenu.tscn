@@ -1,8 +1,9 @@
-[gd_scene load_steps=4 format=3 uid="uid://hd6uldxh1brl"]
+[gd_scene load_steps=5 format=3 uid="uid://hd6uldxh1brl"]
 
 [ext_resource type="Script" path="res://Scenes/Menus/LostScreen.gd" id="1_yo6br"]
 [ext_resource type="Theme" uid="uid://vtocky5omcns" path="res://Assets/UIpack/DefaultTheme.tres" id="2_jjlk6"]
 [ext_resource type="Script" path="res://Scenes/Menus/GrabFocus.gd" id="2_n83gw"]
+[ext_resource type="Theme" uid="uid://dyos8gp3athjs" path="res://Assets/UIpack/DefaultFont.tres" id="2_r0835"]
 
 [node name="Pause" type="Control"]
 process_mode = 3
@@ -32,21 +33,23 @@ alignment = 1
 
 [node name="Label" type="Label" parent="VBoxContainer"]
 layout_mode = 2
-text = "PAUSE"
+theme = ExtResource("2_r0835")
+theme_override_font_sizes/font_size = 81
+text = "KEY_PAUSE"
 horizontal_alignment = 1
 
 [node name="Resume" type="Button" parent="VBoxContainer"]
 layout_mode = 2
 theme = ExtResource("2_jjlk6")
 theme_type_variation = &"FlatButton"
-text = "Resume"
+text = "KEY_RESUME"
 script = ExtResource("2_n83gw")
 
 [node name="Main Menu" type="Button" parent="VBoxContainer"]
 layout_mode = 2
 theme = ExtResource("2_jjlk6")
 theme_type_variation = &"FlatButton"
-text = "Give Up"
+text = "KEY_GIVEUP"
 
 [connection signal="button_up" from="VBoxContainer/Resume" to="." method="_on_resume_button_up"]
 [connection signal="button_up" from="VBoxContainer/Main Menu" to="." method="_on_main_menu_button_up"]

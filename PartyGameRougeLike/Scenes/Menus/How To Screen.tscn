@@ -1,0 +1,51 @@
+[gd_scene load_steps=5 format=3 uid="uid://dk2fsnocl5n5p"]
+
+[ext_resource type="Script" path="res://Scenes/Menus/how_to_screen.gd" id="1_4j1u8"]
+[ext_resource type="Theme" uid="uid://vtocky5omcns" path="res://Assets/UIpack/DefaultTheme.tres" id="1_ovis8"]
+[ext_resource type="PackedScene" uid="uid://d0f7gdq8ltms" path="res://Scenes/Menus/MainMenu.tscn" id="2_r00yr"]
+[ext_resource type="Script" path="res://Scenes/Menus/GrabFocus.gd" id="3_0vfn8"]
+
+[node name="HowToScreen" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_4j1u8")
+mainMenu = ExtResource("2_r00yr")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -915.0
+offset_top = -91.0
+offset_right = 913.0
+offset_bottom = 92.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Label" type="Label" parent="VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+theme = ExtResource("1_ovis8")
+theme_override_font_sizes/font_size = 28
+text = "KEY_CONT
+KEY_KEYBOARD_CONT
+KEY_CONTROLLER_CONT
+KEY_GOAL
+KEY_GOAL_PT1 
+KEY_GOAL_PT2"
+horizontal_alignment = 1
+
+[node name="Button" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+theme = ExtResource("1_ovis8")
+text = "KEY_BACK"
+script = ExtResource("3_0vfn8")
+
+[connection signal="button_up" from="VBoxContainer/Button" to="." method="_on_button_button_up"]
