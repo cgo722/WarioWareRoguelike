@@ -34,12 +34,47 @@ layout_mode = 2
 size_flags_horizontal = 4
 theme = ExtResource("1_ovis8")
 theme_override_font_sizes/font_size = 28
-text = "KEY_CONT
-KEY_KEYBOARD_CONT
-KEY_CONTROLLER_CONT
-KEY_GOAL
-KEY_GOAL_PT1 
-KEY_GOAL_PT2"
+text = "KEY_CONT"
+horizontal_alignment = 1
+
+[node name="Label2" type="Label" parent="VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+theme = ExtResource("1_ovis8")
+theme_override_font_sizes/font_size = 28
+text = "KEY_KEYBOARD_CONT"
+horizontal_alignment = 1
+
+[node name="Label3" type="Label" parent="VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+theme = ExtResource("1_ovis8")
+theme_override_font_sizes/font_size = 28
+text = "KEY_CONTROLLER_CONT"
+horizontal_alignment = 1
+
+[node name="Label4" type="Label" parent="VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+theme = ExtResource("1_ovis8")
+theme_override_font_sizes/font_size = 28
+text = "KEY_GOAL"
+horizontal_alignment = 1
+
+[node name="Label5" type="Label" parent="VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+theme = ExtResource("1_ovis8")
+theme_override_font_sizes/font_size = 28
+text = "KEY_GOAL_PT1"
+horizontal_alignment = 1
+
+[node name="Label6" type="Label" parent="VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+theme = ExtResource("1_ovis8")
+theme_override_font_sizes/font_size = 28
+text = "KEY_GOAL_PT2"
 horizontal_alignment = 1
 
 [node name="Button" type="Button" parent="VBoxContainer"]

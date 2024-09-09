@@ -81,7 +81,7 @@ script = ExtResource("1_nx27p")
 
 [node name="SpawnerFishing" parent="." instance=ExtResource("3_8mh63")]
 position = Vector2(0, 338)
-maxCount = 150
+maxCount = 88
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 

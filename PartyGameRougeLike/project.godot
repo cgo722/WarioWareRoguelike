@@ -14,6 +14,7 @@ config/name="It's A Game Changer"
 run/main_scene="res://Scenes/NewMainScene.tscn"
 config/features=PackedStringArray("4.3", "Mobile")
 run/max_fps=360
+boot_splash/use_filter=false
 config/icon="res://icon.svg"
 
 [autoload]
@@ -26,6 +27,7 @@ LocalizationManager="*res://addons/localization_editor/LocalizationManager.gd"
 
 window/size/viewport_width=1920
 window/size/viewport_height=1080
+window/size/mode=3
 window/stretch/mode="viewport"
 
 [dotnet]
@@ -114,7 +116,7 @@ locale/translations=PackedStringArray("res://localization/localizations.en.trans
 [localization_editor]
 
 translations_save_auth=false
-translations_split_offset=652
+translations_split_offset=188
 
 [physics]
 

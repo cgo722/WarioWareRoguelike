@@ -237,6 +237,7 @@ script = ExtResource("1_7ui2d")
 
 [node name="Area3D" type="Area3D" parent="."]
 transform = Transform3D(0.655299, 0.690842, 0.305486, -0.310602, 0.615083, -0.724706, -0.688558, 0.380015, 0.617638, 2.08165e-12, 2.08165e-12, 2.08165e-12)
+collision_mask = 2
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D"]
 transform = Transform3D(0.5, -1.74393e-16, 1.74393e-16, 1.74393e-16, 0.5, -1.74393e-16, -1.74393e-16, 1.74393e-16, 0.5, 0, 0, -0.0481014)

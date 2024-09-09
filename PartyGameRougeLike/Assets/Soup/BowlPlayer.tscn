@@ -22,7 +22,8 @@ render_priority = 0
 shader = ExtResource("3_rf6uu")
 shader_parameter/scaling = null
 shader_parameter/Roughness_Strength = 1.0
-shader_parameter/Light_Intesity = Vector3(0.5, 0, 0)
+shader_parameter/Shadow_Hardness_Min = 0.5
+shader_parameter/Shadow_Hardness_Max = 1.0
 shader_parameter/Color_Map = SubResource("GradientTexture2D_xqbap")
 shader_parameter/hue = SubResource("GradientTexture1D_hicyr")
 

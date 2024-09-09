@@ -74,6 +74,7 @@ script = ExtResource("1_4w7kf")
 position = Vector2(951, -200)
 
 [node name="2DPlatforms" parent="." instance=ExtResource("3_5vm1n")]
+z_index = -1
 position = Vector2(961, 1159)
 scale = Vector2(30.4007, 12.4738)
 

@@ -30,8 +30,8 @@ func _on_timer_timeout():
 
 
 func _on_round_timer_timeout():
-	minT -= 0.002
-	maxT += 0.002
+	minT -= 0.004
+	maxT += 0.004
 	pass # Replace with function body.
 
 

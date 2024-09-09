@@ -17,7 +17,6 @@ var scored : bool
 @onready var worldTree2Anim := $"../../ParallaxMidGround/World Tree2/AnimationPlayer"
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	gamemanager.completed = false
 	worldTree2.visible = false
 	pass # Replace with function body.
 
