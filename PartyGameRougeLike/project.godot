@@ -36,6 +36,7 @@ project/assembly_name="PartyGameRogueLike"
 
 [editor]
 
+movie_writer/movie_file="/Users/camronoakeson/Documents/Godot Proj.nosync/WarioWareRoguelike/PartyGameRougeLike/GameplayTrailer.avi"
 version_control/plugin_name="GitPlugin"
 version_control/autoload_on_startup=true
 
