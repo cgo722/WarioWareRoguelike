@@ -2,7 +2,7 @@ extends Control
 
 @onready var gamemanager = get_node("/root/GameManager")
 @onready var settingsMenu = load("res://Scenes/Menus/Settings.tscn")
-@onready var hsAmount : Label = $"BoxContainer/VBoxContainer/HSplitContainer/High Score Amount"
+@onready var hsAmount : Label = $"BoxContainer/HBoxContainer/VBoxContainer/HSplitContainer/High Score Amount"
 @onready var howToMenu = load("res://Scenes/Menus/How To Screen.tscn")
 # Called when the node enters the scene tree for the first time.
 func _ready():

@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://cxu8hh6ax82ol"
+path="res://.godot/imported/One Man Symphony - A Wrench In The Works (Free) - 01 Your Digital Footprint (Investigation Theme).wav-147be262bd4f228f8cbf5b42907e0209.sample"
+
+[deps]
+
+source_file="res://Assets/Sounds/One Man Symphony - A Wrench In The Works (Free) 2/One Man Symphony - A Wrench In The Works (Free) - 01 Your Digital Footprint (Investigation Theme).wav"
+dest_files=["res://.godot/imported/One Man Symphony - A Wrench In The Works (Free) - 01 Your Digital Footprint (Investigation Theme).wav-147be262bd4f228f8cbf5b42907e0209.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0

@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://biy2olgaghhs6"
+path="res://.godot/imported/One Man Symphony - A Wrench In The Works (Free) - 03 Shattering The Illusion (Action 01).wav-4c240844f74583b659ae9b10ee42c123.sample"
+
+[deps]
+
+source_file="res://Assets/Sounds/One Man Symphony - A Wrench In The Works (Free) 2/One Man Symphony - A Wrench In The Works (Free) - 03 Shattering The Illusion (Action 01).wav"
+dest_files=["res://.godot/imported/One Man Symphony - A Wrench In The Works (Free) - 03 Shattering The Illusion (Action 01).wav-4c240844f74583b659ae9b10ee42c123.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0
