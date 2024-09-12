@@ -20,7 +20,8 @@ offset_right = 40.0
 offset_bottom = 40.0
 
 [node name="Sprite2D" type="Sprite2D" parent="VBoxContainer"]
-scale = Vector2(0.826651, 0.734085)
+position = Vector2(23, -85)
+scale = Vector2(0.470825, 0.418104)
 texture = ExtResource("2_hynvp")
 
 [node name="Button" type="Button" parent="VBoxContainer"]
@@ -31,11 +32,16 @@ theme_type_variation = &"FlatButton"
 script = ExtResource("2_s0rnu")
 
 [node name="Label" type="Label" parent="VBoxContainer/Button"]
-layout_mode = 2
-offset_top = 54.0
-offset_right = 50.0
-offset_bottom = 55.0
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -218.0
+offset_right = 220.0
+offset_bottom = 246.0
+grow_horizontal = 2
 theme = ExtResource("2_506bn")
+text = "nlknjfl;kasdjf;lasdjf;lkasdjf;lkajsdf;lajs"
 horizontal_alignment = 1
 vertical_alignment = 1
 autowrap_mode = 3
