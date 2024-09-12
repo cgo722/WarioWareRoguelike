@@ -26,7 +26,7 @@ const DESC_SPDUJFD = "DESC_SPDUJFD"
 const KEY_RLU = "KEY_RLU"
 const DESC_RLU = "DESC_RLU"
 const KEY_RLD = "KEY_RLD"
-const DESC_RL = "DESC_RL"
+const DESC_RLD = "DESC_RLD"
 const KEY_RLUSPDD = "KEY_RLUSPDD"
 const DESC_RLUSPDD = "DESC_RLUSPDD"
 const KEY_PHU = "KEY_PHU"
@@ -82,7 +82,7 @@ const KEYS = [
  "KEY_RLU",
  "DESC_RLU",
  "KEY_RLD",
- "DESC_RL",
+ "DESC_RLD",
  "KEY_RLUSPDD",
  "DESC_RLUSPDD",
  "KEY_PHU",
