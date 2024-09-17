@@ -29,7 +29,7 @@ func _process(delta):
 	else:
 		pullOutSpeed = baseSpeed
 	if position.y < competedHeight:
-		gamemanager.completed = true
+		gamemanager.finished = true
 	if falling == true:
 		position.y += fallSpeed
 	if position.y > startHeight:
@@ -40,7 +40,7 @@ func _process(delta):
 	if Input.is_action_just_pressed("ui_left") or Input.is_action_just_pressed("ui_right"):
 		pullOutSpeed += 0.5
 		shaker.play_shake()
-	if gamemanager.completed == true && scored == false:
+	if gamemanager.finished == true && scored == false:
 		gamemanager.score += 500
 		scored = true
 	pass

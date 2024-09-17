@@ -42,7 +42,7 @@ DESC_JFUOSPDU,Because of not skipping leg day your jump is increased by +25% but
 KEY_MJFU,Rocket Boots,Raketenstiefel,Ракетные сапоги,ロケットブーツ,Botas cohete,火箭靴
 DESC_MJFU,+50% to the power of the Spacebar button at the cost of one life,+50 % Kraft der Leertaste zum Preis eines Lebens,+50% к мощности кнопки «Пробел» ценой одной жизни,ライフを 1 つ犠牲にして、スペースバー ボタンの威力が +50%,+50% a la potencia del botón de la barra espaciadora a costa de una vida,+50% 空格键力量，但需牺牲一条生命
 KEY_JPU,Squats,Kniebeugen,Приседания,スクワット,sentadillas,深蹲
-DESC_JP,5% increase to jump height,5 % Erhöhung der Sprunghöhe,5% увеличение высоты прыжка,ジャンプの高さが5%増加,5% de aumento en la altura del salto.,跳跃高度增加 5%
+DESC_JPU,5% increase to jump height,5 % Erhöhung der Sprunghöhe,5% увеличение высоты прыжка,ジャンプの高さが5%増加,5% de aumento en la altura del salto.,跳跃高度增加 5%
 KEY_BACK,Back,Zurück,Назад,戻る,Atrás,后退
 KEY_CONT,Controls:,Kontrollen:,Элементы управления:,コントロール:,Controles:,控制：
 KEY_KEYBOARD_CONT,Keyboard: WASD for 3D and AD for 2D. Spacebar is your action button . Press R to skip. ,"Tastatur: WASD für 3D und AD für 2D.  Die Leertaste ist Ihre Aktionstaste (wenn es sich nicht um eine Bewegung handelt, ist sie die Aktionstaste).","Клавиатура: WASD для 3D и AD для 2D.  Пробел — это кнопка действия (если это не движение, то это кнопка действия.",キーボード: 3D の場合は WASD、2D の場合は AD。 スペースバーはアクションボタンです（動かさない場合はアクションボタンです。,"Teclado: WASD para 3D y AD para 2D.  La barra espaciadora es tu botón de acción (si no es movimiento, es el botón de acción).",键盘：WASD 用于 3D，AD 用于 2D。 空格键是您的操作按钮（如果它不移动，则它是操作按钮。
@@ -53,3 +53,8 @@ KEY_GOAL_PT2,each upgrade comes with upsdies and downsides so be careful what up
 KEY_PAUSE,PAUSE,PAUSE,ПАУЗА,一時停止,PAUSA,暂停
 KEY_RESUME,Resume,Wieder aufnehmen,Резюме,再開する,Reanudar,恢复
 KEY_GIVEUP,Give Up,Aufgeben,Сдаться,あきらめる,Abandonar,放弃
+KEY_STAT_PSPD3D,Player Speed 3D,Spielergeschwindigkeit 3D,Скорость игрока 3D,プレーヤースピード 3D,Velocidad del jugador 3D,玩家速度 3D
+KEY_STAT_PSPD2D,Player Speed 2D,Spielergeschwindigkeit 2D,Скорость игрока 2D,プレイヤースピード 2D,Velocidad del jugador 2D,2D 玩家速度
+KEY_STAT_ABS,Action Button Strength,Stärke der Aktionstaste,Сила кнопки действия,アクションボタンの強さ,Fuerza del botón de acción,动作按钮强度
+KEY_STAT_ESPD3D,Enemy Speed 3D,Feindgeschwindigkeit 3D,Скорость врага 3D,エネミースピード3D,Velocidad enemiga 3D,敌人速度3D
+KEY_STAT_ESPD2D,Enemy Speed 2D,Feindgeschwindigkeit 2D,Скорость врага 2D,エネミースピード2D,Velocidad enemiga 2D,敌人速度 2D

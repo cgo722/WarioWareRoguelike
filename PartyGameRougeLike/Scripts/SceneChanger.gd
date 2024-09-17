@@ -1,5 +1,5 @@
 extends Node
-
+class_name sceneChanger
 @onready var DemoLevels := ["res://Scenes/MicroGames/SurviveTheRain.tscn", "res://Scenes/MicroGames/CollectItem3D.tscn", 
 "res://Scenes/MicroGames/Tag3D.tscn", "res://Scenes/MicroGames/Fishing/Fishing.tscn",
 "res://Scenes/MicroGames/Dont Drop The Soup/Dont Drop the Soup.tscn"]
@@ -49,7 +49,7 @@ func _process(_delta):
 		gamemanager.score -= gamemanager.skipCost
 		gamemanager.skipCost += 100
 		SceneManager(false)
-	if gamemanager.death == true: 
+	if gamemanager.death == true or gamemanager.finished == true: 
 		SceneManager(false)
 	if gamemanager.playerHealth > 0:
 		if gamemanager.start == true:
@@ -94,6 +94,7 @@ func SceneManager(loaded):
 		self.add_child(scene_instance)
 		
 	if loaded == false:
+		gamemanager.finished = false
 		if gamemanager.completed == false:
 			gamemanager.playerHealth -= 1
 		if gamemanager.playerHealth > 0:

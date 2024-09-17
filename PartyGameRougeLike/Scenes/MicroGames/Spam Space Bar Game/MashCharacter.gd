@@ -48,6 +48,7 @@ func _process(delta):
 		scored = true
 		worldTree2.visible = true
 		worldTree2Anim.play("Falling Animation")
+		gamemanager.finished = true
 	pass
 
 

@@ -1,7 +1,16 @@
-[gd_scene load_steps=3 format=3 uid="uid://ci0l71vlryhg5"]
+[gd_scene load_steps=4 format=3 uid="uid://ci0l71vlryhg5"]
 
 [ext_resource type="Script" path="res://Scenes/UI/HUD.gd" id="1_7woku"]
 [ext_resource type="Theme" uid="uid://vtocky5omcns" path="res://Assets/UIpack/DefaultTheme.tres" id="2_a748c"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_arum8"]
+bg_color = Color(0.454902, 0.270588, 0.498039, 0.231373)
+border_color = Color(0.861832, 0.742796, 0.976808, 1)
+border_blend = true
+expand_margin_left = 180.0
+expand_margin_top = 50.0
+expand_margin_right = 30.0
+expand_margin_bottom = 21.0
 
 [node name="Hud" type="Control"]
 process_mode = 3
@@ -59,3 +68,94 @@ layout_mode = 2
 theme = ExtResource("2_a748c")
 theme_override_font_sizes/font_size = 45
 text = "0"
+
+[node name="Panel" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = 195.0
+offset_top = 489.0
+offset_right = 235.0
+offset_bottom = 529.0
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_arum8")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Panel"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -184.0
+offset_top = -65.5
+offset_right = 184.0
+offset_bottom = 65.5
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="HSplitContainer" type="HSplitContainer" parent="Panel/VBoxContainer"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="Panel/VBoxContainer/HSplitContainer"]
+layout_mode = 2
+theme = ExtResource("2_a748c")
+text = "KEY_STAT_PSPD3D"
+
+[node name="Label2" type="Label" parent="Panel/VBoxContainer/HSplitContainer"]
+layout_mode = 2
+theme = ExtResource("2_a748c")
+text = "1"
+
+[node name="HSplitContainer2" type="HSplitContainer" parent="Panel/VBoxContainer"]
+layout_mode = 2
+
+[node name="Label2" type="Label" parent="Panel/VBoxContainer/HSplitContainer2"]
+layout_mode = 2
+theme = ExtResource("2_a748c")
+text = "KEY_STAT_PSPD2D"
+
+[node name="Label3" type="Label" parent="Panel/VBoxContainer/HSplitContainer2"]
+layout_mode = 2
+theme = ExtResource("2_a748c")
+text = "1"
+
+[node name="HSplitContainer3" type="HSplitContainer" parent="Panel/VBoxContainer"]
+layout_mode = 2
+
+[node name="Label4" type="Label" parent="Panel/VBoxContainer/HSplitContainer3"]
+layout_mode = 2
+theme = ExtResource("2_a748c")
+text = "KEY_STAT_ABS"
+
+[node name="Label5" type="Label" parent="Panel/VBoxContainer/HSplitContainer3"]
+layout_mode = 2
+theme = ExtResource("2_a748c")
+text = "1"
+
+[node name="HSplitContainer4" type="HSplitContainer" parent="Panel/VBoxContainer"]
+layout_mode = 2
+
+[node name="Label5" type="Label" parent="Panel/VBoxContainer/HSplitContainer4"]
+layout_mode = 2
+theme = ExtResource("2_a748c")
+text = "KEY_STAT_ESPD3D"
+
+[node name="Label6" type="Label" parent="Panel/VBoxContainer/HSplitContainer4"]
+layout_mode = 2
+theme = ExtResource("2_a748c")
+text = "1"
+
+[node name="HSplitContainer5" type="HSplitContainer" parent="Panel/VBoxContainer"]
+layout_mode = 2
+
+[node name="Label6" type="Label" parent="Panel/VBoxContainer/HSplitContainer5"]
+layout_mode = 2
+theme = ExtResource("2_a748c")
+text = "KEY_STAT_ESPD2D"
+
+[node name="Label7" type="Label" parent="Panel/VBoxContainer/HSplitContainer5"]
+layout_mode = 2
+theme = ExtResource("2_a748c")
+text = "1"

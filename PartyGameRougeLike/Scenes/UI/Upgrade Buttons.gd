@@ -28,8 +28,10 @@ var descText : String
 "res://Assets/UIpack/789_Lorc_RPG_icons/Icon.4_33.png", "res://Assets/UIpack/789_Lorc_RPG_icons/Icon.4_35.png",
 "res://Assets/UIpack/789_Lorc_RPG_icons/Icon.4_64.png"]
 
+var buttonPressed : bool
 # Called when the node enters the scene tree for the first time.
 func _ready():
+	buttonPressed = false
 	effect = effectNames.pick_random()
 	if effect == "SpdU":
 		buttonText = "KEY_SPDU"
@@ -98,82 +100,89 @@ func _ready():
 func _process(delta):
 	if gamemanager.playerHealth <= 1 && effect == "MSpdU" or "MRLU" or "MPHU" or "MJFU":
 		effect = effectNames.pick_random()
-
+		
 func _on_button_button_up():
-	print("Your mom")
+	print(buttonPressed)
 	gamemanager.upgrades = true
-	if effect == "SpdU":
-		gamemanager.playerSpeed3D += 0.05
-		gamemanager.playerSpeed2D += 0.05
-	if effect == "SpdURLD":
-		gamemanager.playerSpeed3D += 0.15
-		gamemanager.playerSpeed2D += 0.15
-		
-		gamemanager.roundLength -= 0.25
+	if buttonPressed == true:
+		if effect == "SpdU":
+			gamemanager.playerSpeed3D += 0.05
+			gamemanager.playerSpeed2D += 0.05
+		if effect == "SpdURLD":
+			gamemanager.playerSpeed3D += 0.15
+			gamemanager.playerSpeed2D += 0.15
+			
+			gamemanager.roundLength -= 0.25
 
-	if effect == "SpdUJFD":
-		gamemanager.playerSpeed3D += 0.15
-		gamemanager.playerSpeed2D += 0.15
-		
-		gamemanager.jumpStrength -= 0.2
-	if effect == "RluSpd":
-		gamemanager.roundLength += 0.25
-		
-		gamemanager.playerSpeed3D -= 0.25
-		gamemanager.playerSpeed2D -= 0.25
-	if effect == "RLU":
-		gamemanager.roundLength += 0.05
-	if effect == "RLD":
-		gamemanager.roundLength -= 0.05
-	if effect == "PHU":
-		gamemanager.playerHealth += 1
-		
-		gamemanager.otherSpeed3D += 0.15
-		gamemanager.otherSpeed2D += 0.15
+		if effect == "SpdUJFD":
+			gamemanager.playerSpeed3D += 0.15
+			gamemanager.playerSpeed2D += 0.15
+			
+			gamemanager.jumpStrength -= 0.2
+		if effect == "RluSpd":
+			gamemanager.roundLength += 0.25
+			
+			gamemanager.playerSpeed3D -= 0.25
+			gamemanager.playerSpeed2D -= 0.25
+		if effect == "RLU":
+			gamemanager.roundLength += 0.05
+		if effect == "RLD":
+			gamemanager.roundLength -= 0.05
+		if effect == "PHU":
+			gamemanager.playerHealth += 1
+			
+			gamemanager.otherSpeed3D += 0.15
+			gamemanager.otherSpeed2D += 0.15
 
-		
-	if effect == "TR":
-		GameTimer.wait_time = 15
-		
-		gamemanager.playerHealth -= 1
-		
-	if effect == "MSpdU":
-		gamemanager.playerSpeed3D += 0.5
-		gamemanager.playerSpeed2D += 0.5
-		
-		gamemanager.playerHealth -= 1
-		
-	if effect == "MRLU":
-		gamemanager.roundLength += 1
-		
-		gamemanager.playerHealth -= 1
-		
-	if effect == "MPHU":
-		gamemanager.playerHealth += 2
-		
-		gamemanager.roundLength -= 0.75
-		
-	if effect == "JFUSpdD":
-		gamemanager.jumpStrength += 0.2
-		
-		gamemanager.playerSpeed3D -= 0.25
-		gamemanager.playerSpeed2D -= 0.25
-		
-	if effect == "JFUOSpdU":
-		gamemanager.jumpStrength += 0.25
-		
-		gamemanager.otherSpeed3D += 0.15
-		gamemanager.otherSpeed2D += 0.15
-	if effect == "MJFU":
-		gamemanager.jumpStrength += 0.5
-		
-		gamemanager.playerHealth -= 1
-		
-	if effect == "JpU":
-		gamemanager.jumpStrength += 0.05
-	get_tree().paused = false
+			
+		if effect == "TR":
+			GameTimer.wait_time = 15
+			
+			gamemanager.playerHealth -= 1
+			
+		if effect == "MSpdU":
+			gamemanager.playerSpeed3D += 0.5
+			gamemanager.playerSpeed2D += 0.5
+			
+			gamemanager.playerHealth -= 1
+			
+		if effect == "MRLU":
+			gamemanager.roundLength += 1
+			
+			gamemanager.playerHealth -= 1
+			
+		if effect == "MPHU":
+			gamemanager.playerHealth += 2
+			
+			gamemanager.roundLength -= 0.75
+			
+		if effect == "JFUSpdD":
+			gamemanager.jumpStrength += 0.2
+			
+			gamemanager.playerSpeed3D -= 0.25
+			gamemanager.playerSpeed2D -= 0.25
+			
+		if effect == "JFUOSpdU":
+			gamemanager.jumpStrength += 0.25
+			
+			gamemanager.otherSpeed3D += 0.15
+			gamemanager.otherSpeed2D += 0.15
+		if effect == "MJFU":
+			gamemanager.jumpStrength += 0.5
+			
+			gamemanager.playerHealth -= 1
+			
+		if effect == "JpU":
+			gamemanager.jumpStrength += 0.05
+		get_tree().paused = false
 	pass # Replace with function body.
 
 func _exit_tree():
 	var UiPlayuer = get_parent().get_parent().get_parent().get_node("UISFX")
 	UiPlayuer.play()
+
+
+func _on_timer_timeout() -> void:
+	buttonPressed = true
+	print(buttonPressed)
+	pass # Replace with function body.

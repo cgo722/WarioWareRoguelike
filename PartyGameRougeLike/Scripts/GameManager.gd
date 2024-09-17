@@ -3,6 +3,7 @@ extends Node
 var savingResource : SavingResource
 var start : bool
 var completed : bool
+var finished : bool
 var threeD : bool
 var twoD : bool
 var death : bool

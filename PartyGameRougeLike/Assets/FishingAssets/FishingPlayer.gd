@@ -62,7 +62,7 @@ func _on_area_2d_body_entered(body):
 
 func _on_area_2d_body_exited(body):
 	var PSInstance = splashPS.instantiate()
-	get_parent().add_child(PSInstance)
+	get_parent().add_child.call_deferred(PSInstance)
 	PSInstance.position = position
 	pass # Replace with function body.
 
