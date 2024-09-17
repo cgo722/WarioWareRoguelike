@@ -8,6 +8,7 @@ class_name sceneChanger
 "res://Scenes/MicroGames/Dont Drop The Soup/Dont Drop the Soup.tscn", "res://Scenes/MicroGames/Collapsing Bridge/CollapsingBridge.tscn",
 "res://Scenes/MicroGames/Spam Space Bar Game/SpamSpaceBarGame.tscn", "res://Scenes/MicroGames/Pull the sword out of the stone/Pull the sword out of the Stone.tscn"]
 @export var demo : bool
+@export var mobile : bool
 var Bag := []
 var loadedLevel
 var previousLevel
@@ -27,6 +28,8 @@ func _ready():
 		Bag += DemoLevels
 	else:
 		Bag += FullGameLevels
+	if mobile == true:
+		pass
 	gamemanager.start = false
 	if(gamemanager.restart != true):
 		loadedLevel = load("res://Scenes/Menus/MainMenu.tscn")
