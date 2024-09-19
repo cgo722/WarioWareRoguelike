@@ -1,9 +1,10 @@
-[gd_scene load_steps=7 format=3 uid="uid://cocvuou0yhodj"]
+[gd_scene load_steps=10 format=3 uid="uid://cocvuou0yhodj"]
 
 [ext_resource type="PackedScene" uid="uid://dg8nga1havwdm" path="res://Scenes/MicroGames/Pull the sword out of the stone/Sword out of the Stone Player.tscn" id="1_1udmm"]
 [ext_resource type="Texture2D" uid="uid://b0b1tefme8l5f" path="res://Assets/Sword and the Stone/Bush.png" id="2_7fmej"]
 [ext_resource type="Texture2D" uid="uid://dkncenisvubl3" path="res://Assets/Sword and the Stone/Boulder.png" id="2_iwww8"]
 [ext_resource type="PackedScene" uid="uid://dqwaw0acw6fep" path="res://Assets/Particle FX/2D Wind.tscn" id="3_wvmu4"]
+[ext_resource type="Script" path="res://Scenes/MicroGames/Pull the sword out of the stone/height_line.gd" id="5_yfm0d"]
 
 [sub_resource type="Gradient" id="Gradient_iooef"]
 interpolation_mode = 2
@@ -14,12 +15,21 @@ colors = PackedColorArray(0.199963, 0.341907, 0.55677, 1, 0.520063, 0.767025, 0.
 gradient = SubResource("Gradient_iooef")
 fill_to = Vector2(0, 1)
 
+[sub_resource type="Gradient" id="Gradient_5w6qw"]
+offsets = PackedFloat32Array(1)
+colors = PackedColorArray(1, 1, 1, 1)
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_4h4oc"]
+gradient = SubResource("Gradient_5w6qw")
+
 [node name="PullTheSwordOutOfTheStone" type="Node2D"]
 
 [node name="SwordOutoftheStonePlayer" parent="." instance=ExtResource("1_1udmm")]
-position = Vector2(957, 761)
+position = Vector2(957, 971)
 scale = Vector2(0.161896, 0.161896)
-competedHeight = 241.0
+centered = false
+offset = Vector2(-703.82, -3032.79)
+competedHeight = 464.0
 pullOutSpeed = 10.0
 fallSpeed = 8.0
 
@@ -103,5 +113,12 @@ texture = ExtResource("2_7fmej")
 
 [node name="DirectionalLight2D" type="DirectionalLight2D" parent="."]
 color = Color(0.887934, 0.557453, 7.70092e-07, 1)
+
+[node name="Height Line" type="Sprite2D" parent="."]
+position = Vector2(956, -1)
+scale = Vector2(8.46875, -1)
+texture = SubResource("GradientTexture1D_4h4oc")
+script = ExtResource("5_yfm0d")
+height = 464.0
 
 [connection signal="timeout" from="CanvasLayer/Instruction Timer" to="SwordOutoftheStonePlayer" method="_on_instruction_timer_timeout"]

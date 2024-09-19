@@ -1,4 +1,4 @@
-[gd_scene load_steps=25 format=3 uid="uid://mlfj7mlo1x23"]
+[gd_scene load_steps=26 format=3 uid="uid://mlfj7mlo1x23"]
 
 [ext_resource type="Script" path="res://Scenes/SurviveTheRainManager.gd" id="1_4w7kf"]
 [ext_resource type="PackedScene" uid="uid://dqnv87pgnk5c5" path="res://Assets/2D Spawner.tscn" id="2_p6udn"]
@@ -7,6 +7,7 @@
 [ext_resource type="AudioStream" uid="uid://bx0e3p5qwabqt" path="res://Assets/Sounds/Rain.wav" id="5_1nof8"]
 [ext_resource type="PackedScene" uid="uid://dqwaw0acw6fep" path="res://Assets/Particle FX/2D Wind.tscn" id="6_v4x7b"]
 [ext_resource type="PackedScene" uid="uid://btdh6d75c3jp0" path="res://Scenes/upgrade_timer.tscn" id="7_ius4y"]
+[ext_resource type="Texture2D" uid="uid://dtn0jtqt2a0u6" path="res://Assets/Survive the Rain/2DPlatformsSprites.tres" id="8_b0k43"]
 [ext_resource type="Texture2D" uid="uid://sqfl2h0b3ogm" path="res://Assets/Survive the Rain/Dumpster.png" id="8_ijr5w"]
 [ext_resource type="Shader" path="res://Assets/Materials/2DColorChangerf.gdshader" id="8_lmyr5"]
 [ext_resource type="Texture2D" uid="uid://c01e0t7g103sj" path="res://Assets/Survive the Rain/BrickTexture.png" id="9_6ttcl"]
@@ -124,6 +125,11 @@ amount = 15
 [node name="Foreground" type="Parallax2D" parent="."]
 scroll_scale = Vector2(1.5, 1.5)
 
+[node name="Ground2" type="Sprite2D" parent="Foreground"]
+position = Vector2(1076, 1384)
+scale = Vector2(50.4551, 14.4602)
+texture = ExtResource("8_b0k43")
+
 [node name="Dumpster3" type="Sprite2D" parent="Foreground"]
 material = SubResource("ShaderMaterial_6h6dj")
 position = Vector2(692, 1148)
@@ -218,6 +224,12 @@ z_index = -40
 position = Vector2(1073.5, 853)
 scale = Vector2(7.44213, 6.20784)
 texture = SubResource("NoiseTexture2D_21h21")
+
+[node name="Ground" type="Sprite2D" parent="Background"]
+z_index = -3839
+position = Vector2(971, 869)
+scale = Vector2(36.9063, 7.53125)
+texture = ExtResource("8_b0k43")
 
 [node name="Far Background" type="Parallax2D" parent="."]
 scale = Vector2(0.417542, 0.417542)
