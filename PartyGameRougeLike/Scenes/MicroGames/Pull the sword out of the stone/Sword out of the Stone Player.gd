@@ -11,6 +11,8 @@ var baseSpeed : float
 var falling : bool
 @onready var shaker := $ShakerComponent2D
 var scored : bool
+@onready var timer: Timer = $"../Timer"
+
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	pullOutSpeed *= gamemanager.playerSpeed2D
@@ -29,7 +31,8 @@ func _process(delta):
 	else:
 		pullOutSpeed = baseSpeed
 	if position.y < competedHeight:
-		gamemanager.finished = true
+		gamemanager.completed = true
+		timer.start()
 	if falling == true:
 		position.y += fallSpeed
 	if position.y > startHeight:
@@ -40,7 +43,7 @@ func _process(delta):
 	if Input.is_action_just_pressed("ui_left") or Input.is_action_just_pressed("ui_right"):
 		pullOutSpeed += 0.5
 		shaker.play_shake()
-	if gamemanager.finished == true && scored == false:
+	if gamemanager.completed == true && scored == false:
 		gamemanager.score += 500
 		scored = true
 	pass
@@ -48,4 +51,9 @@ func _process(delta):
 
 func _on_instruction_timer_timeout():
 	$"../CanvasLayer".queue_free()
+	pass # Replace with function body.
+
+
+func _on_timer_timeout() -> void:
+	gamemanager.finished = true
 	pass # Replace with function body.

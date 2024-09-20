@@ -12,6 +12,8 @@ func _process(delta):
 	if player.position.y < - 10:
 		gamemanager.completed = false
 		gamemanager.death = true
+	else:
+		gamemanager.completed = true
 	pass
 
 

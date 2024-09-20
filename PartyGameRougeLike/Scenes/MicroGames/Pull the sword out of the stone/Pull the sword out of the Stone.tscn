@@ -121,4 +121,8 @@ texture = SubResource("GradientTexture1D_4h4oc")
 script = ExtResource("5_yfm0d")
 height = 464.0
 
+[node name="Timer" type="Timer" parent="."]
+one_shot = true
+
 [connection signal="timeout" from="CanvasLayer/Instruction Timer" to="SwordOutoftheStonePlayer" method="_on_instruction_timer_timeout"]
+[connection signal="timeout" from="Timer" to="SwordOutoftheStonePlayer" method="_on_timer_timeout"]
