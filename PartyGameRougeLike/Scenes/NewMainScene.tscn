@@ -22,6 +22,7 @@ script = ExtResource("1_xybyd")
 
 [node name="GameTimer" type="Timer" parent="."]
 wait_time = 15.0
+one_shot = true
 
 [node name="HUDCanvas" type="CanvasLayer" parent="."]
 
@@ -29,6 +30,7 @@ wait_time = 15.0
 stream = ExtResource("2_kq1hh")
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+process_mode = 3
 stream = SubResource("AudioStreamPlaylist_kxkap")
 autoplay = true
 

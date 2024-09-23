@@ -52,8 +52,12 @@ func _process(_delta):
 		gamemanager.score -= gamemanager.skipCost
 		gamemanager.skipCost += 100
 		SceneManager(false)
+		gameTimer.wait_time *= gamemanager.roundLength
+
 	if gamemanager.death == true or gamemanager.finished == true: 
 		SceneManager(false)
+		gameTimer.wait_time *= gamemanager.roundLength
+
 	if gamemanager.playerHealth > 0:
 		if gamemanager.start == true:
 			var hud_instance = hud.instantiate()
@@ -89,12 +93,9 @@ func SceneManager(loaded):
 		NewScene()
 		scene_instance = loadedLevel.instantiate()
 		self.add_child(scene_instance)
-		
-		if(gameTimer.wait_time > 3):
-			gameTimer.wait_time *= gamemanager.roundLength
-		else:
-			gameTimer.wait_time = 5
+
 	if loaded == false:
+		gameTimer.start(15 * gamemanager.roundLength)
 		gamemanager.finished = false
 		if gamemanager.completed == false:
 			gamemanager.playerHealth -= 1
