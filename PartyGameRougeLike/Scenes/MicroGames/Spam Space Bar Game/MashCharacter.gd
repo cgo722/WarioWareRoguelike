@@ -48,7 +48,6 @@ func _process(delta):
 		scored = true
 		worldTree2.visible = true
 		worldTree2Anim.play("Falling Animation")
-		gamemanager.finished = true
 	pass
 
 
@@ -58,4 +57,9 @@ func scoreChange(change : int):
 
 func _on_instruction_timer_timeout():
 	$"../../../CanvasLayer".queue_free()
+	pass # Replace with function body.
+
+
+func _on_animation_player_animation_finished(anim_name: StringName) -> void:
+	gamemanager.finished = true
 	pass # Replace with function body.

@@ -178,4 +178,5 @@ metadata/_edit_use_anchors_ = true
 wait_time = 3.0
 autostart = true
 
+[connection signal="animation_finished" from="Parallax/ParallaxMidGround/World Tree2/AnimationPlayer" to="Parallax/ParallaxForground/MashCharacter" method="_on_animation_player_animation_finished"]
 [connection signal="timeout" from="CanvasLayer/Instruction Timer" to="Parallax/ParallaxForground/MashCharacter" method="_on_instruction_timer_timeout"]

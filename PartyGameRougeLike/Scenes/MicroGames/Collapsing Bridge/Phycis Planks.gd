@@ -18,7 +18,7 @@ func _ready():
 func _process(delta):
 	if self.position.y < -10 && scored == false && $"../StandardCharacter3D".position < -10:
 		gamemanager.score += value
-		scored == true
+		scored = true
 
 func _on_timer_timeout():
 	outCome = randi() % int(randChance * gamemanager.otherSpeed3D)

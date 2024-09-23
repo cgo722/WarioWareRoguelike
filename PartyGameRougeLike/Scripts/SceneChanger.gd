@@ -70,13 +70,6 @@ func _process(_delta):
 func _on_timer_timeout():
 	if gamemanager.playerHealth > 0:
 		SceneManager(false)
-
-	if(gameTimer.wait_time > 3):
-		gameTimer.wait_time *= gamemanager.roundLength
-	else:
-		gameTimer.wait_time = 5
-
-	pass # Replace with function body.
  
 func NewScene():
 	var levelSel = randi_range(0, Bag.size()- 1)
@@ -92,10 +85,15 @@ func SceneManager(loaded):
 	if loaded == true:
 		gamemanager.completed = false
 		gamemanager.death = false
+		gamemanager.finished = false
 		NewScene()
 		scene_instance = loadedLevel.instantiate()
 		self.add_child(scene_instance)
 		
+		if(gameTimer.wait_time > 3):
+			gameTimer.wait_time *= gamemanager.roundLength
+		else:
+			gameTimer.wait_time = 5
 	if loaded == false:
 		gamemanager.finished = false
 		if gamemanager.completed == false:

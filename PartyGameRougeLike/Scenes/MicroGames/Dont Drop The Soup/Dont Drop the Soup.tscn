@@ -1,4 +1,4 @@
-[gd_scene load_steps=18 format=3 uid="uid://cigdqqcwl3t6e"]
+[gd_scene load_steps=17 format=3 uid="uid://cigdqqcwl3t6e"]
 
 [ext_resource type="PackedScene" uid="uid://bqxk3bqyb5tpd" path="res://Assets/Soup/BowlPlayer.tscn" id="1_7djil"]
 [ext_resource type="Script" path="res://Scenes/MicroGames/Dont Drop The Soup/Dont Drop the Soup Manger.gd" id="1_mns8a"]
@@ -43,9 +43,6 @@ point_count = 2
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_6t406"]
 size = Vector3(191.871, 1, 153.507)
-
-[sub_resource type="BoxShape3D" id="BoxShape3D_bou5v"]
-size = Vector3(2.04, 0.35, 1.82)
 
 [node name="DontDropTheSoup" type="Node3D"]
 script = ExtResource("1_mns8a")
@@ -277,7 +274,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.916738, 4.74809, -0.646056)
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.916738, 4.74809, 0.913926)
 
 [node name="Area3D" type="Area3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -13.2314, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -26.0295, 0)
 collision_mask = 2048
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D"]
@@ -286,7 +283,6 @@ shape = SubResource("BoxShape3D_6t406")
 
 [node name="Timer" type="Timer" parent="."]
 wait_time = 9.5
-autostart = true
 
 [node name="ChiefArm" parent="." instance=ExtResource("4_rh62m")]
 transform = Transform3D(0.886215, 6.93693, -17.7669, -7.25407, -16.3269, -6.73652, -17.6398, 7.06265, 1.87767, 0.0576768, 0.134728, 6.18304)
@@ -365,13 +361,6 @@ tip_bone = &"hand.L.015"
 target_node = NodePath("../../../../BowlPlayer2/IKPinkieMarker")
 script = ExtResource("6_82sld")
 
-[node name="Area3D2" type="Area3D" parent="."]
-transform = Transform3D(1.99934, 0, 0, 0, 1.99934, 0, 0, 0, 1.99934, 2.08165e-12, 2.08165e-12, 2.08165e-12)
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D2"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.420205, 0)
-shape = SubResource("BoxShape3D_bou5v")
-
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
 [node name="TextEdit" type="TextEdit" parent="CanvasLayer"]
@@ -403,7 +392,6 @@ directional_shadow_max_distance = 556.4
 
 [connection signal="body_entered" from="Area3D" to="." method="_on_area_3d_body_entered"]
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
-[connection signal="body_entered" from="Area3D2" to="BowlPlayer2" method="_on_area_3d_body_entered"]
 [connection signal="timeout" from="CanvasLayer/Instruction TImer" to="." method="_on_instruction_t_imer_timeout"]
 [connection signal="timeout" from="Upgrade_Timer" to="BowlPlayer2" method="_on_upgrade_timer_timeout"]
 

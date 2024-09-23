@@ -2,7 +2,8 @@ extends Sprite2D
 
 @onready var gamemanager := get_node("/root/GameManager")
 
-@onready var SwordArt := ["res://Assets/Sword and the Stone/IMG_0413.png", "res://Assets/Sword and the Stone/IMG_0414.png"]
+@export var SwordArt := ["res://Assets/Sword and the Stone/IMG_0413.png", 
+"res://Assets/Sword and the Stone/IMG_0414.png"]
 @export var competedHeight : float
 var startHeight : float
 var baseSpeed : float
@@ -46,6 +47,7 @@ func _process(delta):
 	if gamemanager.completed == true && scored == false:
 		gamemanager.score += 500
 		scored = true
+		gamemanager.finished = true
 	pass
 
 
