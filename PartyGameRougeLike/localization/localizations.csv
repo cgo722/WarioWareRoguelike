@@ -58,3 +58,4 @@ KEY_STAT_PSPD2D,Player Speed 2D,Spielergeschwindigkeit 2D,Скорость иг�
 KEY_STAT_ABS,Action Button Strength,Stärke der Aktionstaste,Сила кнопки действия,アクションボタンの強さ,Fuerza del botón de acción,动作按钮强度
 KEY_STAT_ESPD3D,Enemy Speed 3D,Feindgeschwindigkeit 3D,Скорость врага 3D,エネミースピード3D,Velocidad enemiga 3D,敌人速度3D
 KEY_STAT_ESPD2D,Enemy Speed 2D,Feindgeschwindigkeit 2D,Скорость врага 2D,エネミースピード2D,Velocidad enemiga 2D,敌人速度 2D
+KEY_STAT_RL,Time Multiplier,Zeitmultiplikator,Множитель времени,時間乗数,Multiplicador de tiempo,时间乘数

@@ -1,9 +1,8 @@
-[gd_scene load_steps=5 format=3 uid="uid://hd6uldxh1brl"]
+[gd_scene load_steps=4 format=3 uid="uid://hd6uldxh1brl"]
 
 [ext_resource type="Script" path="res://Scenes/Menus/LostScreen.gd" id="1_yo6br"]
 [ext_resource type="Theme" uid="uid://vtocky5omcns" path="res://Assets/UIpack/DefaultTheme.tres" id="2_jjlk6"]
 [ext_resource type="Script" path="res://Scenes/Menus/GrabFocus.gd" id="2_n83gw"]
-[ext_resource type="Theme" uid="uid://dyos8gp3athjs" path="res://Assets/UIpack/DefaultFont.tres" id="2_r0835"]
 
 [node name="Pause" type="Control"]
 process_mode = 3
@@ -33,7 +32,7 @@ alignment = 1
 
 [node name="Label" type="Label" parent="VBoxContainer"]
 layout_mode = 2
-theme = ExtResource("2_r0835")
+theme = ExtResource("2_jjlk6")
 theme_override_font_sizes/font_size = 81
 text = "KEY_PAUSE"
 horizontal_alignment = 1

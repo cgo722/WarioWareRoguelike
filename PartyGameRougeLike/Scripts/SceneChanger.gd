@@ -15,7 +15,7 @@ var previousLevel
 var scene_instance
 @onready var gameTimer := $GameTimer
 @onready var gamemanager := get_node("/root/GameManager")
-@onready var hud := load("res://Scenes/UI/HUD.tscn")
+@onready var hud : = load("res://Scenes/UI/HUD.tscn")
 @onready var upgrades := load("res://Scenes/UI/Upgrade Trey.tscn")
 @onready var skipButton := load("res://Scenes/UI/Skip Button.tscn")
 @onready var pauseMenu := load("res://Scenes/Menus/PauseMenu.tscn")
@@ -38,7 +38,6 @@ func _ready():
 		pauseable = false
 	else:
 		gamemanager.start = true
-	pass # Replace with function body.
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -52,11 +51,9 @@ func _process(_delta):
 		gamemanager.score -= gamemanager.skipCost
 		gamemanager.skipCost += 100
 		SceneManager(false)
-		gameTimer.wait_time *= gamemanager.roundLength
 
 	if gamemanager.death == true or gamemanager.finished == true: 
 		SceneManager(false)
-		gameTimer.wait_time *= gamemanager.roundLength
 
 	if gamemanager.playerHealth > 0:
 		if gamemanager.start == true:
@@ -77,7 +74,8 @@ func _on_timer_timeout():
  
 func NewScene():
 	var levelSel = randi_range(0, Bag.size()- 1)
-	loadedLevel = load(Bag[levelSel])
+	var loadlevel = ResourceLoader.load_threaded_request(Bag[levelSel])
+	loadedLevel = ResourceLoader.load_threaded_get(Bag[levelSel])
 	if Bag.size() <= 1:
 		if demo == true:
 			Bag += DemoLevels
