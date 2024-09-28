@@ -49,8 +49,13 @@ clip_text = true
 
 [node name="Timer" type="Timer" parent="."]
 process_mode = 3
-wait_time = 0.5
+wait_time = 1.5
 autostart = true
+
+[node name="Upgrade Timer" type="Timer" parent="."]
+wait_time = 0.001
+one_shot = true
 
 [connection signal="button_up" from="VBoxContainer/Button" to="." method="_on_button_button_up"]
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
+[connection signal="timeout" from="Upgrade Timer" to="." method="_on_upgrade_timer_timeout"]

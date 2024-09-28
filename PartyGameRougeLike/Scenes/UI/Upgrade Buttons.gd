@@ -8,7 +8,9 @@ extends Node
 #gamemanager.enemySize3D, gamemanager.unitNumbers]
 
 @onready var effectNames := ["SpdU", "SpdURLD", "SpdUJFD", "RLU", "RLD", "RluSpdD", "PHU", "TR", "MSpdU", 
-"MRLU", "MPHU", "JFUSpdD", "JFUOSpdU", "MJFU", "JpU"]
+"MRLU", "MPHU", "JFUSpdD", "JFUOSpdU", "MJFU", "JpU", "SpdU", "SpdURLD", "SpdUJFD", "RLU", "RLD", "RluSpdD", "PHU", "TR", "MSpdU", 
+"MRLU", "JFUSpdD", "JFUOSpdU", "MJFU", "JpU", "SpdU", "SpdURLD", "SpdUJFD", "RLU", "RLD", "RluSpdD", "MSpdU", 
+"MRLU", "JFUSpdD", "JFUOSpdU", "MJFU", "JpU"]
 
 @onready var effect : String
 
@@ -17,6 +19,7 @@ extends Node
 var buttonText : String
 var descText : String
 @onready var sprite_2d: Sprite2D = $VBoxContainer/Sprite2D
+@onready var upgrade_timer: Timer = $"Upgrade Timer"
 
 @onready var GameTimer : Timer = get_parent().get_parent().get_parent().get_node("GameTimer")
 @onready var Sprites := ["res://Assets/UIpack/789_Lorc_RPG_icons/Icon.5_56.png","res://Assets/UIpack/789_Lorc_RPG_icons/Icon.1_72.png", 
@@ -97,13 +100,8 @@ func _ready():
 	descBox.text = descText
 	pass # Replace with function body.
 
-func _process(delta):
-	if gamemanager.playerHealth <= 1 && effect == "MSpdU" or "MRLU" or "MPHU" or "MJFU":
-		effect = effectNames.pick_random()
-		
 func _on_button_button_up():
 	print(buttonPressed)
-	gamemanager.upgrades = true
 	if buttonPressed == true:
 		if effect == "SpdU":
 			gamemanager.playerSpeed3D += 0.05
@@ -137,7 +135,7 @@ func _on_button_button_up():
 			
 		if effect == "TR":
 			GameTimer.wait_time = 15
-			
+			gamemanager.roundLength = 1
 			gamemanager.playerHealth -= 1
 			
 		if effect == "MSpdU":
@@ -175,6 +173,7 @@ func _on_button_button_up():
 		if effect == "JpU":
 			gamemanager.jumpStrength += 0.05
 		get_tree().paused = false
+		upgrade_timer.start()
 	pass # Replace with function body.
 
 func _exit_tree():
@@ -185,4 +184,9 @@ func _exit_tree():
 func _on_timer_timeout() -> void:
 	buttonPressed = true
 	print(buttonPressed)
+	pass # Replace with function body.
+
+
+func _on_upgrade_timer_timeout() -> void:
+	gamemanager.upgrades = true
 	pass # Replace with function body.

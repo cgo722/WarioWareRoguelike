@@ -34,6 +34,7 @@ background_mode = 2
 background_color = Color(0.862745, 0.552941, 0.364706, 1)
 sky = SubResource("Sky_npwxp")
 ssao_enabled = true
+ssil_enabled = true
 sdfgi_enabled = true
 sdfgi_use_occlusion = true
 adjustment_enabled = true
@@ -126,6 +127,8 @@ transform = Transform3D(0.999991, -0.00358343, 0.0022564, 0.00358075, 0.999993, 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
 transform = Transform3D(0.975783, -0.0854567, -0.201359, 0.197939, 0.736767, 0.646525, 0.093105, -0.670725, 0.735839, 0, 0, 0)
 shadow_enabled = true
+shadow_bias = 0.0
+shadow_normal_bias = 3.466
 
 [node name="Camera3D" type="Camera3D" parent="."]
 transform = Transform3D(0.927836, 0.198602, -0.315717, -3.53277e-10, 0.846453, 0.532463, 0.372988, -0.494038, 0.78537, -3.328, 21.857, 17.222)
@@ -285,7 +288,7 @@ hue_variation_min = -1.0
 hue_variation_max = 1.0
 
 [node name="Reverie Alien Ground" parent="." instance=ExtResource("12_aepmq")]
-transform = Transform3D(19.9716, 0, 3.56611, 0, 15.29, 0, -3.36182, 0, 21.1853, -0.68584, -1.59422, -14.0893)
+transform = Transform3D(19.1749, 0, 6.91447, 0.422007, 15.2579, -1.31685, -6.50468, 0.989894, 20.2975, -0.68584, -1.59422, -14.0893)
 
 [node name="Reverie Alien Ground15" parent="." instance=ExtResource("12_aepmq")]
 transform = Transform3D(0.883111, 2.26346, -7.79208, -5.88168, -3.55816, -2.79057, -5.32477, 4.3057, 1.79013, 5.24821, 2.82471, -13.5814)

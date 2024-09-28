@@ -8,6 +8,6 @@ func _ready():
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(_delta):
-	if gamemanager.upgrades == true or gamemanager.health < 1:
+	if gamemanager.playerHealth < 1 or gamemanager.upgrades == true:
 		queue_free()
 	pass

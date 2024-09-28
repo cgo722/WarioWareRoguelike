@@ -7,6 +7,7 @@
 [node name="Pause" type="Control"]
 process_mode = 3
 z_index = 4096
+z_as_relative = false
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -15,40 +16,45 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_yo6br")
 
-[node name="VBoxContainer" type="VBoxContainer" parent="."]
-layout_mode = 1
+[node name="Lost Timer" type="Timer" parent="."]
+autostart = true
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer"]
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -96.87
+offset_left = -225.217
 offset_top = -50.5
-offset_right = 116.435
+offset_right = 244.782
 offset_bottom = 236.295
 grow_horizontal = 2
 grow_vertical = 2
 alignment = 1
 
-[node name="Label" type="Label" parent="VBoxContainer"]
+[node name="Label" type="Label" parent="CanvasLayer/VBoxContainer"]
 layout_mode = 2
 theme = ExtResource("2_jjlk6")
 theme_override_font_sizes/font_size = 81
 text = "KEY_PAUSE"
 horizontal_alignment = 1
 
-[node name="Resume" type="Button" parent="VBoxContainer"]
+[node name="Resume" type="Button" parent="CanvasLayer/VBoxContainer"]
 layout_mode = 2
 theme = ExtResource("2_jjlk6")
 theme_type_variation = &"FlatButton"
 text = "KEY_RESUME"
 script = ExtResource("2_n83gw")
 
-[node name="Main Menu" type="Button" parent="VBoxContainer"]
+[node name="Main Menu" type="Button" parent="CanvasLayer/VBoxContainer"]
 layout_mode = 2
 theme = ExtResource("2_jjlk6")
 theme_type_variation = &"FlatButton"
 text = "KEY_GIVEUP"
 
-[connection signal="button_up" from="VBoxContainer/Resume" to="." method="_on_resume_button_up"]
-[connection signal="button_up" from="VBoxContainer/Main Menu" to="." method="_on_main_menu_button_up"]
+[connection signal="timeout" from="Lost Timer" to="." method="_on_lost_timer_timeout"]
+[connection signal="button_up" from="CanvasLayer/VBoxContainer/Resume" to="." method="_on_resume_button_up"]
+[connection signal="button_up" from="CanvasLayer/VBoxContainer/Main Menu" to="." method="_on_main_menu_button_up"]

@@ -4,8 +4,7 @@
 [ext_resource type="Script" path="res://Scenes/UI/Upgrade Trey.gd" id="1_jnhas"]
 
 [sub_resource type="Gradient" id="Gradient_cn8rk"]
-offsets = PackedFloat32Array(0.0238095, 1)
-colors = PackedColorArray(0.678431, 0.415686, 0.298039, 0.482353, 0.627451, 0.713726, 0.992157, 0.482353)
+colors = PackedColorArray(0.678431, 0.415686, 0.298039, 0.843137, 0.627451, 0.713726, 0.992157, 0.843137)
 
 [sub_resource type="GradientTexture2D" id="GradientTexture2D_at7of"]
 gradient = SubResource("Gradient_cn8rk")
@@ -13,6 +12,7 @@ fill_from = Vector2(0.5, 1)
 fill_to = Vector2(0.5, 0)
 
 [node name="Control" type="Control"]
+process_mode = 3
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0

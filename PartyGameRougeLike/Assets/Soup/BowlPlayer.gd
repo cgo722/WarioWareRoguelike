@@ -25,7 +25,7 @@ func _process(_delta):
 
 func _on_timer_timeout():
 	rotationDir = Vector3(randf_range(minT, maxT), 0, randf_range(minT, maxT))
-	timer.wait_time -= 0.1 * gamemanager.otherSpeed3D
+	timer.wait_time -= clampf(0.1 * gamemanager.otherSpeed3D, 0.01, 1000)
 	pass # Replace with function body.
 
 
