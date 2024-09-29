@@ -81,12 +81,12 @@ scale = Vector2(30.4007, 12.4738)
 
 [node name="StandardPlayer" parent="." instance=ExtResource("4_ejuh7")]
 position = Vector2(963, 600)
+deathZone = 1700.0
 
 [node name="Camera2D" type="Camera2D" parent="StandardPlayer"]
 position = Vector2(0.256393, 0.256393)
 scale = Vector2(0.256388, 0.256388)
 offset = Vector2(0, -209.38)
-zoom = Vector2(1.5, 1.5)
 position_smoothing_enabled = true
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]

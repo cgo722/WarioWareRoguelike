@@ -1,4 +1,4 @@
-[gd_scene load_steps=39 format=3 uid="uid://d0f7gdq8ltms"]
+[gd_scene load_steps=68 format=3 uid="uid://d0f7gdq8ltms"]
 
 [ext_resource type="Script" path="res://Scripts/UI/MainMenu.gd" id="1_6kmor"]
 [ext_resource type="Texture2D" uid="uid://bgi6l3ol7eghu" path="res://Assets/UIpack/PNG/green_button00.png" id="2_dm4qn"]
@@ -17,6 +17,34 @@
 [ext_resource type="Texture2D" uid="uid://dt116ldebx6lm" path="res://Assets/UIpack/PNG/grey_button02.png" id="13_jvdxb"]
 [ext_resource type="Texture2D" uid="uid://iiect0p1x2oy" path="res://Assets/UIpack/PNG/grey_button03.png" id="14_qe0rh"]
 [ext_resource type="Texture2D" uid="uid://bjc0nu3tb15bu" path="res://Assets/UIpack/PNG/grey_button00.png" id="15_jec35"]
+[ext_resource type="Texture2D" uid="uid://c4yk0a30u6ui6" path="res://Assets/UIpack/Game changer controls/frame_01.png" id="18_gemod"]
+[ext_resource type="Texture2D" uid="uid://n3e45h1enb8j" path="res://Assets/UIpack/Game changer controls/frame_02.png" id="19_jkstq"]
+[ext_resource type="Texture2D" uid="uid://brre1okcuc1b1" path="res://Assets/UIpack/Game changer controls/frame_03.png" id="20_s5f1x"]
+[ext_resource type="Texture2D" uid="uid://bdojmyns5h8l6" path="res://Assets/UIpack/Game changer controls/frame_04.png" id="21_avy41"]
+[ext_resource type="Texture2D" uid="uid://dykaxwophkcsw" path="res://Assets/UIpack/Game changer controls/frame_05.png" id="22_5rn52"]
+[ext_resource type="Texture2D" uid="uid://cusbuhrvtbx2q" path="res://Assets/UIpack/Game changer controls/frame_06.png" id="23_p1jqy"]
+[ext_resource type="Texture2D" uid="uid://cvc1epxumluxg" path="res://Assets/UIpack/Game changer controls/frame_07.png" id="24_f1snq"]
+[ext_resource type="Texture2D" uid="uid://dd4x3f3l3850b" path="res://Assets/UIpack/Game changer controls/frame_08.png" id="25_x12nf"]
+[ext_resource type="Texture2D" uid="uid://c5shumargxefa" path="res://Assets/UIpack/Game changer controls/frame_09.png" id="26_xb43i"]
+[ext_resource type="Texture2D" uid="uid://r5s0cvjoqeeo" path="res://Assets/UIpack/Game changer controls/frame_10.png" id="27_ljqfd"]
+[ext_resource type="Texture2D" uid="uid://c6l11cowykm4" path="res://Assets/UIpack/Game changer controls/frame_11.png" id="28_b50tj"]
+[ext_resource type="Texture2D" uid="uid://buhko4lu7wb61" path="res://Assets/UIpack/Game changer controls/frame_12.png" id="29_nugtn"]
+[ext_resource type="Texture2D" uid="uid://dbqy5s8o0g87w" path="res://Assets/UIpack/Game changer controls/frame_13.png" id="30_qcn58"]
+[ext_resource type="Texture2D" uid="uid://cqwymeduca6j" path="res://Assets/UIpack/Game changer controls/frame_14.png" id="31_vdht5"]
+[ext_resource type="Texture2D" uid="uid://dym2ojutptcsp" path="res://Assets/UIpack/Game changer controls/frame_15.png" id="32_x20fc"]
+[ext_resource type="Texture2D" uid="uid://go8j0uno4vdx" path="res://Assets/UIpack/Game changer controls/frame_16.png" id="33_2i2p6"]
+[ext_resource type="Texture2D" uid="uid://cimy45gchqxno" path="res://Assets/UIpack/Game changer controls/frame_17.png" id="34_64ny7"]
+[ext_resource type="Texture2D" uid="uid://bnc8n55ta7ekc" path="res://Assets/UIpack/Game changer controls/frame_18.png" id="35_jquq1"]
+[ext_resource type="Texture2D" uid="uid://caivvkq10ognt" path="res://Assets/UIpack/Game changer controls/frame_19.png" id="36_0ht8h"]
+[ext_resource type="Texture2D" uid="uid://bkflxa8abw6ma" path="res://Assets/UIpack/Game changer controls/frame_20.png" id="37_dpfnu"]
+[ext_resource type="Texture2D" uid="uid://c5h05ilf7oty6" path="res://Assets/UIpack/Game changer controls/frame_21.png" id="38_wmorq"]
+[ext_resource type="Texture2D" uid="uid://blrf3jnrsiuv7" path="res://Assets/UIpack/Game changer controls/frame_22.png" id="39_356mu"]
+[ext_resource type="Texture2D" uid="uid://bv3pwc42381hb" path="res://Assets/UIpack/Game changer controls/frame_23.png" id="40_1gf2h"]
+[ext_resource type="Texture2D" uid="uid://c2vxk2pa3r0oa" path="res://Assets/UIpack/Game changer controls/frame_24.png" id="41_mftuu"]
+[ext_resource type="Texture2D" uid="uid://c2rwnw34gpfol" path="res://Assets/UIpack/Game changer controls/frame_25.png" id="42_o2yfq"]
+[ext_resource type="Texture2D" uid="uid://ck4gdndisjhr" path="res://Assets/UIpack/Game changer controls/frame_26.png" id="43_p1qvg"]
+[ext_resource type="Texture2D" uid="uid://dhsqxvt8ytiba" path="res://Assets/UIpack/Game changer controls/frame_27.png" id="44_hlww4"]
+[ext_resource type="Texture2D" uid="uid://mv8qe8bm52j2" path="res://Assets/UIpack/Game changer controls/frame_28.png" id="45_iix5d"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_wluh6"]
 texture = ExtResource("3_gg6xw")
@@ -157,6 +185,98 @@ colors = PackedColorArray(1, 1, 1, 1)
 [sub_resource type="GradientTexture2D" id="GradientTexture2D_o0xyp"]
 gradient = SubResource("Gradient_iy1a1")
 
+[sub_resource type="SpriteFrames" id="SpriteFrames_siscq"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("18_gemod")
+}, {
+"duration": 1.0,
+"texture": ExtResource("19_jkstq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("20_s5f1x")
+}, {
+"duration": 1.0,
+"texture": ExtResource("21_avy41")
+}, {
+"duration": 1.0,
+"texture": ExtResource("22_5rn52")
+}, {
+"duration": 1.0,
+"texture": ExtResource("23_p1jqy")
+}, {
+"duration": 1.0,
+"texture": ExtResource("24_f1snq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("25_x12nf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("26_xb43i")
+}, {
+"duration": 1.0,
+"texture": ExtResource("27_ljqfd")
+}, {
+"duration": 1.0,
+"texture": ExtResource("28_b50tj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("29_nugtn")
+}, {
+"duration": 1.0,
+"texture": ExtResource("30_qcn58")
+}, {
+"duration": 1.0,
+"texture": ExtResource("31_vdht5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("32_x20fc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("33_2i2p6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("34_64ny7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("35_jquq1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("36_0ht8h")
+}, {
+"duration": 1.0,
+"texture": ExtResource("37_dpfnu")
+}, {
+"duration": 1.0,
+"texture": ExtResource("38_wmorq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("39_356mu")
+}, {
+"duration": 1.0,
+"texture": ExtResource("40_1gf2h")
+}, {
+"duration": 1.0,
+"texture": ExtResource("41_mftuu")
+}, {
+"duration": 1.0,
+"texture": ExtResource("42_o2yfq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("43_p1qvg")
+}, {
+"duration": 1.0,
+"texture": ExtResource("44_hlww4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("45_iix5d")
+}],
+"loop": true,
+"name": &"default",
+"speed": 15.0
+}]
+
 [node name="Control" type="Control"]
 process_mode = 3
 layout_mode = 3
@@ -246,6 +366,7 @@ theme_override_styles/normal = SubResource("StyleBoxTexture_a5hac")
 text = "KEY_SETTINGS"
 
 [node name="How To" type="Button" parent="BoxContainer/HBoxContainer/VBoxContainer"]
+visible = false
 layout_mode = 2
 theme = ExtResource("3_rdccb")
 theme_type_variation = &"FlatButton"
@@ -280,6 +401,7 @@ grow_horizontal = 2
 grow_vertical = 2
 
 [node name="GPUParticles2D" type="GPUParticles2D" parent="Control"]
+visible = false
 position = Vector2(-746, 389)
 amount = 1000
 process_material = SubResource("ParticleProcessMaterial_thn44")
@@ -290,6 +412,7 @@ randomness = 1.0
 visibility_rect = Rect2(-256, -255.993, 512, 562.626)
 
 [node name="GPUParticles2D2" type="GPUParticles2D" parent="Control"]
+visible = false
 position = Vector2(754, -286)
 amount = 1000
 process_material = SubResource("ParticleProcessMaterial_thn44")
@@ -298,6 +421,12 @@ lifetime = 5.0
 explosiveness = 1.0
 randomness = 1.0
 visibility_rect = Rect2(-256, -255.993, 512, 562.626)
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(1712, 225)
+scale = Vector2(0.619141, 0.619141)
+sprite_frames = SubResource("SpriteFrames_siscq")
+frame_progress = 0.766831
 
 [connection signal="button_up" from="BoxContainer/HBoxContainer/VBoxContainer/Play" to="." method="_on_play_button_up"]
 [connection signal="button_up" from="BoxContainer/HBoxContainer/VBoxContainer/Option" to="." method="_on_options_button_up"]

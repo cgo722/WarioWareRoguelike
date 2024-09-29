@@ -4,7 +4,7 @@ extends Control
 @onready var gamemanager = get_node("/root/GameManager")
 var useable : bool
 @onready var savingResource : SavingResource = SavingResource.new()
-@onready var timer: Timer = $Timer
+
 
 # Called when the node enters the scene tree for the first time.
 func _ready():

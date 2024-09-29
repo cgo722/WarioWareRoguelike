@@ -5,7 +5,6 @@ var minT : float
 var maxT : float
 var rotationDir : Vector3
 @onready var timer = $Timer
-@onready var splashParticles = $Splash_part
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	minT = -0.001
@@ -36,7 +35,6 @@ func _on_round_timer_timeout():
 
 
 func _on_area_3d_body_entered(_body):
-	splashParticles.emitting = true
 	pass # Replace with function body.
 
 

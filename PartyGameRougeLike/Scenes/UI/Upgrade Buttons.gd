@@ -10,7 +10,8 @@ extends Node
 @onready var effectNames := ["SpdU", "SpdURLD", "SpdUJFD", "RLU", "RLD", "RluSpdD", "PHU", "TR", "MSpdU", 
 "MRLU", "MPHU", "JFUSpdD", "JFUOSpdU", "MJFU", "JpU", "SpdU", "SpdURLD", "SpdUJFD", "RLU", "RLD", "RluSpdD", "PHU", "TR", "MSpdU", 
 "MRLU", "JFUSpdD", "JFUOSpdU", "MJFU", "JpU", "SpdU", "SpdURLD", "SpdUJFD", "RLU", "RLD", "RluSpdD", "MSpdU", 
-"MRLU", "JFUSpdD", "JFUOSpdU", "MJFU", "JpU"]
+"MRLU", "JFUSpdD", "JFUOSpdU", "MJFU", "JpU", "SpdU", "SpdURLD", "SpdUJFD", "RLU", "RLD", "RluSpdD", "PHU", "TR", "MSpdU", 
+"MRLU", "MPHU", "JFUSpdD", "JFUOSpdU", "MJFU", "JpU"]
 
 @onready var effect : String
 
@@ -99,7 +100,7 @@ func _ready():
 	button.text = buttonText
 	descBox.text = descText
 	pass # Replace with function body.
-
+		
 func _on_button_button_up():
 	print(buttonPressed)
 	if buttonPressed == true:

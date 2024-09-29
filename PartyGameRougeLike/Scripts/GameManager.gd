@@ -38,6 +38,8 @@ func _ready():
 	score = 0
 	savingResource = SavingResource.loadData()
 
+func _process(delta: float) -> void:
+	roundLength = clampf(roundLength, 0.1, 45)
 func _reset():
 	playerSpeed3D = 1.0
 	playerSpeed2D = 1.0

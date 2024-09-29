@@ -17,6 +17,7 @@ grow_vertical = 2
 script = ExtResource("1_yo6br")
 
 [node name="Lost Timer" type="Timer" parent="."]
+wait_time = 0.2
 autostart = true
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]

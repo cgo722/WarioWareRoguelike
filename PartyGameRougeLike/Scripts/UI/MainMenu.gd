@@ -1,4 +1,5 @@
 extends Control
+@onready var animated_sprite_2d: AnimatedSprite2D = $AnimatedSprite2D
 
 @onready var gamemanager = get_node("/root/GameManager")
 @onready var settingsMenu = load("res://Scenes/Menus/Settings.tscn")
@@ -11,6 +12,7 @@ func _ready():
 		hsAmount.text = str(gamemanager.savingResource.HiScore)
 	else:
 		hsAmount.text = "0"
+	animated_sprite_2d.play()
 	pass # Replace with function body.
 
 

@@ -1,9 +1,8 @@
-[gd_scene load_steps=17 format=3 uid="uid://cigdqqcwl3t6e"]
+[gd_scene load_steps=13 format=3 uid="uid://cigdqqcwl3t6e"]
 
 [ext_resource type="PackedScene" uid="uid://bqxk3bqyb5tpd" path="res://Assets/Soup/BowlPlayer.tscn" id="1_7djil"]
 [ext_resource type="Script" path="res://Scenes/MicroGames/Dont Drop The Soup/Dont Drop the Soup Manger.gd" id="1_mns8a"]
 [ext_resource type="PackedScene" uid="uid://dl0h7dn0iran5" path="res://Assets/Soup/Broth.tscn" id="2_rdhsj"]
-[ext_resource type="Material" uid="uid://c1dv7aa7utx3t" path="res://Assets/Materials/Soup.tres" id="3_ytn8n"]
 [ext_resource type="PackedScene" uid="uid://cc21o6hirk3mm" path="res://Assets/Soup/ChiefArm.glb" id="4_rh62m"]
 [ext_resource type="Script" path="res://Scenes/MicroGames/Dont Drop The Soup/SkeletonIK3D.gd" id="6_82sld"]
 [ext_resource type="PackedScene" uid="uid://cjqpwl3iol37y" path="res://Assets/Soup/Kitchen.tscn" id="7_idxwn"]
@@ -27,19 +26,6 @@ adjustment_enabled = true
 adjustment_brightness = 1.7
 adjustment_contrast = 1.1
 adjustment_saturation = 1.52
-
-[sub_resource type="SphereMesh" id="SphereMesh_3nk41"]
-material = ExtResource("3_ytn8n")
-radius = 0.137
-height = 0.356
-
-[sub_resource type="Curve" id="Curve_6ve6n"]
-_data = [Vector2(0, 1), 0.0, -2.83589, 0, 0, Vector2(1, 0), 0.0, 0.0, 0, 0]
-point_count = 2
-
-[sub_resource type="Curve" id="Curve_u0vh4"]
-_data = [Vector2(0.00805524, 1), 0.0, 0.0, 0, 0, Vector2(0.988493, 0), 0.0, 0.0, 0, 0]
-point_count = 2
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_6t406"]
 size = Vector3(191.871, 1, 153.507)
@@ -74,24 +60,6 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.270067, -0.924268, -0.82404
 
 [node name="IKPinkieMarker" type="Marker3D" parent="BowlPlayer2"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.4394, -0.933183, -0.551408)
-
-[node name="Splash_part" type="CPUParticles3D" parent="BowlPlayer2"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.177984, 0.489263, 0.22012)
-emitting = false
-amount = 120
-lifetime = 0.5
-one_shot = true
-explosiveness = 1.0
-randomness = 1.0
-lifetime_randomness = 0.2
-fract_delta = false
-mesh = SubResource("SphereMesh_3nk41")
-direction = Vector3(2.08165e-12, 2.08165e-12, 2.08165e-12)
-initial_velocity_max = 2.5
-split_scale = true
-scale_curve_x = SubResource("Curve_6ve6n")
-scale_curve_y = null
-scale_curve_z = SubResource("Curve_u0vh4")
 
 [node name="Broth" parent="." instance=ExtResource("2_rdhsj")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.103823, -0.150008, -0.454039)

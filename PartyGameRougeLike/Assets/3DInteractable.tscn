@@ -252,6 +252,7 @@ surface_material_override/0 = SubResource("ShaderMaterial_6stqa")
 
 [node name="GPUParticles3D" type="GPUParticles3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.61355, 0)
+visible = false
 amount = 16
 randomness = 1.0
 fixed_fps = 15

@@ -3,7 +3,7 @@ extends CharacterBody2D
 @onready var gamemanager = get_node("/root/GameManager")
 @onready var SPEED : float = 300.0
 @onready var JUMP_VELOCITY : float = -500.0
-
+@export var deathZone : float = 0
 # Get the gravity from the project settings to be synced with RigidBody nodes.
 var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
 var animations : AnimatedSprite2D
@@ -18,6 +18,8 @@ var jumping : bool
 func _ready():
 	animations = $CollisionShape2D/AnimatedSprite2D
 func _physics_process(delta):
+	if position.y > deathZone:
+		gamemanager.death = true
 	# Add the gravity.
 	if not is_on_floor():
 		velocity.y += gravity * delta
