@@ -273,8 +273,13 @@ animations = [{
 "texture": ExtResource("45_iix5d")
 }],
 "loop": true,
-"name": &"default",
+"name": &"Controller",
 "speed": 15.0
+}, {
+"frames": [],
+"loop": true,
+"name": &"Keyboard",
+"speed": 5.0
 }]
 
 [node name="Control" type="Control"]
@@ -426,7 +431,7 @@ visibility_rect = Rect2(-256, -255.993, 512, 562.626)
 position = Vector2(1712, 225)
 scale = Vector2(0.619141, 0.619141)
 sprite_frames = SubResource("SpriteFrames_siscq")
-frame_progress = 0.766831
+animation = &"Controller"
 
 [connection signal="button_up" from="BoxContainer/HBoxContainer/VBoxContainer/Play" to="." method="_on_play_button_up"]
 [connection signal="button_up" from="BoxContainer/HBoxContainer/VBoxContainer/Option" to="." method="_on_options_button_up"]
