@@ -1,4 +1,4 @@
-[gd_scene load_steps=68 format=3 uid="uid://d0f7gdq8ltms"]
+[gd_scene load_steps=66 format=3 uid="uid://d0f7gdq8ltms"]
 
 [ext_resource type="Script" path="res://Scripts/UI/MainMenu.gd" id="1_6kmor"]
 [ext_resource type="Texture2D" uid="uid://bgi6l3ol7eghu" path="res://Assets/UIpack/PNG/green_button00.png" id="2_dm4qn"]
@@ -45,6 +45,9 @@
 [ext_resource type="Texture2D" uid="uid://ck4gdndisjhr" path="res://Assets/UIpack/Game changer controls/frame_26.png" id="43_p1qvg"]
 [ext_resource type="Texture2D" uid="uid://dhsqxvt8ytiba" path="res://Assets/UIpack/Game changer controls/frame_27.png" id="44_hlww4"]
 [ext_resource type="Texture2D" uid="uid://mv8qe8bm52j2" path="res://Assets/UIpack/Game changer controls/frame_28.png" id="45_iix5d"]
+[ext_resource type="Script" path="res://Scenes/Menus/Controls.gd" id="46_fcyw7"]
+[ext_resource type="Texture2D" uid="uid://cedyy6ffeyjyq" path="res://Assets/SpamSpaceBarGame/IMG_0404.png" id="46_koqfo"]
+[ext_resource type="Texture2D" uid="uid://48ukaoepvjax" path="res://Assets/SpamSpaceBarGame/IMG_0405.png" id="47_6y60g"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_wluh6"]
 texture = ExtResource("3_gg6xw")
@@ -158,33 +161,6 @@ texture_margin_top = 25.0
 texture_margin_right = 25.0
 texture_margin_bottom = 25.0
 
-[sub_resource type="Curve" id="Curve_xvqqx"]
-_data = [Vector2(0, 1), 0.0, 0.0, 0, 0, Vector2(0.497765, 0), 0.0, 0.0, 0, 0]
-point_count = 2
-
-[sub_resource type="CurveTexture" id="CurveTexture_c45ug"]
-curve = SubResource("Curve_xvqqx")
-
-[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_thn44"]
-particle_flag_disable_z = true
-spread = 180.0
-initial_velocity_max = 1000.0
-scale_min = 0.1
-scale_max = 0.5
-scale_curve = SubResource("CurveTexture_c45ug")
-hue_variation_min = -1.0
-hue_variation_max = 1.0
-turbulence_enabled = true
-turbulence_noise_strength = 20.0
-turbulence_noise_speed = Vector3(1, 0, 0)
-
-[sub_resource type="Gradient" id="Gradient_iy1a1"]
-offsets = PackedFloat32Array(1)
-colors = PackedColorArray(1, 1, 1, 1)
-
-[sub_resource type="GradientTexture2D" id="GradientTexture2D_o0xyp"]
-gradient = SubResource("Gradient_iy1a1")
-
 [sub_resource type="SpriteFrames" id="SpriteFrames_siscq"]
 animations = [{
 "frames": [{
@@ -276,10 +252,16 @@ animations = [{
 "name": &"Controller",
 "speed": 15.0
 }, {
-"frames": [],
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("46_koqfo")
+}, {
+"duration": 1.0,
+"texture": ExtResource("47_6y60g")
+}],
 "loop": true,
 "name": &"Keyboard",
-"speed": 5.0
+"speed": 15.0
 }]
 
 [node name="Control" type="Control"]
@@ -391,47 +373,12 @@ theme_override_styles/pressed = SubResource("StyleBoxTexture_s6i3l")
 theme_override_styles/normal = SubResource("StyleBoxTexture_0olwe")
 text = "KEY_QUIT"
 
-[node name="Control" type="Control" parent="."]
-layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -20.0
-offset_top = -20.0
-offset_right = 20.0
-offset_bottom = 20.0
-grow_horizontal = 2
-grow_vertical = 2
-
-[node name="GPUParticles2D" type="GPUParticles2D" parent="Control"]
-visible = false
-position = Vector2(-746, 389)
-amount = 1000
-process_material = SubResource("ParticleProcessMaterial_thn44")
-texture = SubResource("GradientTexture2D_o0xyp")
-lifetime = 5.0
-explosiveness = 1.0
-randomness = 1.0
-visibility_rect = Rect2(-256, -255.993, 512, 562.626)
-
-[node name="GPUParticles2D2" type="GPUParticles2D" parent="Control"]
-visible = false
-position = Vector2(754, -286)
-amount = 1000
-process_material = SubResource("ParticleProcessMaterial_thn44")
-texture = SubResource("GradientTexture2D_o0xyp")
-lifetime = 5.0
-explosiveness = 1.0
-randomness = 1.0
-visibility_rect = Rect2(-256, -255.993, 512, 562.626)
-
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 position = Vector2(1712, 225)
 scale = Vector2(0.619141, 0.619141)
 sprite_frames = SubResource("SpriteFrames_siscq")
-animation = &"Controller"
+animation = &"Keyboard"
+script = ExtResource("46_fcyw7")
 
 [connection signal="button_up" from="BoxContainer/HBoxContainer/VBoxContainer/Play" to="." method="_on_play_button_up"]
 [connection signal="button_up" from="BoxContainer/HBoxContainer/VBoxContainer/Option" to="." method="_on_options_button_up"]

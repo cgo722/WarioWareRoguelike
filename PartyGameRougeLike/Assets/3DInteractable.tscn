@@ -1,4 +1,4 @@
-[gd_scene load_steps=24 format=3 uid="uid://ciluld6if5rp"]
+[gd_scene load_steps=26 format=3 uid="uid://ciluld6if5rp"]
 
 [ext_resource type="Script" path="res://Scripts/3DInteractable.gd" id="1_7ui2d"]
 [ext_resource type="PackedScene" uid="uid://c27jgogu4lns" path="res://Assets/Grab The Item/UraniumTube.glb" id="2_0yfbn"]
@@ -73,18 +73,33 @@ turbulence_enabled = true
 turbulence_noise_strength = 7.77
 turbulence_noise_scale = 0.138
 
+[sub_resource type="FastNoiseLite" id="FastNoiseLite_hd5fc"]
+
+[sub_resource type="NoiseTexture2D" id="NoiseTexture2D_w4qcd"]
+noise = SubResource("FastNoiseLite_hd5fc")
+
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_tfm0k"]
 diffuse_mode = 3
 specular_mode = 1
+disable_ambient_light = true
 albedo_color = Color(0.223529, 0.784314, 0, 1)
 emission_enabled = true
 emission = Color(0.639216, 1, 0.658824, 1)
-emission_energy_multiplier = 1.1
+emission_energy_multiplier = 9.87
+clearcoat_enabled = true
+clearcoat_roughness = 0.0
+anisotropy_enabled = true
+anisotropy = 1.0
+backlight = Color(0, 0, 1, 1)
+refraction_scale = 0.48
+refraction_texture = SubResource("NoiseTexture2D_w4qcd")
+grow = true
+grow_amount = 0.09
 
 [sub_resource type="SphereMesh" id="SphereMesh_32fso"]
 material = SubResource("StandardMaterial3D_tfm0k")
-radius = 0.151
-height = 0.193
+radius = 0.25
+height = 0.5
 
 [sub_resource type="Animation" id="Animation_ign12"]
 length = 3.0
@@ -252,7 +267,6 @@ surface_material_override/0 = SubResource("ShaderMaterial_6stqa")
 
 [node name="GPUParticles3D" type="GPUParticles3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.61355, 0)
-visible = false
 amount = 16
 randomness = 1.0
 fixed_fps = 15

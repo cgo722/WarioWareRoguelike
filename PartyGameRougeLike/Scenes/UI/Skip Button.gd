@@ -5,5 +5,8 @@ var contr : bool
 var controllerText : String = "RB Skip cost 400"
 @onready var gamemanager = get_node("/root/GameManager")
 
-func _process(delta):
-	label.text = "skip: -" + str(gamemanager.skipCost) + " from Score"
+func _input(event: InputEvent) -> void:
+	if event is InputEventKey:
+		label.text = "Press R: skip -" + str(gamemanager.skipCost) + " from Score"
+	if event is InputEventJoypadButton:
+		label.text = "Press RB: skip -" + str(gamemanager.skipCost) + " from Score"
