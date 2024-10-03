@@ -59,3 +59,6 @@ KEY_STAT_ABS,Action Button Strength,Stärke der Aktionstaste,Сила кнопк
 KEY_STAT_ESPD3D,Enemy Speed 3D,Feindgeschwindigkeit 3D,Скорость врага 3D,エネミースピード3D,Velocidad enemiga 3D,敌人速度3D
 KEY_STAT_ESPD2D,Enemy Speed 2D,Feindgeschwindigkeit 2D,Скорость врага 2D,エネミースピード2D,Velocidad enemiga 2D,敌人速度 2D
 KEY_STAT_RL,Time Multiplier,Zeitmultiplikator,Множитель времени,時間乗数,Multiplicador de tiempo,时间乘数
+KEY_SKIP_K,Press R: skip -,R drücken: überspringen -,Нажмите R: пропустить -,Rを押す：スキップ -,Presione R: saltar -,按R：跳过-
+KEY_FROM_SCORE, from score,aus Partitur,из счета,スコアから,de la puntuación,从分数
+KEY_SKIP_C,Press RB: skip -,Drücken Sie RB: überspringen -,Нажмите RB: пропустить -,RBを押す：スキップ -,Presione RB: saltar -,按RB：跳过-

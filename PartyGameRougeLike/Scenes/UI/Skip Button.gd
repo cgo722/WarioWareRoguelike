@@ -7,6 +7,6 @@ var controllerText : String = "RB Skip cost 400"
 
 func _input(event: InputEvent) -> void:
 	if event is InputEventKey:
-		label.text = "Press R: skip -" + str(gamemanager.skipCost) + " from Score"
+		label.text = "KEY_SKIP_K" + str(gamemanager.skipCost) + "KEY_FROM_SCORE"
 	if event is InputEventJoypadButton:
-		label.text = "Press RB: skip -" + str(gamemanager.skipCost) + " from Score"
+		label.text = "KEY_SKIP_C" + str(gamemanager.skipCost) + "KEY_FROM_SCORE"

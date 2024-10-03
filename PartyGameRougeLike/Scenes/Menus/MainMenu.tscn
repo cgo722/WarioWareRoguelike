@@ -1,4 +1,4 @@
-[gd_scene load_steps=66 format=3 uid="uid://d0f7gdq8ltms"]
+[gd_scene load_steps=136 format=3 uid="uid://d0f7gdq8ltms"]
 
 [ext_resource type="Script" path="res://Scripts/UI/MainMenu.gd" id="1_6kmor"]
 [ext_resource type="Texture2D" uid="uid://bgi6l3ol7eghu" path="res://Assets/UIpack/PNG/green_button00.png" id="2_dm4qn"]
@@ -46,8 +46,78 @@
 [ext_resource type="Texture2D" uid="uid://dhsqxvt8ytiba" path="res://Assets/UIpack/Game changer controls/frame_27.png" id="44_hlww4"]
 [ext_resource type="Texture2D" uid="uid://mv8qe8bm52j2" path="res://Assets/UIpack/Game changer controls/frame_28.png" id="45_iix5d"]
 [ext_resource type="Script" path="res://Scenes/Menus/Controls.gd" id="46_fcyw7"]
-[ext_resource type="Texture2D" uid="uid://cedyy6ffeyjyq" path="res://Assets/SpamSpaceBarGame/IMG_0404.png" id="46_koqfo"]
-[ext_resource type="Texture2D" uid="uid://48ukaoepvjax" path="res://Assets/SpamSpaceBarGame/IMG_0405.png" id="47_6y60g"]
+[ext_resource type="Texture2D" uid="uid://nbq7s0uefd7k" path="res://Assets/UIpack/Game changer Keyboard/frame_01.png" id="46_lm313"]
+[ext_resource type="Texture2D" uid="uid://bjqv58qdh12wp" path="res://Assets/UIpack/Game changer Keyboard/frame_02.png" id="47_qil05"]
+[ext_resource type="Texture2D" uid="uid://cneykmohoo1gg" path="res://Assets/UIpack/Game changer Keyboard/frame_03.png" id="48_q0igh"]
+[ext_resource type="Texture2D" uid="uid://cbsy6nuhwnvfb" path="res://Assets/UIpack/Game changer Keyboard/frame_04.png" id="49_xt8nv"]
+[ext_resource type="Texture2D" uid="uid://b7a6e3lkt6smw" path="res://Assets/UIpack/Game changer Keyboard/frame_05.png" id="50_3j7er"]
+[ext_resource type="Texture2D" uid="uid://c1sms2xfxgi04" path="res://Assets/UIpack/Game changer Keyboard/frame_06.png" id="51_7ahb5"]
+[ext_resource type="Texture2D" uid="uid://b5oy6jhmlot1x" path="res://Assets/UIpack/Game changer Keyboard/frame_07.png" id="52_sb2ac"]
+[ext_resource type="Texture2D" uid="uid://dty456nmnkdhf" path="res://Assets/UIpack/Game changer Keyboard/frame_08.png" id="53_dlmdn"]
+[ext_resource type="Texture2D" uid="uid://v3wxh4cop46n" path="res://Assets/UIpack/Game changer Keyboard/frame_09.png" id="54_crq3j"]
+[ext_resource type="Texture2D" uid="uid://dsvyhbw47takh" path="res://Assets/UIpack/Game changer Keyboard/frame_10.png" id="55_pnu7o"]
+[ext_resource type="Texture2D" uid="uid://gss7q17bxwni" path="res://Assets/UIpack/Game changer Keyboard/frame_11.png" id="56_7hmmp"]
+[ext_resource type="Texture2D" uid="uid://cxcyxsfao00ix" path="res://Assets/UIpack/Game changer Keyboard/frame_12.png" id="57_6w7au"]
+[ext_resource type="Texture2D" uid="uid://c6biyw2bidowh" path="res://Assets/UIpack/Game changer Keyboard/frame_13.png" id="58_duyok"]
+[ext_resource type="Texture2D" uid="uid://don3m2x5n22lw" path="res://Assets/UIpack/Game changer Keyboard/frame_14.png" id="59_77fom"]
+[ext_resource type="Texture2D" uid="uid://cxc12nwwqbvhs" path="res://Assets/UIpack/Game changer Keyboard/frame_15.png" id="60_uttv0"]
+[ext_resource type="Texture2D" uid="uid://cxvukya2l5ys" path="res://Assets/UIpack/Game changer Keyboard/frame_16.png" id="61_w550x"]
+[ext_resource type="Texture2D" uid="uid://dektauaix5pmw" path="res://Assets/UIpack/Game changer Keyboard/frame_17.png" id="62_5e4d0"]
+[ext_resource type="Texture2D" uid="uid://qmctnisot8ia" path="res://Assets/UIpack/Game changer Keyboard/frame_18.png" id="63_kyrkw"]
+[ext_resource type="Texture2D" uid="uid://dldfnn2h5oog7" path="res://Assets/UIpack/Game changer Keyboard/frame_19.png" id="64_psuxv"]
+[ext_resource type="Texture2D" uid="uid://ba2kvp1qjwn4t" path="res://Assets/UIpack/Game changer Keyboard/frame_20.png" id="65_rll4t"]
+[ext_resource type="Texture2D" uid="uid://cipb34oby87d1" path="res://Assets/UIpack/Game changer Keyboard/frame_21.png" id="66_ewsn1"]
+[ext_resource type="Texture2D" uid="uid://cfw6o1y0rkxgw" path="res://Assets/UIpack/Game changer Keyboard/frame_22.png" id="67_jw5k8"]
+[ext_resource type="Texture2D" uid="uid://h03mlakcemf5" path="res://Assets/UIpack/Game changer Keyboard/frame_23.png" id="68_ykonu"]
+[ext_resource type="Texture2D" uid="uid://cokufo3mqxfqc" path="res://Assets/UIpack/Game changer Keyboard/frame_24.png" id="69_4jlk5"]
+[ext_resource type="Texture2D" uid="uid://drdnxsufg3y6t" path="res://Assets/UIpack/Game changer Keyboard/frame_25.png" id="70_wkgpa"]
+[ext_resource type="Texture2D" uid="uid://d1er5ad5gacq" path="res://Assets/UIpack/Game changer Keyboard/frame_26.png" id="71_oupd6"]
+[ext_resource type="Texture2D" uid="uid://ck5onbd00r1f6" path="res://Assets/UIpack/Game changer Keyboard/frame_27.png" id="72_derwr"]
+[ext_resource type="Texture2D" uid="uid://cmdbqc1ceqbbw" path="res://Assets/UIpack/Game changer Keyboard/frame_28.png" id="73_lqfqn"]
+[ext_resource type="Texture2D" uid="uid://dgyfo7ydng656" path="res://Assets/UIpack/Game changer Keyboard/frame_29.png" id="74_w7c1x"]
+[ext_resource type="Texture2D" uid="uid://yi32kfm3c3yu" path="res://Assets/UIpack/Game changer Keyboard/frame_30.png" id="75_lio45"]
+[ext_resource type="Texture2D" uid="uid://cjx3p6uf15v2e" path="res://Assets/UIpack/Game changer Keyboard/frame_31.png" id="76_bqswl"]
+[ext_resource type="Texture2D" uid="uid://di16l5i3ocutu" path="res://Assets/UIpack/Game changer Keyboard/frame_32.png" id="77_vdcuc"]
+[ext_resource type="Texture2D" uid="uid://dpkpu8gejkjxr" path="res://Assets/UIpack/Game changer Keyboard/frame_33.png" id="78_an2nd"]
+[ext_resource type="Texture2D" uid="uid://0xsibltyj3nh" path="res://Assets/UIpack/Game changer Keyboard/frame_34.png" id="79_vhjqw"]
+[ext_resource type="Texture2D" uid="uid://cut0a0tbxoaut" path="res://Assets/UIpack/Game changer Keyboard/frame_35.png" id="80_vf8k7"]
+[ext_resource type="Texture2D" uid="uid://drhqno543ra34" path="res://Assets/UIpack/Game changer Keyboard/frame_36.png" id="81_tu4wm"]
+[ext_resource type="Texture2D" uid="uid://bd54gr2cgsydb" path="res://Assets/UIpack/Game changer Keyboard/frame_37.png" id="82_70niv"]
+[ext_resource type="Texture2D" uid="uid://dwk52i2lughw1" path="res://Assets/UIpack/Game changer Keyboard/frame_38.png" id="83_07m8h"]
+[ext_resource type="Texture2D" uid="uid://badh5ujucbmvd" path="res://Assets/UIpack/Game changer Keyboard/frame_39.png" id="84_e6l5u"]
+[ext_resource type="Texture2D" uid="uid://dd3wpmg4n2chx" path="res://Assets/UIpack/Game changer Keyboard/frame_40.png" id="85_5hask"]
+[ext_resource type="Texture2D" uid="uid://2xwyxmopkswo" path="res://Assets/UIpack/Game changer Keyboard/frame_41.png" id="86_nq6rq"]
+[ext_resource type="Texture2D" uid="uid://dqqsops2btdt8" path="res://Assets/UIpack/Game changer Keyboard/frame_42.png" id="87_68qtb"]
+[ext_resource type="Texture2D" uid="uid://mmdvkthgau62" path="res://Assets/UIpack/Game changer Keyboard/frame_43.png" id="88_2rluw"]
+[ext_resource type="Texture2D" uid="uid://cmjoya523xgy4" path="res://Assets/UIpack/Game changer Keyboard/frame_44.png" id="89_vfrg8"]
+[ext_resource type="Texture2D" uid="uid://coi1w3enm4if5" path="res://Assets/UIpack/Game changer Keyboard/frame_45.png" id="90_eallq"]
+[ext_resource type="Texture2D" uid="uid://dsreirbb0hbgq" path="res://Assets/UIpack/Game changer Keyboard/frame_46.png" id="91_y82my"]
+[ext_resource type="Texture2D" uid="uid://c8aq4sywi04xv" path="res://Assets/UIpack/Game changer Keyboard/frame_47.png" id="92_5mfbu"]
+[ext_resource type="Texture2D" uid="uid://chpf5h0gl3vkt" path="res://Assets/UIpack/Game changer Keyboard/frame_48.png" id="93_83nlj"]
+[ext_resource type="Texture2D" uid="uid://bhttxigcuiklx" path="res://Assets/UIpack/Game changer Keyboard/frame_49.png" id="94_2m4ft"]
+[ext_resource type="Texture2D" uid="uid://b0vudjh5d5yvm" path="res://Assets/UIpack/Game changer Keyboard/frame_50.png" id="95_wbp5v"]
+[ext_resource type="Texture2D" uid="uid://b65kctxkt7el7" path="res://Assets/UIpack/Game changer Keyboard/frame_51.png" id="96_whdkw"]
+[ext_resource type="Texture2D" uid="uid://boxgsfb8f4nmm" path="res://Assets/UIpack/Game changer Keyboard/frame_52.png" id="97_88bhm"]
+[ext_resource type="Texture2D" uid="uid://b2m2db8g6h8ms" path="res://Assets/UIpack/Game changer Keyboard/frame_53.png" id="98_65mbj"]
+[ext_resource type="Texture2D" uid="uid://cvo3mckgy6o5j" path="res://Assets/UIpack/Game changer Keyboard/frame_54.png" id="99_6ytwk"]
+[ext_resource type="Texture2D" uid="uid://c73w5n0p81rw1" path="res://Assets/UIpack/Game changer Keyboard/frame_55.png" id="100_3825k"]
+[ext_resource type="Texture2D" uid="uid://c3u7prqlgww77" path="res://Assets/UIpack/Game changer Keyboard/frame_56.png" id="101_u677d"]
+[ext_resource type="Texture2D" uid="uid://sjuhqu5ps4wq" path="res://Assets/UIpack/Game changer Keyboard/frame_57.png" id="102_sxeo7"]
+[ext_resource type="Texture2D" uid="uid://cjoch50g881io" path="res://Assets/UIpack/Game changer Keyboard/frame_58.png" id="103_6e1xt"]
+[ext_resource type="Texture2D" uid="uid://c6agl7hlvt740" path="res://Assets/UIpack/Game changer Keyboard/frame_59.png" id="104_dac56"]
+[ext_resource type="Texture2D" uid="uid://dc8c857xj67hq" path="res://Assets/UIpack/Game changer Keyboard/frame_60.png" id="105_vuckp"]
+[ext_resource type="Texture2D" uid="uid://bgxuaqmqtvwih" path="res://Assets/UIpack/Game changer Keyboard/frame_61.png" id="106_bydpm"]
+[ext_resource type="Texture2D" uid="uid://b747x4qb5aswu" path="res://Assets/UIpack/Game changer Keyboard/frame_62.png" id="107_exiu3"]
+[ext_resource type="Texture2D" uid="uid://beka6ioygbvrh" path="res://Assets/UIpack/Game changer Keyboard/frame_63.png" id="108_4vm4w"]
+[ext_resource type="Texture2D" uid="uid://cpqnrfjh0xclj" path="res://Assets/UIpack/Game changer Keyboard/frame_64.png" id="109_ntu53"]
+[ext_resource type="Texture2D" uid="uid://o7d26fpvxt33" path="res://Assets/UIpack/Game changer Keyboard/frame_65.png" id="110_acg1r"]
+[ext_resource type="Texture2D" uid="uid://cvhhw5pds2854" path="res://Assets/UIpack/Game changer Keyboard/frame_66.png" id="111_7y4ns"]
+[ext_resource type="Texture2D" uid="uid://c0apat7m6ril1" path="res://Assets/UIpack/Game changer Keyboard/frame_67.png" id="112_1qumu"]
+[ext_resource type="Texture2D" uid="uid://c1vltxaar2u62" path="res://Assets/UIpack/Game changer Keyboard/frame_68.png" id="113_3menn"]
+[ext_resource type="Texture2D" uid="uid://cr27sgbwmvyrf" path="res://Assets/UIpack/Game changer Keyboard/frame_69.png" id="114_3itwl"]
+[ext_resource type="Texture2D" uid="uid://rr56umvj1kla" path="res://Assets/UIpack/Game changer Keyboard/frame_70.png" id="115_fvffe"]
+[ext_resource type="Texture2D" uid="uid://clbdc0iifqm2c" path="res://Assets/UIpack/Game changer Keyboard/frame_71.png" id="116_qow3x"]
+[ext_resource type="Texture2D" uid="uid://c2sbwn1xunkge" path="res://Assets/UIpack/Game changer Keyboard/frame_72.png" id="117_ma1rl"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_wluh6"]
 texture = ExtResource("3_gg6xw")
@@ -250,18 +320,228 @@ animations = [{
 }],
 "loop": true,
 "name": &"Controller",
-"speed": 15.0
+"speed": 20.0
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("46_koqfo")
+"texture": ExtResource("46_lm313")
 }, {
 "duration": 1.0,
-"texture": ExtResource("47_6y60g")
+"texture": ExtResource("47_qil05")
+}, {
+"duration": 1.0,
+"texture": ExtResource("48_q0igh")
+}, {
+"duration": 1.0,
+"texture": ExtResource("49_xt8nv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("50_3j7er")
+}, {
+"duration": 1.0,
+"texture": ExtResource("51_7ahb5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("52_sb2ac")
+}, {
+"duration": 1.0,
+"texture": ExtResource("53_dlmdn")
+}, {
+"duration": 1.0,
+"texture": ExtResource("54_crq3j")
+}, {
+"duration": 1.0,
+"texture": ExtResource("55_pnu7o")
+}, {
+"duration": 1.0,
+"texture": ExtResource("56_7hmmp")
+}, {
+"duration": 1.0,
+"texture": ExtResource("57_6w7au")
+}, {
+"duration": 1.0,
+"texture": ExtResource("58_duyok")
+}, {
+"duration": 1.0,
+"texture": ExtResource("59_77fom")
+}, {
+"duration": 1.0,
+"texture": ExtResource("60_uttv0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("61_w550x")
+}, {
+"duration": 1.0,
+"texture": ExtResource("62_5e4d0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("63_kyrkw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("64_psuxv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("65_rll4t")
+}, {
+"duration": 1.0,
+"texture": ExtResource("66_ewsn1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("67_jw5k8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("68_ykonu")
+}, {
+"duration": 1.0,
+"texture": ExtResource("69_4jlk5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("70_wkgpa")
+}, {
+"duration": 1.0,
+"texture": ExtResource("71_oupd6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("72_derwr")
+}, {
+"duration": 1.0,
+"texture": ExtResource("73_lqfqn")
+}, {
+"duration": 1.0,
+"texture": ExtResource("74_w7c1x")
+}, {
+"duration": 1.0,
+"texture": ExtResource("75_lio45")
+}, {
+"duration": 1.0,
+"texture": ExtResource("76_bqswl")
+}, {
+"duration": 1.0,
+"texture": ExtResource("77_vdcuc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("78_an2nd")
+}, {
+"duration": 1.0,
+"texture": ExtResource("79_vhjqw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("80_vf8k7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("81_tu4wm")
+}, {
+"duration": 1.0,
+"texture": ExtResource("82_70niv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("83_07m8h")
+}, {
+"duration": 1.0,
+"texture": ExtResource("84_e6l5u")
+}, {
+"duration": 1.0,
+"texture": ExtResource("85_5hask")
+}, {
+"duration": 1.0,
+"texture": ExtResource("86_nq6rq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("87_68qtb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("88_2rluw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("89_vfrg8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("90_eallq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("91_y82my")
+}, {
+"duration": 1.0,
+"texture": ExtResource("92_5mfbu")
+}, {
+"duration": 1.0,
+"texture": ExtResource("93_83nlj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("94_2m4ft")
+}, {
+"duration": 1.0,
+"texture": ExtResource("95_wbp5v")
+}, {
+"duration": 1.0,
+"texture": ExtResource("96_whdkw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("97_88bhm")
+}, {
+"duration": 1.0,
+"texture": ExtResource("98_65mbj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("99_6ytwk")
+}, {
+"duration": 1.0,
+"texture": ExtResource("100_3825k")
+}, {
+"duration": 1.0,
+"texture": ExtResource("101_u677d")
+}, {
+"duration": 1.0,
+"texture": ExtResource("102_sxeo7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("103_6e1xt")
+}, {
+"duration": 1.0,
+"texture": ExtResource("104_dac56")
+}, {
+"duration": 1.0,
+"texture": ExtResource("105_vuckp")
+}, {
+"duration": 1.0,
+"texture": ExtResource("106_bydpm")
+}, {
+"duration": 1.0,
+"texture": ExtResource("107_exiu3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("108_4vm4w")
+}, {
+"duration": 1.0,
+"texture": ExtResource("109_ntu53")
+}, {
+"duration": 1.0,
+"texture": ExtResource("110_acg1r")
+}, {
+"duration": 1.0,
+"texture": ExtResource("111_7y4ns")
+}, {
+"duration": 1.0,
+"texture": ExtResource("112_1qumu")
+}, {
+"duration": 1.0,
+"texture": ExtResource("113_3menn")
+}, {
+"duration": 1.0,
+"texture": ExtResource("114_3itwl")
+}, {
+"duration": 1.0,
+"texture": ExtResource("115_fvffe")
+}, {
+"duration": 1.0,
+"texture": ExtResource("116_qow3x")
+}, {
+"duration": 1.0,
+"texture": ExtResource("117_ma1rl")
 }],
 "loop": true,
 "name": &"Keyboard",
-"speed": 15.0
+"speed": 24.0
 }]
 
 [node name="Control" type="Control"]
@@ -377,7 +657,8 @@ text = "KEY_QUIT"
 position = Vector2(1712, 225)
 scale = Vector2(0.619141, 0.619141)
 sprite_frames = SubResource("SpriteFrames_siscq")
-animation = &"Keyboard"
+animation = &"Controller"
+frame_progress = 0.300894
 script = ExtResource("46_fcyw7")
 
 [connection signal="button_up" from="BoxContainer/HBoxContainer/VBoxContainer/Play" to="." method="_on_play_button_up"]
