@@ -1,0 +1,9 @@
+[gd_scene load_steps=2 format=3 uid="uid://bdpj12txybt65"]
+
+[ext_resource type="Script" path="res://Scenes/MicroGames/New Microgame/kdt_player.gd" id="1_mb88g"]
+
+[node name="KdtPlayer" type="Node3D"]
+script = ExtResource("1_mb88g")
+
+[node name="Camera3D" type="Camera3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 7.96688)

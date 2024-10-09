@@ -1,0 +1,57 @@
+[gd_scene load_steps=7 format=3 uid="uid://twjj0vvb35h7"]
+
+[ext_resource type="PackedScene" uid="uid://dn746pokb2xhh" path="res://Scenes/MicroGames/New Microgame/Tower Physics Cube.tscn" id="1_5460m"]
+[ext_resource type="PackedScene" uid="uid://bdpj12txybt65" path="res://Scenes/MicroGames/New Microgame/KDTPlayer.tscn" id="2_liivg"]
+
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_53sy3"]
+
+[sub_resource type="Sky" id="Sky_0ckvn"]
+sky_material = SubResource("ProceduralSkyMaterial_53sy3")
+
+[sub_resource type="Environment" id="Environment_c7xiv"]
+background_mode = 2
+sky = SubResource("Sky_0ckvn")
+ssao_enabled = true
+sdfgi_enabled = true
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_bevc4"]
+
+[node name="KnockDownTheTower" type="Node3D"]
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 0.815037, 0.579409, 0, -0.579409, 0.815037, 0, 0, 0)
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="DirectionalLight3D"]
+environment = SubResource("Environment_c7xiv")
+
+[node name="Node3D" type="Node3D" parent="."]
+transform = Transform3D(30.5897, 0, 0, 0, 0.196556, 0, 0, 0, 39.5181, 0, 0, 0)
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Node3D"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Node3D/StaticBody3D"]
+shape = SubResource("BoxShape3D_bevc4")
+
+[node name="CSGBox3D" type="CSGBox3D" parent="Node3D/StaticBody3D/CollisionShape3D"]
+
+[node name="TowerPhysicsCube" parent="." instance=ExtResource("1_5460m")]
+transform = Transform3D(0.265343, 0, 0, 0, 1, 0, 0, 0, 0.204602, 1.8581, 1.44252, 2.51071)
+
+[node name="TowerPhysicsCube2" parent="." instance=ExtResource("1_5460m")]
+transform = Transform3D(0.265343, 0, 0, 0, 1, 0, 0, 0, 0.204602, 1.8581, 1.44252, -0.314505)
+
+[node name="TowerPhysicsCube5" parent="." instance=ExtResource("1_5460m")]
+transform = Transform3D(-1.15985e-08, -2.36702, 0, 0.265343, -1.03466e-07, 0, 0, 0, 0.204602, 0.847414, 2.31503, -0.314505)
+
+[node name="TowerPhysicsCube6" parent="." instance=ExtResource("1_5460m")]
+transform = Transform3D(-1.15985e-08, -2.36702, 0, 0.265343, -1.03466e-07, 0, 0, 0, 0.204602, 0.847414, 2.31503, 2.32006)
+
+[node name="TowerPhysicsCube3" parent="." instance=ExtResource("1_5460m")]
+transform = Transform3D(0.265343, 0, 0, 0, 1, 0, 0, 0, 0.204602, -0.491577, 1.44252, 2.51071)
+
+[node name="TowerPhysicsCube4" parent="." instance=ExtResource("1_5460m")]
+transform = Transform3D(0.265343, 0, 0, 0, 1, 0, 0, 0, 0.204602, -0.491577, 1.44252, -0.314505)
+
+[node name="KdtPlayer" parent="." instance=ExtResource("2_liivg")]
+transform = Transform3D(1, 0, 0, 0, 0.910734, 0.412993, 0, -0.412993, 0.910734, 0, 0, 0)
+speed = -0.1
