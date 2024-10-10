@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://drj7e30kqjcmv"]
+
+[ext_resource type="Script" path="res://Scenes/MicroGames/Quick Time Event/qte_manager.gd" id="1_kpdlr"]
+
+[node name="QteMicrogame" type="Node2D"]
+script = ExtResource("1_kpdlr")
+
+[node name="Timer" type="Timer" parent="."]
