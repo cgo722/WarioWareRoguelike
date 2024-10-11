@@ -7,7 +7,9 @@ class_name sceneChanger
 "res://Scenes/MicroGames/Tag3D.tscn", "res://Scenes/MicroGames/Fishing/Fishing.tscn",
 "res://Scenes/MicroGames/Dont Drop The Soup/Dont Drop the Soup.tscn", "res://Scenes/MicroGames/Collapsing Bridge/CollapsingBridge.tscn",
 "res://Scenes/MicroGames/Spam Space Bar Game/SpamSpaceBarGame.tscn", "res://Scenes/MicroGames/Pull the sword out of the stone/Pull the sword out of the Stone.tscn"]
+@onready var debugLevels := ["res://Scenes/MicroGames/Quick Time Event/QTE Microgame.tscn"]
 @export var demo : bool
+@export var debug : bool
 @export var mobile : bool
 var Bag := []
 var loadedLevel
@@ -77,6 +79,10 @@ func NewScene():
 	var loadlevel = ResourceLoader.load_threaded_request(Bag[levelSel])
 	loadedLevel = ResourceLoader.load_threaded_get(Bag[levelSel])
 	if Bag.size() <= 1:
+		if debug == true:
+			Bag += debugLevels
+		else:
+			Bag += FullGameLevels
 		if demo == true:
 			Bag += DemoLevels
 		else:

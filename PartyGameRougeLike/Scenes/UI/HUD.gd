@@ -2,6 +2,8 @@ extends Control
 
 @onready var gamemanager = get_node("/root/GameManager")
 @onready var timer : Timer
+var oldscore : float
+@onready var wavyTexture := load("res://Assets/Materials/Wavy UI.gdshader")
 @onready var stats := [$Panel/VBoxContainer/HSplitContainer/Label2, $Panel/VBoxContainer/HSplitContainer2/Label3,
 $Panel/VBoxContainer/HSplitContainer3/Label5, $Panel/VBoxContainer/HSplitContainer4/Label6, $Panel/VBoxContainer/HSplitContainer5/Label7, $Panel/VBoxContainer/HSplitContainer6/Label7]
 # Called when the node enters the scene tree for the first time.
@@ -21,4 +23,13 @@ func _process(_delta):
 	stats[3].text = str(gamemanager.otherSpeed3D)
 	stats[4].text = str(gamemanager.otherSpeed2D)
 	stats[5].text = str(gamemanager.roundLength)
+	if gamemanager.score != oldscore:
+		$"HBoxContainer/HSplitContainer3/Score Text".material.set_shader_param("height", 50)
+		print("69")
+		oldscore = gamemanager.score
 	pass
+
+
+func _on_timer_timeout() -> void:
+	
+	pass # Replace with function body.

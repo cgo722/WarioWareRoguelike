@@ -1,0 +1,14 @@
+[gd_scene load_steps=3 format=3 uid="uid://hnxd0xuqnani"]
+
+[ext_resource type="Script" path="res://Scenes/MicroGames/New Microgame/bomb.gd" id="1_i8v88"]
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_fw7hs"]
+
+[node name="Bomb" type="RigidBody3D"]
+script = ExtResource("1_i8v88")
+speed = 5.0
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+shape = SubResource("SphereShape3D_fw7hs")
+
+[node name="CSGSphere3D" type="CSGSphere3D" parent="CollisionShape3D"]

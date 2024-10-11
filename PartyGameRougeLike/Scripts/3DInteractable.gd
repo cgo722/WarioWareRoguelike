@@ -6,6 +6,7 @@ var ranPos
 var locations = [Vector3(-0.2, 7.2, -13.9), Vector3(12.6, 7.8, -19.9), Vector3(22.3, 6.4, -4.5), Vector3(-6.4, 9.1, -2.5), Vector3(-11.7, 1.9, -1.9)]
 @onready var anim = $AnimationPlayer
 @onready var spawnParticles := $PuffSmoke
+@onready var shaker := get_parent().get_parent().get_child(2).get_child(1)
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	Bag()
@@ -26,12 +27,10 @@ func _process(_delta):
 	pass
 
 
-
-
-
 func _on_area_3d_body_entered(_body):
 	gamemanager.completed = true
 	gamemanager.score += 100
 	Bag()
 	spawnParticles.emitting = true
+	shaker.play_shake()
 	pass # Replace with function body.

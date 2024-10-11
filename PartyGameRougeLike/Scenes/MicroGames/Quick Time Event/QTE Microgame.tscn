@@ -4,5 +4,14 @@
 
 [node name="QteMicrogame" type="Node2D"]
 script = ExtResource("1_kpdlr")
+waitTime = 5.0
+failTime = 2.0
 
 [node name="Timer" type="Timer" parent="."]
+one_shot = true
+
+[node name="Timer2" type="Timer" parent="."]
+one_shot = true
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
+[connection signal="timeout" from="Timer2" to="." method="_on_timer_2_timeout"]

@@ -3,6 +3,7 @@ extends Node3D
 @onready var camera_3d: Camera3D = $Camera3D
 @export var speed : float
 @export var shotSpeed : float
+@export var bullet : PackedScene
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	pass # Replace with function body.
@@ -17,5 +18,8 @@ func _process(delta: float) -> void:
 	if directionX:
 		rotation.y += (directionX * -speed)
 	if Input.is_action_just_pressed("jump"):
+		var bulletInstance = bullet.instantiate()
+		camera_3d.add_child(bulletInstance)
+		
 		pass
 	pass

@@ -35,23 +35,28 @@ shape = SubResource("BoxShape3D_bevc4")
 [node name="CSGBox3D" type="CSGBox3D" parent="Node3D/StaticBody3D/CollisionShape3D"]
 
 [node name="TowerPhysicsCube" parent="." instance=ExtResource("1_5460m")]
-transform = Transform3D(0.265343, 0, 0, 0, 1, 0, 0, 0, 0.204602, 1.8581, 1.44252, 2.51071)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.8581, 1.44252, 2.51071)
+
+[node name="CollisionShape3D" parent="TowerPhysicsCube/RigidBody3D" index="0"]
+transform = Transform3D(1, 0, 0, 0, 3.11317, 0, 0, 0, 1, 0.00576639, 1.16277, -0.0190382)
 
 [node name="TowerPhysicsCube2" parent="." instance=ExtResource("1_5460m")]
-transform = Transform3D(0.265343, 0, 0, 0, 1, 0, 0, 0, 0.204602, 1.8581, 1.44252, -0.314505)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.8581, 1.44252, -1.67542)
 
-[node name="TowerPhysicsCube5" parent="." instance=ExtResource("1_5460m")]
-transform = Transform3D(-1.15985e-08, -2.36702, 0, 0.265343, -1.03466e-07, 0, 0, 0, 0.204602, 0.847414, 2.31503, -0.314505)
-
-[node name="TowerPhysicsCube6" parent="." instance=ExtResource("1_5460m")]
-transform = Transform3D(-1.15985e-08, -2.36702, 0, 0.265343, -1.03466e-07, 0, 0, 0, 0.204602, 0.847414, 2.31503, 2.32006)
+[node name="CollisionShape3D" parent="TowerPhysicsCube2/RigidBody3D" index="0"]
+transform = Transform3D(1, 0, 0, 0, 3.73938, 0, 0, 0, 1, 0.00014019, 0.618147, -0.0227497)
 
 [node name="TowerPhysicsCube3" parent="." instance=ExtResource("1_5460m")]
-transform = Transform3D(0.265343, 0, 0, 0, 1, 0, 0, 0, 0.204602, -0.491577, 1.44252, 2.51071)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.8581, 3.47473, 0.487039)
 
-[node name="TowerPhysicsCube4" parent="." instance=ExtResource("1_5460m")]
-transform = Transform3D(0.265343, 0, 0, 0, 1, 0, 0, 0, 0.204602, -0.491577, 1.44252, -0.314505)
+[node name="CollisionShape3D" parent="TowerPhysicsCube3/RigidBody3D" index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 4.91509, 0, 1.23708, 0)
 
 [node name="KdtPlayer" parent="." instance=ExtResource("2_liivg")]
 transform = Transform3D(1, 0, 0, 0, 0.910734, 0.412993, 0, -0.412993, 0.910734, 0, 0, 0)
 speed = -0.1
+
+[editable path="TowerPhysicsCube"]
+[editable path="TowerPhysicsCube2"]
+[editable path="TowerPhysicsCube3"]
+[editable path="KdtPlayer"]
