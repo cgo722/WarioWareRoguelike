@@ -81,8 +81,6 @@ func NewScene():
 	if Bag.size() <= 1:
 		if debug == true:
 			Bag += debugLevels
-		else:
-			Bag += FullGameLevels
 		if demo == true:
 			Bag += DemoLevels
 		else:

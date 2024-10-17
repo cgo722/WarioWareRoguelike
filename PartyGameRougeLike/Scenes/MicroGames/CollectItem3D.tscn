@@ -150,10 +150,10 @@ script = ExtResource("1_bup1j")
 transform = Transform3D(0.999991, -0.00358343, 0.0022564, 0.00358075, 0.999993, 0.00119232, -0.00226065, -0.00118424, 0.999997, 0, 1.99292, 0)
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
-transform = Transform3D(0.975783, -0.0854567, -0.201359, 0.197939, 0.736767, 0.646525, 0.093105, -0.670725, 0.735839, 0, 0, 0)
+transform = Transform3D(0.975783, -0.0854565, -0.201359, 0.0375969, -0.84131, 0.539244, -0.215488, -0.533756, -0.817722, 0, 0, 0)
 shadow_enabled = true
 shadow_bias = 0.0
-shadow_normal_bias = 3.466
+shadow_normal_bias = 10.0
 
 [node name="Camera3D" type="Camera3D" parent="."]
 transform = Transform3D(0.927836, 0.198602, -0.315717, -3.53277e-10, 0.846453, 0.532463, 0.372988, -0.494038, 0.78537, -3.328, 21.857, 17.222)

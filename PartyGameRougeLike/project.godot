@@ -27,6 +27,7 @@ LocalizationManager="*res://addons/localization_editor/LocalizationManager.gd"
 
 window/size/viewport_width=1920
 window/size/viewport_height=1080
+window/size/mode=3
 window/stretch/mode="viewport"
 window/dpi/allow_hidpi=false
 
@@ -117,7 +118,7 @@ locale/translations=PackedStringArray("res://localization/localizations.en.trans
 [localization_editor]
 
 translations_save_auth=false
-translations_split_offset=515
+translations_split_offset=175
 
 [physics]
 

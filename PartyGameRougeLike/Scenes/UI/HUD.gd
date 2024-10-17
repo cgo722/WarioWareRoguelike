@@ -24,7 +24,7 @@ func _process(_delta):
 	stats[4].text = str(gamemanager.otherSpeed2D)
 	stats[5].text = str(gamemanager.roundLength)
 	if gamemanager.score != oldscore:
-		$"HBoxContainer/HSplitContainer3/Score Text".material.set_shader_param("height", 50)
+		#$"HBoxContainer/HSplitContainer3/Score Text".material.set_shader_param("height", 50)
 		print("69")
 		oldscore = gamemanager.score
 	pass
