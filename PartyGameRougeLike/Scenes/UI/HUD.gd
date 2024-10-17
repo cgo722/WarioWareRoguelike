@@ -1,9 +1,13 @@
 extends Control
-
+signal scoreChange
+signal pof
 @onready var gamemanager = get_node("/root/GameManager")
 @onready var timer : Timer
-var oldscore : float
+@export var VFX := []
+var oldscore : float = 0
+@onready var pfl: Sprite2D = $CanvasLayer/PassOrFailLIght
 @onready var wavyTexture := load("res://Assets/Materials/Wavy UI.gdshader")
+@export var lights := ["res://Assets/UIpack/Red Light.png", "res://Assets/UIpack/Green Light.png"]
 @onready var stats := [$Panel/VBoxContainer/HSplitContainer/Label2, $Panel/VBoxContainer/HSplitContainer2/Label3,
 $Panel/VBoxContainer/HSplitContainer3/Label5, $Panel/VBoxContainer/HSplitContainer4/Label6, $Panel/VBoxContainer/HSplitContainer5/Label7, $Panel/VBoxContainer/HSplitContainer6/Label7]
 # Called when the node enters the scene tree for the first time.
@@ -27,6 +31,12 @@ func _process(_delta):
 		#$"HBoxContainer/HSplitContainer3/Score Text".material.set_shader_param("height", 50)
 		print("69")
 		oldscore = gamemanager.score
+		emit_signal("scoreChange")
+	if gamemanager.completed == false:
+		pfl.texture = load(lights[0])
+	if gamemanager.completed == true:
+		pfl.texture = load(lights[1])
+		emit_signal("pof")
 	pass
 
 

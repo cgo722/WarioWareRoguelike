@@ -11,6 +11,6 @@ func _input(event: InputEvent) -> void:
 		contr = true
 func  _process(delta: float) -> void:
 	if contr == false:
-		label.text = "KEY_SKIP_K" + " " + str(gamemanager.skipCost) + " " + "KEY_FROM_SCORE"
+		label.text = tr("KEY_SKIP_K") + " " + str(gamemanager.skipCost) + " " + tr("KEY_FROM_SCORE")
 	else:
-		label.text = "KEY_SKIP_C" + " " + str(gamemanager.skipCost) + " " + "KEY_FROM_SCORE"
+		label.text = tr("KEY_SKIP_C") + " " + str(gamemanager.skipCost) + " " + tr("KEY_FROM_SCORE")

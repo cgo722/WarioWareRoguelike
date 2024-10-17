@@ -1,7 +1,11 @@
-[gd_scene load_steps=4 format=3 uid="uid://ci0l71vlryhg5"]
+[gd_scene load_steps=8 format=3 uid="uid://ci0l71vlryhg5"]
 
 [ext_resource type="Script" path="res://Scenes/UI/HUD.gd" id="1_7woku"]
 [ext_resource type="Theme" uid="uid://vtocky5omcns" path="res://Assets/UIpack/DefaultTheme.tres" id="2_a748c"]
+[ext_resource type="Texture2D" uid="uid://b2angytfioekg" path="res://Assets/UIpack/Red Light.png" id="3_bl6lj"]
+[ext_resource type="SpriteFrames" uid="uid://dnna8gewyhwit" path="res://Assets/UIpack/Animated Squiggles/Animated Squiggles.tres" id="4_vnemt"]
+[ext_resource type="Script" path="res://Scenes/UI/pofl.gd" id="5_pga4f"]
+[ext_resource type="Script" path="res://Scenes/UI/ScoreChangeVFX.gd" id="6_ilvm2"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_arum8"]
 bg_color = Color(0.454902, 0.270588, 0.498039, 0.231373)
@@ -18,6 +22,7 @@ z_index = 4096
 layout_mode = 3
 anchors_preset = 0
 script = ExtResource("1_7woku")
+VFX = [NodePath("CanvasLayer/Node2D/AnimatedSprite2D"), NodePath("CanvasLayer/Node2D/AnimatedSprite2D6"), NodePath("CanvasLayer/Node2D/AnimatedSprite2D5"), NodePath("CanvasLayer/Node2D/AnimatedSprite2D7"), NodePath("CanvasLayer/Node2D/AnimatedSprite2D8"), NodePath("CanvasLayer/Node2D/AnimatedSprite2D2"), NodePath("CanvasLayer/Node2D/AnimatedSprite2D4"), NodePath("CanvasLayer/Node2D/AnimatedSprite2D3"), null]
 
 [node name="HBoxContainer" type="HBoxContainer" parent="."]
 layout_mode = 0
@@ -178,4 +183,115 @@ text = "1"
 
 [node name="Timer" type="Timer" parent="."]
 
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="PassOrFailLIght" type="Sprite2D" parent="CanvasLayer"]
+position = Vector2(1760.7, 534.502)
+scale = Vector2(3.08514, 3.02508)
+texture = ExtResource("3_bl6lj")
+
+[node name="Node2D" type="Node2D" parent="CanvasLayer"]
+position = Vector2(1761.7, 535.502)
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="CanvasLayer/Node2D"]
+position = Vector2(-1, 94)
+scale = Vector2(0.471973, 0.471973)
+sprite_frames = ExtResource("4_vnemt")
+animation = &"Squiggle"
+frame = 12
+frame_progress = 1.0
+script = ExtResource("5_pga4f")
+
+[node name="AnimatedSprite2D6" type="AnimatedSprite2D" parent="CanvasLayer/Node2D"]
+position = Vector2(-65.7028, 59.4984)
+rotation = 0.764281
+scale = Vector2(0.471973, 0.308277)
+sprite_frames = ExtResource("4_vnemt")
+animation = &"Squiggle"
+frame = 12
+frame_progress = 1.0
+script = ExtResource("5_pga4f")
+
+[node name="AnimatedSprite2D5" type="AnimatedSprite2D" parent="CanvasLayer/Node2D"]
+position = Vector2(56.4556, 53.3659)
+rotation = -0.750502
+scale = Vector2(0.471973, 0.210368)
+sprite_frames = ExtResource("4_vnemt")
+animation = &"Squiggle"
+frame = 12
+frame_progress = 1.0
+script = ExtResource("5_pga4f")
+
+[node name="AnimatedSprite2D7" type="AnimatedSprite2D" parent="CanvasLayer/Node2D"]
+position = Vector2(59.2973, -53.5017)
+rotation = -2.32774
+scale = Vector2(0.471973, 0.210368)
+sprite_frames = ExtResource("4_vnemt")
+animation = &"Squiggle"
+frame = 12
+frame_progress = 1.0
+script = ExtResource("5_pga4f")
+
+[node name="AnimatedSprite2D8" type="AnimatedSprite2D" parent="CanvasLayer/Node2D"]
+position = Vector2(-62.7027, -57.5017)
+rotation = -3.93338
+scale = Vector2(0.471973, 0.210368)
+sprite_frames = ExtResource("4_vnemt")
+animation = &"Squiggle"
+frame = 12
+frame_progress = 1.0
+script = ExtResource("5_pga4f")
+
+[node name="AnimatedSprite2D2" type="AnimatedSprite2D" parent="CanvasLayer/Node2D"]
+position = Vector2(102, -1)
+rotation = -1.5708
+scale = Vector2(0.471973, 0.471973)
+sprite_frames = ExtResource("4_vnemt")
+animation = &"Squiggle"
+frame = 12
+frame_progress = 1.0
+script = ExtResource("5_pga4f")
+
+[node name="AnimatedSprite2D4" type="AnimatedSprite2D" parent="CanvasLayer/Node2D"]
+position = Vector2(-1, -105)
+rotation = -3.14159
+scale = Vector2(0.471973, 0.471973)
+sprite_frames = ExtResource("4_vnemt")
+animation = &"Squiggle"
+frame = 12
+frame_progress = 1.0
+script = ExtResource("5_pga4f")
+
+[node name="AnimatedSprite2D3" type="AnimatedSprite2D" parent="CanvasLayer/Node2D"]
+position = Vector2(-102, -1)
+rotation = 1.5708
+scale = Vector2(0.471973, 0.471973)
+sprite_frames = ExtResource("4_vnemt")
+animation = &"Squiggle"
+frame = 12
+frame_progress = 1.0
+script = ExtResource("5_pga4f")
+
+[node name="Node2D2" type="Node2D" parent="CanvasLayer"]
+position = Vector2(1151, 67)
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="CanvasLayer/Node2D2"]
+position = Vector2(-190, 62)
+rotation = -1.5708
+scale = Vector2(0.471973, 3.27197)
+sprite_frames = ExtResource("4_vnemt")
+animation = &"Squiggle"
+frame = 12
+frame_progress = 1.0
+script = ExtResource("6_ilvm2")
+
+[connection signal="pof" from="." to="CanvasLayer/Node2D/AnimatedSprite2D" method="_on_hud_pof"]
+[connection signal="pof" from="." to="CanvasLayer/Node2D/AnimatedSprite2D2" method="_on_hud_pof"]
+[connection signal="pof" from="." to="CanvasLayer/Node2D/AnimatedSprite2D3" method="_on_hud_pof"]
+[connection signal="pof" from="." to="CanvasLayer/Node2D/AnimatedSprite2D4" method="_on_hud_pof"]
+[connection signal="pof" from="." to="CanvasLayer/Node2D/AnimatedSprite2D5" method="_on_hud_pof"]
+[connection signal="pof" from="." to="CanvasLayer/Node2D/AnimatedSprite2D6" method="_on_hud_pof"]
+[connection signal="pof" from="." to="CanvasLayer/Node2D/AnimatedSprite2D7" method="_on_hud_pof"]
+[connection signal="pof" from="." to="CanvasLayer/Node2D/AnimatedSprite2D8" method="_on_hud_pof"]
+[connection signal="scoreChange" from="." to="CanvasLayer/Node2D2/AnimatedSprite2D" method="_on_hud_score_change"]
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

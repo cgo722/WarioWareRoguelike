@@ -20,6 +20,7 @@ sdfgi_enabled = true
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 0.815037, 0.579409, 0, -0.579409, 0.815037, 0, 0, 0)
+shadow_enabled = true
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="DirectionalLight3D"]
 environment = SubResource("Environment_c7xiv")
