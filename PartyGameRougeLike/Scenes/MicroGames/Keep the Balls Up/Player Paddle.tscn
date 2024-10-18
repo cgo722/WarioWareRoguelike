@@ -1,0 +1,23 @@
+[gd_scene load_steps=5 format=3 uid="uid://cm4sm3s3rh0ho"]
+
+[ext_resource type="Script" path="res://Scenes/MicroGames/Keep the Balls Up/player_paddle.gd" id="1_eq6x0"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_iomw7"]
+size = Vector2(64, 64)
+
+[sub_resource type="Gradient" id="Gradient_x1k3h"]
+colors = PackedColorArray(1, 1, 1, 1, 1, 1, 1, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_jcct6"]
+gradient = SubResource("Gradient_x1k3h")
+
+[node name="PlayerPaddle" type="CharacterBody2D"]
+scale = Vector2(5.85457, 0.469714)
+motion_mode = 1
+script = ExtResource("1_eq6x0")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_iomw7")
+
+[node name="Sprite2D" type="Sprite2D" parent="CollisionShape2D"]
+texture = SubResource("GradientTexture2D_jcct6")

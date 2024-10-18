@@ -1,0 +1,20 @@
+[gd_scene load_steps=4 format=3 uid="uid://bs3fedjfvi0ah"]
+
+[ext_resource type="Texture2D" uid="uid://b2angytfioekg" path="res://Assets/UIpack/Red Light.png" id="1_hqc0v"]
+[ext_resource type="Script" path="res://Scenes/MicroGames/Keep the Balls Up/ball.gd" id="1_pksa3"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_23eft"]
+radius = 16.0312
+
+[node name="Ball" type="RigidBody2D"]
+center_of_mass_mode = 1
+freeze_mode = 1
+script = ExtResource("1_pksa3")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_23eft")
+
+[node name="Sprite2D" type="Sprite2D" parent="CollisionShape2D"]
+texture = ExtResource("1_hqc0v")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

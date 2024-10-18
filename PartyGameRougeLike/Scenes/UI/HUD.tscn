@@ -286,12 +286,12 @@ frame_progress = 1.0
 script = ExtResource("6_ilvm2")
 
 [connection signal="pof" from="." to="CanvasLayer/Node2D/AnimatedSprite2D" method="_on_hud_pof"]
-[connection signal="pof" from="." to="CanvasLayer/Node2D/AnimatedSprite2D2" method="_on_hud_pof"]
-[connection signal="pof" from="." to="CanvasLayer/Node2D/AnimatedSprite2D3" method="_on_hud_pof"]
-[connection signal="pof" from="." to="CanvasLayer/Node2D/AnimatedSprite2D4" method="_on_hud_pof"]
-[connection signal="pof" from="." to="CanvasLayer/Node2D/AnimatedSprite2D5" method="_on_hud_pof"]
 [connection signal="pof" from="." to="CanvasLayer/Node2D/AnimatedSprite2D6" method="_on_hud_pof"]
+[connection signal="pof" from="." to="CanvasLayer/Node2D/AnimatedSprite2D5" method="_on_hud_pof"]
 [connection signal="pof" from="." to="CanvasLayer/Node2D/AnimatedSprite2D7" method="_on_hud_pof"]
 [connection signal="pof" from="." to="CanvasLayer/Node2D/AnimatedSprite2D8" method="_on_hud_pof"]
+[connection signal="pof" from="." to="CanvasLayer/Node2D/AnimatedSprite2D2" method="_on_hud_pof"]
+[connection signal="pof" from="." to="CanvasLayer/Node2D/AnimatedSprite2D4" method="_on_hud_pof"]
+[connection signal="pof" from="." to="CanvasLayer/Node2D/AnimatedSprite2D3" method="_on_hud_pof"]
 [connection signal="scoreChange" from="." to="CanvasLayer/Node2D2/AnimatedSprite2D" method="_on_hud_score_change"]
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
