@@ -17,6 +17,7 @@ stream_3 = ExtResource("6_q3q6n")
 
 [node name="Node" type="Node"]
 script = ExtResource("1_xybyd")
+demo = true
 
 [node name="GameTimer" type="Timer" parent="."]
 wait_time = 15.0
