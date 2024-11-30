@@ -21,6 +21,7 @@ func _process(delta: float) -> void:
 		var bulletInstance = bullet.instantiate()
 		get_parent().add_child(bulletInstance)
 		bulletInstance.position = camera_3d.global_position
-		bulletInstance.rotation = camera_3d.global_rotation
+		bulletInstance.rotation = rotation
+
 		pass
 	pass
