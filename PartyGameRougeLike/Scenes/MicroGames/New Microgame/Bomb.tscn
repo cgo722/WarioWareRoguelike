@@ -6,7 +6,7 @@
 
 [node name="Bomb" type="RigidBody3D"]
 script = ExtResource("1_i8v88")
-speed = 5.0
+speed = 50.0
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
 shape = SubResource("SphereShape3D_fw7hs")

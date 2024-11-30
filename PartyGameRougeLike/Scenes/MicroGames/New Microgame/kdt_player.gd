@@ -19,7 +19,8 @@ func _process(delta: float) -> void:
 		rotation.y += (directionX * -speed)
 	if Input.is_action_just_pressed("jump"):
 		var bulletInstance = bullet.instantiate()
-		camera_3d.add_child(bulletInstance)
-		
+		get_parent().add_child(bulletInstance)
+		bulletInstance.position = camera_3d.global_position
+		bulletInstance.rotation = camera_3d.global_rotation
 		pass
 	pass
