@@ -1,6 +1,10 @@
-[gd_scene load_steps=5 format=3 uid="uid://cm4sm3s3rh0ho"]
+[gd_scene load_steps=6 format=3 uid="uid://cm4sm3s3rh0ho"]
 
-[ext_resource type="Script" path="res://Scenes/MicroGames/Keep the Balls Up/player_paddle.gd" id="1_eq6x0"]
+[ext_resource type="Script" path="res://Scenes/MicroGames/Keep the Balls Up/Player Paddle.gd" id="1_jwf6i"]
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_3wn6l"]
+friction = 0.0
+bounce = 1.0
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_iomw7"]
 size = Vector2(64, 64)
@@ -11,12 +15,12 @@ colors = PackedColorArray(1, 1, 1, 1, 1, 1, 1, 1)
 [sub_resource type="GradientTexture2D" id="GradientTexture2D_jcct6"]
 gradient = SubResource("Gradient_x1k3h")
 
-[node name="PlayerPaddle" type="CharacterBody2D"]
-scale = Vector2(5.85457, 0.469714)
-motion_mode = 1
-script = ExtResource("1_eq6x0")
+[node name="AnimatableBody2D" type="AnimatableBody2D"]
+physics_material_override = SubResource("PhysicsMaterial_3wn6l")
+script = ExtResource("1_jwf6i")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+scale = Vector2(5.85457, 0.469714)
 shape = SubResource("RectangleShape2D_iomw7")
 
 [node name="Sprite2D" type="Sprite2D" parent="CollisionShape2D"]
