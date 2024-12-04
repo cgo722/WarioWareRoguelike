@@ -1,6 +1,8 @@
 extends AnimatableBody2D
 
-@export var speed : float
+@onready var gamemanager := get_node("/root/GameManager")
+
+@onready var speed : float = 15 * gamemanager.playerSpeed2D
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	#speed *= gamemanager.playerSpeed2d

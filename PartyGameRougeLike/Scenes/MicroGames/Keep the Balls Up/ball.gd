@@ -1,6 +1,8 @@
 extends RigidBody2D
 
-var speed : float = 1000
+@onready var gamemanager := get_node("/root/GameManager")
+
+@onready var speed : float = 1000 * gamemanager.otherSpeed2D
 var vel : float = 750
 var down : bool
 # Called when the node enters the scene tree for the first time.

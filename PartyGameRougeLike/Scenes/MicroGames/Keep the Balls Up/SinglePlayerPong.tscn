@@ -1,5 +1,6 @@
-[gd_scene load_steps=6 format=3 uid="uid://cxhmwjtlx0l33"]
+[gd_scene load_steps=7 format=3 uid="uid://cxhmwjtlx0l33"]
 
+[ext_resource type="Script" path="res://Scenes/MicroGames/Keep the Balls Up/single_player_pong_Gamemanager.gd" id="1_lk5se"]
 [ext_resource type="PackedScene" uid="uid://bs3fedjfvi0ah" path="res://Scenes/MicroGames/Keep the Balls Up/Ball.tscn" id="1_nukql"]
 [ext_resource type="PackedScene" uid="uid://cm4sm3s3rh0ho" path="res://Scenes/MicroGames/Keep the Balls Up/Player Paddle.tscn" id="2_p2xuo"]
 
@@ -14,13 +15,15 @@ size = Vector2(171, 1078)
 size = Vector2(2162, 171)
 
 [node name="SinglePlayerPong" type="Node2D"]
+script = ExtResource("1_lk5se")
+balls = ExtResource("1_nukql")
+startLocale = Vector2(952, 145)
 
 [node name="Ball" parent="." instance=ExtResource("1_nukql")]
 position = Vector2(952, 145)
 
 [node name="PlayerPaddle" parent="." instance=ExtResource("2_p2xuo")]
 position = Vector2(968, 985)
-speed = 10.0
 
 [node name="StaticBody2D" type="StaticBody2D" parent="."]
 position = Vector2(0, 512)
@@ -31,7 +34,7 @@ position = Vector2(-85, 27)
 shape = SubResource("RectangleShape2D_y20x8")
 
 [node name="StaticBody2D2" type="StaticBody2D" parent="."]
-position = Vector2(1916, 512)
+position = Vector2(2008, 510)
 physics_material_override = SubResource("PhysicsMaterial_ojsdr")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D2"]
@@ -44,3 +47,8 @@ physics_material_override = SubResource("PhysicsMaterial_ojsdr")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D3"]
 position = Vector2(-44, -60.5)
 shape = SubResource("RectangleShape2D_s6x6i")
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 3.0
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
