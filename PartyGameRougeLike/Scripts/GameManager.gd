@@ -24,10 +24,11 @@ var enemySize2D : float = 1.0
 var playerSize3D : float = 1.0
 var playerSize2D : float = 1.0
 var jumpStrength : float = 1.0
+var frequency : float = 1.0
 
 var playerHealth : int
 var unitNumbers : int
-
+var ballNumbers : int
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	completed = false

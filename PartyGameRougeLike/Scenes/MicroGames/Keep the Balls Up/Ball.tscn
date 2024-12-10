@@ -18,6 +18,8 @@ freeze_mode = 1
 contact_monitor = true
 max_contacts_reported = 1
 script = ExtResource("1_pksa3")
+min = 1200.0
+scoreIncrease = 50.0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("CircleShape2D_23eft")
@@ -26,3 +28,4 @@ shape = SubResource("CircleShape2D_23eft")
 texture = ExtResource("1_hqc0v")
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="tree_exiting" from="." to="." method="_on_tree_exiting"]

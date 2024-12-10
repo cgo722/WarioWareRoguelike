@@ -11,7 +11,7 @@ extends Node
 "MRLU", "MPHU", "JFUSpdD", "JFUOSpdU", "MJFU", "JpU", "SpdU", "SpdURLD", "SpdUJFD", "RLU", "RLD", "RluSpdD", "PHU", "TR", "MSpdU", 
 "MRLU", "JFUSpdD", "JFUOSpdU", "MJFU", "JpU", "SpdU", "SpdURLD", "SpdUJFD", "RLU", "RLD", "RluSpdD", "MSpdU", 
 "MRLU", "JFUSpdD", "JFUOSpdU", "MJFU", "JpU", "SpdU", "SpdURLD", "SpdUJFD", "RLU", "RLD", "RluSpdD", "PHU", "TR", "MSpdU", 
-"MRLU", "MPHU", "JFUSpdD", "JFUOSpdU", "MJFU", "JpU"]
+"MRLU", "MPHU", "JFUSpdD", "JFUOSpdU", "MJFU", "JpU"] #create frequency items. Frequency is both a good thing and a bad thing.
 
 @onready var effect : String
 

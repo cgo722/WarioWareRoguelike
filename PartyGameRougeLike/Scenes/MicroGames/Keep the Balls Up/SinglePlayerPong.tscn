@@ -18,6 +18,7 @@ size = Vector2(2162, 171)
 script = ExtResource("1_lk5se")
 balls = ExtResource("1_nukql")
 startLocale = Vector2(952, 145)
+failPoint = 5
 
 [node name="Ball" parent="." instance=ExtResource("1_nukql")]
 position = Vector2(952, 145)
@@ -49,6 +50,7 @@ position = Vector2(-44, -60.5)
 shape = SubResource("RectangleShape2D_s6x6i")
 
 [node name="Timer" type="Timer" parent="."]
-wait_time = 3.0
+wait_time = 5.0
+autostart = true
 
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
