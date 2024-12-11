@@ -11,7 +11,7 @@ extends Node
 "MRLU", "MPHU", "JFUSpdD", "JFUOSpdU", "MJFU", "JpU", "SpdU", "SpdURLD", "SpdUJFD", "RLU", "RLD", "RluSpdD", "PHU", "TR", "MSpdU", 
 "MRLU", "JFUSpdD", "JFUOSpdU", "MJFU", "JpU", "SpdU", "SpdURLD", "SpdUJFD", "RLU", "RLD", "RluSpdD", "MSpdU", 
 "MRLU", "JFUSpdD", "JFUOSpdU", "MJFU", "JpU", "SpdU", "SpdURLD", "SpdUJFD", "RLU", "RLD", "RluSpdD", "PHU", "TR", "MSpdU", 
-"MRLU", "MPHU", "JFUSpdD", "JFUOSpdU", "MJFU", "JpU"] #create frequency items. Frequency is both a good thing and a bad thing.
+"MRLU", "MPHU", "JFUSpdD", "JFUOSpdU", "MJFU", "JpU", "FU", "FUSpdD", "FURLD", "FUJFD", "MFU", "MFD", "SpdUFD", "RLUFD", "JFUFD"] #Need to create more round length adjusting powerups theres only one that increase round length and makes other stats go down
 
 @onready var effect : String
 
@@ -33,7 +33,7 @@ var descText : String
 "res://Assets/UIpack/789_Lorc_RPG_icons/Icon.4_64.png"]
 
 var buttonPressed : bool
-# Called when the node enters the scene tree for the first time.
+#Need to create the localization descriptoions and names
 func _ready():
 	buttonPressed = false
 	effect = effectNames.pick_random()
@@ -97,6 +97,33 @@ func _ready():
 		buttonText = "KEY_JPU"
 		descText = "DESC_JPU"
 		sprite_2d.texture = load(Sprites[14])
+	if effect == "FU":
+		buttonText = " "
+		descText = " "
+	if effect == "FUSpdD":
+		buttonText = " "
+		descText = " "
+	if effect == "FURLD":
+		buttonText = " "
+		descText = " "
+	if effect == "FUJFD":
+		buttonText = " "
+		descText = " "
+	if effect == "MFU":
+		buttonText = " "
+		descText = " "
+	if effect == "MFD":
+		buttonText = " "
+		descText = " "
+	if effect == "SpdUFD":
+		buttonText = " "
+		descText = " "
+	if effect == "RLUFD":
+		buttonText = " "
+		descText = " "
+	if effect == "JFUFD":
+		buttonText = " "
+		descText = " "
 	button.text = buttonText
 	descBox.text = descText
 	pass # Replace with function body.
@@ -173,6 +200,34 @@ func _on_button_button_up():
 			
 		if effect == "JpU":
 			gamemanager.jumpStrength += 0.05
+		if effect == "FU":
+			gamemanager.frequency += 0.05
+		if effect == "FUSpdD":
+			gamemanager.frequency -= 0.2
+			gamemanager.otherSpeed3D -= 0.25
+			gamemanager.otherSpeed2D -= 0.25
+		if effect == "FURLD":
+			gamemanager.frequency -= 0.2
+			gamemanager.roundLength -= 0.25
+		if effect == "FUJFD":
+			gamemanager.frequency -= 0.2
+			gamemanager.jumpStrength -= 0.25
+		if effect == "MFU":
+			gamemanager.frequency -= 1
+			gamemanager.playerHealth -= 1
+		if effect == "MFD":
+			gamemanager.frequency += 1
+			gamemanager.playerHealth -= 1
+		if effect == "SpdUFD":
+			gamemanager.otherSpeed3D += 0.2
+			gamemanager.otherSpeed2D += 0.2
+			gamemanager.frequency += 0.3
+		if effect == "RLUFD":
+			gamemanager.roundLength += 0.2
+			gamemanager.frequency += 0.3
+		if effect == "JFUFD":
+			gamemanager.jumpStrength += 0.2
+			gamemanager.frequency += 0.3
 		get_tree().paused = false
 		upgrade_timer.start()
 	pass # Replace with function body.
