@@ -11,7 +11,9 @@ extends Node
 "MRLU", "MPHU", "JFUSpdD", "JFUOSpdU", "MJFU", "JpU", "SpdU", "SpdURLD", "SpdUJFD", "RLU", "RLD", "RluSpdD", "PHU", "TR", "MSpdU", 
 "MRLU", "JFUSpdD", "JFUOSpdU", "MJFU", "JpU", "SpdU", "SpdURLD", "SpdUJFD", "RLU", "RLD", "RluSpdD", "MSpdU", 
 "MRLU", "JFUSpdD", "JFUOSpdU", "MJFU", "JpU", "SpdU", "SpdURLD", "SpdUJFD", "RLU", "RLD", "RluSpdD", "PHU", "TR", "MSpdU", 
-"MRLU", "MPHU", "JFUSpdD", "JFUOSpdU", "MJFU", "JpU", "FU", "FUSpdD", "FURLD", "FUJFD", "MFU", "MFD", "SpdUFD", "RLUFD", "JFUFD"] #Need to create more round length adjusting powerups theres only one that increase round length and makes other stats go down
+"MRLU", "MPHU", "JFUSpdD", "JFUOSpdU", "MJFU", "JpU", "FU", "FUSpdD", "FURLD", "FUJFD", "MFU", "MFD", "SpdUFD", "RLUFD", "JFUFD",
+"FU", "FUSpdD", "FURLD", "FUJFD", "MFU", "MFD", "SpdUFD", "RLUFD", "JFUFD","FU", "FUSpdD", "FURLD", "FUJFD", "MFU", "MFD", "SpdUFD", "RLUFD", "JFUFD",
+"FU", "FUSpdD", "FURLD", "FUJFD", "MFU", "MFD", "SpdUFD", "RLUFD", "JFUFD"] #Need to create more round length adjusting powerups theres only one that increase round length and makes other stats go down
 
 @onready var effect : String
 
@@ -98,32 +100,32 @@ func _ready():
 		descText = "DESC_JPU"
 		sprite_2d.texture = load(Sprites[14])
 	if effect == "FU":
-		buttonText = " "
-		descText = " "
+		buttonText = "KEY_FU"
+		descText = "DESC_FU"
 	if effect == "FUSpdD":
-		buttonText = " "
-		descText = " "
+		buttonText = "KEY_FUSPDD"
+		descText = "DESC_FUSPDD"
 	if effect == "FURLD":
-		buttonText = " "
-		descText = " "
+		buttonText = "KEY_FURLD"
+		descText = "DESC_FURLD"
 	if effect == "FUJFD":
-		buttonText = " "
-		descText = " "
+		buttonText = "KEY_FUJFD"
+		descText = "DESC_FUJFD"
 	if effect == "MFU":
-		buttonText = " "
-		descText = " "
+		buttonText = "KEY_MFU"
+		descText = "DESC_MFU"
 	if effect == "MFD":
-		buttonText = " "
-		descText = " "
+		buttonText = "KEY_MFD"
+		descText = "DESC_MFD"
 	if effect == "SpdUFD":
-		buttonText = " "
-		descText = " "
+		buttonText = "KEY_SPDUFD"
+		descText = "DESC_SPDUFD"
 	if effect == "RLUFD":
-		buttonText = " "
-		descText = " "
+		buttonText = "KEY_RLUFD"
+		descText = "DESC_RLUFD"
 	if effect == "JFUFD":
-		buttonText = " "
-		descText = " "
+		buttonText = "KEY_JFUFD"
+		descText = "DESC_JFUFD"
 	button.text = buttonText
 	descBox.text = descText
 	pass # Replace with function body.

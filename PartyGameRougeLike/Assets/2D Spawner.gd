@@ -18,5 +18,5 @@ func _process(_delta):
 func _on_timer_timeout():
 	var spawn_instance = projectile.instantiate()
 	self.add_child(spawn_instance)
-	timer.wait_time = randf_range(0.1, 0.5)
+	timer.wait_time = randf_range(0.1 * gamemanager.frequency, 0.5 * gamemanager.frequency)
 	pass # Replace with function body.
