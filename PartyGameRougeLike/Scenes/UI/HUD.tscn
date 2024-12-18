@@ -14,7 +14,7 @@ border_blend = true
 expand_margin_left = 180.0
 expand_margin_top = 60.0
 expand_margin_right = 30.0
-expand_margin_bottom = 51.0
+expand_margin_bottom = 66.0
 
 [node name="Hud" type="Control"]
 process_mode = 3
@@ -177,6 +177,19 @@ theme = ExtResource("2_a748c")
 text = "KEY_STAT_RL"
 
 [node name="Label7" type="Label" parent="Panel/VBoxContainer/HSplitContainer6"]
+layout_mode = 2
+theme = ExtResource("2_a748c")
+text = "1"
+
+[node name="HSplitContainer7" type="HSplitContainer" parent="Panel/VBoxContainer"]
+layout_mode = 2
+
+[node name="Label6" type="Label" parent="Panel/VBoxContainer/HSplitContainer7"]
+layout_mode = 2
+theme = ExtResource("2_a748c")
+text = "KEY_STAT_F"
+
+[node name="Label7" type="Label" parent="Panel/VBoxContainer/HSplitContainer7"]
 layout_mode = 2
 theme = ExtResource("2_a748c")
 text = "1"

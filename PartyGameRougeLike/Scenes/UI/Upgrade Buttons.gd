@@ -100,32 +100,32 @@ func _ready():
 		descText = "DESC_JPU"
 		sprite_2d.texture = load(Sprites[14])
 	if effect == "FU":
-		buttonText = "KEY_FU"
-		descText = "DESC_FU"
+		buttonText = "KEY_FU" 
+		descText = "DESC_FU" 
 	if effect == "FUSpdD":
-		buttonText = "KEY_FUSPDD"
-		descText = "DESC_FUSPDD"
+		buttonText = "KEY_FUSPDD" 
+		descText = "DESC_FUSPDD" 
 	if effect == "FURLD":
-		buttonText = "KEY_FURLD"
-		descText = "DESC_FURLD"
+		buttonText = "KEY_FURLD" 
+		descText = "DESC_FURLD" 
 	if effect == "FUJFD":
-		buttonText = "KEY_FUJFD"
-		descText = "DESC_FUJFD"
+		buttonText = "KEY_FUJFD" 
+		descText = "DESC_FUJFD" 
 	if effect == "MFU":
-		buttonText = "KEY_MFU"
-		descText = "DESC_MFU"
+		buttonText = "KEY_MFU" 
+		descText = "DESC_MFU" 
 	if effect == "MFD":
-		buttonText = "KEY_MFD"
-		descText = "DESC_MFD"
+		buttonText = "KEY_MFD" 
+		descText = "DESC_MFD" 
 	if effect == "SpdUFD":
-		buttonText = "KEY_SPDUFD"
-		descText = "DESC_SPDUFD"
+		buttonText = "KEY_SPDUFD" 
+		descText = "DESC_SPDUFD" 
 	if effect == "RLUFD":
-		buttonText = "KEY_RLUFD"
-		descText = "DESC_RLUFD"
+		buttonText = "KEY_RLUFD" 
+		descText = "DESC_RLUFD" 
 	if effect == "JFUFD":
-		buttonText = "KEY_JFUFD"
-		descText = "DESC_JFUFD"
+		buttonText = "KEY_JFUFD" 
+		descText = "DESC_JFUFD" 
 	button.text = buttonText
 	descBox.text = descText
 	pass # Replace with function body.

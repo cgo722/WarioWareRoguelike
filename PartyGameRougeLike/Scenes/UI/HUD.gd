@@ -9,7 +9,9 @@ var oldscore : float = 0
 @onready var wavyTexture := load("res://Assets/Materials/Wavy UI.gdshader")
 @export var lights := ["res://Assets/UIpack/Red Light.png", "res://Assets/UIpack/Green Light.png"]
 @onready var stats := [$Panel/VBoxContainer/HSplitContainer/Label2, $Panel/VBoxContainer/HSplitContainer2/Label3,
-$Panel/VBoxContainer/HSplitContainer3/Label5, $Panel/VBoxContainer/HSplitContainer4/Label6, $Panel/VBoxContainer/HSplitContainer5/Label7, $Panel/VBoxContainer/HSplitContainer6/Label7]
+$Panel/VBoxContainer/HSplitContainer3/Label5, $Panel/VBoxContainer/HSplitContainer4/Label6, 
+$Panel/VBoxContainer/HSplitContainer5/Label7, $Panel/VBoxContainer/HSplitContainer6/Label7,
+$Panel/VBoxContainer/HSplitContainer7/Label7]
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	timer = get_parent().get_parent().get_node("GameTimer")
@@ -27,6 +29,7 @@ func _process(_delta):
 	stats[3].text = str(gamemanager.otherSpeed3D)
 	stats[4].text = str(gamemanager.otherSpeed2D)
 	stats[5].text = str(gamemanager.roundLength)
+	stats[6].text = str(gamemanager.frequency)
 	if gamemanager.score != oldscore:
 		#$"HBoxContainer/HSplitContainer3/Score Text".material.set_shader_param("height", 50)
 		print("69")
